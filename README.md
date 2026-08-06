@@ -1,28 +1,34 @@
-# Personal Brand Website — Piotr Kulbacki
+# Piotr Kulbacki — Personal Brand Website
 
-Workspace for the personal brand / business card site.
+Wizytówka / portfolio: Next.js (App Router) + TypeScript + Tailwind + next-intl + Vercel.
 
-| Path | Purpose |
-|------|---------|
-| [`PROJECT_CHECKLIST.md`](./PROJECT_CHECKLIST.md) | Living checklist — report progress to update |
-| [`Personal_Brand_Website_Project_Documentation_v2.1.md`](./Personal_Brand_Website_Project_Documentation_v2.1.md) | Original product requirements |
-| [`website/`](./website/) | Next.js application (deploy this) |
+## Struktura
 
-## Quick start
+| Ścieżka | Opis |
+|---------|------|
+| `src/` | Aplikacja Next.js |
+| `public/` | Assety publiczne (`portrait.png`, `avatar.png`, …) |
+| `messages/` | Tłumaczenia (pl, en, de, es, uk) |
+| `docs/` | Dokumentacja projektu + źródłowe zdjęcia w `docs/assets/` |
+| `PROJECT_CHECKLIST.md` | Żywa checklista postępów |
+
+## Start lokalny
 
 ```bash
-cd website
 cp .env.example .env.local
 npm install
 npm run dev
 ```
 
-## Your next steps (ops)
+Otwórz [http://localhost:3000](http://localhost:3000).
 
-1. Utwórz repo na GitHubie i wypchnij `website/` (commit + push)
-2. Import projektu na Vercel + env vars
-3. Wybór i zakup domeny → DNS na Vercel
-4. Resend API key (prawdziwy formularz kontaktowy)
-5. Google Search Console
+## Deploy (Vercel)
 
-See [`PROJECT_CHECKLIST.md`](./PROJECT_CHECKLIST.md) for full status.
+1. Import repo [PiotrKulbacki/my-buisness-card](https://github.com/PiotrKulbacki/my-buisness-card)
+2. **Root Directory:** zostaw puste / `.` (aplikacja jest w rootcie)
+3. Env vars — patrz [`docs/DEPLOY.md`](docs/DEPLOY.md)
+
+## Następny krok
+
+Vercel preview → domena → Resend → Search Console.  
+Szczegóły: [`PROJECT_CHECKLIST.md`](PROJECT_CHECKLIST.md).

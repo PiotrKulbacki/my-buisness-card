@@ -3,100 +3,90 @@
 **Marka:** Piotr Kulbacki · **Produkt:** Lyamo  
 **Stack:** Next.js (App Router) + TypeScript + Tailwind + Motion + next-intl · **Hosting:** Vercel  
 **Repo:** [PiotrKulbacki/my-buisness-card](https://github.com/PiotrKulbacki/my-buisness-card)  
-**Workflow:** zgłoś postęp — checklista zostanie zaktualizowana.
+**Lokalnie:** katalog `my-business-card` (root = aplikacja)
 
-**Legenda:** `[ ]` do zrobienia · `[x]` ukończone · `[~]` częściowo / wymaga Ciebie
+**Legenda:** `[ ]` do zrobienia · `[x]` ukończone · `[~]` częściowo
 
 ---
 
 ## Faza 0 — Fundamenty biznesowe i ops
 
-- [x] Utworzenie struktury projektu w workspace (`website/`)
-- [x] Inicjalizacja repozytorium Git (`main`)
-- [x] README + DEPLOY runbook
-- [x] Repo GitHub: `https://github.com/PiotrKulbacki/my-buisness-card`
-- [x] Push kodu aplikacji `website/` na GitHub (naprawione: wcześniej był tylko pointer do zagnieżdżonego `.git`)
-- [ ] Projekt na Vercel + podpięcie repo (**Root Directory = `website`**)
-- [ ] Wybór i zakup domeny
-- [ ] Konto Resend + API key w env
-- [ ] Decyzja analytics: Vercel Analytics ± Plausible/Umami
+- [x] Struktura projektu (root = Next.js, docs w `docs/`)
+- [x] Git `main` + GitHub push (pełny kod aplikacji)
+- [x] README + `docs/DEPLOY.md`
+- [ ] Projekt na Vercel (**Root Directory = puste / `.`**)
+- [ ] Zakup domeny
+- [ ] Resend + API key
+- [ ] Decyzja analytics (Vercel Analytics już w kodzie)
 
-**Notatki:** Następny krok produkcyjny = Vercel preview.
+**Następny krok:** deploy preview na Vercel.
 
 ---
 
 ## Faza 1 — Design system i brand
 
-- [x] Dark-only UI, lewy sidebar, avatar + soft-blend portret
-- [x] Design tokens, Syne + Geist, reduced-motion
-- [x] Favicon / apple-touch
-- [ ] Finalne logo marki (opcjonalnie)
-- [ ] Finalna decyzja fontów po preview na Vercel
+- [x] Dark-only, lewy sidebar, avatar + soft-blend portret
+- [x] Design tokens, Syne + Geist, reduced-motion, favicon
+- [ ] Finalne logo (opcjonalnie)
+- [ ] Decyzja fontów po preview
 
 ---
 
-## Faza 2 — Scaffold aplikacji
+## Faza 2 — Scaffold
 
-- [x] Next.js App Router + TypeScript + Tailwind + next-intl (5 locale)
-- [x] Routing: landing, about, projects, path, contact, privacy
-- [x] `proxy.ts`, config `site.ts`, path aliases
+- [x] Next.js + Tailwind + next-intl (5 locale) + `proxy.ts`
+- [x] Routing: `/`, `/about`, `/projects`, `/path`, `/contact`, `/privacy`
 
 ---
 
-## Faza 3 — Treści i dane
+## Faza 3 — Treści
 
-- [x] i18n, projekty JSON, CV/Ścieżka, email, LinkedIn, GitHub
-- [x] Portret + avatar w `public/`
-- [x] Stack tech (m.in. Supabase, Stripe, Vercel, Git/GitHub)
-- [ ] Finalne copy autorskie
-- [ ] Realne screenshoty projektów
-- [ ] Pełne CV
-- [ ] Realne URL Facebook / Instagram / YouTube
+- [x] i18n, projekty, Ścieżka/CV, email, LinkedIn, GitHub
+- [x] `public/portrait.png`, `public/avatar.png` (+ źródła w `docs/assets/`)
+- [x] Stack tech (Supabase, Stripe, Vercel, …)
+- [ ] Finalne copy, screenshoty projektów, pełne CV
+- [ ] Realne URL FB / IG / YT
 
 ---
 
 ## Faza 4 — Strony i UX
 
-- [x] Landing, Kim jestem, Projekty, Ścieżka, Kontakt
-- [x] Motion P0 (bez custom cursora)
-- [ ] P1 opcjonalnie po launchu
+- [x] Landing, Kim jestem, Projekty, Ścieżka, Kontakt + motion P0
 
 ---
 
-## Faza 5 — Formularz, prawne, SEO tech
+## Faza 5 — Formularz / prawne / SEO
 
-- [x] Contact API + honeypot, privacy, robots, sitemap, metadata, JSON-LD
-- [ ] Ocena `/imprint` (DE/AT)
-- [ ] Finalny tekst prawny (jeśli potrzeba)
+- [x] Contact API, privacy, robots, sitemap, metadata, JSON-LD
+- [ ] Imprint (DE/AT) jeśli potrzeba
 
 ---
 
-## Faza 6 — Analityka, Search Console, QA
+## Faza 6 — QA / GSC
 
-- [x] Vercel Analytics w kodzie + lokalne QA scripts
-- [ ] GSC, Lighthouse na preview/prod, formularz E2E z Resend
+- [x] Lokalne lint/typecheck/build
+- [ ] Lighthouse + GSC + formularz E2E na preview/prod
 
 ---
 
 ## Faza 7 — Launch
 
-- [ ] Deploy Vercel (preview → produkcja)
-- [ ] DNS domeny → Vercel
-- [ ] Env prod (`RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `NEXT_PUBLIC_SITE_URL`)
-- [ ] Smoke test + ogłoszenie LinkedIn
+- [ ] Vercel preview → produkcja
+- [ ] DNS + env prod
+- [ ] Smoke + LinkedIn
 
 ---
 
 ## Faza 8 — Backlog (po zgodzie)
 
-- [ ] Canvas projektów, Lyamo teaser, `/now`, OG images, ⌘K, CMS…
+- [ ] Canvas, Lyamo teaser, `/now`, OG, ⌘K, CMS…
 
 ---
 
-## Historia aktualizacji
+## Historia
 
 | Data | Zmiana |
 |------|--------|
-| 2026-08-05 | Scaffold MVP + dark UI + sidebar + zdjęcia |
-| 2026-08-06 | Checklista sync; GitHub social; repo `my-buisness-card` |
-| 2026-08-06 | Naprawa: `website/` jako pełny kod (nie embedded git); następny krok = Vercel |
+| 2026-08-05 | MVP dark UI + sidebar |
+| 2026-08-06 | GitHub + naprawa embedded `website/` |
+| 2026-08-06 | Spłaszczenie: app w rootcie, docs w `docs/`, katalog lokalny `my-business-card` |
