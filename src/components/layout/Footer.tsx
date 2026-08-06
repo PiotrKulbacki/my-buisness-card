@@ -8,11 +8,11 @@ export async function Footer() {
 
   return (
     <footer className="mt-auto border-t border-[var(--line)]">
-      <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-3 px-5 py-5 text-xs text-[var(--fg-muted)] sm:flex-row sm:items-center md:px-8">
-        <p>
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-3 text-xs leading-none text-[var(--fg-muted)] md:px-8">
+        <p className="truncate">
           © {year} {siteConfig.name}. {t("rights")}
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex shrink-0 gap-4">
           <Link className="focus-ring rounded hover:text-[var(--fg)]" href="/privacy">
             {t("privacy")}
           </Link>

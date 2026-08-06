@@ -1,0 +1,51 @@
+# Reguły dla Agentów AI — Personal Brand Website (Piotr Kulbacki)
+
+## Żelazne reguły (nienaruszalne)
+
+1. **TypeScript strict + path aliases:** Używaj TypeScript w trybie `strict`. Importy przez alias `@/*` — nigdy głębokie `../../../../`.
+2. **Nie cofaj kodu:** Nigdy nie usuwaj działających implementacji bez wyraźnego polecenia użytkownika.
+3. **Błędy UI przez toast:** Komunikaty sukcesu i błędów dla użytkownika (np. formularz kontaktowy) zawsze przez `toast` (Sonner). Zakaz renderowania błędów jako stałego tekstu pod przyciskami/inputami.
+4. **i18n bez hardkodu:** Zakaz hardkodowania tekstów widocznych dla użytkownika (w tym etykiet a11y w UI). Używaj `next-intl` i plików w `messages/{pl,en,de,es,uk}.json`.
+5. **Zakaz autonomicznego rozszerzania zakresu:** Nie dodawaj nowych funkcji (efekty P2/P3, CMS, blog, nowe strony) bez jednoznacznej zgody użytkownika.
+6. **Formatowanie Prettier:** Po zmianach uruchom `npx prettier --write .`, potem `npm run format:check`.
+7. **Lokalna weryfikacja jakości:** Przed zakończeniem pracy: `npm run format:check`, `npm run lint`, `npm run typecheck`, `npm run build`. Wszystkie muszą być zielone.
+
+## Architektura (single app)
+
+- Next.js App Router w rootcie repo (bez monorepo).
+- Routing wielojęzyczny: `src/app/[locale]/…` + `src/proxy.ts` (next-intl).
+- Konfiguracja centralna: `src/config/site.ts` (email, social, assety).
+- Treści projektów / CV: `src/content/*`.
+- Komponenty w `src/components/{layout,home,about,projects,contact,motion,ui,seo}`.
+- Dokumentacja projektu: `docs/` + żywa checklista `PROJECT_CHECKLIST.md`.
+
+## UX / formularze
+
+- Submit formularza: stan `loading` → **disabled** na inputach i przycisku + **spinner** na przycisku (`Button` prop `loading`).
+- Feedback: wyłącznie toast (sukces / błąd / rate limit / walidacja).
+- **Cursor pointer:** każdy interaktywny przycisk (`button`, `Button`, submit) ma `cursor: pointer` w stanie enabled; `cursor: not-allowed` gdy disabled/loading.
+- Label formularza: wystarczający odstęp od inputa (`gap-3+`), żeby `focus-ring` nie nachodził na tekst etykiety.
+- Respektuj `prefers-reduced-motion`.
+
+## API / bezpieczeństwo
+
+- Route Handlers: walidacja Zod.
+- Formularz kontaktowy: honeypot + **rate limiting** (`src/lib/rate-limit.ts`).
+- Sekrety tylko w env serwerowym (`RESEND_*`, `CONTACT_*`). Publiczne: `NEXT_PUBLIC_*`.
+- Nie commituj `.env.local` / sekretów.
+
+## Design
+
+- Dark-only. Lewy sidebar. Brand: Piotr Kulbacki; produkt flagowy: Lyamo.
+- Assety runtime w `public/` (`portrait.png`, `avatar.png`). Źródła referencyjne w `docs/assets/`.
+- Nie wprowadzaj „AI default” looków (fioletowe gradienty, Inter/Roboto jako display, cream+terracotta).
+
+## Git / deploy
+
+- Gałąź robocza: `main`.
+- Hosting: Vercel, Root Directory = `.` (root repo).
+- Commit/push tylko na wyraźną prośbę użytkownika.
+
+## Język i korekty
+
+- Jeśli użytkownik poda błędną formę językową (np. „Inżynier programowania”), zaproponuj poprawną („Inżynier oprogramowania”) i zastosuj poprawkę po potwierdzeniu lub w tej samej zmianie, jeśli intencja jest jasna.

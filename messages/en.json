@@ -11,7 +11,8 @@
     "resume": "Resume",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "language": "Language"
+    "language": "Language",
+    "primaryNav": "Primary navigation"
   },
   "sidebar": {
     "role": "Software Engineer"
@@ -58,13 +59,16 @@
     "live": "Live",
     "repo": "Repository",
     "back": "Back to projects",
-    "empty": "No projects in this category."
+    "empty": "No projects in this category.",
+    "filtersLabel": "Project filters"
   },
   "contact": {
     "title": "Contact",
     "lead": "Have an idea for a product, website or collaboration? I usually reply within 1–2 business days.",
     "name": "Name",
     "email": "Email",
+    "phone": "Phone",
+    "optional": "optional",
     "message": "Message",
     "submit": "Send message",
     "sending": "Sending…",
@@ -74,7 +78,9 @@
     "privacyLink": "privacy policy",
     "directEmail": "Direct email",
     "location": "Location",
-    "remote": "Remote · Poland / EU"
+    "remote": "Remote · Berlin / EU",
+    "validationError": "Please check the form and try again.",
+    "rateLimited": "Too many attempts. Please wait a moment and try again."
   },
   "privacy": {
     "title": "Privacy policy",
@@ -93,5 +99,16 @@
   },
   "common": {
     "availability": "Open for projects"
+  },
+  "languages": {
+    "pl": "Polski",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "uk": "Українська"
+  },
+  "notFound": {
+    "title": "Page not found.",
+    "home": "Home"
   }
 }

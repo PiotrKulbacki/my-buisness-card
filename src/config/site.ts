@@ -16,7 +16,7 @@ export const siteConfig = {
   avatarSrc: "/avatar.png",
   avatarEnabled: true,
   location: {
-    city: "Poland",
+    city: "Berlin",
     remote: true,
   },
   social: {

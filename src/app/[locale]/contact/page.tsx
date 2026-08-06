@@ -19,8 +19,8 @@ export default async function ContactPage({ params }: Props) {
   const t = await getTranslations("contact");
 
   return (
-    <section className="py-16 md:py-24">
-      <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr]">
+    <section className="flex min-h-[calc(100svh-8rem)] flex-col justify-center py-10 md:min-h-[calc(100svh-5rem)] md:py-16">
+      <div className="grid w-full gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center">
         <Reveal>
           <h1 className="display text-4xl md:text-6xl">{t("title")}</h1>
           <p className="mt-4 text-[var(--fg-muted)]">{t("lead")}</p>

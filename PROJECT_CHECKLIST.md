@@ -85,8 +85,9 @@
 
 ## Historia
 
-| Data | Zmiana |
-|------|--------|
-| 2026-08-05 | MVP dark UI + sidebar |
-| 2026-08-06 | GitHub + naprawa embedded `website/` |
-| 2026-08-06 | Spłaszczenie: app w rootcie, docs w `docs/`, katalog lokalny `my-business-card` |
+| Data       | Zmiana                                                                                                    |
+| ---------- | --------------------------------------------------------------------------------------------------------- |
+| 2026-08-05 | MVP dark UI + sidebar                                                                                     |
+| 2026-08-06 | GitHub + naprawa embedded `website/`                                                                      |
+| 2026-08-06 | Spłaszczenie: app w rootcie, docs w `docs/`, katalog lokalny `my-business-card`                           |
+| 2026-08-06 | Toast (Sonner) + loader na submit; i18n hardkodów; rate limit `/api/contact`; `.cursorrules`; CI workflow |

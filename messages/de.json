@@ -11,7 +11,8 @@
     "resume": "Resume",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
-    "language": "Sprache"
+    "language": "Sprache",
+    "primaryNav": "Hauptnavigation"
   },
   "sidebar": {
     "role": "Software Engineer"
@@ -58,13 +59,16 @@
     "live": "Live",
     "repo": "Repository",
     "back": "Zurück zu Projekten",
-    "empty": "Keine Projekte in dieser Kategorie."
+    "empty": "Keine Projekte in dieser Kategorie.",
+    "filtersLabel": "Projektfilter"
   },
   "contact": {
     "title": "Kontakt",
     "lead": "Idee für ein Produkt, eine Website oder Zusammenarbeit? Antwort meist in 1–2 Werktagen.",
     "name": "Name",
     "email": "E-Mail",
+    "phone": "Telefon",
+    "optional": "optional",
     "message": "Nachricht",
     "submit": "Nachricht senden",
     "sending": "Senden…",
@@ -74,7 +78,9 @@
     "privacyLink": "Datenschutzerklärung",
     "directEmail": "Direkte E-Mail",
     "location": "Standort",
-    "remote": "Remote · Polen / EU"
+    "remote": "Remote · Berlin / EU",
+    "validationError": "Bitte Formular prüfen und erneut versuchen.",
+    "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen."
   },
   "privacy": {
     "title": "Datenschutzerklärung",
@@ -93,5 +99,16 @@
   },
   "common": {
     "availability": "Offen für Projekte"
+  },
+  "languages": {
+    "pl": "Polski",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "uk": "Українська"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden.",
+    "home": "Start"
   }
 }

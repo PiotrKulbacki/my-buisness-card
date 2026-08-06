@@ -26,7 +26,7 @@ export function ProjectFilters() {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Project filters">
+      <div className="flex flex-wrap gap-2" role="tablist" aria-label={t("filtersLabel")}>
         {options.map((option) => (
           <button
             key={option.id}

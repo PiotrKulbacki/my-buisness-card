@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { toast } from "sonner";
 import { z } from "zod";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
@@ -9,26 +10,38 @@ import { Button } from "@/components/ui/Button";
 const schema = z.object({
   name: z.string().min(2).max(80),
   email: z.string().email(),
+  phone: z.string().max(40).optional(),
   message: z.string().min(10).max(4000),
   website: z.string().optional(),
 });
 
+function RequiredMark() {
+  return (
+    <span className="ml-0.5 text-red-500" aria-hidden="true">
+      *
+    </span>
+  );
+}
+
 export function ContactForm() {
   const t = useTranslations("contact");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [loading, setLoading] = useState(false);
 
   async function onSubmit(formData: FormData) {
-    setStatus("loading");
+    setLoading(true);
+    const phone = String(formData.get("phone") ?? "").trim();
     const payload = {
       name: String(formData.get("name") ?? ""),
       email: String(formData.get("email") ?? ""),
+      phone: phone || undefined,
       message: String(formData.get("message") ?? ""),
       website: String(formData.get("website") ?? ""),
     };
 
     const parsed = schema.safeParse(payload);
     if (!parsed.success) {
-      setStatus("error");
+      toast.error(t("validationError"));
+      setLoading(false);
       return;
     }
 
@@ -38,47 +51,79 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(parsed.data),
       });
+
+      if (response.status === 429) {
+        toast.error(t("rateLimited"));
+        return;
+      }
+
       if (!response.ok) throw new Error("Request failed");
-      setStatus("success");
+      toast.success(t("success"));
+      (document.getElementById("contact-form") as HTMLFormElement | null)?.reset();
     } catch {
-      setStatus("error");
+      toast.error(t("error"));
+    } finally {
+      setLoading(false);
     }
   }
 
   return (
-    <form action={onSubmit} className="space-y-4">
+    <form id="contact-form" action={onSubmit} className="space-y-4">
       <div className="grid gap-4 md:grid-cols-2">
-        <label className="block space-y-2 text-sm">
-          <span>{t("name")}</span>
+        <label className="flex flex-col gap-3 text-sm">
+          <span className="leading-none">
+            {t("name")}
+            <RequiredMark />
+          </span>
           <input
             required
             name="name"
-            disabled={status === "loading"}
+            autoComplete="name"
+            disabled={loading}
             className="focus-ring w-full rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-3"
           />
         </label>
-        <label className="block space-y-2 text-sm">
-          <span>{t("email")}</span>
+        <label className="flex flex-col gap-3 text-sm">
+          <span className="leading-none">
+            {t("email")}
+            <RequiredMark />
+          </span>
           <input
             required
             type="email"
             name="email"
-            disabled={status === "loading"}
+            autoComplete="email"
+            disabled={loading}
             className="focus-ring w-full rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-3"
           />
         </label>
       </div>
-      <label className="block space-y-2 text-sm">
-        <span>{t("message")}</span>
+      <label className="flex flex-col gap-3 text-sm">
+        <span className="leading-none">
+          {t("phone")}
+          <span className="ml-1 text-[var(--fg-muted)]">({t("optional")})</span>
+        </span>
+        <input
+          type="tel"
+          name="phone"
+          autoComplete="tel"
+          disabled={loading}
+          className="focus-ring w-full rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-3"
+        />
+      </label>
+      <label className="flex flex-col gap-3 text-sm">
+        <span className="leading-none">
+          {t("message")}
+          <RequiredMark />
+        </span>
         <textarea
           required
           name="message"
           rows={6}
-          disabled={status === "loading"}
+          disabled={loading}
           className="focus-ring w-full resize-y rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-3"
         />
       </label>
-      {/* Honeypot */}
       <input
         type="text"
         name="website"
@@ -94,19 +139,9 @@ export function ContactForm() {
         </Link>
         .
       </p>
-      <Button type="submit" disabled={status === "loading"} className="min-w-40">
-        {status === "loading" ? t("sending") : t("submit")}
+      <Button type="submit" loading={loading} className="min-w-44">
+        {loading ? t("sending") : t("submit")}
       </Button>
-      {status === "success" ? (
-        <p role="status" className="text-sm text-[var(--success)]">
-          {t("success")}
-        </p>
-      ) : null}
-      {status === "error" ? (
-        <p role="alert" className="text-sm text-[var(--danger)]">
-          {t("error")}
-        </p>
-      ) : null}
     </form>
   );
 }

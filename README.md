@@ -4,13 +4,13 @@ Wizytówka / portfolio: Next.js (App Router) + TypeScript + Tailwind + next-intl
 
 ## Struktura
 
-| Ścieżka | Opis |
-|---------|------|
-| `src/` | Aplikacja Next.js |
-| `public/` | Assety publiczne (`portrait.png`, `avatar.png`, …) |
-| `messages/` | Tłumaczenia (pl, en, de, es, uk) |
-| `docs/` | Dokumentacja projektu + źródłowe zdjęcia w `docs/assets/` |
-| `PROJECT_CHECKLIST.md` | Żywa checklista postępów |
+| Ścieżka                | Opis                                                      |
+| ---------------------- | --------------------------------------------------------- |
+| `src/`                 | Aplikacja Next.js                                         |
+| `public/`              | Assety publiczne (`portrait.png`, `avatar.png`, …)        |
+| `messages/`            | Tłumaczenia (pl, en, de, es, uk)                          |
+| `docs/`                | Dokumentacja projektu + źródłowe zdjęcia w `docs/assets/` |
+| `PROJECT_CHECKLIST.md` | Żywa checklista postępów                                  |
 
 ## Start lokalny
 

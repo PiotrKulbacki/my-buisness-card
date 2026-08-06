@@ -36,7 +36,7 @@ export function Sidebar() {
   );
 
   const nav = (
-    <nav className="flex flex-col gap-3" aria-label="Primary">
+    <nav className="flex flex-col gap-3" aria-label={t("primaryNav")}>
       {links.map((link) => {
         const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
         return (
@@ -94,7 +94,7 @@ export function Sidebar() {
         <div className="mb-6 border-t border-[var(--line)]" />
         <div className="flex-1">{nav}</div>
         <div className="mt-6 space-y-3 border-t border-[var(--line)] pt-4">
-          <LanguageSwitcher className="w-full [&_select]:w-full" />
+          <LanguageSwitcher />
         </div>
       </aside>
     </>

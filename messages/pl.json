@@ -11,7 +11,8 @@
     "resume": "Resume",
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
-    "language": "Język"
+    "language": "Język",
+    "primaryNav": "Nawigacja główna"
   },
   "sidebar": {
     "role": "Inżynier oprogramowania"
@@ -58,13 +59,16 @@
     "live": "Live",
     "repo": "Repozytorium",
     "back": "Wróć do projektów",
-    "empty": "Brak projektów w tej kategorii."
+    "empty": "Brak projektów w tej kategorii.",
+    "filtersLabel": "Filtry projektów"
   },
   "contact": {
     "title": "Kontakt",
     "lead": "Masz pomysł na produkt, stronę lub współpracę? Napisz — odpowiadam zwykle w 1–2 dni robocze.",
     "name": "Imię",
     "email": "Email",
+    "phone": "Telefon",
+    "optional": "opcjonalnie",
     "message": "Wiadomość",
     "submit": "Wyślij wiadomość",
     "sending": "Wysyłanie…",
@@ -74,7 +78,9 @@
     "privacyLink": "politykę prywatności",
     "directEmail": "Email bezpośredni",
     "location": "Lokalizacja",
-    "remote": "Remote · Polska / EU"
+    "remote": "Remote · Berlin / EU",
+    "validationError": "Sprawdź poprawność formularza i spróbuj ponownie.",
+    "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie."
   },
   "privacy": {
     "title": "Polityka prywatności",
@@ -93,5 +99,16 @@
   },
   "common": {
     "availability": "Otwarty na projekty"
+  },
+  "languages": {
+    "pl": "Polski",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "uk": "Українська"
+  },
+  "notFound": {
+    "title": "Nie znaleziono strony.",
+    "home": "Strona główna"
   }
 }

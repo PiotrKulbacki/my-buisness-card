@@ -8,6 +8,7 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { Footer } from "@/components/layout/Footer";
 import { PageTransition } from "@/components/motion/PageTransition";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { AppToaster } from "@/components/ui/AppToaster";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
 import "../globals.css";
@@ -93,6 +94,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             </main>
             <Footer />
           </div>
+          <AppToaster />
           <JsonLd />
           <Analytics />
         </NextIntlClientProvider>

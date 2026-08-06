@@ -19,12 +19,12 @@ git push origin main
 3. **Root Directory:** zostaw puste (`.`) — **nie** ustawiaj `website`
 4. Env vars (opcjonalnie na preview, wymagane na prod z formularzem):
 
-| Name | Value |
-|------|--------|
+| Name                   | Value                                      |
+| ---------------------- | ------------------------------------------ |
 | `NEXT_PUBLIC_SITE_URL` | `https://your-domain.com` (lub URL Vercel) |
-| `RESEND_API_KEY` | z Resend |
-| `CONTACT_TO_EMAIL` | `it.piotr.kulbacki@gmail.com` |
-| `CONTACT_FROM_EMAIL` | zweryfikowany sender w Resend |
+| `RESEND_API_KEY`       | z Resend                                   |
+| `CONTACT_TO_EMAIL`     | `it.piotr.kulbacki@gmail.com`              |
+| `CONTACT_FROM_EMAIL`   | zweryfikowany sender w Resend              |
 
 5. Deploy → otwórz `*.vercel.app` → smoke test `/pl` + sidebar + zdjęcia
 

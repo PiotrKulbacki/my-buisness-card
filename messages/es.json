@@ -11,7 +11,8 @@
     "resume": "Resume",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
-    "language": "Idioma"
+    "language": "Idioma",
+    "primaryNav": "Navegación principal"
   },
   "sidebar": {
     "role": "Ingeniero de software"
@@ -58,13 +59,16 @@
     "live": "Live",
     "repo": "Repositorio",
     "back": "Volver a proyectos",
-    "empty": "No hay proyectos en esta categoría."
+    "empty": "No hay proyectos en esta categoría.",
+    "filtersLabel": "Filtros de proyectos"
   },
   "contact": {
     "title": "Contacto",
     "lead": "¿Idea de producto, web o colaboración? Suelo responder en 1–2 días laborables.",
     "name": "Nombre",
     "email": "Email",
+    "phone": "Teléfono",
+    "optional": "opcional",
     "message": "Mensaje",
     "submit": "Enviar mensaje",
     "sending": "Enviando…",
@@ -74,7 +78,9 @@
     "privacyLink": "política de privacidad",
     "directEmail": "Email directo",
     "location": "Ubicación",
-    "remote": "Remoto · Polonia / UE"
+    "remote": "Remote · Berlin / EU",
+    "validationError": "Revisa el formulario e inténtalo de nuevo.",
+    "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo."
   },
   "privacy": {
     "title": "Política de privacidad",
@@ -93,5 +99,16 @@
   },
   "common": {
     "availability": "Abierto a proyectos"
+  },
+  "languages": {
+    "pl": "Polski",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "uk": "Українська"
+  },
+  "notFound": {
+    "title": "Página no encontrada.",
+    "home": "Inicio"
   }
 }
