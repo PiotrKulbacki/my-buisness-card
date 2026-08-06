@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Piotr Kulbacki — Inżynier oprogramowania",
+    "description": "Buduję nowoczesne produkty cyfrowe, strony i aplikacje. Twórca Lyamo. Współpraca remote."
+  },
+  "nav": {
+    "about": "Kim jestem",
+    "projects": "Projekty",
+    "path": "Ścieżka",
+    "contact": "Kontakt",
+    "resume": "Resume",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "language": "Język"
+  },
+  "sidebar": {
+    "role": "Inżynier oprogramowania"
+  },
+  "landing": {
+    "welcome": "Witaj w moim portfolio",
+    "role": "Inżynier oprogramowania",
+    "tagline": "Buduję produkty cyfrowe, strony i aplikacje — od koncepcji po wdrożenie."
+  },
+  "about": {
+    "eyebrow": "Wprowadzenie",
+    "title": "Kim jestem",
+    "lead": "Inżynier produktu i founder — łączę design, kod i myślenie produktowe.",
+    "bio": "Nazywam się Piotr Kulbacki. Buduję rozwiązania end-to-end: od architektury i UX po produkcję. Stawiam na czytelny przekaz, wydajność i detale, które budują zaufanie.",
+    "buildingTitle": "Co buduję",
+    "buildingBody": "Tworzę produkty własne i realizacje dla klientów — ze szczególnym naciskiem na jakość UX oraz solidną inżynierię.",
+    "buildingItems": {
+      "product": "Lyamo — aplikacja do finansów osobistych (web + mobile)",
+      "websites": "Strony firmowe i landingi z naciskiem na SEO i motion",
+      "apps": "Aplikacje webowe i panele operacyjne"
+    },
+    "techTitle": "Technologie"
+  },
+  "path": {
+    "eyebrow": "Doświadczenie",
+    "title": "Ścieżka",
+    "lead": "Skrót doświadczenia, kompetencji i edukacji — CV w formie strony.",
+    "experience": "Doświadczenie",
+    "skills": "Kompetencje",
+    "education": "Edukacja"
+  },
+  "projects": {
+    "title": "Projekty",
+    "lead": "Wybrane realizacje — strony, aplikacje i produkty własne.",
+    "filters": {
+      "all": "Wszystkie",
+      "websites": "Strony internetowe",
+      "apps": "Aplikacje"
+    },
+    "viewProject": "Zobacz projekt",
+    "tech": "Technologie",
+    "links": "Linki",
+    "gallery": "Galeria",
+    "live": "Live",
+    "repo": "Repozytorium",
+    "back": "Wróć do projektów",
+    "empty": "Brak projektów w tej kategorii."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "lead": "Masz pomysł na produkt, stronę lub współpracę? Napisz — odpowiadam zwykle w 1–2 dni robocze.",
+    "name": "Imię",
+    "email": "Email",
+    "message": "Wiadomość",
+    "submit": "Wyślij wiadomość",
+    "sending": "Wysyłanie…",
+    "success": "Wiadomość wysłana. Dzięki — odezwę się wkrótce.",
+    "error": "Nie udało się wysłać. Spróbuj ponownie lub napisz bezpośrednio na email.",
+    "privacyNote": "Wysyłając formularz akceptujesz",
+    "privacyLink": "politykę prywatności",
+    "directEmail": "Email bezpośredni",
+    "location": "Lokalizacja",
+    "remote": "Remote · Polska / EU"
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "updated": "Ostatnia aktualizacja: 5 sierpnia 2026",
+    "intro": "Ta strona zbiera tylko dane niezbędne do odpowiedzi na wiadomości kontaktowe oraz opcjonalnie anonimową analitykę ruchu.",
+    "controller": "Administratorem danych jest Piotr Kulbacki.",
+    "form": "Formularz kontaktowy przekazuje imię, email i treść wiadomości w celu odpowiedzi. Dane nie są sprzedawane.",
+    "analytics": "Może być używana analityka bez cookies lub z minimalnym zakresem (np. Vercel Analytics).",
+    "rights": "Masz prawo do dostępu, sprostowania i usunięcia danych — napisz na adres kontaktowy.",
+    "contact": "W sprawach prywatności: "
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "personalData": "Dane osobowe"
+  },
+  "common": {
+    "availability": "Otwarty na projekty"
+  }
+}

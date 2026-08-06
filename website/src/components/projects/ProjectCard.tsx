@@ -1,0 +1,56 @@
+"use client";
+
+import { motion } from "motion/react";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import type { Project } from "@/content/projects";
+import type { Locale } from "@/i18n/routing";
+
+export function ProjectCard({ project }: { project: Project }) {
+  const t = useTranslations("projects");
+  const locale = useLocale() as Locale;
+
+  return (
+    <motion.article
+      layout
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.98 }}
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      className="group overflow-hidden rounded-[24px] border border-[var(--line)] bg-[var(--bg-elevated)] shadow-sm"
+    >
+      <Link href={`/projects/${project.slug}`} className="focus-ring block">
+        <div
+          className="relative aspect-[16/10] overflow-hidden"
+          style={{ background: project.coverGradient }}
+        >
+          <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
+          <div className="absolute inset-x-0 bottom-0 translate-y-4 p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="flex flex-wrap gap-2">
+              {project.tech.slice(0, 4).map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-medium text-black"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="space-y-2 p-5">
+          <div className="flex items-center justify-between gap-3 text-xs text-[var(--fg-muted)]">
+            <span className="tracking-wider uppercase">{project.category}</span>
+            <span>{project.year}</span>
+          </div>
+          <h3 className="text-xl font-semibold">{project.title[locale]}</h3>
+          <p className="text-sm text-[var(--fg-muted)]">{project.summary[locale]}</p>
+          <span className="inline-flex pt-2 text-sm font-medium underline-offset-4 group-hover:underline">
+            {t("viewProject")}
+          </span>
+        </div>
+      </Link>
+    </motion.article>
+  );
+}

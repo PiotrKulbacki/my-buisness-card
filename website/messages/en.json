@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Piotr Kulbacki — Software Engineer",
+    "description": "I build modern digital products, websites and apps. Creator of Lyamo. Available for remote collaboration."
+  },
+  "nav": {
+    "about": "Who I am",
+    "projects": "Projects",
+    "path": "Path",
+    "contact": "Contact",
+    "resume": "Resume",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "sidebar": {
+    "role": "Software Engineer"
+  },
+  "landing": {
+    "welcome": "Welcome to my portfolio",
+    "role": "Software Engineer",
+    "tagline": "I build digital products, websites and apps — from concept to production."
+  },
+  "about": {
+    "eyebrow": "Introduction",
+    "title": "Who I am",
+    "lead": "Product engineer and founder — combining design, code and product thinking.",
+    "bio": "I'm Piotr Kulbacki. I build end-to-end: architecture and UX through to production. Clear messaging, performance and craft details that build trust.",
+    "buildingTitle": "What I build",
+    "buildingBody": "I ship my own products and client work — with a strong focus on UX quality and solid engineering.",
+    "buildingItems": {
+      "product": "Lyamo — personal finance app (web + mobile)",
+      "websites": "Company sites and landings with SEO and motion",
+      "apps": "Web apps and operations dashboards"
+    },
+    "techTitle": "Technologies"
+  },
+  "path": {
+    "eyebrow": "Experience",
+    "title": "Path",
+    "lead": "A concise view of experience, skills and education — CV as a page.",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education"
+  },
+  "projects": {
+    "title": "Projects",
+    "lead": "Selected work — websites, applications and own products.",
+    "filters": {
+      "all": "All",
+      "websites": "Websites",
+      "apps": "Applications"
+    },
+    "viewProject": "View project",
+    "tech": "Tech stack",
+    "links": "Links",
+    "gallery": "Gallery",
+    "live": "Live",
+    "repo": "Repository",
+    "back": "Back to projects",
+    "empty": "No projects in this category."
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Have an idea for a product, website or collaboration? I usually reply within 1–2 business days.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Message sent. Thanks — I’ll get back to you soon.",
+    "error": "Couldn’t send. Try again or email me directly.",
+    "privacyNote": "By submitting you accept the",
+    "privacyLink": "privacy policy",
+    "directEmail": "Direct email",
+    "location": "Location",
+    "remote": "Remote · Poland / EU"
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "updated": "Last updated: 5 August 2026",
+    "intro": "This site only collects data needed to reply to contact messages and optionally anonymous traffic analytics.",
+    "controller": "The data controller is Piotr Kulbacki.",
+    "form": "The contact form sends your name, email and message in order to reply. Data is not sold.",
+    "analytics": "Analytics may be cookieless or minimal (e.g. Vercel Analytics).",
+    "rights": "You have the right to access, rectify and delete your data — email the contact address.",
+    "contact": "Privacy inquiries: "
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy policy",
+    "personalData": "Personal data"
+  },
+  "common": {
+    "availability": "Open for projects"
+  }
+}
