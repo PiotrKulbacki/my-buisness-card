@@ -47,7 +47,8 @@
 - [x] Pełne CV online (`/path`) — treść z PDF + aktualny stack; docs: `docs/CV_Online.md`
 - [x] Certyfikaty w `public/certificates/` + podgląd modalny (PDF/obrazy); PII na dyplomie zredagowane
 - [ ] PDF Git/GitHub (Udemy) — odłożony (brak pliku); wpis na liście bez podglądu
-- [ ] Finalne copy landing/about; screenshoty projektów
+- [x] Screenshoty case study: MovieWeb + Sport Club PowerPlay (`public/projects/{movieweb,sportclub}/`; reguły: `docs/Projects_Section.md`)
+- [ ] Finalne copy landing/about; screenshoty pozostałych projektów
 - [ ] Realne URL FB / IG / YT
 
 ---

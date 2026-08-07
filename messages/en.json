@@ -81,6 +81,10 @@
     "gallery": "Gallery",
     "live": "Live",
     "repo": "Repository",
+    "notLive": "No live demo",
+    "courseBadge": "During programming course",
+    "expandImage": "View full-size image",
+    "closeImage": "Close",
     "back": "Back to projects",
     "empty": "No projects in this category.",
     "filtersLabel": "Project filters"

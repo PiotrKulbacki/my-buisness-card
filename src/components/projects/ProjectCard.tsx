@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -23,8 +24,17 @@ export function ProjectCard({ project }: { project: Project }) {
       <Link href={`/projects/${project.slug}`} className="focus-ring block">
         <div
           className="relative aspect-[16/10] overflow-hidden"
-          style={{ background: project.coverGradient }}
+          style={project.coverSrc ? undefined : { background: project.coverGradient }}
         >
+          {project.coverSrc ? (
+            <Image
+              src={project.coverSrc}
+              alt={project.title[locale]}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+          ) : null}
           <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
           <div className="absolute inset-x-0 bottom-0 translate-y-4 p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
             <div className="flex flex-wrap gap-2">
@@ -41,10 +51,17 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className="space-y-2 p-5">
           <div className="text-fg-muted flex items-center justify-between gap-3 text-xs">
-            <span className="tracking-wider uppercase">{project.category}</span>
+            <span className="tracking-wider uppercase">{t(`filters.${project.category}`)}</span>
             <span>{project.year}</span>
           </div>
-          <h3 className="text-xl font-semibold">{project.title[locale]}</h3>
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="text-xl font-semibold">{project.title[locale]}</h3>
+            {project.courseProject ? (
+              <span className="border-accent/30 bg-accent/10 text-accent rounded-full border px-2.5 py-0.5 text-xs">
+                {t("courseBadge")}
+              </span>
+            ) : null}
+          </div>
           <p className="text-fg-muted text-sm">{project.summary[locale]}</p>
           <span className="inline-flex pt-2 text-sm font-medium underline-offset-4 group-hover:underline">
             {t("viewProject")}

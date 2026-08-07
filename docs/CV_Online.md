@@ -149,7 +149,7 @@ _(Etykiety przetłumaczone w 5 locale; techniczne nazwy stacku po angielsku.)_
 Szczegóły → zakładka **Projekty**. Tu: nazwa, 1–2 zdania, opcjonalnie live URL, badge kursu.
 
 1. **MovieWeb App** — badge: podczas kursu programowania
-2. **Sport Club Manage** — badge: podczas kursu programowania
+2. **Sport Club PowerPlay** — badge: podczas kursu programowania
 3. **Lyamo** — `https://lyamo.app`
 4. **AI Document** — `https://aidocument.eu/pl`
 5. **AK Gebäudeservice** — `https://www.akgebaeudeservice.com/`

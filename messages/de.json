@@ -81,6 +81,10 @@
     "gallery": "Galerie",
     "live": "Live",
     "repo": "Repository",
+    "notLive": "Keine Live-Version",
+    "courseBadge": "Während des Programmierkurses",
+    "expandImage": "Bild in voller Größe anzeigen",
+    "closeImage": "Schließen",
     "back": "Zurück zu Projekten",
     "empty": "Keine Projekte in dieser Kategorie.",
     "filtersLabel": "Projektfilter"

@@ -5,7 +5,7 @@
 1. **TypeScript strict + path aliases:** Używaj TypeScript w trybie `strict`. Importy przez alias `@/*` — nigdy głębokie `../../../../`.
 2. **Nie cofaj kodu:** Nigdy nie usuwaj działających implementacji bez wyraźnego polecenia użytkownika.
 3. **Błędy UI przez toast:** Komunikaty sukcesu i błędów dla użytkownika (np. formularz kontaktowy) zawsze przez `toast` (Sonner). Zakaz renderowania błędów jako stałego tekstu pod przyciskami/inputami.
-4. **i18n bez hardkodu:** Zakaz hardkodowania tekstów widocznych dla użytkownika (w tym etykiet a11y w UI). Używaj `next-intl` i plików w `messages/{pl,en,de,es,uk}.json`.
+4. **i18n bez hardkodu:** Zakaz hardkodowania tekstów widocznych dla użytkownika (w tym etykiet a11y w UI). Używaj `next-intl` i plików w `messages/{pl,en,de,es,uk}.json`. Treści case study (`title` / `summary` / `body` / `caption` w `src/content/projects.ts`) muszą być przetłumaczone na wszystkie 5 locale — nawet gdy opisywany produkt/strona klienta jest w innym języku (np. DE): podpisy galerii i opisy pisz w języku widoku portfolio, nie kopiuj etykiet UI klienta.
 5. **Zakaz autonomicznego rozszerzania zakresu:** Nie dodawaj nowych funkcji (efekty P2/P3, CMS, blog, nowe strony) bez jednoznacznej zgody użytkownika.
 6. **Formatowanie Prettier:** Po zmianach uruchom `npx prettier --write .`, potem `npm run format:check`.
 7. **Lokalna weryfikacja jakości:** Przed zakończeniem pracy: `npm run format:check`, `npm run lint`, `npm run typecheck`, `npm run build`. Wszystkie muszą być zielone.
@@ -24,6 +24,7 @@
 - Treści projektów / CV: `src/content/*`.
 - Komponenty w `src/components/{layout,home,about,projects,contact,motion,ui,seo}`.
 - Dokumentacja projektu: `docs/` + żywa checklista `PROJECT_CHECKLIST.md`.
+- **Sekcja Projekty:** przy dodawaniu / zmianie case study zawsze stosuj `docs/Projects_Section.md` (assety, i18n 5 locale dla title/summary/body/caption, **jednakowy rozmiar kafelków galerii** `aspect-4/3` + `object-contain`, lightbox, motion). Kategorie i etykiety UI tylko przez namespace `projects` w `messages/*`.
 
 ## UX / formularze
 
@@ -43,8 +44,9 @@
 ## Design
 
 - Dark-only. Lewy sidebar. Brand: Piotr Kulbacki; produkt flagowy: Lyamo.
-- Assety runtime w `public/` (`portrait.png`, `avatar.png`). Źródła referencyjne w `docs/assets/`.
+- Assety runtime w `public/` (`portrait.png`, `avatar.png`, `projects/<slug>/…`, `certificates/`). Źródła referencyjne w `docs/assets/`.
 - Nie wprowadzaj „AI default” looków (fioletowe gradienty, Inter/Roboto jako display, cream+terracotta).
+- Galeria na podstronie projektu: **wszystkie kafelki tego samego rozmiaru** (`docs/Projects_Section.md`).
 
 ## Git / deploy
 

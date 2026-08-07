@@ -12,6 +12,7 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@swc/helpers": "^0.5.23",
     "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "motion": "^13.0.0",

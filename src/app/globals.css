@@ -120,6 +120,27 @@ a {
   outline-offset: 3px;
 }
 
+@keyframes project-ken-burns {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.06) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+.project-ken-burns {
+  animation: project-ken-burns 9s var(--ease-out) infinite alternate;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-ken-burns {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -131,5 +152,9 @@ a {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .project-ken-burns {
+    animation: none !important;
   }
 }

@@ -186,15 +186,15 @@ export const cv = {
       },
     },
     {
-      id: "sport-club",
-      title: "Sport Club Manage",
+      id: "sportclub",
+      title: "Sport Club PowerPlay",
       courseBadge: true,
       summary: {
-        pl: "Zarządzanie zajęciami sportowymi, klasami, terminami i drużynami — osobny panel admina i uczestnika (zapisy / wypisy).",
-        en: "Manage sports classes, schedules and teams — separate admin and participant panels (join / leave).",
-        de: "Verwaltung von Sportkursen, Terminen und Teams — getrennte Admin- und Teilnehmer-Panels (an-/abmelden).",
-        es: "Gestión de clases deportivas, horarios y equipos — paneles separados de admin y participante (alta / baja).",
-        uk: "Керування спортивними заняттями, розкладом і командами — окремі панелі адміна та учасника (запис / відпис).",
+        pl: "Zarządzanie kursami sportowymi: panel admina (kursy, klasy, harmonogram) i uczestnika (zapisy / wypisy, usuwanie konta).",
+        en: "Sports course management: admin panel (courses, classes, schedule) and participant panel (join / leave, delete account).",
+        de: "Sportkurs-Verwaltung: Admin-Panel (Kurse, Klassen, Plan) und Teilnehmer-Panel (an-/abmelden, Konto löschen).",
+        es: "Gestión de cursos deportivos: panel admin (cursos, clases, horario) y participante (alta / baja, borrar cuenta).",
+        uk: "Керування спортивними курсами: панель адміна (курси, класи, розклад) і учасника (запис / відпис, видалення акаунта).",
       },
     },
     {
