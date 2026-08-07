@@ -6,7 +6,8 @@
   "nav": {
     "about": "Wer ich bin",
     "projects": "Projekte",
-    "path": "Pfad",
+    "path": "Erfahrung",
+    "pathMobile": "CV",
     "contact": "Kontakt",
     "resume": "Resume",
     "openMenu": "Menü öffnen",
@@ -37,12 +38,34 @@
     "techTitle": "Technologien"
   },
   "path": {
-    "eyebrow": "Erfahrung",
-    "title": "Pfad",
-    "lead": "Kompakter Überblick über Erfahrung, Skills und Bildung — CV als Seite.",
+    "eyebrow": "CV",
+    "title": "Erfahrung",
+    "lead": "Vollständiges Online-CV — Erfahrung, Skills, Projekte und Bildung.",
+    "summary": "Zusammenfassung",
     "experience": "Erfahrung",
-    "skills": "Kompetenzen",
-    "education": "Bildung"
+    "skills": "Technische Skills",
+    "softSkills": "Soft Skills",
+    "projects": "Projekte",
+    "projectsNote": "Kurze Erwähnungen — ausführliche Case Studies findest du unter Projekte.",
+    "courseBadge": "Während des Programmierkurses",
+    "live": "Live",
+    "education": "Bildung",
+    "certificates": "Zertifikate",
+    "viewCertificate": "Zertifikat ansehen",
+    "openCertificateTab": "In neuem Tab öffnen",
+    "closeCertificate": "Schließen",
+    "languages": "Sprachen",
+    "remote": "Remote",
+    "showPhone": "Nummer anzeigen",
+    "skillGroups": {
+      "frontend": "Frontend",
+      "backend": "Backend & Daten",
+      "ai": "KI",
+      "payments": "Zahlungen",
+      "quality": "Qualität & DX",
+      "deploy": "Deployment",
+      "product": "Produkt & Web"
+    }
   },
   "projects": {
     "title": "Projekte",
@@ -98,14 +121,23 @@
     "personalData": "Personenbezogene Daten"
   },
   "common": {
-    "availability": "Offen für Projekte"
+    "availability": "Offen für Projekte",
+    "expandAvatar": "Foto ansehen",
+    "closeAvatar": "Schließen"
   },
   "languages": {
     "pl": "Polski",
     "en": "English",
     "de": "Deutsch",
     "es": "Español",
-    "uk": "Українська"
+    "uk": "Українська",
+    "short": {
+      "pl": "PL",
+      "en": "EN",
+      "de": "DE",
+      "es": "ES",
+      "uk": "UK"
+    }
   },
   "notFound": {
     "title": "Seite nicht gefunden.",

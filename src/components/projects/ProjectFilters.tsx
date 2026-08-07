@@ -36,8 +36,8 @@ export function ProjectFilters() {
             className={cn(
               "focus-ring rounded-full border px-4 py-2 text-sm transition-colors",
               filter === option.id
-                ? "border-[var(--fg)] bg-[var(--fg)] text-[var(--bg)]"
-                : "border-[var(--line)] bg-[var(--bg-elevated)] text-[var(--fg-muted)] hover:text-[var(--fg)]",
+                ? "border-fg bg-fg text-bg"
+                : "border-line bg-bg-elevated text-fg-muted hover:text-fg",
             )}
             onClick={() => setFilter(option.id)}
           >
@@ -54,7 +54,7 @@ export function ProjectFilters() {
         </AnimatePresence>
       </div>
 
-      {filtered.length === 0 ? <p className="mt-8 text-[var(--fg-muted)]">{t("empty")}</p> : null}
+      {filtered.length === 0 ? <p className="text-fg-muted mt-8">{t("empty")}</p> : null}
     </div>
   );
 }

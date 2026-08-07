@@ -51,7 +51,8 @@ Po krótkim czasie odwiedzający powinien wiedzieć:
 
 - Strona główna
 - Projekty
-- CV (sekcja łącząca CV oraz informacje „O mnie”; nazwa może zostać dopracowana)
+- Kim jestem (`/about`)
+- CV / Doświadczenie (`/path`) — pełne CV online (mobile: „CV”, desktop: „Doświadczenie”); szczegóły: `docs/CV_Online.md`
 - Kontakt
 
 Projekt powinien umożliwiać łatwe dodawanie kolejnych projektów i rozwój strony bez przebudowy całej aplikacji.
@@ -82,11 +83,20 @@ Projekt od początku powinien być przygotowany do obsługi wielu języków:
 - Español
 - Українська
 
-Przełączanie języka powinno odbywać się za pomocą listy rozwijanej.
+Przełączanie języka powinno odbywać się za pomocą listy rozwijanej (ikona globusa; na mobile skróty PL / EN / DE / ES / UK).
 
 Przy pierwszej wizycie strona powinna automatycznie wykrywać język interfejsu użytkownika i wyświetlać odpowiednią wersję językową.
 
 Jeżeli dany język nie będzie dostępny, domyślnym językiem powinien być język angielski.
+
+---
+
+# Nawigacja i layout
+
+- **Desktop:** stały lewy sidebar (avatar, imię, rola, nawigacja, przełącznik języka).
+- **Mobile:** górny pasek (avatar + imię, język) oraz dolny tab bar jak w aplikacji (bez hamburger menu).
+- **Avatar:** klik otwiera powiększony podgląd (lightbox) na mobile i desktop.
+- **Landing (mobile):** pierwszy ekran wypełniony treścią hero; stopka dostępna po scrollu.
 
 ---
 

@@ -9,6 +9,12 @@
 5. **Zakaz autonomicznego rozszerzania zakresu:** Nie dodawaj nowych funkcji (efekty P2/P3, CMS, blog, nowe strony) bez jednoznacznej zgody użytkownika.
 6. **Formatowanie Prettier:** Po zmianach uruchom `npx prettier --write .`, potem `npm run format:check`.
 7. **Lokalna weryfikacja jakości:** Przed zakończeniem pracy: `npm run format:check`, `npm run lint`, `npm run typecheck`, `npm run build`. Wszystkie muszą być zielone.
+8. **Tailwind CSS v4 — najnowszy zapis klas (obowiązkowy):**
+   - **Zakaz** `bg-[var(--token)]`, `text-[var(--token)]`, `border-[var(--token)]` itd.
+   - Tokeny z `@theme` (`--color-*`): utilities, np. `border-line`, `text-fg-muted`, `bg-bg-elevated`, `text-accent`, `bg-accent/10`, `decoration-line`.
+   - Surowa zmienna CSS: `bg-(--bg)/95`, `w-(--sidebar-w)`, `shadow-(--shadow)` — **nigdy** `bg-[var(--bg)]/95`.
+   - Arbitrary values ze znakiem ujemnym: `left-[-1.91rem]`, **nie** `-left-[1.91rem]`.
+   - Przed zakończeniem pracy popraw ostrzeżenia Tailwind IntelliSense w zmienionych plikach.
 
 ## Architektura (single app)
 

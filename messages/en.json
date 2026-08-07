@@ -6,7 +6,8 @@
   "nav": {
     "about": "Who I am",
     "projects": "Projects",
-    "path": "Path",
+    "path": "Experience",
+    "pathMobile": "CV",
     "contact": "Contact",
     "resume": "Resume",
     "openMenu": "Open menu",
@@ -37,12 +38,34 @@
     "techTitle": "Technologies"
   },
   "path": {
-    "eyebrow": "Experience",
-    "title": "Path",
-    "lead": "A concise view of experience, skills and education — CV as a page.",
+    "eyebrow": "CV",
+    "title": "Experience",
+    "lead": "Full online CV — experience, skills, projects and education.",
+    "summary": "Summary",
     "experience": "Experience",
-    "skills": "Skills",
-    "education": "Education"
+    "skills": "Technical skills",
+    "softSkills": "Soft skills",
+    "projects": "Projects",
+    "projectsNote": "Short mentions — fuller case studies live in the Projects tab.",
+    "courseBadge": "During programming course",
+    "live": "Live",
+    "education": "Education",
+    "certificates": "Certificates",
+    "viewCertificate": "View certificate",
+    "openCertificateTab": "Open in new tab",
+    "closeCertificate": "Close",
+    "languages": "Languages",
+    "remote": "Remote",
+    "showPhone": "Show number",
+    "skillGroups": {
+      "frontend": "Frontend",
+      "backend": "Backend & data",
+      "ai": "AI",
+      "payments": "Payments",
+      "quality": "Quality & DX",
+      "deploy": "Deployment",
+      "product": "Product & web"
+    }
   },
   "projects": {
     "title": "Projects",
@@ -98,14 +121,23 @@
     "personalData": "Personal data"
   },
   "common": {
-    "availability": "Open for projects"
+    "availability": "Open for projects",
+    "expandAvatar": "View photo",
+    "closeAvatar": "Close"
   },
   "languages": {
     "pl": "Polski",
     "en": "English",
     "de": "Deutsch",
     "es": "Español",
-    "uk": "Українська"
+    "uk": "Українська",
+    "short": {
+      "pl": "PL",
+      "en": "EN",
+      "de": "DE",
+      "es": "ES",
+      "uk": "UK"
+    }
   },
   "notFound": {
     "title": "Page not found.",

@@ -21,8 +21,8 @@ export default async function PrivacyPage({ params }: Props) {
     <section className="py-16 md:py-24">
       <Reveal>
         <h1 className="display text-4xl md:text-6xl">{t("title")}</h1>
-        <p className="mt-3 text-sm text-[var(--fg-muted)]">{t("updated")}</p>
-        <div className="prose-like mt-8 max-w-3xl space-y-4 text-[var(--fg-muted)]">
+        <p className="text-fg-muted mt-3 text-sm">{t("updated")}</p>
+        <div className="prose-like text-fg-muted mt-8 max-w-3xl space-y-4">
           <p>{t("intro")}</p>
           <p>{t("controller")}</p>
           <p>{t("form")}</p>

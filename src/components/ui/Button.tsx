@@ -16,10 +16,9 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-[var(--accent)] text-[var(--accent-ink)] hover:brightness-95 shadow-[0_10px_30px_rgba(184,240,0,0.25)]",
-  secondary:
-    "bg-[var(--bg-elevated)] text-[var(--fg)] border border-[var(--line)] hover:border-[var(--fg)]",
-  ghost: "bg-transparent text-[var(--fg)] hover:bg-white/5",
+    "bg-accent text-accent-ink hover:brightness-95 shadow-[0_10px_30px_rgba(184,240,0,0.25)]",
+  secondary: "bg-bg-elevated text-fg border border-line hover:border-fg",
+  ghost: "bg-transparent text-fg hover:bg-white/5",
 };
 
 function Spinner({ className }: { className?: string }) {

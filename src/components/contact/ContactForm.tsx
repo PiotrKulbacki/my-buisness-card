@@ -80,7 +80,7 @@ export function ContactForm() {
             name="name"
             autoComplete="name"
             disabled={loading}
-            className="focus-ring w-full rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-3"
+            className="focus-ring border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3"
           />
         </label>
         <label className="flex flex-col gap-3 text-sm">
@@ -94,21 +94,21 @@ export function ContactForm() {
             name="email"
             autoComplete="email"
             disabled={loading}
-            className="focus-ring w-full rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-3"
+            className="focus-ring border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3"
           />
         </label>
       </div>
       <label className="flex flex-col gap-3 text-sm">
         <span className="leading-none">
           {t("phone")}
-          <span className="ml-1 text-[var(--fg-muted)]">({t("optional")})</span>
+          <span className="text-fg-muted ml-1">({t("optional")})</span>
         </span>
         <input
           type="tel"
           name="phone"
           autoComplete="tel"
           disabled={loading}
-          className="focus-ring w-full rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-3"
+          className="focus-ring border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3"
         />
       </label>
       <label className="flex flex-col gap-3 text-sm">
@@ -121,7 +121,7 @@ export function ContactForm() {
           name="message"
           rows={6}
           disabled={loading}
-          className="focus-ring w-full resize-y rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-3"
+          className="focus-ring border-line bg-bg-elevated w-full resize-y rounded-2xl border px-4 py-3"
         />
       </label>
       <input
@@ -132,7 +132,7 @@ export function ContactForm() {
         className="absolute left-[-9999px] h-0 w-0 opacity-0"
         aria-hidden
       />
-      <p className="text-sm text-[var(--fg-muted)]">
+      <p className="text-fg-muted text-sm">
         {t("privacyNote")}{" "}
         <Link href="/privacy" className="underline underline-offset-4">
           {t("privacyLink")}

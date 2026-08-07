@@ -6,7 +6,8 @@
   "nav": {
     "about": "Quién soy",
     "projects": "Proyectos",
-    "path": "Trayectoria",
+    "path": "Experiencia",
+    "pathMobile": "CV",
     "contact": "Contacto",
     "resume": "Resume",
     "openMenu": "Abrir menú",
@@ -37,12 +38,34 @@
     "techTitle": "Tecnologías"
   },
   "path": {
-    "eyebrow": "Experiencia",
-    "title": "Trayectoria",
-    "lead": "Resumen de experiencia, skills y educación — CV como página.",
+    "eyebrow": "CV",
+    "title": "Experiencia",
+    "lead": "CV online completo — experiencia, skills, proyectos y educación.",
+    "summary": "Resumen",
     "experience": "Experiencia",
-    "skills": "Competencias",
-    "education": "Educación"
+    "skills": "Skills técnicas",
+    "softSkills": "Soft skills",
+    "projects": "Proyectos",
+    "projectsNote": "Menciones breves — los case studies completos están en la pestaña Proyectos.",
+    "courseBadge": "Durante el curso de programación",
+    "live": "Live",
+    "education": "Educación",
+    "certificates": "Certificados",
+    "viewCertificate": "Ver certificado",
+    "openCertificateTab": "Abrir en nueva pestaña",
+    "closeCertificate": "Cerrar",
+    "languages": "Idiomas",
+    "remote": "Remoto",
+    "showPhone": "Mostrar número",
+    "skillGroups": {
+      "frontend": "Frontend",
+      "backend": "Backend y datos",
+      "ai": "IA",
+      "payments": "Pagos",
+      "quality": "Calidad y DX",
+      "deploy": "Deployment",
+      "product": "Producto y web"
+    }
   },
   "projects": {
     "title": "Proyectos",
@@ -98,14 +121,23 @@
     "personalData": "Datos personales"
   },
   "common": {
-    "availability": "Abierto a proyectos"
+    "availability": "Abierto a proyectos",
+    "expandAvatar": "Ver foto",
+    "closeAvatar": "Cerrar"
   },
   "languages": {
     "pl": "Polski",
     "en": "English",
     "de": "Deutsch",
     "es": "Español",
-    "uk": "Українська"
+    "uk": "Українська",
+    "short": {
+      "pl": "PL",
+      "en": "EN",
+      "de": "DE",
+      "es": "ES",
+      "uk": "UK"
+    }
   },
   "notFound": {
     "title": "Página no encontrada.",

@@ -7,16 +7,16 @@ export async function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto border-t border-[var(--line)]">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-3 text-xs leading-none text-[var(--fg-muted)] md:px-8">
+    <footer className="border-line mt-auto border-t">
+      <div className="text-fg-muted mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-3 text-xs leading-none md:px-8">
         <p className="truncate">
           © {year} {siteConfig.name}. {t("rights")}
         </p>
         <div className="flex shrink-0 gap-4">
-          <Link className="focus-ring rounded hover:text-[var(--fg)]" href="/privacy">
+          <Link className="focus-ring hover:text-fg rounded" href="/privacy">
             {t("privacy")}
           </Link>
-          <Link className="focus-ring rounded hover:text-[var(--fg)]" href="/privacy">
+          <Link className="focus-ring hover:text-fg rounded" href="/privacy">
             {t("personalData")}
           </Link>
         </div>

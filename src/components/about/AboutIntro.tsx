@@ -13,28 +13,25 @@ export function AboutIntro() {
       <div className="grid items-start gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
         <div>
           <Reveal>
-            <p className="text-xs tracking-[0.2em] text-[var(--fg-muted)] uppercase">
-              {t("eyebrow")}
-            </p>
-            <h1 className="display mt-3 text-4xl md:text-6xl">{t("title")}</h1>
-            <p className="mt-5 max-w-xl text-lg text-[var(--fg-muted)]">{t("lead")}</p>
-            <p className="mt-5 max-w-xl leading-relaxed text-[var(--fg-muted)]">{t("bio")}</p>
+            <h1 className="display text-4xl md:text-6xl">{t("title")}</h1>
+            <p className="text-fg-muted mt-5 max-w-xl text-lg">{t("lead")}</p>
+            <p className="text-fg-muted mt-5 max-w-xl leading-relaxed">{t("bio")}</p>
           </Reveal>
 
           <Reveal delay={0.08} className="mt-10">
             <h2 className="display text-2xl md:text-3xl">{t("buildingTitle")}</h2>
-            <p className="mt-3 max-w-xl text-[var(--fg-muted)]">{t("buildingBody")}</p>
-            <ul className="mt-5 space-y-2 text-sm text-[var(--fg-muted)]">
+            <p className="text-fg-muted mt-3 max-w-xl">{t("buildingBody")}</p>
+            <ul className="text-fg-muted mt-5 space-y-2 text-sm">
               <li className="flex gap-2">
-                <span className="text-[var(--accent)]">▸</span>
+                <span className="text-accent">▸</span>
                 {t("buildingItems.product")}
               </li>
               <li className="flex gap-2">
-                <span className="text-[var(--accent)]">▸</span>
+                <span className="text-accent">▸</span>
                 {t("buildingItems.websites")}
               </li>
               <li className="flex gap-2">
-                <span className="text-[var(--accent)]">▸</span>
+                <span className="text-accent">▸</span>
                 {t("buildingItems.apps")}
               </li>
             </ul>
@@ -46,7 +43,7 @@ export function AboutIntro() {
               {siteConfig.stack.map((tech) => (
                 <li
                   key={tech}
-                  className="rounded-full border border-[var(--line)] bg-[var(--bg-elevated)] px-3 py-1.5 text-sm"
+                  className="border-line bg-bg-elevated rounded-full border px-3 py-1.5 text-sm"
                 >
                   {tech}
                 </li>
@@ -56,7 +53,7 @@ export function AboutIntro() {
         </div>
 
         <Reveal delay={0.1} className="md:sticky md:top-8">
-          <Portrait className="aspect-[3/4] w-full" />
+          <Portrait className="aspect-3/4 w-full" />
         </Reveal>
       </div>
     </section>

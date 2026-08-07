@@ -6,7 +6,8 @@
   "nav": {
     "about": "Kim jestem",
     "projects": "Projekty",
-    "path": "Ścieżka",
+    "path": "Doświadczenie",
+    "pathMobile": "CV",
     "contact": "Kontakt",
     "resume": "Resume",
     "openMenu": "Otwórz menu",
@@ -37,12 +38,34 @@
     "techTitle": "Technologie"
   },
   "path": {
-    "eyebrow": "Doświadczenie",
-    "title": "Ścieżka",
-    "lead": "Skrót doświadczenia, kompetencji i edukacji — CV w formie strony.",
+    "eyebrow": "CV",
+    "title": "Doświadczenie",
+    "lead": "Pełne CV online — doświadczenie, kompetencje, projekty i edukacja.",
+    "summary": "Podsumowanie",
     "experience": "Doświadczenie",
-    "skills": "Kompetencje",
-    "education": "Edukacja"
+    "skills": "Umiejętności techniczne",
+    "softSkills": "Kompetencje miękkie",
+    "projects": "Projekty",
+    "projectsNote": "Krótkie wzmianki — pełniejsze case studies znajdziesz w zakładce Projekty.",
+    "courseBadge": "Podczas kursu programowania",
+    "live": "Live",
+    "education": "Edukacja",
+    "certificates": "Certyfikaty",
+    "viewCertificate": "Zobacz certyfikat",
+    "openCertificateTab": "Otwórz w nowej karcie",
+    "closeCertificate": "Zamknij",
+    "languages": "Języki",
+    "remote": "Remote",
+    "showPhone": "Pokaż numer",
+    "skillGroups": {
+      "frontend": "Frontend",
+      "backend": "Backend i dane",
+      "ai": "AI",
+      "payments": "Płatności",
+      "quality": "Jakość i DX",
+      "deploy": "Deployment",
+      "product": "Produkt i web"
+    }
   },
   "projects": {
     "title": "Projekty",
@@ -98,14 +121,23 @@
     "personalData": "Dane osobowe"
   },
   "common": {
-    "availability": "Otwarty na projekty"
+    "availability": "Otwarty na projekty",
+    "expandAvatar": "Zobacz zdjęcie",
+    "closeAvatar": "Zamknij"
   },
   "languages": {
     "pl": "Polski",
     "en": "English",
     "de": "Deutsch",
     "es": "Español",
-    "uk": "Українська"
+    "uk": "Українська",
+    "short": {
+      "pl": "PL",
+      "en": "EN",
+      "de": "DE",
+      "es": "ES",
+      "uk": "UK"
+    }
   },
   "notFound": {
     "title": "Nie znaleziono strony.",

@@ -11,8 +11,7 @@ export function AppToaster() {
       closeButton
       toastOptions={{
         classNames: {
-          toast:
-            "border border-[var(--line)] bg-[var(--bg-elevated)] text-[var(--fg)] shadow-[var(--shadow)]",
+          toast: "border border-line bg-bg-elevated text-fg shadow-(--shadow)",
         },
       }}
     />

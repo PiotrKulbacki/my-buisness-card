@@ -88,7 +88,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <div className="site-grid" aria-hidden />
           <div className="site-grain" aria-hidden />
           <Sidebar />
-          <div className="relative z-10 flex min-h-full flex-col pt-14 md:pt-0 md:pl-[var(--sidebar-w)]">
+          <div className="relative z-10 flex min-h-full flex-col pt-14 pb-[calc(3.5rem+env(safe-area-inset-bottom,0px))] md:pt-0 md:pb-0 md:pl-(--sidebar-w)">
             <main className="mx-auto w-full max-w-5xl flex-1 px-5 py-6 md:px-8 md:py-8">
               <PageTransition>{children}</PageTransition>
             </main>

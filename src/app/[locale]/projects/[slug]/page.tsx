@@ -39,39 +39,34 @@ export default async function ProjectDetailPage({ params }: Props) {
   return (
     <article className="py-16 md:py-24">
       <Reveal>
-        <Link href="/projects" className="text-sm text-[var(--fg-muted)] hover:text-[var(--fg)]">
+        <Link href="/projects" className="text-fg-muted hover:text-fg text-sm">
           ← {t("back")}
         </Link>
-        <p className="mt-6 text-xs tracking-[0.18em] text-[var(--fg-muted)] uppercase">
+        <p className="text-fg-muted mt-6 text-xs tracking-[0.18em] uppercase">
           {project.category} · {project.year}
         </p>
         <h1 className="display mt-3 text-4xl md:text-6xl">{project.title[loc]}</h1>
-        <p className="mt-5 max-w-2xl text-lg text-[var(--fg-muted)]">{project.summary[loc]}</p>
+        <p className="text-fg-muted mt-5 max-w-2xl text-lg">{project.summary[loc]}</p>
       </Reveal>
 
       <Reveal delay={0.1} className="mt-10">
         <div
-          className="aspect-[16/9] overflow-hidden rounded-[28px] border border-[var(--line)]"
+          className="border-line aspect-[16/9] overflow-hidden rounded-[28px] border"
           style={{ background: project.coverGradient }}
         />
       </Reveal>
 
       <div className="mt-12 grid gap-10 md:grid-cols-[1.4fr_0.6fr]">
         <Reveal>
-          <p className="text-base leading-relaxed text-[var(--fg-muted)] md:text-lg">
-            {project.body[loc]}
-          </p>
+          <p className="text-fg-muted text-base leading-relaxed md:text-lg">{project.body[loc]}</p>
         </Reveal>
         <Reveal delay={0.08}>
-          <div className="space-y-6 rounded-[24px] border border-[var(--line)] bg-[var(--bg-elevated)] p-6">
+          <div className="border-line bg-bg-elevated space-y-6 rounded-[24px] border p-6">
             <div>
               <h2 className="text-sm font-semibold tracking-wide uppercase">{t("tech")}</h2>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {project.tech.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-full border border-[var(--line)] px-3 py-1 text-sm"
-                  >
+                  <li key={tech} className="border-line rounded-full border px-3 py-1 text-sm">
                     {tech}
                   </li>
                 ))}
@@ -102,7 +97,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           {project.gallery.map((item) => (
             <div
               key={item.label}
-              className="aspect-[4/3] overflow-hidden rounded-[20px] border border-[var(--line)]"
+              className="border-line aspect-[4/3] overflow-hidden rounded-[20px] border"
               style={{ background: item.gradient }}
               title={item.label}
             />

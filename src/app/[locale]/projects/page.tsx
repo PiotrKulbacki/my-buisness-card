@@ -21,7 +21,7 @@ export default async function ProjectsPage({ params }: Props) {
     <section className="py-16 md:py-24">
       <Reveal>
         <h1 className="display text-4xl md:text-6xl">{t("title")}</h1>
-        <p className="mt-4 max-w-2xl text-[var(--fg-muted)]">{t("lead")}</p>
+        <p className="text-fg-muted mt-4 max-w-2xl">{t("lead")}</p>
       </Reveal>
       <div className="mt-10">
         <ProjectFilters />

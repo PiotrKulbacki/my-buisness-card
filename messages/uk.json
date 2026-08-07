@@ -6,7 +6,8 @@
   "nav": {
     "about": "Хто я",
     "projects": "Проєкти",
-    "path": "Шлях",
+    "path": "Досвід",
+    "pathMobile": "CV",
     "contact": "Контакт",
     "resume": "Resume",
     "openMenu": "Відкрити меню",
@@ -37,12 +38,34 @@
     "techTitle": "Технології"
   },
   "path": {
-    "eyebrow": "Досвід",
-    "title": "Шлях",
-    "lead": "Стислий огляд досвіду, навичок і освіти — CV як сторінка.",
+    "eyebrow": "CV",
+    "title": "Досвід",
+    "lead": "Повне онлайн-CV — досвід, навички, проєкти та освіта.",
+    "summary": "Коротко про мене",
     "experience": "Досвід",
-    "skills": "Навички",
-    "education": "Освіта"
+    "skills": "Технічні навички",
+    "softSkills": "Soft skills",
+    "projects": "Проєкти",
+    "projectsNote": "Короткі згадки — детальні case studies у вкладці Проєкти.",
+    "courseBadge": "Під час курсу програмування",
+    "live": "Live",
+    "education": "Освіта",
+    "certificates": "Сертифікати",
+    "viewCertificate": "Переглянути сертифікат",
+    "openCertificateTab": "Відкрити в новій вкладці",
+    "closeCertificate": "Закрити",
+    "languages": "Мови",
+    "remote": "Remote",
+    "showPhone": "Показати номер",
+    "skillGroups": {
+      "frontend": "Frontend",
+      "backend": "Backend і дані",
+      "ai": "AI",
+      "payments": "Платежі",
+      "quality": "Якість і DX",
+      "deploy": "Deployment",
+      "product": "Продукт і web"
+    }
   },
   "projects": {
     "title": "Проєкти",
@@ -98,14 +121,23 @@
     "personalData": "Персональні дані"
   },
   "common": {
-    "availability": "Відкритий до проєктів"
+    "availability": "Відкритий до проєктів",
+    "expandAvatar": "Переглянути фото",
+    "closeAvatar": "Закрити"
   },
   "languages": {
     "pl": "Polski",
     "en": "English",
     "de": "Deutsch",
     "es": "Español",
-    "uk": "Українська"
+    "uk": "Українська",
+    "short": {
+      "pl": "PL",
+      "en": "EN",
+      "de": "DE",
+      "es": "ES",
+      "uk": "UK"
+    }
   },
   "notFound": {
     "title": "Сторінку не знайдено.",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import type { ReactNode } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Avatar } from "@/components/ui/Avatar";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
@@ -15,85 +15,139 @@ const links = [
   { href: "/contact", key: "contact" as const },
 ];
 
+function NavIcon({ children }: { children: ReactNode }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="size-5 shrink-0"
+      aria-hidden
+    >
+      {children}
+    </svg>
+  );
+}
+
+const icons: Record<(typeof links)[number]["key"], ReactNode> = {
+  about: (
+    <NavIcon>
+      {/* Person + spark — identity */}
+      <circle cx="12" cy="8" r="3.25" />
+      <path d="M5.5 19.5c1.2-3.2 3.4-4.8 6.5-4.8s5.3 1.6 6.5 4.8" />
+      <path d="M18.2 4.2l.4 1.1 1.1.4-1.1.4-.4 1.1-.4-1.1-1.1-.4 1.1-.4z" />
+    </NavIcon>
+  ),
+  projects: (
+    <NavIcon>
+      {/* Stacked boards — projects */}
+      <rect x="4" y="5" width="14" height="10" rx="2" />
+      <path d="M7 17h11a2 2 0 0 0 2-2V8" />
+      <path d="M8 9.5h6M8 12.5h4" />
+    </NavIcon>
+  ),
+  path: (
+    <NavIcon>
+      {/* Ascending path / milestones */}
+      <path d="M4 17.5c2.2-1.2 3.4-3.4 5.2-5.1 1.5-1.4 3.1-1.4 4.6 0L18 16" />
+      <circle cx="6.2" cy="16.2" r="1.4" />
+      <circle cx="12" cy="11.2" r="1.4" />
+      <circle cx="18" cy="15.8" r="1.4" />
+      <path d="M18 12.5v-3.2h-3.2" />
+    </NavIcon>
+  ),
+  contact: (
+    <NavIcon>
+      {/* Chat bubble with pulse */}
+      <path d="M5.5 17.5 4 20l3.2-.9A7.8 7.8 0 1 0 5.5 17.5Z" />
+      <path d="M9 11h.01M12 11h.01M15 11h.01" />
+    </NavIcon>
+  ),
+};
+
 export function Sidebar() {
   const t = useTranslations("nav");
   const tSidebar = useTranslations("sidebar");
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-
-  const brand = (
-    <Link
-      href="/"
-      onClick={() => setOpen(false)}
-      className="focus-ring flex flex-col items-center gap-3 rounded-xl text-center"
-    >
-      <Avatar />
-      <div>
-        <p className="text-base leading-tight font-semibold">{siteConfig.name}</p>
-        <p className="mt-1 text-sm text-[var(--fg-muted)]">{tSidebar("role")}</p>
-      </div>
-    </Link>
-  );
-
-  const nav = (
-    <nav className="flex flex-col gap-3" aria-label={t("primaryNav")}>
-      {links.map((link) => {
-        const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
-        return (
-          <Link
-            key={link.href}
-            href={link.href}
-            onClick={() => setOpen(false)}
-            className={cn(
-              "focus-ring rounded-xl px-3 py-3.5 text-base transition-colors",
-              active
-                ? "bg-white/10 font-medium text-[var(--fg)]"
-                : "text-[var(--fg-muted)] hover:bg-white/5 hover:text-[var(--fg)]",
-            )}
-          >
-            {t(link.key)}
-          </Link>
-        );
-      })}
-    </nav>
-  );
 
   return (
     <>
-      <div className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between border-b border-[var(--line)] bg-[var(--bg)] px-4 md:hidden">
-        <Link href="/" onClick={() => setOpen(false)} className="focus-ring text-sm font-semibold">
-          {siteConfig.name}
-        </Link>
-        <button
-          type="button"
-          className="focus-ring rounded-full border border-[var(--line)] px-3 py-1.5 text-sm"
-          aria-expanded={open}
-          aria-controls="side-nav"
-          onClick={() => setOpen((value) => !value)}
-        >
-          {open ? t("closeMenu") : t("openMenu")}
-        </button>
-      </div>
+      {/* Mobile top bar: avatar + name | language */}
+      <header className="border-line bg-bg/95 fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-3 border-b px-4 backdrop-blur-md md:hidden">
+        <div className="flex min-w-0 items-center gap-2.5">
+          <Avatar size="sm" />
+          <Link href="/" className="focus-ring truncate rounded-lg text-sm font-semibold">
+            {siteConfig.name}
+          </Link>
+        </div>
+        <LanguageSwitcher compact menuPlacement="below" />
+      </header>
 
-      {open ? (
-        <div
-          className="fixed inset-0 z-40 bg-black/60 md:hidden"
-          onClick={() => setOpen(false)}
-          aria-hidden
-        />
-      ) : null}
-
-      <aside
-        id="side-nav"
-        className={cn(
-          "fixed top-0 left-0 z-50 flex h-full w-[min(84vw,300px)] flex-col border-r border-[var(--line)] bg-[var(--bg)] px-5 py-6 transition-transform duration-300 md:w-[var(--sidebar-w)] md:translate-x-0",
-          open ? "translate-x-0" : "-translate-x-full md:translate-x-0",
-        )}
+      {/* Mobile bottom tab bar */}
+      <nav
+        className="border-line bg-bg/95 fixed inset-x-0 bottom-0 z-50 border-t backdrop-blur-md md:hidden"
+        style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
+        aria-label={t("primaryNav")}
       >
-        <div className="mb-6">{brand}</div>
-        <div className="mb-6 border-t border-[var(--line)]" />
-        <div className="flex-1">{nav}</div>
-        <div className="mt-6 space-y-3 border-t border-[var(--line)] pt-4">
+        <ul className="grid h-14 grid-cols-4">
+          {links.map((link) => {
+            const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return (
+              <li key={link.href} className="min-w-0">
+                <Link
+                  href={link.href}
+                  className={cn(
+                    "focus-ring flex h-full flex-col items-center justify-center gap-0.5 px-1 text-center text-[10px] leading-tight transition-colors",
+                    active ? "text-accent font-medium" : "text-fg-muted active:text-fg",
+                  )}
+                >
+                  {icons[link.key]}
+                  <span className="line-clamp-1">
+                    {link.key === "path" ? t("pathMobile") : t(link.key)}
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+
+      {/* Desktop sidebar */}
+      <aside
+        className="border-line bg-bg fixed top-0 left-0 z-50 hidden h-full w-(--sidebar-w) flex-col border-r px-5 py-6 md:flex"
+        aria-label={t("primaryNav")}
+      >
+        <div className="mb-6 flex flex-col items-center gap-3 text-center">
+          <Avatar />
+          <Link href="/" className="focus-ring rounded-xl">
+            <p className="text-base leading-tight font-semibold">{siteConfig.name}</p>
+            <p className="text-fg-muted mt-1 text-sm">{tSidebar("role")}</p>
+          </Link>
+        </div>
+        <div className="border-line mb-6 border-t" />
+        <nav className="flex flex-1 flex-col gap-3" aria-label={t("primaryNav")}>
+          {links.map((link) => {
+            const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "focus-ring rounded-xl px-3 py-3.5 text-base transition-colors",
+                  active
+                    ? "text-fg bg-white/10 font-medium"
+                    : "text-fg-muted hover:text-fg hover:bg-white/5",
+                )}
+              >
+                {t(link.key)}
+              </Link>
+            );
+          })}
+        </nav>
+        <div className="border-line mt-6 space-y-3 border-t pt-4">
           <LanguageSwitcher />
         </div>
       </aside>

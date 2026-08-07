@@ -23,10 +23,10 @@ export default async function ContactPage({ params }: Props) {
       <div className="grid w-full gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center">
         <Reveal>
           <h1 className="display text-4xl md:text-6xl">{t("title")}</h1>
-          <p className="mt-4 text-[var(--fg-muted)]">{t("lead")}</p>
+          <p className="text-fg-muted mt-4">{t("lead")}</p>
           <dl className="mt-8 space-y-4 text-sm">
             <div>
-              <dt className="text-[var(--fg-muted)]">{t("directEmail")}</dt>
+              <dt className="text-fg-muted">{t("directEmail")}</dt>
               <dd>
                 <a className="underline underline-offset-4" href={`mailto:${siteConfig.email}`}>
                   {siteConfig.email}
@@ -34,7 +34,7 @@ export default async function ContactPage({ params }: Props) {
               </dd>
             </div>
             <div>
-              <dt className="text-[var(--fg-muted)]">{t("location")}</dt>
+              <dt className="text-fg-muted">{t("location")}</dt>
               <dd>{t("remote")}</dd>
             </div>
           </dl>

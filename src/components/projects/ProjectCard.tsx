@@ -18,7 +18,7 @@ export function ProjectCard({ project }: { project: Project }) {
       exit={{ opacity: 0, scale: 0.98 }}
       whileHover={{ y: -6 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group overflow-hidden rounded-[24px] border border-[var(--line)] bg-[var(--bg-elevated)] shadow-sm"
+      className="group border-line bg-bg-elevated overflow-hidden rounded-[24px] border shadow-sm"
     >
       <Link href={`/projects/${project.slug}`} className="focus-ring block">
         <div
@@ -40,12 +40,12 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
         </div>
         <div className="space-y-2 p-5">
-          <div className="flex items-center justify-between gap-3 text-xs text-[var(--fg-muted)]">
+          <div className="text-fg-muted flex items-center justify-between gap-3 text-xs">
             <span className="tracking-wider uppercase">{project.category}</span>
             <span>{project.year}</span>
           </div>
           <h3 className="text-xl font-semibold">{project.title[locale]}</h3>
-          <p className="text-sm text-[var(--fg-muted)]">{project.summary[locale]}</p>
+          <p className="text-fg-muted text-sm">{project.summary[locale]}</p>
           <span className="inline-flex pt-2 text-sm font-medium underline-offset-4 group-hover:underline">
             {t("viewProject")}
           </span>

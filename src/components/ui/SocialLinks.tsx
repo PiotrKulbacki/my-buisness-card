@@ -26,10 +26,12 @@ const icons: Record<SocialKey, { label: string; path: string }> = {
   },
 };
 
-export function SocialLinks({ className }: { className?: string }) {
+export function SocialLinks({ className, keys }: { className?: string; keys?: SocialKey[] }) {
+  const list = keys ?? (Object.keys(icons) as SocialKey[]);
+
   return (
     <ul className={cn("flex flex-wrap items-center gap-3", className)}>
-      {(Object.keys(icons) as SocialKey[]).map((key) => {
+      {list.map((key) => {
         const item = icons[key];
         return (
           <li key={key}>
@@ -38,7 +40,7 @@ export function SocialLinks({ className }: { className?: string }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={item.label}
-              className="focus-ring inline-flex size-10 items-center justify-center rounded-full border border-[var(--line)] text-[var(--fg)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
+              className="focus-ring border-line text-fg hover:border-accent hover:text-accent inline-flex size-10 items-center justify-center rounded-full border transition-colors"
             >
               <svg viewBox="0 0 24 24" className="size-4 fill-current" aria-hidden>
                 <path d={item.path} />
