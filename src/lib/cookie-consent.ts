@@ -4,6 +4,7 @@ import {
   COOKIE_MAX_AGE_SECONDS,
   type CookieConsentValue,
 } from "@/config/cookies";
+import { updateGoogleConsentMode } from "@/lib/google-consent";
 
 export const COOKIE_SETTINGS_EVENT = "pk:open-cookie-settings";
 export const COOKIE_CONSENT_CHANGE_EVENT = "pk:cookie-consent-change";
@@ -51,6 +52,8 @@ export function writeConsentCookie(analytics: boolean): CookieConsentValue {
     typeof window !== "undefined" && window.location.protocol === "https:" ? "; Secure" : "";
   document.cookie = `${COOKIE_CONSENT_NAME}=${encoded}; Path=/; Max-Age=${COOKIE_MAX_AGE_SECONDS}; SameSite=Lax${secure}`;
   cachedConsentSnapshot = value;
+  // Consent Mode v2 update before GA mounts / after revoke
+  updateGoogleConsentMode(analytics);
   if (typeof window !== "undefined") {
     window.dispatchEvent(new Event(COOKIE_CONSENT_CHANGE_EVENT));
   }

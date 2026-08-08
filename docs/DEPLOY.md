@@ -19,15 +19,16 @@ git push origin main
 3. **Root Directory:** zostaw puste (`.`) — **nie** ustawiaj `website`
 4. Env vars (opcjonalnie na preview, wymagane na prod z formularzem):
 
-| Name                             | Value                                                          |
-| -------------------------------- | -------------------------------------------------------------- |
-| `NEXT_PUBLIC_SITE_URL`           | `https://piotrkulbacki.com`                                    |
-| `NEXT_PUBLIC_FACEBOOK_APP_ID`    | opcjonalnie — Meta App ID (`fb:app_id` w OG; `docs/SEO.md`)    |
-| `BREVO_API_KEY`                  | z Brevo → SMTP & API → API keys                                |
-| `BREVO_FROM_EMAIL`               | `Piotr Kulbacki <kontakt@piotrkulbacki.com>` (domena verified) |
-| `CONTACT_TO_EMAIL`               | `it.piotr.kulbacki@gmail.com` (skrzynka, w której czytasz)     |
-| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Cloudflare Turnstile site key                                  |
-| `TURNSTILE_SECRET_KEY`           | Cloudflare Turnstile secret key                                |
+| Name                             | Value                                                                                              |
+| -------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL`           | `https://piotrkulbacki.com`                                                                        |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID`  | opcjonalnie — GA4 `G-…` (tylko **production** + po zgodzie; Consent Mode v2 — `docs/Analytics.md`) |
+| `NEXT_PUBLIC_FACEBOOK_APP_ID`    | opcjonalnie — Meta App ID (`fb:app_id` w OG; `docs/SEO.md`)                                        |
+| `BREVO_API_KEY`                  | z Brevo → SMTP & API → API keys                                                                    |
+| `BREVO_FROM_EMAIL`               | `Piotr Kulbacki <kontakt@piotrkulbacki.com>` (domena verified)                                     |
+| `CONTACT_TO_EMAIL`               | `it.piotr.kulbacki@gmail.com` (skrzynka, w której czytasz)                                         |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Cloudflare Turnstile site key                                                                      |
+| `TURNSTILE_SECRET_KEY`           | Cloudflare Turnstile secret key                                                                    |
 
 5. Domains: `piotrkulbacki.com` + redirect `www` → apex
 6. Deploy → smoke test `/pl` + sidebar + zdjęcia + formularz
@@ -62,12 +63,20 @@ Szczegóły sitemap / hreflang / OG: [`docs/SEO.md`](SEO.md).
 2. Wszystkie URL powinny mieć **tę samą** grafikę z logo (nie portret)
 3. WhatsApp: cache bywa wolny — goły link tuż po deployu nie zawsze oznacza błąd OG
 
-## 6. Post-launch smoke
+## 6. Google Analytics 4 (opcjonalnie)
+
+1. Utwórz GA4 property + Web stream → Measurement ID `G-…`
+2. Vercel env: `NEXT_PUBLIC_GA_MEASUREMENT_ID` (Production)
+3. Redeploy
+4. Smoke Consent Mode — checklista w [`docs/Analytics.md`](Analytics.md) (brak `gtag` przed zgodą; hit po Accept)
+
+## 7. Post-launch smoke
 
 - [ ] `/pl`, `/en`, language switcher
 - [ ] Projects: Lyamo (`lyamo.eu`), AI Document (`aidocument.eu/pl`), AK
 - [ ] Contact form (Turnstile + Brevo: inbox + auto-reply)
 - [ ] Logo w mailach z `https://piotrkulbacki.com/brand/…`
 - [ ] OG preview (FB Debugger) + GSC sitemap
+- [ ] GA4 + Consent Mode (jeśli ID ustawione): Accept → Realtime; Necessary only → brak GA
 - [ ] Lighthouse
 - [ ] LinkedIn announcement

@@ -2,6 +2,8 @@
 
 Status: wdrożone (canonical, hreflang, robots, sitemap, wspólny OG image, opcjonalny `fb:app_id`).
 
+Analityka (poza SEO tech, ale często weryfikowana razem z GSC): `docs/Analytics.md`.
+
 ---
 
 ## Pliki

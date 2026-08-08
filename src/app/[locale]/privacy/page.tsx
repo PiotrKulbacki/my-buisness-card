@@ -79,6 +79,11 @@ export default async function PrivacyPage({ params }: Props) {
                 {" — "}
                 {t("cookieConsent")}
               </li>
+              <li>
+                <span className="text-fg font-medium">_ga / _ga_*</span>
+                {" — "}
+                {t("cookieGa")}
+              </li>
             </ul>
             <p>{t("cookiesNoMarketing")}</p>
           </div>

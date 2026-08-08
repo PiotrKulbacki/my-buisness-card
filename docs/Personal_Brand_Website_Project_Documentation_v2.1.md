@@ -1,6 +1,6 @@
 # Personal Brand Website – Project Documentation (v2.1)
 
-> Brief wstępny (kierunek produktu). **Aktualny stan i runbooki:** `PROJECT_CHECKLIST.md`, `docs/SEO.md`, `docs/DEPLOY.md`, `docs/Projects_Section.md`, `docs/Legal_and_Cookies.md`, `docs/Brand_Logo.md`, `docs/CV_Online.md`.
+> Brief wstępny (kierunek produktu). **Aktualny stan i runbooki:** `PROJECT_CHECKLIST.md`, `docs/SEO.md`, `docs/Analytics.md`, `docs/DEPLOY.md`, `docs/Projects_Section.md`, `docs/Legal_and_Cookies.md`, `docs/Brand_Logo.md`, `docs/CV_Online.md`.
 
 ## Cel projektu
 
@@ -116,8 +116,8 @@ Dane kontaktowe oraz inne często wykorzystywane informacje powinny być zarząd
 Wdrożone dla działalności w Niemczech (Einzelunternehmen / Kleinunternehmer):
 
 - **Impressum** (`/impressum`) — § 5 DDG; adres, e-mail, telefon; bez USt-IdNr.
-- **Polityka prywatności** (`/privacy`) — formularz, hosting, analityka po zgodzie, inventarz cookies.
-- **Cookies** — `NEXT_LOCALE` + `pk_cookie_consent`; baner; Vercel Analytics tylko po „Akceptuję wszystkie”.
+- **Polityka prywatności** (`/privacy`) — formularz, hosting, analityka po zgodzie (Vercel + opcjonalne GA4), inventarz cookies.
+- **Cookies** — `NEXT_LOCALE` + `pk_cookie_consent`; baner; Vercel Analytics + GA4 (Consent Mode v2) tylko po „Akceptuję wszystkie”. Szczegóły: `docs/Analytics.md`.
 - **Regulamin / AGB** — nie wymagany przy samej wizytówce + formularzu.
 
 Pełny opis: **`docs/Legal_and_Cookies.md`**.

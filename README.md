@@ -14,9 +14,10 @@ Produkcja: [piotrkulbacki.com](https://piotrkulbacki.com)
 | `docs/Brand_Logo.md`        | Logo PK: warianty, favicon, mapa w layoutcie                                  |
 | `docs/CV_Online.md`         | Spec i stan sekcji CV (`/path`)                                               |
 | `docs/Legal_and_Cookies.md` | Impressum, privacy, cookies, układ stopki                                     |
+| `docs/Analytics.md`         | Vercel Analytics, GA4, Google Consent Mode v2                                 |
 | `docs/Projects_Section.md`  | Reguły case study / galerii projektów                                         |
 | `docs/SEO.md`               | Canonical, hreflang, robots, sitemap, wspólny OG image                        |
-| `docs/DEPLOY.md`            | Env Vercel, GSC, smoke launch                                                 |
+| `docs/DEPLOY.md`            | Env Vercel, GSC, GA, smoke launch                                             |
 | `PROJECT_CHECKLIST.md`      | Żywa checklista postępów                                                      |
 
 ## Start lokalny
@@ -48,14 +49,15 @@ Sekcja **CV / Doświadczenie** (`/path`): pełne CV online — [`docs/CV_Online.
 
 **Projekty (live):** Lyamo → [lyamo.eu](https://lyamo.eu/), AI Document → [aidocument.eu/pl](https://aidocument.eu/pl), AK Gebäudeservice. Reguły case study: [`docs/Projects_Section.md`](docs/Projects_Section.md).
 
-Prawne: `/impressum`, `/privacy`, baner cookies — [`docs/Legal_and_Cookies.md`](docs/Legal_and_Cookies.md).
+Prawne: `/impressum`, `/privacy`, baner cookies — [`docs/Legal_and_Cookies.md`](docs/Legal_and_Cookies.md).  
+Analityka (Vercel + opcjonalne GA4, Consent Mode v2): [`docs/Analytics.md`](docs/Analytics.md).
 
 SEO (robots, sitemap 60 URL, OG z logo): [`docs/SEO.md`](docs/SEO.md).
 
 ## Następny krok
 
 1. **Google Search Console** — weryfikacja + submit `sitemap.xml`
-2. Smoke share preview (FB Debugger) po deployu SEO/OG
+2. (Opcjonalnie) **GA4** — `NEXT_PUBLIC_GA_MEASUREMENT_ID` na Vercel + smoke Consent Mode
 3. Case study: screenshoty Lyamo + AI Document
 4. Lighthouse + LinkedIn
 

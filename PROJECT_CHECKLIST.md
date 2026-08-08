@@ -17,10 +17,10 @@
 - [x] Projekt na Vercel (**Root Directory = puste / `.`**) + domena produkcyjna
 - [x] Zakup domeny (`piotrkulbacki.com` na Vercel + redirect www)
 - [x] Brevo + API key (kod: formularz + auto-reply; env na Vercel + weryfikacja domeny w Brevo)
-- [x] Decyzja analytics (Vercel Analytics; ładuje się dopiero po zgodzie w bannerze)
+- [x] Decyzja analytics (Vercel Analytics + opcjonalne GA4; oba dopiero po zgodzie w bannerze)
 - [x] Cookies: `NEXT_LOCALE` + `pk_cookie_consent`, lekki banner; link w stopce (docs: `docs/Legal_and_Cookies.md`)
 
-**Następny krok:** Google Search Console (sitemap) + smoke OG; screenshoty Lyamo / AI Document.
+**Następny krok:** Google Search Console (sitemap); opcjonalnie GA4 Measurement ID + smoke Consent Mode (`docs/Analytics.md`); screenshoty Lyamo / AI Document.
 
 ---
 
@@ -76,6 +76,8 @@
 - [x] Brevo zamiast Resend (formularz kontaktowy + auto-reply HTML)
 - [x] Cloudflare Turnstile na formularzu kontaktowym
 - [x] Cookies + zgoda na Vercel Analytics (banner; inventarz w `/privacy#cookies`)
+- [x] Google Analytics 4 via `@next/third-parties/google` (prod + consent; `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
+- [x] Google Consent Mode v2 (default denied → analytics_storage granted; bez CMP) — `docs/Analytics.md`
 - [x] Stopka mobile: dwie linie wyśrodkowane (logo+© / Impressum·Privacy·Cookies); desktop bez zmian układu prawnego
 
 ---
@@ -91,7 +93,7 @@
 
 ## Faza 7 — Launch
 
-- [x] Domena + env prod (Brevo, Turnstile, `NEXT_PUBLIC_SITE_URL`, opcjonalnie FB App ID)
+- [x] Domena + env prod (Brevo, Turnstile, `NEXT_PUBLIC_SITE_URL`, opcjonalnie FB App ID / GA Measurement ID)
 - [ ] Smoke + LinkedIn
 
 ---
@@ -124,3 +126,6 @@
 | 2026-08-08 | Brevo zamiast Resend: HTML inbox + auto-reply; publiczny email `kontakt@piotrkulbacki.com`                                              |
 | 2026-08-08 | Domena `piotrkulbacki.com` na Vercel; Turnstile; toast sukcesu skrócony; logo maila z domeny                                            |
 | 2026-08-08 | SEO: OG logo na wszystkich URL, robots/sitemap+hreflang, `fb:app_id`; AI Document zamiast brand-site; Lyamo → `lyamo.eu`; `docs/SEO.md` |
+| 2026-08-08 | GA4: `@next/third-parties/google` w root layout (prod + zgoda cookies); privacy i18n 5 locale                                           |
+| 2026-08-08 | Google Consent Mode v2: default denied → analytics_storage granted po Accept; ads denied; bez CMP                                       |
+| 2026-08-08 | Docs: `docs/Analytics.md`; update Legal / DEPLOY / README / SEO / checklist                                                             |
