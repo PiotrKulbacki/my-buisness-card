@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { locales } from "@/i18n/routing";
 
@@ -19,6 +19,10 @@ const schema = z.object({
   turnstileToken: z.string().optional(),
 });
 
+/** Focus stays inside the field — outline-offset was clipped by page overflow. */
+const fieldClassName =
+  "border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3 transition-[border-color,box-shadow] focus-visible:border-accent focus-visible:shadow-[0_0_0_3px_color-mix(in_oklab,var(--accent)_35%,transparent)] focus-visible:outline-none disabled:opacity-60";
+
 function RequiredMark() {
   return (
     <span className="ml-0.5 text-red-500" aria-hidden="true">
@@ -30,6 +34,7 @@ function RequiredMark() {
 export function ContactForm() {
   const t = useTranslations("contact");
   const locale = useLocale();
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const turnstileRef = useRef<TurnstileInstance | null>(null);
@@ -89,9 +94,9 @@ export function ContactForm() {
 
       if (!response.ok) throw new Error("Request failed");
       toast.success(t("success"));
-      (document.getElementById("contact-form") as HTMLFormElement | null)?.reset();
       turnstileRef.current?.reset();
       setTurnstileToken(null);
+      router.push("/");
     } catch {
       toast.error(t("error"));
     } finally {
@@ -112,7 +117,7 @@ export function ContactForm() {
             name="name"
             autoComplete="name"
             disabled={loading}
-            className="focus-ring border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3"
+            className={fieldClassName}
           />
         </label>
         <label className="flex flex-col gap-3 text-sm">
@@ -126,7 +131,7 @@ export function ContactForm() {
             name="email"
             autoComplete="email"
             disabled={loading}
-            className="focus-ring border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3"
+            className={fieldClassName}
           />
         </label>
       </div>
@@ -140,7 +145,7 @@ export function ContactForm() {
           name="phone"
           autoComplete="tel"
           disabled={loading}
-          className="focus-ring border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3"
+          className={fieldClassName}
         />
       </label>
       <label className="flex flex-col gap-3 text-sm">
@@ -153,7 +158,7 @@ export function ContactForm() {
           name="message"
           rows={6}
           disabled={loading}
-          className="focus-ring border-line bg-bg-elevated w-full resize-y rounded-2xl border px-4 py-3"
+          className={`${fieldClassName} resize-y`}
         />
       </label>
       <input
@@ -165,7 +170,7 @@ export function ContactForm() {
         aria-hidden
       />
       {siteKey ? (
-        <div className="overflow-hidden rounded-2xl">
+        <div className="w-full min-w-0 [&_iframe]:max-w-full">
           <Turnstile
             ref={turnstileRef}
             siteKey={siteKey}

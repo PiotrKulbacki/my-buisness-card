@@ -11,8 +11,8 @@ export function LandingHero() {
 
   return (
     <section className="relative -my-6 flex h-(--site-landing-mobile-h) flex-col pt-5 pb-1 md:my-0 md:h-(--site-main-h) md:min-h-0 md:justify-center md:py-0">
-      <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] items-center gap-4 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] md:grid-rows-none md:gap-8">
-        <Reveal>
+      <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] items-stretch gap-3 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] md:grid-rows-none md:items-center md:gap-8">
+        <Reveal className="relative z-10 shrink-0">
           <p className="text-fg-muted mb-2 text-[10px] font-medium tracking-[0.22em] uppercase md:mb-5 md:text-xs">
             {t("welcome")}
           </p>
@@ -30,10 +30,13 @@ export function LandingHero() {
           <SocialLinks className="mt-4 md:mt-8" />
         </Reveal>
 
-        <Reveal delay={0.1} className="flex min-h-0 items-center justify-center md:block">
+        <Reveal
+          delay={0.1}
+          className="flex min-h-0 items-end justify-center overflow-hidden md:block md:items-center md:overflow-visible"
+        >
           <Portrait
             priority
-            className="mx-auto aspect-3/4 h-(--portrait-mobile-h) w-auto max-w-full md:ml-auto md:h-auto md:max-h-full md:w-full md:max-w-none"
+            className="mx-auto aspect-3/4 h-full max-h-full w-auto max-w-full md:ml-auto md:h-auto md:max-h-full md:w-full md:max-w-none"
           />
         </Reveal>
       </div>
