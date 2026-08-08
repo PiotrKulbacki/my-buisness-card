@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useId, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
+import { PdfPagePreview } from "@/components/path/PdfPagePreview";
 import { cn } from "@/lib/utils";
 
 type CertificateItem = {
@@ -81,7 +82,7 @@ export function CertificatesList({ items }: Props) {
             />
 
             <motion.div
-              className="border-line bg-bg-elevated relative z-10 flex h-[min(85dvh,52rem)] w-[min(100%,90vw)] max-w-4xl flex-col overflow-hidden rounded-[20px] border shadow-(--shadow)"
+              className="border-line bg-bg-elevated relative z-10 flex h-[min(82dvh,52rem)] w-[min(100%,92vw)] max-w-4xl flex-col overflow-hidden rounded-[20px] border shadow-(--shadow)"
               initial={reduce ? false : { opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={reduce ? undefined : { opacity: 0, scale: 0.98 }}
@@ -115,15 +116,11 @@ export function CertificatesList({ items }: Props) {
                   <img
                     src={active.url}
                     alt={active.title}
-                    className="h-auto max-h-full w-auto max-w-full object-contain"
+                    className="max-h-[min(70dvh,100%)] max-w-[min(85vw,100%)] object-contain"
                   />
                 </div>
               ) : (
-                <iframe
-                  title={active.title}
-                  src={active.url}
-                  className="min-h-0 w-full flex-1 bg-white"
-                />
+                <PdfPagePreview url={active.url} title={active.title} />
               )}
             </motion.div>
           </motion.div>
