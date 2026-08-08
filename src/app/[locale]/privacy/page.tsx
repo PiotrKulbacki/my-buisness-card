@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { siteConfig } from "@/config/site";
 import { COOKIE_CONSENT_NAME, LOCALE_COOKIE_NAME } from "@/config/cookies";
 import { Reveal } from "@/components/motion/Reveal";
+import { buildPageMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -10,7 +11,12 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "privacy" });
-  return { title: t("title") };
+  return buildPageMetadata({
+    locale,
+    path: "/privacy",
+    title: t("title"),
+    description: t("intro"),
+  });
 }
 
 export default async function PrivacyPage({ params }: Props) {

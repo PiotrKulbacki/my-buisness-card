@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/motion/Reveal";
+import { buildPageMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -9,7 +10,12 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "impressum" });
-  return { title: t("title") };
+  return buildPageMetadata({
+    locale,
+    path: "/impressum",
+    title: t("title"),
+    description: t("legalBasis"),
+  });
 }
 
 export default async function ImpressumPage({ params }: Props) {

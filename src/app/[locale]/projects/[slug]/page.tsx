@@ -4,6 +4,7 @@ import { getProject, projects } from "@/content/projects";
 import { ProjectDetail } from "@/components/projects/ProjectDetail";
 import type { Locale } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
+import { buildPageMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -20,10 +21,12 @@ export async function generateMetadata({ params }: Props) {
   const project = getProject(slug);
   if (!project) return {};
   const loc = locale as Locale;
-  return {
+  return buildPageMetadata({
+    locale,
+    path: `/projects/${slug}`,
     title: project.title[loc],
     description: project.summary[loc],
-  };
+  });
 }
 
 export default async function ProjectDetailPage({ params }: Props) {

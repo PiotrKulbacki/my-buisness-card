@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Reveal } from "@/components/motion/Reveal";
 import { siteConfig } from "@/config/site";
+import { buildPageMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -10,7 +11,12 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
-  return { title: t("title"), description: t("lead") };
+  return buildPageMetadata({
+    locale,
+    path: "/contact",
+    title: t("title"),
+    description: t("lead"),
+  });
 }
 
 export default async function ContactPage({ params }: Props) {

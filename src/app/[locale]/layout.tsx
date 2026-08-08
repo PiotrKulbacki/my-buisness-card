@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { AppToaster } from "@/components/ui/AppToaster";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
+import { buildPageMetadata } from "@/lib/seo";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -41,6 +42,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+  const page = buildPageMetadata({
+    locale,
+    path: "",
+    description: t("description"),
+  });
 
   return {
     metadataBase: new URL(siteConfig.url),
@@ -58,21 +64,17 @@ export async function generateMetadata({ params }: Props) {
       ],
       apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     },
+    alternates: page.alternates,
     openGraph: {
+      ...page.openGraph,
+      siteName: siteConfig.name,
       title: t("title"),
       description: t("description"),
-      url: siteConfig.url,
-      siteName: siteConfig.name,
-      locale,
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-    },
-    alternates: {
-      languages: Object.fromEntries(routing.locales.map((code) => [code, `/${code}`])),
     },
   };
 }
