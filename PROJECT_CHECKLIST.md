@@ -15,12 +15,12 @@
 - [x] Git `main` + GitHub push (pełny kod aplikacji)
 - [x] README + `docs/DEPLOY.md`
 - [ ] Projekt na Vercel (**Root Directory = puste / `.`**)
-- [ ] Zakup domeny
-- [ ] Resend + API key → **Brevo** (planowane; Resend w kodzie do wymiany)
+- [ ] Zakup domeny (`piotrkulbacki.com` — wykupiona; DNS/Vercel do podpięcia)
+- [x] Brevo + API key (kod: formularz + auto-reply; env na Vercel + weryfikacja domeny w Brevo)
 - [x] Decyzja analytics (Vercel Analytics; ładuje się dopiero po zgodzie w bannerze)
 - [x] Cookies: `NEXT_LOCALE` + `pk_cookie_consent`, lekki banner; link w stopce (docs: `docs/Legal_and_Cookies.md`)
 
-**Następny krok:** deploy preview na Vercel (Root Directory = `.`), potem env (Brevo / `CONTACT_*`, `NEXT_PUBLIC_SITE_URL`) i smoke test formularza na preview.
+**Następny krok:** deploy preview na Vercel (Root Directory = `.`), env (`BREVO_*`, `CONTACT_TO_EMAIL`, `NEXT_PUBLIC_SITE_URL`), weryfikacja domeny w Brevo, smoke test formularza.
 
 ---
 
@@ -71,7 +71,7 @@
 
 - [x] Contact API, privacy, robots, sitemap, metadata, JSON-LD
 - [x] Impressum (§ 5 DDG) + rozbudowana polityka prywatności — `docs/Legal_and_Cookies.md`
-- [ ] Brevo zamiast Resend (formularz kontaktowy)
+- [x] Brevo zamiast Resend (formularz kontaktowy + auto-reply HTML)
 - [x] Cookies + zgoda na Vercel Analytics (banner; inventarz w `/privacy#cookies`)
 - [x] Stopka mobile: dwie linie wyśrodkowane (logo+© / Impressum·Privacy·Cookies); desktop bez zmian układu prawnego
 
@@ -116,3 +116,4 @@
 | 2026-08-08 | Impressum (§ 5 DDG) + rozbudowana privacy (Brevo/Vercel Analytics); stopka: Impressum · Privacy           |
 | 2026-08-08 | Cookies: NEXT_LOCALE + pk_cookie_consent, banner zgody, Analytics dopiero po Accept all                   |
 | 2026-08-08 | Stopka mobile: 2 linie wyśrodkowane; docs `Legal_and_Cookies.md` + update Brand_Logo / checklist          |
+| 2026-08-08 | Brevo zamiast Resend: HTML inbox + auto-reply; publiczny email `kontakt@piotrkulbacki.com`                |

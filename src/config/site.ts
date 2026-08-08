@@ -5,7 +5,7 @@ export const siteConfig = {
   shortName: "P",
   role: "Software Engineer",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://piotrkulbacki.com",
-  email: "it.piotr.kulbacki@gmail.com",
+  email: "kontakt@piotrkulbacki.com",
   /** Hero / main portrait */
   portraitSrc: "/portrait.png",
   portraitEnabled: true,

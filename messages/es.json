@@ -119,7 +119,7 @@
     "hostingHeading": "Alojamiento",
     "hostingBody": "El sitio está alojado en Vercel Inc. Pueden generarse logs técnicos (p. ej. IP, user agent, marca de tiempo) necesarios para la seguridad y estabilidad del servicio.",
     "formHeading": "Formulario de contacto",
-    "formBody": "Al enviar el formulario se tratan nombre, email, teléfono opcional y mensaje solo para responder (art. 6.1.b o f RGPD). El envío está previsto mediante Brevo (Sendinblue GmbH, Alemania) como encargado. Los datos no se venden ni se usan para marketing sin consentimiento aparte. Se conservan solo el tiempo necesario para gestionar la solicitud y luego se eliminan o archivan si la ley lo exige.",
+    "formBody": "Al enviar el formulario se tratan nombre, email, teléfono opcional y mensaje solo para responder (art. 6.1.b o f RGPD). El envío se realiza mediante Brevo (Sendinblue GmbH, Alemania) como encargado; también puedes recibir un acuse de recibo automático. Los datos no se venden ni se usan para marketing sin consentimiento aparte. Se conservan solo el tiempo necesario para gestionar la solicitud y luego se eliminan o archivan si la ley lo exige.",
     "analyticsHeading": "Analítica",
     "analyticsBody": "Tras aceptar la analítica en el banner de cookies, cargo Vercel Analytics. No establece cookies propias de seguimiento; el tráfico se mide de forma minimizada (p. ej. hash de la petición). Sin consentimiento, la analítica permanece desactivada. Base jurídica con consentimiento: art. 6.1.a RGPD.",
     "cookiesHeading": "Cookies",
@@ -180,5 +180,28 @@
   "notFound": {
     "title": "Página no encontrada.",
     "home": "Inicio"
+  },
+  "email": {
+    "layout": {
+      "footerLead": "{name} — sitio personal"
+    },
+    "inbox": {
+      "subject": "Contacto del portfolio de {name}",
+      "title": "Nuevo mensaje de contacto",
+      "nameLabel": "Nombre",
+      "emailLabel": "Email",
+      "phoneLabel": "Teléfono",
+      "messageLabel": "Mensaje",
+      "replyHint": "Usa Responder para escribir directamente al remitente.",
+      "cta": "Responder por email"
+    },
+    "autoReply": {
+      "subject": "Gracias — he recibido tu mensaje",
+      "greeting": "Hola {name},",
+      "body": "Gracias por escribirme. He recibido tu mensaje y normalmente respondo en 1–2 días laborables.",
+      "messageLabel": "Tu mensaje:",
+      "signOff": "Un saludo,\n{name}",
+      "footerNote": "Esta es una confirmación automática. No respondas a este email si necesitas otra cosa — te escribiré desde mi dirección."
+    }
   }
 }

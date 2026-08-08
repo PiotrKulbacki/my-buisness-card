@@ -1,11 +1,12 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
+import { locales } from "@/i18n/routing";
 
 const schema = z.object({
   name: z.string().min(2).max(80),
@@ -13,6 +14,7 @@ const schema = z.object({
   phone: z.string().max(40).optional(),
   message: z.string().min(10).max(4000),
   website: z.string().optional(),
+  locale: z.enum(locales).optional(),
 });
 
 function RequiredMark() {
@@ -25,6 +27,7 @@ function RequiredMark() {
 
 export function ContactForm() {
   const t = useTranslations("contact");
+  const locale = useLocale();
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(formData: FormData) {
@@ -36,6 +39,9 @@ export function ContactForm() {
       phone: phone || undefined,
       message: String(formData.get("message") ?? ""),
       website: String(formData.get("website") ?? ""),
+      locale: locales.includes(locale as (typeof locales)[number])
+        ? (locale as (typeof locales)[number])
+        : undefined,
     };
 
     const parsed = schema.safeParse(payload);

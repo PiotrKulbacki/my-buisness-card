@@ -119,7 +119,7 @@
     "hostingHeading": "Hosting",
     "hostingBody": "The site is hosted by Vercel Inc. Technical logs (e.g. IP address, user agent, timestamp) may be created as needed for security and service stability.",
     "formHeading": "Contact form",
-    "formBody": "When you submit the form, your name, email, optional phone number and message are processed solely to reply (Art. 6(1)(b) or (f) GDPR). Message delivery is planned via Brevo (Sendinblue GmbH, Germany) as a processor. Data is not sold or used for marketing without separate consent. It is kept only as long as needed to handle the request, then deleted or archived where legally required.",
+    "formBody": "When you submit the form, your name, email, optional phone number and message are processed solely to reply (Art. 6(1)(b) or (f) GDPR). Messages are delivered via Brevo (Sendinblue GmbH, Germany) as a processor; you may also receive an automatic acknowledgement. Data is not sold or used for marketing without separate consent. It is kept only as long as needed to handle the request, then deleted or archived where legally required.",
     "analyticsHeading": "Analytics",
     "analyticsBody": "After you accept analytics in the cookie banner, I load Vercel Analytics. It does not set its own tracking cookies; traffic is measured in a minimised way (e.g. request hash). Without consent, analytics stays off. Legal basis with consent: Art. 6(1)(a) GDPR.",
     "cookiesHeading": "Cookies",
@@ -180,5 +180,28 @@
   "notFound": {
     "title": "Page not found.",
     "home": "Home"
+  },
+  "email": {
+    "layout": {
+      "footerLead": "{name} — personal website"
+    },
+    "inbox": {
+      "subject": "Portfolio contact from {name}",
+      "title": "New contact message",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "messageLabel": "Message",
+      "replyHint": "Use Reply to answer the sender directly.",
+      "cta": "Reply by email"
+    },
+    "autoReply": {
+      "subject": "Thanks — I received your message",
+      "greeting": "Hi {name},",
+      "body": "Thank you for getting in touch. I received your message and will reply within 1–2 business days.",
+      "messageLabel": "Your message:",
+      "signOff": "Best regards,\n{name}",
+      "footerNote": "This is an automatic confirmation. Please do not reply to this email if you need something else — I will write back from my address."
+    }
   }
 }

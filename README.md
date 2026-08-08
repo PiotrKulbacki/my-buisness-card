@@ -48,7 +48,8 @@ Prawne: `/impressum`, `/privacy`, baner cookies — [`docs/Legal_and_Cookies.md`
 ## Następny krok
 
 1. **Vercel preview** — import repo, Root Directory = `.`, env z [`docs/DEPLOY.md`](docs/DEPLOY.md)
-2. Smoke: locale, formularz kontaktowy, mobile tabs, avatar lightbox, cookies/Impressum
-3. Domena + Brevo (zamiast Resend) + Search Console
+2. **Brevo** — weryfikacja domeny `piotrkulbacki.com` (DKIM/SPF) + `BREVO_API_KEY` / `BREVO_FROM_EMAIL` / `CONTACT_TO_EMAIL`
+3. Smoke: locale, formularz (inbox + auto-reply), mobile tabs, avatar lightbox, cookies/Impressum
+4. DNS domeny na Vercel + Search Console
 
 Szczegóły: [`PROJECT_CHECKLIST.md`](PROJECT_CHECKLIST.md).

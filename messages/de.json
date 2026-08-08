@@ -119,7 +119,7 @@
     "hostingHeading": "Hosting",
     "hostingBody": "Die Website wird bei Vercel Inc. gehostet. Im Rahmen der Bereitstellung können technische Logs (z. B. IP-Adresse, User-Agent, Zeitstempel) entstehen, soweit dies für Sicherheit und Stabilität erforderlich ist.",
     "formHeading": "Kontaktformular",
-    "formBody": "Bei Absenden werden Name, E-Mail, optional Telefonnummer und Nachricht ausschließlich zur Beantwortung verarbeitet (Art. 6 Abs. 1 lit. b oder f DSGVO). Für den Versand ist Brevo (Sendinblue GmbH, Deutschland) als Auftragsverarbeiter vorgesehen. Daten werden nicht verkauft und ohne gesonderte Einwilligung nicht für Marketing genutzt. Speicherung nur so lange wie zur Bearbeitung nötig, danach Löschung oder gesetzlich erforderliche Archivierung.",
+    "formBody": "Bei Absenden werden Name, E-Mail, optional Telefonnummer und Nachricht ausschließlich zur Beantwortung verarbeitet (Art. 6 Abs. 1 lit. b oder f DSGVO). Der Versand erfolgt über Brevo (Sendinblue GmbH, Deutschland) als Auftragsverarbeiter; Sie können zudem eine automatische Empfangsbestätigung erhalten. Daten werden nicht verkauft und ohne gesonderte Einwilligung nicht für Marketing genutzt. Speicherung nur so lange wie zur Bearbeitung nötig, danach Löschung oder gesetzlich erforderliche Archivierung.",
     "analyticsHeading": "Analytics",
     "analyticsBody": "Nach Einwilligung im Cookie-Banner lade ich Vercel Analytics. Es setzt keine eigenen Tracking-Cookies; der Traffic wird minimiert erfasst (u. a. Request-Hash). Ohne Einwilligung bleibt Analytics deaktiviert. Rechtsgrundlage bei Einwilligung: Art. 6 Abs. 1 lit. a DSGVO.",
     "cookiesHeading": "Cookies",
@@ -180,5 +180,28 @@
   "notFound": {
     "title": "Seite nicht gefunden.",
     "home": "Start"
+  },
+  "email": {
+    "layout": {
+      "footerLead": "{name} — persönliche Website"
+    },
+    "inbox": {
+      "subject": "Portfolio-Kontakt von {name}",
+      "title": "Neue Kontaktnachricht",
+      "nameLabel": "Name",
+      "emailLabel": "E-Mail",
+      "phoneLabel": "Telefon",
+      "messageLabel": "Nachricht",
+      "replyHint": "Nutzen Sie Antworten, um dem Absender direkt zu schreiben.",
+      "cta": "Per E-Mail antworten"
+    },
+    "autoReply": {
+      "subject": "Danke — ich habe Ihre Nachricht erhalten",
+      "greeting": "Hallo {name},",
+      "body": "Vielen Dank für Ihre Nachricht. Ich habe sie erhalten und antworte in der Regel innerhalb von 1–2 Werktagen.",
+      "messageLabel": "Ihre Nachricht:",
+      "signOff": "Freundliche Grüße,\n{name}",
+      "footerNote": "Dies ist eine automatische Bestätigung. Bitte antworten Sie nicht auf diese E-Mail, wenn Sie etwas anderes brauchen — ich melde mich von meiner Adresse."
+    }
   }
 }

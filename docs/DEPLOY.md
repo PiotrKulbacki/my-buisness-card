@@ -19,14 +19,21 @@ git push origin main
 3. **Root Directory:** zostaw puste (`.`) — **nie** ustawiaj `website`
 4. Env vars (opcjonalnie na preview, wymagane na prod z formularzem):
 
-| Name                   | Value                                      |
-| ---------------------- | ------------------------------------------ |
-| `NEXT_PUBLIC_SITE_URL` | `https://your-domain.com` (lub URL Vercel) |
-| `RESEND_API_KEY`       | z Resend                                   |
-| `CONTACT_TO_EMAIL`     | `it.piotr.kulbacki@gmail.com`              |
-| `CONTACT_FROM_EMAIL`   | zweryfikowany sender w Resend              |
+| Name                   | Value                                                          |
+| ---------------------- | -------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | `https://piotrkulbacki.com` (lub URL Vercel)                   |
+| `BREVO_API_KEY`        | z Brevo → SMTP & API → API keys                                |
+| `BREVO_FROM_EMAIL`     | `Piotr Kulbacki <kontakt@piotrkulbacki.com>` (domena verified) |
+| `CONTACT_TO_EMAIL`     | `it.piotr.kulbacki@gmail.com` (skrzynka, w której czytasz)     |
 
 5. Deploy → otwórz `*.vercel.app` → smoke test `/pl` + sidebar + zdjęcia
+
+### Brevo — weryfikacja domeny (raz)
+
+1. Brevo → **Senders, Domains & Dedicated IPs** → dodaj `piotrkulbacki.com`
+2. Wstaw rekordy DNS (DKIM / SPF) u rejestratora domeny
+3. Poczekaj na status verified, potem ustawiaj `BREVO_FROM_EMAIL`
+4. Opcjonalnie: forwarding `kontakt@piotrkulbacki.com` → Gmail (maile bezpośrednie na publiczny adres)
 
 ## 3. Domain
 
@@ -45,6 +52,6 @@ git push origin main
 
 - [ ] `/pl`, `/en`, language switcher
 - [ ] Projects filter + Lyamo detail
-- [ ] Contact form (z Resend)
+- [ ] Contact form (Brevo: mail na Gmail + auto-reply do nadawcy)
 - [ ] Lighthouse
 - [ ] LinkedIn announcement

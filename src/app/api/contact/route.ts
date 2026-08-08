@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
 import { z } from "zod";
+import { getContactInbox, isEmailConfigured, sendTransactionalEmail } from "@/lib/brevo";
+import { buildContactAutoReplyEmail } from "@/lib/email/contact-auto-reply";
+import { buildContactInboxEmail } from "@/lib/email/contact-inbox";
 import { getClientIp, rateLimit } from "@/lib/rate-limit";
+import { locales } from "@/i18n/routing";
 
 const schema = z.object({
   name: z.string().min(2).max(80),
@@ -9,6 +12,7 @@ const schema = z.object({
   phone: z.string().max(40).optional(),
   message: z.string().min(10).max(4000),
   website: z.string().optional(),
+  locale: z.enum(locales).optional(),
 });
 
 export async function POST(request: Request) {
@@ -34,13 +38,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true });
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const to = process.env.CONTACT_TO_EMAIL;
-
-    const phoneLine = parsed.data.phone ? `Phone: ${parsed.data.phone}\n` : "";
-    const text = `From: ${parsed.data.name} <${parsed.data.email}>\n${phoneLine}\n${parsed.data.message}`;
-
-    if (!apiKey || !to) {
+    if (!isEmailConfigured()) {
       console.info("[contact]", parsed.data);
       return NextResponse.json({
         ok: true,
@@ -48,14 +46,50 @@ export async function POST(request: Request) {
       });
     }
 
-    const resend = new Resend(apiKey);
-    await resend.emails.send({
-      from: process.env.CONTACT_FROM_EMAIL ?? "Portfolio <onboarding@resend.dev>",
-      to,
-      replyTo: parsed.data.email,
-      subject: `Portfolio contact from ${parsed.data.name}`,
-      text,
+    const inbox = getContactInbox();
+    if (!inbox) {
+      return NextResponse.json({ error: "Failed to send" }, { status: 500 });
+    }
+
+    const inboxMail = buildContactInboxEmail({
+      name: parsed.data.name,
+      email: parsed.data.email,
+      phone: parsed.data.phone,
+      message: parsed.data.message,
+      locale: parsed.data.locale,
     });
+
+    const inboxResult = await sendTransactionalEmail({
+      to: inbox,
+      subject: inboxMail.subject,
+      html: inboxMail.html,
+      text: inboxMail.text,
+      replyTo: {
+        email: parsed.data.email,
+        name: parsed.data.name,
+      },
+    });
+
+    if (!inboxResult.ok) {
+      return NextResponse.json({ error: "Failed to send" }, { status: 500 });
+    }
+
+    const autoReply = buildContactAutoReplyEmail({
+      name: parsed.data.name,
+      message: parsed.data.message,
+      locale: parsed.data.locale,
+    });
+
+    const autoReplyResult = await sendTransactionalEmail({
+      to: parsed.data.email,
+      subject: autoReply.subject,
+      html: autoReply.html,
+      text: autoReply.text,
+    });
+
+    if (!autoReplyResult.ok) {
+      console.error("[contact] auto-reply failed", autoReplyResult.error);
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
