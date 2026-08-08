@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { siteConfig } from "@/config/site";
 import { getContactInbox, isEmailConfigured, sendTransactionalEmail } from "@/lib/brevo";
 import { buildContactAutoReplyEmail } from "@/lib/email/contact-auto-reply";
 import { buildContactInboxEmail } from "@/lib/email/contact-inbox";
@@ -85,6 +86,10 @@ export async function POST(request: Request) {
       subject: autoReply.subject,
       html: autoReply.html,
       text: autoReply.text,
+      replyTo: {
+        email: siteConfig.email,
+        name: siteConfig.name,
+      },
     });
 
     if (!autoReplyResult.ok) {

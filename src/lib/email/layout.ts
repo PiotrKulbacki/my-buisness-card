@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import { EMAIL_LOGO_CID } from "@/lib/brevo";
 import { fillTemplate, getEmailMessages, resolveLocale } from "@/lib/email/messages";
 import type { Locale } from "@/i18n/routing";
 
@@ -43,7 +44,8 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
   const brand = escapeHtml(siteConfig.name);
   const siteUrl = getSiteUrl();
   const siteUrlEscaped = escapeHtml(siteUrl);
-  const markUrl = escapeHtml(`${siteUrl}${siteConfig.brand.mark}`);
+  /** Inline CID — domain may not be live yet; HTTP URL would break in Gmail. */
+  const markUrl = `cid:${EMAIL_LOGO_CID}`;
   const contactEmail = escapeHtml(siteConfig.email);
   const fontSans = "system-ui,-apple-system,'Segoe UI',sans-serif";
   const resolvedLocale = resolveLocale(locale);
@@ -76,10 +78,10 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
           <td style="vertical-align:middle;padding-right:12px;line-height:0;">
             <img
               src="${markUrl}"
-              width="36"
-              height="36"
+              width="40"
+              height="40"
               alt="${brand}"
-              style="display:block;width:36px;height:36px;border:0;outline:none;text-decoration:none;"
+              style="display:block;width:40px;height:40px;border:0;outline:none;text-decoration:none;border-radius:10px;"
             />
           </td>
           <td style="vertical-align:middle;font-family:${fontSans};font-size:18px;font-weight:700;letter-spacing:-0.02em;color:${EMAIL_BRAND.wordmark};">

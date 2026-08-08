@@ -22,6 +22,7 @@ Identyfikacja wizualna marki osobistej (monogram **PK** + wordmark) spójna z da
 | `ui-lockup-stacked.png`    | PK nad tekstem (3 linie, wycentrowane)                                 | Master / zapas               |
 | `ui-lockup-horizontal.png` | Monogram + „Piotr Kulbacki” w jednej linii                             | Mobile top bar obok avatara  |
 | `ui-mark.png`              | Sam monogram PK                                                        | Stopka                       |
+| `email-mark.png`           | Kwadratowy PK (lime)                                                   | Maile Brevo (CID inline)     |
 
 Komponent: `<BrandLogo variant="lockupSide" | "lockupStacked" | "lockupHorizontal" | "mark" />`.
 
