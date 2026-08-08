@@ -48,6 +48,8 @@ export async function generateMetadata({ params }: Props) {
     description: t("description"),
   });
 
+  const facebookAppId = process.env.NEXT_PUBLIC_FACEBOOK_APP_ID?.trim();
+
   return {
     metadataBase: new URL(siteConfig.url),
     title: {
@@ -76,6 +78,7 @@ export async function generateMetadata({ params }: Props) {
       title: t("title"),
       description: t("description"),
     },
+    ...(facebookAppId ? { facebook: { appId: facebookAppId } } : {}),
   };
 }
 
