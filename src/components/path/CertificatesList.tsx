@@ -81,13 +81,13 @@ export function CertificatesList({ items }: Props) {
             />
 
             <motion.div
-              className="border-line bg-bg-elevated relative z-10 flex h-[min(90dvh,52rem)] w-full max-w-4xl flex-col overflow-hidden rounded-[20px] border shadow-(--shadow)"
+              className="border-line bg-bg-elevated relative z-10 flex h-[min(85dvh,52rem)] w-[min(100%,90vw)] max-w-4xl flex-col overflow-hidden rounded-[20px] border shadow-(--shadow)"
               initial={reduce ? false : { opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={reduce ? undefined : { opacity: 0, scale: 0.98 }}
               transition={reduce ? { duration: 0 } : { duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="border-line flex items-start justify-between gap-3 border-b px-4 py-3 md:px-5">
+              <div className="border-line flex shrink-0 items-start justify-between gap-3 border-b px-4 py-3 md:px-5">
                 <div className="min-w-0">
                   <p id={titleId} className="truncate text-sm font-medium">
                     {active.title}
@@ -110,19 +110,19 @@ export function CertificatesList({ items }: Props) {
                 </button>
               </div>
               {isImageUrl(active.url) ? (
-                <div className="flex flex-1 items-center justify-center overflow-auto bg-black/40 p-3 md:p-6">
+                <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-black/40 p-3 md:p-6">
                   {/* eslint-disable-next-line @next/next/no-img-element -- local certificate asset preview */}
                   <img
                     src={active.url}
                     alt={active.title}
-                    className="max-h-full max-w-full object-contain"
+                    className="h-auto max-h-full w-auto max-w-full object-contain"
                   />
                 </div>
               ) : (
                 <iframe
                   title={active.title}
                   src={active.url}
-                  className="h-full w-full flex-1 bg-white"
+                  className="min-h-0 w-full flex-1 bg-white"
                 />
               )}
             </motion.div>

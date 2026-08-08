@@ -19,9 +19,12 @@ const schema = z.object({
   turnstileToken: z.string().optional(),
 });
 
-/** Focus stays inside the field — outline-offset was clipped by page overflow. */
+/**
+ * text-base (16px) prevents iOS focus zoom. Focus ring via box-shadow;
+ * parent form padding leaves room so the ring is not clipped.
+ */
 const fieldClassName =
-  "border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3 transition-[border-color,box-shadow] focus-visible:border-accent focus-visible:shadow-[0_0_0_3px_color-mix(in_oklab,var(--accent)_35%,transparent)] focus-visible:outline-none disabled:opacity-60";
+  "border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3 text-base transition-[border-color,box-shadow] focus-visible:border-accent focus-visible:shadow-[0_0_0_3px_color-mix(in_oklab,var(--accent)_35%,transparent)] focus-visible:outline-none disabled:opacity-60";
 
 function RequiredMark() {
   return (
@@ -105,7 +108,7 @@ export function ContactForm() {
   }
 
   return (
-    <form id="contact-form" action={onSubmit} className="space-y-4">
+    <form id="contact-form" action={onSubmit} className="space-y-4 p-1.5 md:p-2">
       <div className="grid gap-4 md:grid-cols-2">
         <label className="flex flex-col gap-3 text-sm">
           <span className="leading-none">

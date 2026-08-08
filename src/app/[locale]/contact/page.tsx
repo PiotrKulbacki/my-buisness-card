@@ -39,7 +39,7 @@ export default async function ContactPage({ params }: Props) {
             </div>
           </dl>
         </Reveal>
-        <Reveal delay={0.08}>
+        <Reveal delay={0.08} className="min-w-0">
           <ContactForm />
         </Reveal>
       </div>
