@@ -15,9 +15,34 @@ export const siteConfig = {
    */
   avatarSrc: "/avatar.png",
   avatarEnabled: true,
+  /**
+   * Brand logos in `public/brand/` (trimmed UI assets + masters).
+   * See `docs/Brand_Logo.md`.
+   */
+  brand: {
+    mark: "/brand/ui-mark.png",
+    lockupHorizontal: "/brand/ui-lockup-horizontal.png",
+    lockupStacked: "/brand/ui-lockup-stacked.png",
+    /** PK left + Piotr / Kulbacki / role on 3 lines */
+    lockupSide: "/brand/ui-lockup-side.png",
+  },
   location: {
     city: "Berlin",
     remote: true,
+  },
+  /**
+   * Legal / Impressum (§ 5 DDG) — Einzelunternehmen, Kleinunternehmer (§ 19 UStG).
+   * USt-IdNr. only if issued; Steuernummer must not be published.
+   */
+  legal: {
+    street: "Bendastr. 11",
+    postalCode: "12051",
+    city: "Berlin",
+    country: "Germany",
+    countryDe: "Deutschland",
+    phoneDisplay: "+49 157 35166871",
+    phoneTel: "+4915735166871",
+    entity: "Einzelunternehmen",
   },
   social: {
     linkedin: "https://www.linkedin.com/in/it-piotr-kulbacki",

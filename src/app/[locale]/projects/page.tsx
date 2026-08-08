@@ -18,7 +18,7 @@ export default async function ProjectsPage({ params }: Props) {
   const t = await getTranslations("projects");
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-6 md:py-8">
       <Reveal>
         <h1 className="display text-4xl md:text-6xl">{t("title")}</h1>
         <p className="text-fg-muted mt-4 max-w-2xl">{t("lead")}</p>

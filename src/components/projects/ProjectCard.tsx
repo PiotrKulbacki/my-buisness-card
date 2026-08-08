@@ -19,11 +19,11 @@ export function ProjectCard({ project }: { project: Project }) {
       exit={{ opacity: 0, scale: 0.98 }}
       whileHover={{ y: -6 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group border-line bg-bg-elevated overflow-hidden rounded-[24px] border shadow-sm"
+      className="group border-line bg-bg-elevated overflow-hidden rounded-3xl border shadow-sm"
     >
       <Link href={`/projects/${project.slug}`} className="focus-ring block">
         <div
-          className="relative aspect-[16/10] overflow-hidden"
+          className="relative aspect-16/10 overflow-hidden"
           style={project.coverSrc ? undefined : { background: project.coverGradient }}
         >
           {project.coverSrc ? (

@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -6,6 +5,7 @@ import { Geist, Geist_Mono, Syne } from "next/font/google";
 import type { ReactNode } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { Footer } from "@/components/layout/Footer";
+import { CookieAndAnalytics } from "@/components/cookies/CookieAndAnalytics";
 import { PageTransition } from "@/components/motion/PageTransition";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AppToaster } from "@/components/ui/AppToaster";
@@ -49,6 +49,15 @@ export async function generateMetadata({ params }: Props) {
       template: `%s · ${siteConfig.name}`,
     },
     description: t("description"),
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+        { url: "/favicon.svg", type: "image/svg+xml" },
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    },
     openGraph: {
       title: t("title"),
       description: t("description"),
@@ -83,20 +92,22 @@ export default async function LocaleLayout({ children, params }: Props) {
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} h-full antialiased`}
     >
-      <body className="relative min-h-full" suppressHydrationWarning>
+      <body className="relative min-h-full md:h-full" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <div className="site-grid" aria-hidden />
           <div className="site-grain" aria-hidden />
           <Sidebar />
-          <div className="relative z-10 flex min-h-full flex-col pt-14 pb-[calc(3.5rem+env(safe-area-inset-bottom,0px))] md:pt-0 md:pb-0 md:pl-(--sidebar-w)">
-            <main className="mx-auto w-full max-w-5xl flex-1 px-5 py-6 md:px-8 md:py-8">
-              <PageTransition>{children}</PageTransition>
-            </main>
+          <div className="relative z-10 flex min-h-full flex-col pt-14 pb-[calc(3.5rem+env(safe-area-inset-bottom,0px))] md:h-svh md:overflow-hidden md:pt-0 md:pb-0 md:pl-(--sidebar-w)">
+            <div className="min-h-0 flex-1 overflow-y-auto">
+              <main className="mx-auto w-full max-w-5xl px-5 py-6 md:px-8 md:py-8">
+                <PageTransition>{children}</PageTransition>
+              </main>
+            </div>
             <Footer />
           </div>
           <AppToaster />
           <JsonLd />
-          <Analytics />
+          <CookieAndAnalytics />
         </NextIntlClientProvider>
       </body>
     </html>

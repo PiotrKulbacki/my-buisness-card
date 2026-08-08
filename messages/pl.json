@@ -111,18 +111,52 @@
   },
   "privacy": {
     "title": "Polityka prywatności",
-    "updated": "Ostatnia aktualizacja: 5 sierpnia 2026",
-    "intro": "Ta strona zbiera tylko dane niezbędne do odpowiedzi na wiadomości kontaktowe oraz opcjonalnie anonimową analitykę ruchu.",
-    "controller": "Administratorem danych jest Piotr Kulbacki.",
-    "form": "Formularz kontaktowy przekazuje imię, email i treść wiadomości w celu odpowiedzi. Dane nie są sprzedawane.",
-    "analytics": "Może być używana analityka bez cookies lub z minimalnym zakresem (np. Vercel Analytics).",
-    "rights": "Masz prawo do dostępu, sprostowania i usunięcia danych — napisz na adres kontaktowy.",
-    "contact": "W sprawach prywatności: "
+    "updated": "Ostatnia aktualizacja: 8 sierpnia 2026",
+    "intro": "Ta strona przetwarza dane osobowe tylko w zakresie niezbędnym do działania witryny, odpowiedzi na zapytania kontaktowe oraz — po zgodzie — pomiaru ruchu (Vercel Analytics).",
+    "controllerHeading": "Administrator danych",
+    "controllerBody": "Administratorem danych jest {name} (Einzelunternehmen, Berlin).",
+    "contact": "Kontakt w sprawach prywatności",
+    "hostingHeading": "Hosting",
+    "hostingBody": "Strona jest hostowana u Vercel Inc. W ramach dostarczenia treści mogą powstawać logi techniczne (np. adres IP, user agent, znacznik czasu) niezbędne do bezpieczeństwa i stabilności usługi.",
+    "formHeading": "Formularz kontaktowy",
+    "formBody": "Po wysłaniu formularza przetwarzane są imię, adres e-mail, opcjonalny telefon oraz treść wiadomości — wyłącznie w celu odpowiedzi (art. 6 ust. 1 lit. b lub f RODO). Do wysyłki wiadomości planowane jest użycie Brevo (Sendinblue GmbH, Niemcy) jako procesora. Dane nie są sprzedawane ani wykorzystywane do marketingu bez osobnej zgody. Przechowywane są tak długo, jak potrzeba do obsługi zapytania, a następnie usuwane lub archiwizowane w zakresie wymaganym prawnie.",
+    "analyticsHeading": "Analityka",
+    "analyticsBody": "Po wyrażeniu zgody w bannerze cookies ładuję Vercel Analytics. Narzędzie nie ustawia własnych cookies śledzących; ruch jest mierzony w sposób zminimalizowany (m.in. hash żądania). Bez zgody analityka nie jest włączana. Podstawa przy zgodzie: art. 6 ust. 1 lit. a RODO.",
+    "cookiesHeading": "Cookies",
+    "cookiesBody": "Używam wyłącznie first-party cookies niezbędnych do działania strony oraz zapamiętania Twojej decyzji o zgodzie. Czas życia: 12 miesięcy. Preferencje możesz zmienić w każdej chwili linkiem „Cookies” w stopce.",
+    "cookieLocale": "niezbędne — zapamiętuje wybrany język (next-intl).",
+    "cookieConsent": "niezbędne — przechowuje Twoją decyzję o zgodzie na analitykę (wersja, flaga analytics, data).",
+    "cookiesNoMarketing": "Nie używam cookies reklamowych ani zewnętrznych trackerów marketingowych.",
+    "rightsHeading": "Twoje prawa",
+    "rightsBody": "Masz prawo do dostępu, sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz sprzeciwu — napisz na adres e-mail administratora.",
+    "complaintHeading": "Skarga do organu nadzorczego",
+    "complaintBody": "Masz prawo złożyć skargę do właściwego organu ochrony danych. Dla Berlina: Berliner Beauftragte für Datenschutz und Informationsfreiheit."
+  },
+  "cookies": {
+    "title": "Cookies i analityka",
+    "body": "Używam niezbędnych cookies (język i zapamiętanie zgody). Analityka (Vercel Analytics) działa tylko po Twojej zgodzie — bez cookies reklamowych.",
+    "learnMore": "Więcej w polityce prywatności",
+    "necessaryOnly": "Tylko niezbędne",
+    "acceptAll": "Akceptuję wszystkie"
+  },
+  "impressum": {
+    "title": "Impressum",
+    "legalBasis": "Informacje zgodnie z § 5 DDG (Digitale-Dienste-Gesetz).",
+    "providerHeading": "Dostawca usługi",
+    "entity": "Einzelunternehmen (działalność jednoosobowa)",
+    "contactHeading": "Kontakt",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "vatHeading": "Identyfikacja podatkowa",
+    "vatBody": "Jako Kleinunternehmer według § 19 UStG nie posiadam USt-IdNr. Numer podatkowy (Steuernummer) nie jest publikowany.",
+    "responsibleHeading": "Odpowiedzialność za treści",
+    "responsibleBody": "Za treści tej witryny odpowiada {name}."
   },
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone.",
+    "impressum": "Impressum",
     "privacy": "Polityka prywatności",
-    "personalData": "Dane osobowe"
+    "cookies": "Cookies"
   },
   "common": {
     "availability": "Otwarty na projekty",

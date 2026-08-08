@@ -93,23 +93,32 @@ Jeżeli dany język nie będzie dostępny, domyślnym językiem powinien być j�
 
 # Nawigacja i layout
 
-- **Desktop:** stały lewy sidebar (avatar, imię, rola, nawigacja, przełącznik języka).
-- **Mobile:** górny pasek (avatar + imię, język) oraz dolny tab bar jak w aplikacji (bez hamburger menu).
+- **Desktop:** stały lewy sidebar (avatar, logo lockup PK z nazwiskiem, nawigacja, przełącznik języka).
+- **Mobile:** górny pasek (avatar + logo lockup poziome, język) oraz dolny tab bar jak w aplikacji (bez hamburger menu).
 - **Avatar:** klik otwiera powiększony podgląd (lightbox) na mobile i desktop.
+- **Logo:** monogram PK + wordmark — szczegóły i mapa plików w `docs/Brand_Logo.md`. Favicon i apple-touch z tego samego systemu znaku.
+- **Stopka:** monogram PK obok copyrightu; linki Impressum · Privacy · Cookies. Desktop: jeden rząd (`--site-footer-h`). Mobile: dwie linie, wyśrodkowane (logo+© / linki). Szczegóły: `docs/Legal_and_Cookies.md`, `docs/Brand_Logo.md`.
 - **Landing (mobile):** pierwszy ekran wypełniony treścią hero; stopka dostępna po scrollu.
+- **Stopka / język (desktop):** wspólna wysokość pasa `--site-footer-h` (stopka treści = LanguageSwitcher w sidebarze).
 
 ---
 
 # Dane kontaktowe
 
-Dane kontaktowe oraz inne często wykorzystywane informacje powinny być zarządzane centralnie.
+Dane kontaktowe oraz inne często wykorzystywane informacje powinny być zarządzane centralnie (`src/config/site.ts`, w tym `legal` pod Impressum).
 
 ---
 
 # Aspekty prawne
 
-Należy uwzględnić wymagane elementy prawne odpowiednie dla strony firmowej, w tym politykę prywatności przy formularzu kontaktowym oraz ocenę potrzeby innych podstron.
+Wdrożone dla działalności w Niemczech (Einzelunternehmen / Kleinunternehmer):
 
+- **Impressum** (`/impressum`) — § 5 DDG; adres, e-mail, telefon; bez USt-IdNr.
+- **Polityka prywatności** (`/privacy`) — formularz, hosting, analityka po zgodzie, inventarz cookies.
+- **Cookies** — `NEXT_LOCALE` + `pk_cookie_consent`; baner; Vercel Analytics tylko po „Akceptuję wszystkie”.
+- **Regulamin / AGB** — nie wymagany przy samej wizytówce + formularzu.
+
+Pełny opis: **`docs/Legal_and_Cookies.md`**.
 ---
 
 # Inspiracje

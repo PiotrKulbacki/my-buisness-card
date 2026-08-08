@@ -4,14 +4,17 @@ Wizytówka / portfolio: Next.js (App Router) + TypeScript + Tailwind + next-intl
 
 ## Struktura
 
-| Ścieżka                | Opis                                                                |
-| ---------------------- | ------------------------------------------------------------------- |
-| `src/`                 | Aplikacja Next.js                                                   |
-| `public/`              | Assety publiczne (`portrait.png`, `avatar.png`, `certificates/`, …) |
-| `messages/`            | Tłumaczenia (pl, en, de, es, uk)                                    |
-| `docs/`                | Dokumentacja projektu + źródłowe zdjęcia w `docs/assets/`           |
-| `docs/CV_Online.md`    | Spec i stan sekcji CV (`/path`)                                     |
-| `PROJECT_CHECKLIST.md` | Żywa checklista postępów                                            |
+| Ścieżka                     | Opis                                                                          |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| `src/`                      | Aplikacja Next.js                                                             |
+| `public/`                   | Assety publiczne (`portrait.png`, `avatar.png`, `brand/`, `certificates/`, …) |
+| `messages/`                 | Tłumaczenia (pl, en, de, es, uk)                                              |
+| `docs/`                     | Dokumentacja projektu + źródłowe zdjęcia w `docs/assets/`                     |
+| `docs/Brand_Logo.md`        | Logo PK: warianty, favicon, mapa w layoutcie                                  |
+| `docs/CV_Online.md`         | Spec i stan sekcji CV (`/path`)                                               |
+| `docs/Legal_and_Cookies.md` | Impressum, privacy, cookies, układ stopki                                     |
+| `docs/Projects_Section.md`  | Reguły case study / galerii projektów                                         |
+| `PROJECT_CHECKLIST.md`      | Żywa checklista postępów                                                      |
 
 ## Start lokalny
 
@@ -31,19 +34,21 @@ Otwórz [http://localhost:3000](http://localhost:3000).
 
 ## Nawigacja (stan obecny)
 
-| Breakpoint | Układ                                                                 |
-| ---------- | --------------------------------------------------------------------- |
-| Desktop    | Lewy sidebar: avatar (lightbox), brand, nav, LanguageSwitcher + globe |
-| Mobile     | Top: avatar (lightbox) + imię \| język (skróty + globe); dół: tab bar |
+| Breakpoint | Układ                                                                       |
+| ---------- | --------------------------------------------------------------------------- |
+| Desktop    | Lewy sidebar: avatar (lightbox), logo lockup, nav, LanguageSwitcher + globe |
+| Mobile     | Top: avatar (lightbox) + logo \| język (skróty + globe); dół: tab bar       |
 
 Landing na mobile: hero wypełnia pierwszy viewport; poniżej do scrolla głównie stopka.
 
 Sekcja **CV / Doświadczenie** (`/path`): pełne CV online (skills, doświadczenie, edukacja, certyfikaty z modalem, PhoneReveal). Opis: [`docs/CV_Online.md`](docs/CV_Online.md).
 
+Prawne: `/impressum`, `/privacy`, baner cookies — [`docs/Legal_and_Cookies.md`](docs/Legal_and_Cookies.md).
+
 ## Następny krok
 
 1. **Vercel preview** — import repo, Root Directory = `.`, env z [`docs/DEPLOY.md`](docs/DEPLOY.md)
-2. Smoke: locale, formularz kontaktowy, mobile tabs, avatar lightbox
-3. Domena + Resend prod + Search Console
+2. Smoke: locale, formularz kontaktowy, mobile tabs, avatar lightbox, cookies/Impressum
+3. Domena + Brevo (zamiast Resend) + Search Console
 
 Szczegóły: [`PROJECT_CHECKLIST.md`](PROJECT_CHECKLIST.md).

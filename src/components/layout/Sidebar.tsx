@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { Avatar } from "@/components/ui/Avatar";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { siteConfig } from "@/config/site";
@@ -70,17 +71,26 @@ const icons: Record<(typeof links)[number]["key"], ReactNode> = {
 
 export function Sidebar() {
   const t = useTranslations("nav");
-  const tSidebar = useTranslations("sidebar");
   const pathname = usePathname();
 
   return (
     <>
-      {/* Mobile top bar: avatar + name | language */}
+      {/* Mobile top bar: avatar + brand lockup | language */}
       <header className="border-line bg-bg/95 fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-3 border-b px-4 backdrop-blur-md md:hidden">
         <div className="flex min-w-0 items-center gap-2.5">
           <Avatar size="sm" />
-          <Link href="/" className="focus-ring truncate rounded-lg text-sm font-semibold">
-            {siteConfig.name}
+          <Link
+            href="/"
+            className="focus-ring block max-w-46 min-w-0 rounded-lg"
+            aria-label={siteConfig.name}
+          >
+            <BrandLogo
+              variant="lockupHorizontal"
+              decorative
+              priority
+              sizes="184px"
+              className="h-7 w-auto max-w-full"
+            />
           </Link>
         </div>
         <LanguageSwitcher compact menuPlacement="below" />
@@ -96,12 +106,15 @@ export function Sidebar() {
           {links.map((link) => {
             const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
             return (
-              <li key={link.href} className="min-w-0">
+              <li key={link.href} className="flex min-w-0 items-center justify-center">
                 <Link
                   href={link.href}
+                  aria-current={active ? "page" : undefined}
                   className={cn(
-                    "focus-ring flex h-full flex-col items-center justify-center gap-0.5 px-1 text-center text-[10px] leading-tight transition-colors",
-                    active ? "text-accent font-medium" : "text-fg-muted active:text-fg",
+                    "focus-ring mx-1 flex h-12 w-full flex-col items-center justify-center gap-0.5 rounded-xl px-1 text-center text-[10px] leading-tight transition-colors",
+                    active
+                      ? "bg-accent/10 text-accent font-medium"
+                      : "text-fg-muted active:text-fg",
                   )}
                 >
                   {icons[link.key]}
@@ -117,18 +130,27 @@ export function Sidebar() {
 
       {/* Desktop sidebar */}
       <aside
-        className="border-line bg-bg fixed top-0 left-0 z-50 hidden h-full w-(--sidebar-w) flex-col border-r px-5 py-6 md:flex"
+        className="border-line bg-bg fixed top-0 left-0 z-50 hidden h-full w-(--sidebar-w) flex-col border-r pt-6 md:flex"
         aria-label={t("primaryNav")}
       >
-        <div className="mb-6 flex flex-col items-center gap-3 text-center">
+        <div className="mb-6 flex flex-col items-center gap-3 px-5 text-center">
           <Avatar />
-          <Link href="/" className="focus-ring rounded-xl">
-            <p className="text-base leading-tight font-semibold">{siteConfig.name}</p>
-            <p className="text-fg-muted mt-1 text-sm">{tSidebar("role")}</p>
+          <Link
+            href="/"
+            className="focus-ring w-full max-w-40 rounded-xl"
+            aria-label={siteConfig.name}
+          >
+            <BrandLogo
+              variant="lockupSide"
+              decorative
+              priority
+              sizes="160px"
+              className="mx-auto h-auto w-full max-w-40"
+            />
           </Link>
         </div>
-        <div className="border-line mb-6 border-t" />
-        <nav className="flex flex-1 flex-col gap-3" aria-label={t("primaryNav")}>
+        <div className="border-line mx-5 mb-6 border-t" />
+        <nav className="flex flex-1 flex-col gap-3 px-5" aria-label={t("primaryNav")}>
           {links.map((link) => {
             const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
             return (
@@ -147,8 +169,8 @@ export function Sidebar() {
             );
           })}
         </nav>
-        <div className="border-line mt-6 space-y-3 border-t pt-4">
-          <LanguageSwitcher />
+        <div className="border-line flex h-(--site-footer-h) shrink-0 items-center border-t px-5">
+          <LanguageSwitcher className="w-full" />
         </div>
       </aside>
     </>

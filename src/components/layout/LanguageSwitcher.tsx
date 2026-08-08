@@ -86,11 +86,11 @@ export function LanguageSwitcher({
       <button
         type="button"
         className={cn(
-          "border-line bg-bg-elevated flex cursor-pointer items-center gap-2 rounded-full border text-left text-sm transition-[outline-color,border-color] duration-200",
-          compact ? "px-2.5 py-1.5" : "w-full justify-between px-3 py-2",
+          "border-line bg-bg-elevated flex cursor-pointer items-center rounded-full border text-left text-sm leading-none transition-[outline-color,border-color] duration-200",
+          compact ? "h-8 gap-2 px-2.5" : "h-9 w-full justify-between gap-3 px-4",
           open
-            ? "outline-accent outline outline-2 outline-offset-3"
-            : "focus-visible:outline-accent outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3",
+            ? "outline-accent outline-2 outline-offset-3"
+            : "focus-visible:outline-accent focus-visible:outline-2 focus-visible:outline-offset-3",
         )}
         aria-label={t("language")}
         aria-haspopup="listbox"
@@ -98,13 +98,13 @@ export function LanguageSwitcher({
         aria-controls={listId}
         onClick={() => setOpen((value) => !value)}
       >
-        <span className="flex min-w-0 items-center gap-2">
+        <span className="flex min-w-0 items-center gap-2 leading-none">
           <GlobeIcon className="text-fg-muted size-4 shrink-0" />
-          <span>{labelFor(locale)}</span>
+          <span className="leading-none">{labelFor(locale)}</span>
         </span>
         <motion.span
           aria-hidden
-          className="text-fg-muted inline-block"
+          className="text-fg-muted inline-flex size-5 shrink-0 items-center justify-center text-base leading-none"
           animate={{ rotate: open ? 180 : 0 }}
           transition={reduce ? { duration: 0 } : { duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
         >
@@ -131,7 +131,7 @@ export function LanguageSwitcher({
             style={{ transformOrigin: menuPlacement === "below" ? "top center" : "bottom center" }}
             className={cn(
               "border-line bg-bg-elevated absolute z-20 overflow-hidden rounded-2xl border py-1 shadow-(--shadow)",
-              compact ? "right-0 min-w-[7.5rem]" : "inset-x-0",
+              compact ? "right-0 min-w-30" : "inset-x-0",
               menuPlacement === "below" ? "top-full mt-2" : "bottom-full mb-2",
             )}
           >

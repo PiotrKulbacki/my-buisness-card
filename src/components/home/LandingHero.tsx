@@ -10,7 +10,7 @@ export function LandingHero() {
   const t = useTranslations("landing");
 
   return (
-    <section className="relative -my-6 flex h-[calc(100svh-7rem-env(safe-area-inset-bottom,0px))] flex-col pt-5 pb-1 md:my-0 md:h-auto md:min-h-svh md:justify-center md:py-0">
+    <section className="relative -my-6 flex h-(--site-landing-mobile-h) flex-col pt-5 pb-1 md:my-0 md:h-(--site-main-h) md:min-h-0 md:justify-center md:py-0">
       <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] items-center gap-4 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] md:grid-rows-none md:gap-8">
         <Reveal>
           <p className="text-fg-muted mb-2 text-[10px] font-medium tracking-[0.22em] uppercase md:mb-5 md:text-xs">
@@ -33,7 +33,7 @@ export function LandingHero() {
         <Reveal delay={0.1} className="flex min-h-0 items-center justify-center md:block">
           <Portrait
             priority
-            className="mx-auto aspect-[3/4] h-[min(54svh,400px)] w-auto max-w-full md:ml-auto md:h-auto md:w-full md:max-w-none"
+            className="mx-auto aspect-3/4 h-(--portrait-mobile-h) w-auto max-w-full md:ml-auto md:h-auto md:max-h-full md:w-full md:max-w-none"
           />
         </Reveal>
       </div>

@@ -17,6 +17,12 @@
   --radius: 18px;
   --header-h: 72px;
   --sidebar-w: 260px;
+  /* Shared height: main Footer + sidebar LanguageSwitcher band (flush to bottom). */
+  --site-footer-h: 3.25rem;
+  /* Content column height above footer (main py-8 × 2 ≈ 4rem). */
+  --site-main-h: calc(100svh - var(--site-footer-h) - 4rem);
+  --site-landing-mobile-h: calc(100svh - 7rem - env(safe-area-inset-bottom, 0px));
+  --portrait-mobile-h: min(54svh, 400px);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-fast: 160ms;
   --duration: 420ms;

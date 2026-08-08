@@ -32,7 +32,7 @@ export async function CvPage({ locale }: Props) {
   }));
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-6 md:py-8">
       <Reveal>
         <h1 className="display text-4xl md:text-6xl">{t("title")}</h1>
         <p className="text-fg-muted mt-4 max-w-2xl text-lg">{t("lead")}</p>

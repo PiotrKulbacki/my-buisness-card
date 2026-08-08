@@ -16,18 +16,19 @@
 - [x] README + `docs/DEPLOY.md`
 - [ ] Projekt na Vercel (**Root Directory = puste / `.`**)
 - [ ] Zakup domeny
-- [ ] Resend + API key
-- [ ] Decyzja analytics (Vercel Analytics już w kodzie)
+- [ ] Resend + API key → **Brevo** (planowane; Resend w kodzie do wymiany)
+- [x] Decyzja analytics (Vercel Analytics; ładuje się dopiero po zgodzie w bannerze)
+- [x] Cookies: `NEXT_LOCALE` + `pk_cookie_consent`, lekki banner; link w stopce (docs: `docs/Legal_and_Cookies.md`)
 
-**Następny krok:** deploy preview na Vercel (Root Directory = `.`), potem env (`RESEND_*`, `CONTACT_*`, `NEXT_PUBLIC_SITE_URL`) i smoke test formularza na preview.
+**Następny krok:** deploy preview na Vercel (Root Directory = `.`), potem env (Brevo / `CONTACT_*`, `NEXT_PUBLIC_SITE_URL`) i smoke test formularza na preview.
 
 ---
 
 ## Faza 1 — Design system i brand
 
 - [x] Dark-only, lewy sidebar, avatar + soft-blend portret
-- [x] Design tokens, Syne + Geist, reduced-motion, favicon
-- [ ] Finalne logo (opcjonalnie)
+- [x] Design tokens, Syne + Geist, reduced-motion, favicon (logo PK)
+- [x] Logo marki (PK): sidebar lockup, footer mark, favicon — `docs/Brand_Logo.md`
 - [ ] Decyzja fontów po preview
 
 ---
@@ -35,7 +36,7 @@
 ## Faza 2 — Scaffold
 
 - [x] Next.js + Tailwind + next-intl (5 locale) + `proxy.ts`
-- [x] Routing: `/`, `/about`, `/projects`, `/path` (CV), `/contact`, `/privacy`
+- [x] Routing: `/`, `/about`, `/projects`, `/path` (CV), `/contact`, `/privacy`, `/impressum`
 
 ---
 
@@ -57,7 +58,7 @@
 
 - [x] Landing, Kim jestem, Projekty, CV/Doświadczenie (`/path`), Kontakt + motion P0
 - [x] Mobile: dolny tab bar (jak w appce) zamiast hamburgera z headera
-- [x] Mobile top bar: avatar + imię | przełącznik języka (skróty PL/EN/… + ikona globusa)
+- [x] Mobile top bar: avatar + logo lockup | przełącznik języka (skróty PL/EN/… + ikona globusa)
 - [x] Desktop: ikona globusa przy LanguageSwitcher (sidebar bez zmian układu)
 - [x] Landing mobile: hero wypełnia viewport (stopka do scrolla); skalowanie portretu
 - [x] Avatar lightbox (klik → powiększony podgląd, Escape / tło / Zamknij)
@@ -69,7 +70,10 @@
 ## Faza 5 — Formularz / prawne / SEO
 
 - [x] Contact API, privacy, robots, sitemap, metadata, JSON-LD
-- [ ] Imprint (DE/AT) jeśli potrzeba
+- [x] Impressum (§ 5 DDG) + rozbudowana polityka prywatności — `docs/Legal_and_Cookies.md`
+- [ ] Brevo zamiast Resend (formularz kontaktowy)
+- [x] Cookies + zgoda na Vercel Analytics (banner; inventarz w `/privacy#cookies`)
+- [x] Stopka mobile: dwie linie wyśrodkowane (logo+© / Impressum·Privacy·Cookies); desktop bez zmian układu prawnego
 
 ---
 
@@ -105,3 +109,10 @@
 | 2026-08-06 | Mobile nav: bottom tabs + top bar (avatar/język); globe w LanguageSwitcher; landing fill-screen           |
 | 2026-08-07 | Avatar lightbox (mobile + desktop)                                                                        |
 | 2026-08-07 | CV online `/path`: pełna treść, certyfikaty + modal, redakcja PESEL na dyplomie, Tailwind v4 cleanup      |
+| 2026-08-08 | Logo PK: favicon, lockup pod avatarem (sidebar + mobile), mark w stopce; `docs/Brand_Logo.md`             |
+| 2026-08-08 | Sidebar: lockup side (PK + 3 linie tekstu obok); asset `ui-lockup-side.png`                               |
+| 2026-08-08 | Mniejsze logo sidebar; stopka = wys. LanguageSwitcher (`--site-footer-h`); Kontakt bez scrollbara         |
+| 2026-08-08 | Stopka/sidebar flush w jednej linii; Home/Kontakt bez scrollbara okna; wyśrodkowany język i tekst stopki  |
+| 2026-08-08 | Impressum (§ 5 DDG) + rozbudowana privacy (Brevo/Vercel Analytics); stopka: Impressum · Privacy           |
+| 2026-08-08 | Cookies: NEXT_LOCALE + pk_cookie_consent, banner zgody, Analytics dopiero po Accept all                   |
+| 2026-08-08 | Stopka mobile: 2 linie wyśrodkowane; docs `Legal_and_Cookies.md` + update Brand_Logo / checklist          |

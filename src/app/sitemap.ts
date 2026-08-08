@@ -4,7 +4,7 @@ import { projects } from "@/content/projects";
 import { routing } from "@/i18n/routing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["", "/about", "/projects", "/path", "/contact", "/privacy"];
+  const paths = ["", "/about", "/projects", "/path", "/contact", "/privacy", "/impressum"];
   const projectPaths = projects.map((project) => `/projects/${project.slug}`);
 
   return routing.locales.flatMap((locale) =>

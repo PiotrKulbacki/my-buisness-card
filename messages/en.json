@@ -111,18 +111,52 @@
   },
   "privacy": {
     "title": "Privacy policy",
-    "updated": "Last updated: 5 August 2026",
-    "intro": "This site only collects data needed to reply to contact messages and optionally anonymous traffic analytics.",
-    "controller": "The data controller is Piotr Kulbacki.",
-    "form": "The contact form sends your name, email and message in order to reply. Data is not sold.",
-    "analytics": "Analytics may be cookieless or minimal (e.g. Vercel Analytics).",
-    "rights": "You have the right to access, rectify and delete your data — email the contact address.",
-    "contact": "Privacy inquiries: "
+    "updated": "Last updated: 8 August 2026",
+    "intro": "This site processes personal data only as needed to run the website, reply to contact requests and — with your consent — measure traffic (Vercel Analytics).",
+    "controllerHeading": "Data controller",
+    "controllerBody": "The data controller is {name} (sole proprietorship / Einzelunternehmen, Berlin).",
+    "contact": "Privacy contact",
+    "hostingHeading": "Hosting",
+    "hostingBody": "The site is hosted by Vercel Inc. Technical logs (e.g. IP address, user agent, timestamp) may be created as needed for security and service stability.",
+    "formHeading": "Contact form",
+    "formBody": "When you submit the form, your name, email, optional phone number and message are processed solely to reply (Art. 6(1)(b) or (f) GDPR). Message delivery is planned via Brevo (Sendinblue GmbH, Germany) as a processor. Data is not sold or used for marketing without separate consent. It is kept only as long as needed to handle the request, then deleted or archived where legally required.",
+    "analyticsHeading": "Analytics",
+    "analyticsBody": "After you accept analytics in the cookie banner, I load Vercel Analytics. It does not set its own tracking cookies; traffic is measured in a minimised way (e.g. request hash). Without consent, analytics stays off. Legal basis with consent: Art. 6(1)(a) GDPR.",
+    "cookiesHeading": "Cookies",
+    "cookiesBody": "I only use first-party cookies that are necessary for the site to work and to remember your consent choice. Lifetime: 12 months. You can change preferences anytime via the “Cookies” link in the footer.",
+    "cookieLocale": "necessary — remembers the selected language (next-intl).",
+    "cookieConsent": "necessary — stores your analytics consent choice (version, analytics flag, date).",
+    "cookiesNoMarketing": "I do not use advertising cookies or third-party marketing trackers.",
+    "rightsHeading": "Your rights",
+    "rightsBody": "You have the right of access, rectification, erasure, restriction, data portability and objection — email the controller.",
+    "complaintHeading": "Supervisory authority",
+    "complaintBody": "You may lodge a complaint with the competent data protection authority. For Berlin: Berliner Beauftragte für Datenschutz und Informationsfreiheit."
+  },
+  "cookies": {
+    "title": "Cookies & analytics",
+    "body": "I use necessary cookies (language and consent memory). Analytics (Vercel Analytics) runs only with your consent — no advertising cookies.",
+    "learnMore": "More in the privacy policy",
+    "necessaryOnly": "Necessary only",
+    "acceptAll": "Accept all"
+  },
+  "impressum": {
+    "title": "Legal notice (Impressum)",
+    "legalBasis": "Information pursuant to § 5 DDG (Digitale-Dienste-Gesetz).",
+    "providerHeading": "Service provider",
+    "entity": "Sole proprietorship (Einzelunternehmen)",
+    "contactHeading": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "vatHeading": "VAT identification",
+    "vatBody": "As a small business under § 19 UStG (Kleinunternehmer) I do not hold a USt-IdNr. The tax office number (Steuernummer) is not published.",
+    "responsibleHeading": "Responsibility for content",
+    "responsibleBody": "{name} is responsible for the content of this website."
   },
   "footer": {
     "rights": "All rights reserved.",
+    "impressum": "Impressum",
     "privacy": "Privacy policy",
-    "personalData": "Personal data"
+    "cookies": "Cookies"
   },
   "common": {
     "availability": "Open for projects",
