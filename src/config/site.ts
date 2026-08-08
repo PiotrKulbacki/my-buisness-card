@@ -53,7 +53,7 @@ export const siteConfig = {
   },
   product: {
     name: "Lyamo",
-    url: "https://lyamo.app",
+    url: "https://lyamo.eu",
   },
   stack: [
     "TypeScript",

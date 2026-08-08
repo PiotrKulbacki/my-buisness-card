@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { AppToaster } from "@/components/ui/AppToaster";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
-import { buildPageMetadata } from "@/lib/seo";
+import { brandShareImage, buildPageMetadata } from "@/lib/seo";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -49,6 +49,7 @@ export async function generateMetadata({ params }: Props) {
   });
 
   const facebookAppId = process.env.NEXT_PUBLIC_FACEBOOK_APP_ID?.trim();
+  const shareImage = brandShareImage(locale);
 
   return {
     metadataBase: new URL(siteConfig.url),
@@ -72,11 +73,13 @@ export async function generateMetadata({ params }: Props) {
       siteName: siteConfig.name,
       title: t("title"),
       description: t("description"),
+      images: [shareImage],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
+      images: [shareImage.url],
     },
     ...(facebookAppId ? { facebook: { appId: facebookAppId } } : {}),
   };

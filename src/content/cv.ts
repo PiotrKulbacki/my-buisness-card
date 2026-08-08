@@ -200,7 +200,7 @@ export const cv = {
     {
       id: "lyamo",
       title: "Lyamo",
-      liveUrl: "https://lyamo.app",
+      liveUrl: "https://lyamo.eu/",
       summary: {
         pl: "Aplikacja do finansów osobistych (web + mobile): monorepo, i18n, billing, AI/OCR i architektura pod skalę.",
         en: "Personal finance app (web + mobile): monorepo, i18n, billing, AI/OCR and scale-ready architecture.",

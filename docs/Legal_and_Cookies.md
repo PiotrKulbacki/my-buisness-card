@@ -65,4 +65,6 @@ Konfiguracja: `src/config/cookies.ts`, logika: `src/lib/cookie-consent.ts`, loca
 
 ## Sitemap
 
-Ścieżki prawne w `src/app/sitemap.ts`: `/privacy`, `/impressum`.
+Ścieżki prawne są w `getIndexableRoutes()` (`src/lib/seo.ts`) i trafiają do `/sitemap.xml` (priorytet `0.3`, `yearly`): `/privacy`, `/impressum` × 5 locale.
+
+Pełny opis SEO: `docs/SEO.md`.

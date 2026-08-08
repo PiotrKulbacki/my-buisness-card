@@ -1,5 +1,7 @@
 # Personal Brand Website – Project Documentation (v2.1)
 
+> Brief wstępny (kierunek produktu). **Aktualny stan i runbooki:** `PROJECT_CHECKLIST.md`, `docs/SEO.md`, `docs/DEPLOY.md`, `docs/Projects_Section.md`, `docs/Legal_and_Cookies.md`, `docs/Brand_Logo.md`, `docs/CV_Online.md`.
+
 ## Cel projektu
 
 Celem jest stworzenie nowoczesnej, profesjonalnej strony internetowej będącej jednocześnie:

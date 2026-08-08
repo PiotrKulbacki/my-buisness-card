@@ -1,6 +1,7 @@
 # Piotr Kulbacki — Personal Brand Website
 
-Wizytówka / portfolio: Next.js (App Router) + TypeScript + Tailwind + next-intl + Vercel.
+Wizytówka / portfolio: Next.js (App Router) + TypeScript + Tailwind + next-intl + Vercel.  
+Produkcja: [piotrkulbacki.com](https://piotrkulbacki.com)
 
 ## Struktura
 
@@ -14,6 +15,8 @@ Wizytówka / portfolio: Next.js (App Router) + TypeScript + Tailwind + next-intl
 | `docs/CV_Online.md`         | Spec i stan sekcji CV (`/path`)                                               |
 | `docs/Legal_and_Cookies.md` | Impressum, privacy, cookies, układ stopki                                     |
 | `docs/Projects_Section.md`  | Reguły case study / galerii projektów                                         |
+| `docs/SEO.md`               | Canonical, hreflang, robots, sitemap, wspólny OG image                        |
+| `docs/DEPLOY.md`            | Env Vercel, GSC, smoke launch                                                 |
 | `PROJECT_CHECKLIST.md`      | Żywa checklista postępów                                                      |
 
 ## Start lokalny
@@ -41,15 +44,19 @@ Otwórz [http://localhost:3000](http://localhost:3000).
 
 Landing na mobile: hero wypełnia pierwszy viewport; poniżej do scrolla głównie stopka.
 
-Sekcja **CV / Doświadczenie** (`/path`): pełne CV online (skills, doświadczenie, edukacja, certyfikaty z modalem, PhoneReveal). Opis: [`docs/CV_Online.md`](docs/CV_Online.md).
+Sekcja **CV / Doświadczenie** (`/path`): pełne CV online — [`docs/CV_Online.md`](docs/CV_Online.md).
+
+**Projekty (live):** Lyamo → [lyamo.eu](https://lyamo.eu/), AI Document → [aidocument.eu/pl](https://aidocument.eu/pl), AK Gebäudeservice. Reguły case study: [`docs/Projects_Section.md`](docs/Projects_Section.md).
 
 Prawne: `/impressum`, `/privacy`, baner cookies — [`docs/Legal_and_Cookies.md`](docs/Legal_and_Cookies.md).
 
+SEO (robots, sitemap 60 URL, OG z logo): [`docs/SEO.md`](docs/SEO.md).
+
 ## Następny krok
 
-1. **Vercel preview** — import repo, Root Directory = `.`, env z [`docs/DEPLOY.md`](docs/DEPLOY.md)
-2. **Brevo** — weryfikacja domeny `piotrkulbacki.com` (DKIM/SPF) + `BREVO_API_KEY` / `BREVO_FROM_EMAIL` / `CONTACT_TO_EMAIL`
-3. Smoke: locale, formularz (inbox + auto-reply), mobile tabs, avatar lightbox, cookies/Impressum
-4. DNS domeny na Vercel + Search Console
+1. **Google Search Console** — weryfikacja + submit `sitemap.xml`
+2. Smoke share preview (FB Debugger) po deployu SEO/OG
+3. Case study: screenshoty Lyamo + AI Document
+4. Lighthouse + LinkedIn
 
 Szczegóły: [`PROJECT_CHECKLIST.md`](PROJECT_CHECKLIST.md).

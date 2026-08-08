@@ -22,6 +22,7 @@ git push origin main
 | Name                             | Value                                                          |
 | -------------------------------- | -------------------------------------------------------------- |
 | `NEXT_PUBLIC_SITE_URL`           | `https://piotrkulbacki.com`                                    |
+| `NEXT_PUBLIC_FACEBOOK_APP_ID`    | opcjonalnie — Meta App ID (`fb:app_id` w OG; `docs/SEO.md`)    |
 | `BREVO_API_KEY`                  | z Brevo → SMTP & API → API keys                                |
 | `BREVO_FROM_EMAIL`               | `Piotr Kulbacki <kontakt@piotrkulbacki.com>` (domena verified) |
 | `CONTACT_TO_EMAIL`               | `it.piotr.kulbacki@gmail.com` (skrzynka, w której czytasz)     |
@@ -48,15 +49,25 @@ Lokalnie: skopiuj te same klucze do `.env` (wzór: `.env.example`), żeby Turnst
 
 ## 4. Google Search Console
 
-1. Property = URL produkcji
+1. Property = URL produkcji (`https://piotrkulbacki.com`)
 2. Weryfikacja DNS TXT lub HTML
 3. Submit `https://piotrkulbacki.com/sitemap.xml`
+4. Sprawdź `https://piotrkulbacki.com/robots.txt` (Allow `/`, Disallow `/api/`, Sitemap)
 
-## 5. Post-launch smoke
+Szczegóły sitemap / hreflang / OG: [`docs/SEO.md`](SEO.md).
+
+## 5. Open Graph / share preview
+
+1. Facebook Sharing Debugger → Scrape Again dla `/pl`, `/pl/about`, case study
+2. Wszystkie URL powinny mieć **tę samą** grafikę z logo (nie portret)
+3. WhatsApp: cache bywa wolny — goły link tuż po deployu nie zawsze oznacza błąd OG
+
+## 6. Post-launch smoke
 
 - [ ] `/pl`, `/en`, language switcher
-- [ ] Projects filter + Lyamo detail
+- [ ] Projects: Lyamo (`lyamo.eu`), AI Document (`aidocument.eu/pl`), AK
 - [ ] Contact form (Turnstile + Brevo: inbox + auto-reply)
 - [ ] Logo w mailach z `https://piotrkulbacki.com/brand/…`
+- [ ] OG preview (FB Debugger) + GSC sitemap
 - [ ] Lighthouse
 - [ ] LinkedIn announcement

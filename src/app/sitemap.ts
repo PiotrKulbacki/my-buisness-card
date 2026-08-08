@@ -1,18 +1,24 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/config/site";
-import { projects } from "@/content/projects";
 import { routing } from "@/i18n/routing";
+import { absoluteLocaleUrl, getIndexableRoutes, hreflangLanguages } from "@/lib/seo";
 
+/**
+ * sitemap.xml — every public locale URL + xhtml hreflang alternates
+ * (same map as page metadata / `buildPageMetadata`).
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["", "/about", "/projects", "/path", "/contact", "/privacy", "/impressum"];
-  const projectPaths = projects.map((project) => `/projects/${project.slug}`);
+  const lastModified = new Date();
+  const routes = getIndexableRoutes();
 
   return routing.locales.flatMap((locale) =>
-    [...paths, ...projectPaths].map((path) => ({
-      url: `${siteConfig.url}/${locale}${path}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: path === "" ? 1 : 0.7,
+    routes.map((route) => ({
+      url: absoluteLocaleUrl(locale, route.path),
+      lastModified,
+      changeFrequency: route.changeFrequency,
+      priority: route.priority,
+      alternates: {
+        languages: hreflangLanguages(route.path),
+      },
     })),
   );
 }

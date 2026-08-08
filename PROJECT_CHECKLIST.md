@@ -14,13 +14,13 @@
 - [x] Struktura projektu (root = Next.js, docs w `docs/`)
 - [x] Git `main` + GitHub push (pełny kod aplikacji)
 - [x] README + `docs/DEPLOY.md`
-- [ ] Projekt na Vercel (**Root Directory = puste / `.`**)
+- [x] Projekt na Vercel (**Root Directory = puste / `.`**) + domena produkcyjna
 - [x] Zakup domeny (`piotrkulbacki.com` na Vercel + redirect www)
 - [x] Brevo + API key (kod: formularz + auto-reply; env na Vercel + weryfikacja domeny w Brevo)
 - [x] Decyzja analytics (Vercel Analytics; ładuje się dopiero po zgodzie w bannerze)
 - [x] Cookies: `NEXT_LOCALE` + `pk_cookie_consent`, lekki banner; link w stopce (docs: `docs/Legal_and_Cookies.md`)
 
-**Następny krok:** smoke test formularza na prod (Turnstile + Brevo + logo w mailu), Search Console.
+**Następny krok:** Google Search Console (sitemap) + smoke OG; screenshoty Lyamo / AI Document.
 
 ---
 
@@ -48,8 +48,9 @@
 - [x] Pełne CV online (`/path`) — treść z PDF + aktualny stack; docs: `docs/CV_Online.md`
 - [x] Certyfikaty w `public/certificates/` + podgląd modalny (PDF/obrazy); PII na dyplomie zredagowane
 - [ ] PDF Git/GitHub (Udemy) — odłożony (brak pliku); wpis na liście bez podglądu
-- [x] Screenshoty case study: MovieWeb + Sport Club PowerPlay (`public/projects/{movieweb,sportclub}/`; reguły: `docs/Projects_Section.md`)
-- [ ] Finalne copy landing/about; screenshoty pozostałych projektów
+- [x] Screenshoty case study: MovieWeb + Sport Club PowerPlay + AK (`public/projects/…`; reguły: `docs/Projects_Section.md`)
+- [ ] Screenshoty / pełne case study: Lyamo (`lyamo.eu`), AI Document (`aidocument.eu/pl`)
+- [ ] Finalne copy landing/about
 - [ ] Realne URL FB / IG / YT
 
 ---
@@ -70,6 +71,7 @@
 ## Faza 5 — Formularz / prawne / SEO
 
 - [x] Contact API, privacy, robots, sitemap, metadata, JSON-LD
+- [x] SEO: wspólny OG (logo) na wszystkich URL, hreflang w sitemap, `fb:app_id` (env) — `docs/SEO.md`
 - [x] Impressum (§ 5 DDG) + rozbudowana polityka prywatności — `docs/Legal_and_Cookies.md`
 - [x] Brevo zamiast Resend (formularz kontaktowy + auto-reply HTML)
 - [x] Cloudflare Turnstile na formularzu kontaktowym
@@ -81,41 +83,44 @@
 ## Faza 6 — QA / GSC
 
 - [x] Lokalne lint/typecheck/build
-- [ ] Lighthouse + GSC + formularz E2E na preview/prod
+- [ ] Google Search Console — weryfikacja + submit sitemap
+- [ ] Lighthouse + formularz E2E na preview/prod
+- [ ] Share preview: FB Debugger (wszystkie kluczowe URL z logo OG)
 
 ---
 
 ## Faza 7 — Launch
 
-- [ ] Vercel preview → produkcja
-- [ ] DNS + env prod
+- [x] Domena + env prod (Brevo, Turnstile, `NEXT_PUBLIC_SITE_URL`, opcjonalnie FB App ID)
 - [ ] Smoke + LinkedIn
 
 ---
 
 ## Faza 8 — Backlog (po zgodzie)
 
-- [ ] Canvas, Lyamo teaser, `/now`, OG, ⌘K, CMS…
+- [ ] Canvas, Lyamo teaser, `/now`, ⌘K, CMS…
+- [ ] Pełne case study Lyamo + AI Document (screeny, tech stack)
 
 ---
 
 ## Historia
 
-| Data       | Zmiana                                                                                                    |
-| ---------- | --------------------------------------------------------------------------------------------------------- |
-| 2026-08-05 | MVP dark UI + sidebar                                                                                     |
-| 2026-08-06 | GitHub + naprawa embedded `website/`                                                                      |
-| 2026-08-06 | Spłaszczenie: app w rootcie, docs w `docs/`, katalog lokalny `my-business-card`                           |
-| 2026-08-06 | Toast (Sonner) + loader na submit; i18n hardkodów; rate limit `/api/contact`; `.cursorrules`; CI workflow |
-| 2026-08-06 | Mobile nav: bottom tabs + top bar (avatar/język); globe w LanguageSwitcher; landing fill-screen           |
-| 2026-08-07 | Avatar lightbox (mobile + desktop)                                                                        |
-| 2026-08-07 | CV online `/path`: pełna treść, certyfikaty + modal, redakcja PESEL na dyplomie, Tailwind v4 cleanup      |
-| 2026-08-08 | Logo PK: favicon, lockup pod avatarem (sidebar + mobile), mark w stopce; `docs/Brand_Logo.md`             |
-| 2026-08-08 | Sidebar: lockup side (PK + 3 linie tekstu obok); asset `ui-lockup-side.png`                               |
-| 2026-08-08 | Mniejsze logo sidebar; stopka = wys. LanguageSwitcher (`--site-footer-h`); Kontakt bez scrollbara         |
-| 2026-08-08 | Stopka/sidebar flush w jednej linii; Home/Kontakt bez scrollbara okna; wyśrodkowany język i tekst stopki  |
-| 2026-08-08 | Impressum (§ 5 DDG) + rozbudowana privacy (Brevo/Vercel Analytics); stopka: Impressum · Privacy           |
-| 2026-08-08 | Cookies: NEXT_LOCALE + pk_cookie_consent, banner zgody, Analytics dopiero po Accept all                   |
-| 2026-08-08 | Stopka mobile: 2 linie wyśrodkowane; docs `Legal_and_Cookies.md` + update Brand_Logo / checklist          |
-| 2026-08-08 | Brevo zamiast Resend: HTML inbox + auto-reply; publiczny email `kontakt@piotrkulbacki.com`                |
-| 2026-08-08 | Domena `piotrkulbacki.com` na Vercel; Turnstile; toast sukcesu skrócony; logo maila z domeny              |
+| Data       | Zmiana                                                                                                                                  |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-08-05 | MVP dark UI + sidebar                                                                                                                   |
+| 2026-08-06 | GitHub + naprawa embedded `website/`                                                                                                    |
+| 2026-08-06 | Spłaszczenie: app w rootcie, docs w `docs/`, katalog lokalny `my-business-card`                                                         |
+| 2026-08-06 | Toast (Sonner) + loader na submit; i18n hardkodów; rate limit `/api/contact`; `.cursorrules`; CI workflow                               |
+| 2026-08-06 | Mobile nav: bottom tabs + top bar (avatar/język); globe w LanguageSwitcher; landing fill-screen                                         |
+| 2026-08-07 | Avatar lightbox (mobile + desktop)                                                                                                      |
+| 2026-08-07 | CV online `/path`: pełna treść, certyfikaty + modal, redakcja PESEL na dyplomie, Tailwind v4 cleanup                                    |
+| 2026-08-08 | Logo PK: favicon, lockup pod avatarem (sidebar + mobile), mark w stopce; `docs/Brand_Logo.md`                                           |
+| 2026-08-08 | Sidebar: lockup side (PK + 3 linie tekstu obok); asset `ui-lockup-side.png`                                                             |
+| 2026-08-08 | Mniejsze logo sidebar; stopka = wys. LanguageSwitcher (`--site-footer-h`); Kontakt bez scrollbara                                       |
+| 2026-08-08 | Stopka/sidebar flush w jednej linii; Home/Kontakt bez scrollbara okna; wyśrodkowany język i tekst stopki                                |
+| 2026-08-08 | Impressum (§ 5 DDG) + rozbudowana privacy (Brevo/Vercel Analytics); stopka: Impressum · Privacy                                         |
+| 2026-08-08 | Cookies: NEXT_LOCALE + pk_cookie_consent, banner zgody, Analytics dopiero po Accept all                                                 |
+| 2026-08-08 | Stopka mobile: 2 linie wyśrodkowane; docs `Legal_and_Cookies.md` + update Brand_Logo / checklist                                        |
+| 2026-08-08 | Brevo zamiast Resend: HTML inbox + auto-reply; publiczny email `kontakt@piotrkulbacki.com`                                              |
+| 2026-08-08 | Domena `piotrkulbacki.com` na Vercel; Turnstile; toast sukcesu skrócony; logo maila z domeny                                            |
+| 2026-08-08 | SEO: OG logo na wszystkich URL, robots/sitemap+hreflang, `fb:app_id`; AI Document zamiast brand-site; Lyamo → `lyamo.eu`; `docs/SEO.md` |

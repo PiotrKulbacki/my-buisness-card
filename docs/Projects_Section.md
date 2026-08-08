@@ -63,6 +63,20 @@ Padding strony: kompaktowy u góry (`pt-4 md:pt-8`), żeby na desktopie cover mi
 - `featured: true` → wyróżnienie (np. Lyamo).
 - Brak `liveUrl` → `projects.notLive`, nie pusty link.
 
+## Aktualny katalog projektów (2026-08-08)
+
+| Slug                 | Kategoria | Live                                 | Screeny                             |
+| -------------------- | --------- | ------------------------------------ | ----------------------------------- |
+| `lyamo`              | apps      | `https://lyamo.eu/`                  | TODO (placeholdery gradient)        |
+| `ak-gebaeudeservice` | websites  | `https://www.akgebaeudeservice.com/` | OK w `public/projects/…`            |
+| `ai-document`        | apps      | `https://aidocument.eu/pl`           | TODO (zastąpił `brand-site-system`) |
+| `movieweb`           | apps      | — (kurs)                             | OK                                  |
+| `sportclub`          | apps      | — (kurs)                             | OK                                  |
+
+Przy pełnej konfiguracji Lyamo / AI Document: assety wg checklisty powyżej + doprecyzowanie tech stacku i ewentualnie live URL AI Document (`/pl` vs root z detekcją języka).
+
+Sitemap case studies: `docs/SEO.md`.
+
 ## Konwencja nazw plików
 
 ```text

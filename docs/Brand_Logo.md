@@ -49,14 +49,14 @@ W `public/brand/` zostają też mastery (`01-mark-only.png`, `02-…`, `03-…`,
 
 ## Mapa w layoutcie
 
-| Miejsce                        | Asset                                                    |
-| ------------------------------ | -------------------------------------------------------- |
-| Desktop sidebar (pod avatarem) | `lockupSide`                                             |
-| Mobile top bar                 | `lockupHorizontal`                                       |
-| Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…` |
-| Open Graph / Twitter card      | `lockupHorizontal` (w `opengraph-image.tsx`)             |
-| Footer (przy ©)                | `mark` (wys. `h-4`)                                      |
-| Zakładka przeglądarki          | favicon / `icon.png`                                     |
+| Miejsce                        | Asset                                                                                                                                               |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Desktop sidebar (pod avatarem) | `lockupSide`                                                                                                                                        |
+| Mobile top bar                 | `lockupHorizontal`                                                                                                                                  |
+| Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…`                                                                                            |
+| Open Graph / Twitter card      | `lockupHorizontal` w `opengraph-image.tsx`; wymuszane na **wszystkich** URL przez `brandShareImage()` w `src/lib/seo.ts` (szczegóły: `docs/SEO.md`) |
+| Footer (przy ©)                | `mark` (wys. `h-4`)                                                                                                                                 |
+| Zakładka przeglądarki          | favicon / `icon.png`                                                                                                                                |
 
 Desktop sidebar: lockup side `max-w-40`. Stopka treści i pas LanguageSwitcher: wspólna wysokość `--site-footer-h` (3.25rem), oba flush do dołu viewportu (separatory w jednej linii). Desktop shell: `md:h-svh` — stopka zawsze na dole; Home / Kontakt bez scrollbara okna (`h-(--site-main-h)`).
 
