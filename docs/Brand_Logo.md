@@ -54,6 +54,7 @@ W `public/brand/` zostają też mastery (`01-mark-only.png`, `02-…`, `03-…`,
 | Desktop sidebar (pod avatarem) | `lockupSide`                                             |
 | Mobile top bar                 | `lockupHorizontal`                                       |
 | Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…` |
+| Open Graph / Twitter card      | `lockupHorizontal` (w `opengraph-image.tsx`)             |
 | Footer (przy ©)                | `mark` (wys. `h-4`)                                      |
 | Zakładka przeglądarki          | favicon / `icon.png`                                     |
 

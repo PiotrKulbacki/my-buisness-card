@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/config/site";
 import { routing } from "@/i18n/routing";
@@ -17,6 +19,11 @@ type Props = {
 export default async function OpenGraphImage({ params }: Props) {
   await params;
 
+  const lockupData = await readFile(
+    join(process.cwd(), "public", "brand", "ui-lockup-horizontal.png"),
+  );
+  const lockupSrc = `data:image/png;base64,${lockupData.toString("base64")}`;
+
   return new ImageResponse(
     <div
       style={{
@@ -30,40 +37,14 @@ export default async function OpenGraphImage({ params }: Props) {
         fontFamily: "system-ui, sans-serif",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 18,
-        }}
-      >
-        <div
-          style={{
-            width: 56,
-            height: 56,
-            borderRadius: 14,
-            background: "#c8f542",
-            color: "#0a0a0a",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 28,
-            fontWeight: 700,
-            letterSpacing: "-0.04em",
-          }}
-        >
-          PK
-        </div>
-        <div
-          style={{
-            fontSize: 28,
-            color: "#f5f5f5",
-            fontWeight: 600,
-            letterSpacing: "-0.02em",
-          }}
-        >
-          {siteConfig.name}
-        </div>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <img
+          src={lockupSrc}
+          alt=""
+          width={420}
+          height={107}
+          style={{ width: 420, height: 107, objectFit: "contain" }}
+        />
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
