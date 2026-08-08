@@ -1,7 +1,8 @@
 "use client";
 
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { Link } from "@/i18n/navigation";
@@ -15,6 +16,7 @@ const schema = z.object({
   message: z.string().min(10).max(4000),
   website: z.string().optional(),
   locale: z.enum(locales).optional(),
+  turnstileToken: z.string().optional(),
 });
 
 function RequiredMark() {
@@ -29,6 +31,9 @@ export function ContactForm() {
   const t = useTranslations("contact");
   const locale = useLocale();
   const [loading, setLoading] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim() || null;
 
   async function onSubmit(formData: FormData) {
     setLoading(true);
@@ -42,7 +47,14 @@ export function ContactForm() {
       locale: locales.includes(locale as (typeof locales)[number])
         ? (locale as (typeof locales)[number])
         : undefined,
+      turnstileToken: turnstileToken ?? undefined,
     };
+
+    if (siteKey && !turnstileToken) {
+      toast.error(t("captchaError"));
+      setLoading(false);
+      return;
+    }
 
     const parsed = schema.safeParse(payload);
     if (!parsed.success) {
@@ -63,9 +75,23 @@ export function ContactForm() {
         return;
       }
 
+      if (response.status === 400) {
+        const body = (await response.json().catch(() => null)) as { error?: string } | null;
+        if (body?.error === "Captcha failed") {
+          toast.error(t("captchaError"));
+          turnstileRef.current?.reset();
+          setTurnstileToken(null);
+          return;
+        }
+        toast.error(t("validationError"));
+        return;
+      }
+
       if (!response.ok) throw new Error("Request failed");
       toast.success(t("success"));
       (document.getElementById("contact-form") as HTMLFormElement | null)?.reset();
+      turnstileRef.current?.reset();
+      setTurnstileToken(null);
     } catch {
       toast.error(t("error"));
     } finally {
@@ -138,6 +164,18 @@ export function ContactForm() {
         className="absolute left-[-9999px] h-0 w-0 opacity-0"
         aria-hidden
       />
+      {siteKey ? (
+        <div className="overflow-hidden rounded-2xl">
+          <Turnstile
+            ref={turnstileRef}
+            siteKey={siteKey}
+            options={{ theme: "dark", size: "flexible" }}
+            onSuccess={setTurnstileToken}
+            onExpire={() => setTurnstileToken(null)}
+            onError={() => setTurnstileToken(null)}
+          />
+        </div>
+      ) : null}
       <p className="text-fg-muted text-sm">
         {t("privacyNote")}{" "}
         <Link href="/privacy" className="underline underline-offset-4">

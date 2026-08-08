@@ -12,6 +12,7 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@marsidev/react-turnstile": "^1.5.5",
     "@swc/helpers": "^0.5.23",
     "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",

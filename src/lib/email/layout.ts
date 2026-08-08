@@ -1,5 +1,4 @@
 import { siteConfig } from "@/config/site";
-import { EMAIL_LOGO_CID } from "@/lib/brevo";
 import { fillTemplate, getEmailMessages, resolveLocale } from "@/lib/email/messages";
 import type { Locale } from "@/i18n/routing";
 
@@ -16,6 +15,10 @@ export const EMAIL_BRAND = {
   wordmark: "#f5f5f5",
 } as const;
 
+/** Display size for horizontal lockup in email header (source ~1065×272). */
+const EMAIL_LOCKUP_WIDTH = 280;
+const EMAIL_LOCKUP_HEIGHT = 72;
+
 export function escapeHtml(value: string): string {
   return value
     .replaceAll("&", "&amp;")
@@ -29,6 +32,18 @@ export function getSiteUrl(): string {
   return (process.env.NEXT_PUBLIC_SITE_URL ?? siteConfig.url).replace(/\/$/, "");
 }
 
+/**
+ * Public base for email `<img>` assets. Defaults to the live site URL.
+ * Override with EMAIL_ASSET_BASE_URL only if assets are hosted elsewhere.
+ */
+export function getEmailAssetBaseUrl(): string {
+  return (
+    process.env.EMAIL_ASSET_BASE_URL?.trim() ||
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+    siteConfig.url
+  ).replace(/\/$/, "");
+}
+
 type WrapEmailHtmlParams = {
   locale: Locale;
   bodyHtml: string;
@@ -36,7 +51,7 @@ type WrapEmailHtmlParams = {
 };
 
 /**
- * Shared PK transactional email chrome: dark header + brand mark, body, optional CTA, footer.
+ * Shared PK transactional email chrome: dark header + horizontal lockup, body, optional CTA, footer.
  */
 export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
   const { locale, bodyHtml, cta } = params;
@@ -44,8 +59,7 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
   const brand = escapeHtml(siteConfig.name);
   const siteUrl = getSiteUrl();
   const siteUrlEscaped = escapeHtml(siteUrl);
-  /** Inline CID — domain may not be live yet; HTTP URL would break in Gmail. */
-  const markUrl = `cid:${EMAIL_LOGO_CID}`;
+  const lockupUrl = escapeHtml(`${getEmailAssetBaseUrl()}${siteConfig.brand.lockupHorizontal}`);
   const contactEmail = escapeHtml(siteConfig.email);
   const fontSans = "system-ui,-apple-system,'Segoe UI',sans-serif";
   const resolvedLocale = resolveLocale(locale);
@@ -72,23 +86,14 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
     : "";
 
   const headerHtml = `
-    <a href="${siteUrlEscaped}" style="text-decoration:none;">
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="vertical-align:middle;padding-right:12px;line-height:0;">
-            <img
-              src="${markUrl}"
-              width="40"
-              height="40"
-              alt="${brand}"
-              style="display:block;width:40px;height:40px;border:0;outline:none;text-decoration:none;border-radius:10px;"
-            />
-          </td>
-          <td style="vertical-align:middle;font-family:${fontSans};font-size:18px;font-weight:700;letter-spacing:-0.02em;color:${EMAIL_BRAND.wordmark};">
-            ${brand}
-          </td>
-        </tr>
-      </table>
+    <a href="${siteUrlEscaped}" style="text-decoration:none;display:inline-block;line-height:0;">
+      <img
+        src="${lockupUrl}"
+        width="${EMAIL_LOCKUP_WIDTH}"
+        height="${EMAIL_LOCKUP_HEIGHT}"
+        alt="${brand}"
+        style="display:block;width:${EMAIL_LOCKUP_WIDTH}px;max-width:100%;height:auto;border:0;outline:none;text-decoration:none;"
+      />
     </a>
   `;
 
@@ -108,7 +113,7 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
       <td align="center" style="padding:32px 16px;">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;background:${EMAIL_BRAND.white};border-radius:12px;overflow:hidden;border:1px solid ${EMAIL_BRAND.border};">
           <tr>
-            <td style="background:${EMAIL_BRAND.void};padding:24px 28px;border-bottom:2px solid ${EMAIL_BRAND.accent};">
+            <td style="background:${EMAIL_BRAND.void};padding:22px 28px;border-bottom:2px solid ${EMAIL_BRAND.accent};">
               ${headerHtml}
             </td>
           </tr>

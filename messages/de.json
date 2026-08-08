@@ -99,7 +99,7 @@
     "message": "Nachricht",
     "submit": "Nachricht senden",
     "sending": "Senden…",
-    "success": "Nachricht gesendet. Danke — ich melde mich bald.",
+    "success": "Nachricht gesendet",
     "error": "Senden fehlgeschlagen. Bitte erneut versuchen oder direkt per E-Mail.",
     "privacyNote": "Mit dem Absenden akzeptieren Sie die",
     "privacyLink": "Datenschutzerklärung",
@@ -107,7 +107,8 @@
     "location": "Standort",
     "remote": "Remote · Berlin / EU",
     "validationError": "Bitte Formular prüfen und erneut versuchen.",
-    "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen."
+    "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen.",
+    "captchaError": "Bitte bestätigen Sie, dass Sie kein Bot sind, und versuchen Sie es erneut."
   },
   "privacy": {
     "title": "Datenschutzerklärung",
@@ -119,7 +120,7 @@
     "hostingHeading": "Hosting",
     "hostingBody": "Die Website wird bei Vercel Inc. gehostet. Im Rahmen der Bereitstellung können technische Logs (z. B. IP-Adresse, User-Agent, Zeitstempel) entstehen, soweit dies für Sicherheit und Stabilität erforderlich ist.",
     "formHeading": "Kontaktformular",
-    "formBody": "Bei Absenden werden Name, E-Mail, optional Telefonnummer und Nachricht ausschließlich zur Beantwortung verarbeitet (Art. 6 Abs. 1 lit. b oder f DSGVO). Der Versand erfolgt über Brevo (Sendinblue GmbH, Deutschland) als Auftragsverarbeiter; Sie können zudem eine automatische Empfangsbestätigung erhalten. Daten werden nicht verkauft und ohne gesonderte Einwilligung nicht für Marketing genutzt. Speicherung nur so lange wie zur Bearbeitung nötig, danach Löschung oder gesetzlich erforderliche Archivierung.",
+    "formBody": "Bei Absenden werden Name, E-Mail, optional Telefonnummer und Nachricht ausschließlich zur Beantwortung verarbeitet (Art. 6 Abs. 1 lit. b oder f DSGVO). Das Formular ist durch Cloudflare Turnstile (Bot-Schutz) geschützt. Der Versand erfolgt über Brevo (Sendinblue GmbH, Deutschland) als Auftragsverarbeiter; Sie können zudem eine automatische Empfangsbestätigung erhalten. Daten werden nicht verkauft und ohne gesonderte Einwilligung nicht für Marketing genutzt. Speicherung nur so lange wie zur Bearbeitung nötig, danach Löschung oder gesetzlich erforderliche Archivierung.",
     "analyticsHeading": "Analytics",
     "analyticsBody": "Nach Einwilligung im Cookie-Banner lade ich Vercel Analytics. Es setzt keine eigenen Tracking-Cookies; der Traffic wird minimiert erfasst (u. a. Request-Hash). Ohne Einwilligung bleibt Analytics deaktiviert. Rechtsgrundlage bei Einwilligung: Art. 6 Abs. 1 lit. a DSGVO.",
     "cookiesHeading": "Cookies",

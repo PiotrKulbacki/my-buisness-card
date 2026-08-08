@@ -15,12 +15,12 @@
 - [x] Git `main` + GitHub push (pełny kod aplikacji)
 - [x] README + `docs/DEPLOY.md`
 - [ ] Projekt na Vercel (**Root Directory = puste / `.`**)
-- [ ] Zakup domeny (`piotrkulbacki.com` — wykupiona; DNS/Vercel do podpięcia)
+- [x] Zakup domeny (`piotrkulbacki.com` na Vercel + redirect www)
 - [x] Brevo + API key (kod: formularz + auto-reply; env na Vercel + weryfikacja domeny w Brevo)
 - [x] Decyzja analytics (Vercel Analytics; ładuje się dopiero po zgodzie w bannerze)
 - [x] Cookies: `NEXT_LOCALE` + `pk_cookie_consent`, lekki banner; link w stopce (docs: `docs/Legal_and_Cookies.md`)
 
-**Następny krok:** deploy preview na Vercel (Root Directory = `.`), env (`BREVO_*`, `CONTACT_TO_EMAIL`, `NEXT_PUBLIC_SITE_URL`), weryfikacja domeny w Brevo, smoke test formularza.
+**Następny krok:** smoke test formularza na prod (Turnstile + Brevo + logo w mailu), Search Console.
 
 ---
 
@@ -72,6 +72,7 @@
 - [x] Contact API, privacy, robots, sitemap, metadata, JSON-LD
 - [x] Impressum (§ 5 DDG) + rozbudowana polityka prywatności — `docs/Legal_and_Cookies.md`
 - [x] Brevo zamiast Resend (formularz kontaktowy + auto-reply HTML)
+- [x] Cloudflare Turnstile na formularzu kontaktowym
 - [x] Cookies + zgoda na Vercel Analytics (banner; inventarz w `/privacy#cookies`)
 - [x] Stopka mobile: dwie linie wyśrodkowane (logo+© / Impressum·Privacy·Cookies); desktop bez zmian układu prawnego
 
@@ -117,3 +118,4 @@
 | 2026-08-08 | Cookies: NEXT_LOCALE + pk_cookie_consent, banner zgody, Analytics dopiero po Accept all                   |
 | 2026-08-08 | Stopka mobile: 2 linie wyśrodkowane; docs `Legal_and_Cookies.md` + update Brand_Logo / checklist          |
 | 2026-08-08 | Brevo zamiast Resend: HTML inbox + auto-reply; publiczny email `kontakt@piotrkulbacki.com`                |
+| 2026-08-08 | Domena `piotrkulbacki.com` na Vercel; Turnstile; toast sukcesu skrócony; logo maila z domeny              |

@@ -99,7 +99,7 @@
     "message": "Message",
     "submit": "Send message",
     "sending": "Sending…",
-    "success": "Message sent. Thanks — I’ll get back to you soon.",
+    "success": "Message sent",
     "error": "Couldn’t send. Try again or email me directly.",
     "privacyNote": "By submitting you accept the",
     "privacyLink": "privacy policy",
@@ -107,7 +107,8 @@
     "location": "Location",
     "remote": "Remote · Berlin / EU",
     "validationError": "Please check the form and try again.",
-    "rateLimited": "Too many attempts. Please wait a moment and try again."
+    "rateLimited": "Too many attempts. Please wait a moment and try again.",
+    "captchaError": "Please confirm you are not a bot and try again."
   },
   "privacy": {
     "title": "Privacy policy",
@@ -119,7 +120,7 @@
     "hostingHeading": "Hosting",
     "hostingBody": "The site is hosted by Vercel Inc. Technical logs (e.g. IP address, user agent, timestamp) may be created as needed for security and service stability.",
     "formHeading": "Contact form",
-    "formBody": "When you submit the form, your name, email, optional phone number and message are processed solely to reply (Art. 6(1)(b) or (f) GDPR). Messages are delivered via Brevo (Sendinblue GmbH, Germany) as a processor; you may also receive an automatic acknowledgement. Data is not sold or used for marketing without separate consent. It is kept only as long as needed to handle the request, then deleted or archived where legally required.",
+    "formBody": "When you submit the form, your name, email, optional phone number and message are processed solely to reply (Art. 6(1)(b) or (f) GDPR). The form is protected by Cloudflare Turnstile (bot protection). Messages are delivered via Brevo (Sendinblue GmbH, Germany) as a processor; you may also receive an automatic acknowledgement. Data is not sold or used for marketing without separate consent. It is kept only as long as needed to handle the request, then deleted or archived where legally required.",
     "analyticsHeading": "Analytics",
     "analyticsBody": "After you accept analytics in the cookie banner, I load Vercel Analytics. It does not set its own tracking cookies; traffic is measured in a minimised way (e.g. request hash). Without consent, analytics stays off. Legal basis with consent: Art. 6(1)(a) GDPR.",
     "cookiesHeading": "Cookies",

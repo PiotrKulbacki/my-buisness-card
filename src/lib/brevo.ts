@@ -1,20 +1,8 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
-
 const BREVO_SEND_URL = "https://api.brevo.com/v3/smtp/email";
-
-/** Inline logo Content-ID used in email HTML (`cid:pk-mark`). */
-export const EMAIL_LOGO_CID = "pk-mark";
 
 type ParsedSender = {
   name: string;
   email: string;
-};
-
-type InlineAttachment = {
-  content: string;
-  name: string;
-  contentId: string;
 };
 
 function parseFromAddress(from: string): ParsedSender | null {
@@ -50,30 +38,6 @@ function getSender(): ParsedSender | null {
   return parseFromAddress(from);
 }
 
-let cachedLogoAttachment: InlineAttachment | null | undefined;
-
-/** Square lime PK mark embedded via CID (works without a live domain). */
-export function getEmailLogoAttachment(): InlineAttachment | null {
-  if (cachedLogoAttachment !== undefined) {
-    return cachedLogoAttachment;
-  }
-
-  try {
-    const path = join(process.cwd(), "public/brand/email-mark.png");
-    const content = readFileSync(path).toString("base64");
-    cachedLogoAttachment = {
-      content,
-      name: "pk-mark.png",
-      contentId: EMAIL_LOGO_CID,
-    };
-  } catch (error) {
-    console.error("[brevo] failed to load email logo", error);
-    cachedLogoAttachment = null;
-  }
-
-  return cachedLogoAttachment;
-}
-
 export function isEmailConfigured(): boolean {
   return Boolean(getApiKey() && getSender() && process.env.CONTACT_TO_EMAIL?.trim());
 }
@@ -96,8 +60,6 @@ export async function sendTransactionalEmail(params: {
     return { ok: false, error: "not_configured" };
   }
 
-  const logo = getEmailLogoAttachment();
-
   try {
     const response = await fetch(BREVO_SEND_URL, {
       method: "POST",
@@ -115,17 +77,6 @@ export async function sendTransactionalEmail(params: {
         subject: params.subject,
         htmlContent: params.html,
         textContent: params.text,
-        ...(logo
-          ? {
-              attachment: [
-                {
-                  content: logo.content,
-                  name: logo.name,
-                  contentId: logo.contentId,
-                },
-              ],
-            }
-          : {}),
         ...(params.replyTo
           ? {
               replyTo: {

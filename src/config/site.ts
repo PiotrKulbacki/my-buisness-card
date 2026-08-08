@@ -25,8 +25,6 @@ export const siteConfig = {
     lockupStacked: "/brand/ui-lockup-stacked.png",
     /** PK left + Piotr / Kulbacki / role on 3 lines */
     lockupSide: "/brand/ui-lockup-side.png",
-    /** Square lime mark for transactional emails (CID embed) */
-    emailMark: "/brand/email-mark.png",
   },
   location: {
     city: "Berlin",

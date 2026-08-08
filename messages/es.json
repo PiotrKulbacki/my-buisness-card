@@ -99,7 +99,7 @@
     "message": "Mensaje",
     "submit": "Enviar mensaje",
     "sending": "Enviando…",
-    "success": "Mensaje enviado. Gracias — te responderé pronto.",
+    "success": "Mensaje enviado",
     "error": "No se pudo enviar. Inténtalo de nuevo o escríbeme por email.",
     "privacyNote": "Al enviar aceptas la",
     "privacyLink": "política de privacidad",
@@ -107,7 +107,8 @@
     "location": "Ubicación",
     "remote": "Remote · Berlin / EU",
     "validationError": "Revisa el formulario e inténtalo de nuevo.",
-    "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo."
+    "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo.",
+    "captchaError": "Confirma que no eres un bot e inténtalo de nuevo."
   },
   "privacy": {
     "title": "Política de privacidad",
@@ -119,7 +120,7 @@
     "hostingHeading": "Alojamiento",
     "hostingBody": "El sitio está alojado en Vercel Inc. Pueden generarse logs técnicos (p. ej. IP, user agent, marca de tiempo) necesarios para la seguridad y estabilidad del servicio.",
     "formHeading": "Formulario de contacto",
-    "formBody": "Al enviar el formulario se tratan nombre, email, teléfono opcional y mensaje solo para responder (art. 6.1.b o f RGPD). El envío se realiza mediante Brevo (Sendinblue GmbH, Alemania) como encargado; también puedes recibir un acuse de recibo automático. Los datos no se venden ni se usan para marketing sin consentimiento aparte. Se conservan solo el tiempo necesario para gestionar la solicitud y luego se eliminan o archivan si la ley lo exige.",
+    "formBody": "Al enviar el formulario se tratan nombre, email, teléfono opcional y mensaje solo para responder (art. 6.1.b o f RGPD). El formulario está protegido con Cloudflare Turnstile (protección antibots). El envío se realiza mediante Brevo (Sendinblue GmbH, Alemania) como encargado; también puedes recibir un acuse de recibo automático. Los datos no se venden ni se usan para marketing sin consentimiento aparte. Se conservan solo el tiempo necesario para gestionar la solicitud y luego se eliminan o archivan si la ley lo exige.",
     "analyticsHeading": "Analítica",
     "analyticsBody": "Tras aceptar la analítica en el banner de cookies, cargo Vercel Analytics. No establece cookies propias de seguimiento; el tráfico se mide de forma minimizada (p. ej. hash de la petición). Sin consentimiento, la analítica permanece desactivada. Base jurídica con consentimiento: art. 6.1.a RGPD.",
     "cookiesHeading": "Cookies",

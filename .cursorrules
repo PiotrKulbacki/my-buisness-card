@@ -38,7 +38,7 @@
 
 - Route Handlers: walidacja Zod.
 - Formularz kontaktowy: honeypot + **rate limiting** (`src/lib/rate-limit.ts`).
-- Sekrety tylko w env serwerowym (`BREVO_*`, `CONTACT_*`). Publiczne: `NEXT_PUBLIC_*`.
+- Sekrety tylko w env serwerowym (`BREVO_*`, `CONTACT_*`, `TURNSTILE_SECRET_KEY`). Publiczne: `NEXT_PUBLIC_*` (w tym `NEXT_PUBLIC_TURNSTILE_SITE_KEY`).
 - Nie commituj `.env.local` / sekretów.
 
 ## Design

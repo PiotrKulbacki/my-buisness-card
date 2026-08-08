@@ -19,14 +19,19 @@ git push origin main
 3. **Root Directory:** zostaw puste (`.`) — **nie** ustawiaj `website`
 4. Env vars (opcjonalnie na preview, wymagane na prod z formularzem):
 
-| Name                   | Value                                                          |
-| ---------------------- | -------------------------------------------------------------- |
-| `NEXT_PUBLIC_SITE_URL` | `https://piotrkulbacki.com` (lub URL Vercel)                   |
-| `BREVO_API_KEY`        | z Brevo → SMTP & API → API keys                                |
-| `BREVO_FROM_EMAIL`     | `Piotr Kulbacki <kontakt@piotrkulbacki.com>` (domena verified) |
-| `CONTACT_TO_EMAIL`     | `it.piotr.kulbacki@gmail.com` (skrzynka, w której czytasz)     |
+| Name                             | Value                                                          |
+| -------------------------------- | -------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL`           | `https://piotrkulbacki.com`                                    |
+| `BREVO_API_KEY`                  | z Brevo → SMTP & API → API keys                                |
+| `BREVO_FROM_EMAIL`               | `Piotr Kulbacki <kontakt@piotrkulbacki.com>` (domena verified) |
+| `CONTACT_TO_EMAIL`               | `it.piotr.kulbacki@gmail.com` (skrzynka, w której czytasz)     |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Cloudflare Turnstile site key                                  |
+| `TURNSTILE_SECRET_KEY`           | Cloudflare Turnstile secret key                                |
 
-5. Deploy → otwórz `*.vercel.app` → smoke test `/pl` + sidebar + zdjęcia
+5. Domains: `piotrkulbacki.com` + redirect `www` → apex
+6. Deploy → smoke test `/pl` + sidebar + zdjęcia + formularz
+
+Lokalnie: skopiuj te same klucze do `.env` (wzór: `.env.example`), żeby Turnstile i Brevo działały poza mockiem.
 
 ### Brevo — weryfikacja domeny (raz)
 
@@ -37,21 +42,21 @@ git push origin main
 
 ## 3. Domain
 
-1. Kup domenę (np. `piotrkulbacki.com`)
-2. Vercel → Project → Domains → add
-3. DNS (A/CNAME) wg instrukcji Vercel
-4. SSL
+1. Vercel → Project → Domains → `piotrkulbacki.com` (+ www redirect)
+2. DNS (A/CNAME) wg instrukcji Vercel
+3. SSL
 
 ## 4. Google Search Console
 
 1. Property = URL produkcji
 2. Weryfikacja DNS TXT lub HTML
-3. Submit `https://your-domain.com/sitemap.xml`
+3. Submit `https://piotrkulbacki.com/sitemap.xml`
 
 ## 5. Post-launch smoke
 
 - [ ] `/pl`, `/en`, language switcher
 - [ ] Projects filter + Lyamo detail
-- [ ] Contact form (Brevo: mail na Gmail + auto-reply do nadawcy)
+- [ ] Contact form (Turnstile + Brevo: inbox + auto-reply)
+- [ ] Logo w mailach z `https://piotrkulbacki.com/brand/…`
 - [ ] Lighthouse
 - [ ] LinkedIn announcement

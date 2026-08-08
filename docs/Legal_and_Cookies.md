@@ -41,6 +41,7 @@ Dane adresowe i telefon: `src/config/site.ts` → `legal`.
 Sekcje (i18n, 5 locale): administrator, hosting (Vercel), formularz kontaktowy, analityka, cookies (`#cookies`), prawa, organ nadzorczy (Berlin).
 
 - Formularz: imię, e-mail, opcjonalny telefon, treść — odpowiedź na zapytanie.
+- Ochrona: honeypot + rate limit + **Cloudflare Turnstile**.
 - Wysyłka e-mail: **Brevo** (Sendinblue GmbH) — mail do inboxu + auto-reply do nadawcy; env `BREVO_*`, `CONTACT_TO_EMAIL`.
 - Inventarz cookies w `#cookies`: `NEXT_LOCALE`, `pk_cookie_consent`.
 

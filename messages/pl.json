@@ -99,7 +99,7 @@
     "message": "Wiadomość",
     "submit": "Wyślij wiadomość",
     "sending": "Wysyłanie…",
-    "success": "Wiadomość wysłana. Dzięki — odezwę się wkrótce.",
+    "success": "Wiadomość wysłana",
     "error": "Nie udało się wysłać. Spróbuj ponownie lub napisz bezpośrednio na email.",
     "privacyNote": "Wysyłając formularz akceptujesz",
     "privacyLink": "politykę prywatności",
@@ -107,7 +107,8 @@
     "location": "Lokalizacja",
     "remote": "Remote · Berlin / EU",
     "validationError": "Sprawdź poprawność formularza i spróbuj ponownie.",
-    "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie."
+    "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
+    "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie."
   },
   "privacy": {
     "title": "Polityka prywatności",
@@ -119,7 +120,7 @@
     "hostingHeading": "Hosting",
     "hostingBody": "Strona jest hostowana u Vercel Inc. W ramach dostarczenia treści mogą powstawać logi techniczne (np. adres IP, user agent, znacznik czasu) niezbędne do bezpieczeństwa i stabilności usługi.",
     "formHeading": "Formularz kontaktowy",
-    "formBody": "Po wysłaniu formularza przetwarzane są imię, adres e-mail, opcjonalny telefon oraz treść wiadomości — wyłącznie w celu odpowiedzi (art. 6 ust. 1 lit. b lub f RODO). Wiadomości są dostarczane przez Brevo (Sendinblue GmbH, Niemcy) jako procesora; możesz też otrzymać automatyczne potwierdzenie. Dane nie są sprzedawane ani wykorzystywane do marketingu bez osobnej zgody. Przechowywane są tak długo, jak potrzeba do obsługi zapytania, a następnie usuwane lub archiwizowane w zakresie wymaganym prawnie.",
+    "formBody": "Po wysłaniu formularza przetwarzane są imię, adres e-mail, opcjonalny telefon oraz treść wiadomości — wyłącznie w celu odpowiedzi (art. 6 ust. 1 lit. b lub f RODO). Formularz chroni Cloudflare Turnstile (ochrona przed botami). Wiadomości są dostarczane przez Brevo (Sendinblue GmbH, Niemcy) jako procesora; możesz też otrzymać automatyczne potwierdzenie. Dane nie są sprzedawane ani wykorzystywane do marketingu bez osobnej zgody. Przechowywane są tak długo, jak potrzeba do obsługi zapytania, a następnie usuwane lub archiwizowane w zakresie wymaganym prawnie.",
     "analyticsHeading": "Analityka",
     "analyticsBody": "Po wyrażeniu zgody w bannerze cookies ładuję Vercel Analytics. Narzędzie nie ustawia własnych cookies śledzących; ruch jest mierzony w sposób zminimalizowany (m.in. hash żądania). Bez zgody analityka nie jest włączana. Podstawa przy zgodzie: art. 6 ust. 1 lit. a RODO.",
     "cookiesHeading": "Cookies",

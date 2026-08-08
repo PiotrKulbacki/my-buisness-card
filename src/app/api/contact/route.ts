@@ -5,6 +5,7 @@ import { getContactInbox, isEmailConfigured, sendTransactionalEmail } from "@/li
 import { buildContactAutoReplyEmail } from "@/lib/email/contact-auto-reply";
 import { buildContactInboxEmail } from "@/lib/email/contact-inbox";
 import { getClientIp, rateLimit } from "@/lib/rate-limit";
+import { isTurnstileConfigured, verifyTurnstileToken } from "@/lib/turnstile";
 import { locales } from "@/i18n/routing";
 
 const schema = z.object({
@@ -14,6 +15,7 @@ const schema = z.object({
   message: z.string().min(10).max(4000),
   website: z.string().optional(),
   locale: z.enum(locales).optional(),
+  turnstileToken: z.string().optional(),
 });
 
 export async function POST(request: Request) {
@@ -39,8 +41,20 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true });
     }
 
+    if (isTurnstileConfigured()) {
+      const captcha = await verifyTurnstileToken(parsed.data.turnstileToken, request);
+      if (!captcha.ok) {
+        return NextResponse.json({ error: "Captcha failed" }, { status: 400 });
+      }
+    }
+
     if (!isEmailConfigured()) {
-      console.info("[contact]", parsed.data);
+      console.info("[contact]", {
+        name: parsed.data.name,
+        email: parsed.data.email,
+        phone: parsed.data.phone,
+        locale: parsed.data.locale,
+      });
       return NextResponse.json({
         ok: true,
         mocked: true,

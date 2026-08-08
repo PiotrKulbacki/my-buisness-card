@@ -22,7 +22,6 @@ Identyfikacja wizualna marki osobistej (monogram **PK** + wordmark) spójna z da
 | `ui-lockup-stacked.png`    | PK nad tekstem (3 linie, wycentrowane)                                 | Master / zapas               |
 | `ui-lockup-horizontal.png` | Monogram + „Piotr Kulbacki” w jednej linii                             | Mobile top bar obok avatara  |
 | `ui-mark.png`              | Sam monogram PK                                                        | Stopka                       |
-| `email-mark.png`           | Kwadratowy PK (lime)                                                   | Maile Brevo (CID inline)     |
 
 Komponent: `<BrandLogo variant="lockupSide" | "lockupStacked" | "lockupHorizontal" | "mark" />`.
 
@@ -50,12 +49,13 @@ W `public/brand/` zostają też mastery (`01-mark-only.png`, `02-…`, `03-…`,
 
 ## Mapa w layoutcie
 
-| Miejsce                        | Asset                |
-| ------------------------------ | -------------------- |
-| Desktop sidebar (pod avatarem) | `lockupSide`         |
-| Mobile top bar                 | `lockupHorizontal`   |
-| Footer (przy ©)                | `mark` (wys. `h-4`)  |
-| Zakładka przeglądarki          | favicon / `icon.png` |
+| Miejsce                        | Asset                                                    |
+| ------------------------------ | -------------------------------------------------------- |
+| Desktop sidebar (pod avatarem) | `lockupSide`                                             |
+| Mobile top bar                 | `lockupHorizontal`                                       |
+| Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…` |
+| Footer (przy ©)                | `mark` (wys. `h-4`)                                      |
+| Zakładka przeglądarki          | favicon / `icon.png`                                     |
 
 Desktop sidebar: lockup side `max-w-40`. Stopka treści i pas LanguageSwitcher: wspólna wysokość `--site-footer-h` (3.25rem), oba flush do dołu viewportu (separatory w jednej linii). Desktop shell: `md:h-svh` — stopka zawsze na dole; Home / Kontakt bez scrollbara okna (`h-(--site-main-h)`).
 
