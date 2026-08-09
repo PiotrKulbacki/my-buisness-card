@@ -202,11 +202,11 @@ export const cv = {
       title: "Lyamo",
       liveUrl: "https://lyamo.eu/",
       summary: {
-        pl: "Aplikacja do finansów osobistych (web + mobile): monorepo, i18n, billing, AI/OCR i architektura pod skalę.",
-        en: "Personal finance app (web + mobile): monorepo, i18n, billing, AI/OCR and scale-ready architecture.",
-        de: "Persönliche Finanz-App (Web + Mobile): Monorepo, i18n, Billing, KI/OCR und skalierbare Architektur.",
-        es: "App de finanzas personales (web + móvil): monorepo, i18n, billing, IA/OCR y arquitectura lista para escalar.",
-        uk: "Додаток особистих фінансів (web + mobile): monorepo, i18n, billing, AI/OCR і архітектура під масштаб.",
+        pl: "Aplikacja do finansów osobistych (web + mobile): budżet, OCR, czat AI, plany Stripe i monorepo pod skalę.",
+        en: "Personal finance app (web + mobile): budgeting, OCR, AI chat, Stripe plans and scale-ready monorepo.",
+        de: "Persönliche Finanz-App (Web + Mobile): Budget, OCR, KI-Chat, Stripe-Pläne und skalierbares Monorepo.",
+        es: "App de finanzas personales (web + móvil): presupuesto, OCR, chat IA, planes Stripe y monorepo listo para escalar.",
+        uk: "Додаток особистих фінансів (web + mobile): бюджет, OCR, AI-чат, плани Stripe і monorepo під масштаб.",
       },
     },
     {

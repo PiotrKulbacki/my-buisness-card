@@ -20,7 +20,7 @@
 - [x] Decyzja analytics (Vercel Analytics + opcjonalne GA4; oba dopiero po zgodzie w bannerze)
 - [x] Cookies: `NEXT_LOCALE` + `pk_cookie_consent`, lekki banner; link w stopce (docs: `docs/Legal_and_Cookies.md`)
 
-**Następny krok:** Google Search Console (sitemap); opcjonalnie GA4 Measurement ID + smoke Consent Mode (`docs/Analytics.md`); screenshoty Lyamo / AI Document.
+**Następny krok:** Google Search Console (sitemap); opcjonalnie GA4 Measurement ID + smoke Consent Mode (`docs/Analytics.md`); screenshoty AI Document.
 
 ---
 
@@ -49,7 +49,8 @@
 - [x] Certyfikaty w `public/certificates/` + podgląd modalny (PDF/obrazy); PII na dyplomie zredagowane
 - [ ] PDF Git/GitHub (Udemy) — odłożony (brak pliku); wpis na liście bez podglądu
 - [x] Screenshoty case study: MovieWeb + Sport Club PowerPlay + AK (`public/projects/…`; reguły: `docs/Projects_Section.md`)
-- [ ] Screenshoty / pełne case study: Lyamo (`lyamo.eu`), AI Document (`aidocument.eu/pl`)
+- [x] Screenshoty / pełne case study: Lyamo (`lyamo.eu`)
+- [ ] Screenshoty / pełne case study: AI Document (`aidocument.eu/pl`)
 - [ ] Finalne copy landing/about
 - [ ] Realne URL FB / IG / YT
 
@@ -101,7 +102,8 @@
 ## Faza 8 — Backlog (po zgodzie)
 
 - [ ] Canvas, Lyamo teaser, `/now`, ⌘K, CMS…
-- [ ] Pełne case study Lyamo + AI Document (screeny, tech stack)
+- [x] Pełne case study Lyamo (screeny, tech stack)
+- [ ] Pełne case study AI Document (screeny, tech stack)
 
 ---
 
@@ -129,3 +131,4 @@
 | 2026-08-08 | GA4: `@next/third-parties/google` w root layout (prod + zgoda cookies); privacy i18n 5 locale                                           |
 | 2026-08-08 | Google Consent Mode v2: default denied → analytics_storage granted po Accept; ads denied; bez CMP                                       |
 | 2026-08-08 | Docs: `docs/Analytics.md`; update Legal / DEPLOY / README / SEO / checklist                                                             |
+| 2026-08-09 | Case study Lyamo: cover + galeria (skaner/archiwum, AI chat, split, filtry wykresu), tech chips, i18n 5 locale                          |

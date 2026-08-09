@@ -71,10 +71,10 @@ GSC: po deployu wyślij ponownie `https://piotrkulbacki.com/sitemap.xml` — `do
 
 ## Produkty w portfolio (live)
 
-| Slug                 | Live URL                             | Uwagi                                      |
-| -------------------- | ------------------------------------ | ------------------------------------------ |
-| `lyamo`              | `https://lyamo.eu/`                  | Flagowiec; screeny case study — TODO       |
-| `ai-document`        | `https://aidocument.eu/pl`           | Zastąpił `brand-site-system`; screeny TODO |
-| `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/` | Screeny OK                                 |
+| Slug                 | Live URL                             | Uwagi                                            |
+| -------------------- | ------------------------------------ | ------------------------------------------------ |
+| `lyamo`              | `https://lyamo.eu/`                  | Flagowiec; screeny OK w `public/projects/lyamo/` |
+| `ai-document`        | `https://aidocument.eu/pl`           | Zastąpił `brand-site-system`; screeny TODO       |
+| `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/` | Screeny OK                                       |
 
 `siteConfig.product.url` = `https://lyamo.eu`.

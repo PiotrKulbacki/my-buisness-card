@@ -58,7 +58,7 @@ SEO (robots, sitemap 60 URL, OG z logo): [`docs/SEO.md`](docs/SEO.md).
 
 1. **Google Search Console** — weryfikacja + submit `sitemap.xml`
 2. (Opcjonalnie) **GA4** — `NEXT_PUBLIC_GA_MEASUREMENT_ID` na Vercel + smoke Consent Mode
-3. Case study: screenshoty Lyamo + AI Document
+3. Case study: screenshoty AI Document
 4. Lighthouse + LinkedIn
 
 Szczegóły: [`PROJECT_CHECKLIST.md`](PROJECT_CHECKLIST.md).
