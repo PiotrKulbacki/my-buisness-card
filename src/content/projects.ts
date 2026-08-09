@@ -39,6 +39,67 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "ai-document",
+    category: "apps",
+    year: 2026,
+    tech: ["Next.js", "TypeScript", "AI", "i18n", "Vercel"],
+    liveUrl: "https://aidocument.eu/pl",
+    coverGradient: "linear-gradient(135deg, #0F172A 0%, #1D4ED8 45%, #38BDF8 100%)",
+    gallery: [
+      {
+        caption: {
+          pl: "Panel spraw",
+          en: "Cases dashboard",
+          de: "Akten-Dashboard",
+          es: "Panel de trámites",
+          uk: "Панель справ",
+        },
+        gradient: "linear-gradient(135deg, #0F172A, #1D4ED8)",
+      },
+      {
+        caption: {
+          pl: "Asystent AI",
+          en: "AI assistant",
+          de: "KI-Assistent",
+          es: "Asistente de IA",
+          uk: "AI-асистент",
+        },
+        gradient: "linear-gradient(150deg, #1E3A8A, #38BDF8)",
+      },
+      {
+        caption: {
+          pl: "Terminy i przypomnienia",
+          en: "Deadlines & reminders",
+          de: "Fristen & Erinnerungen",
+          es: "Plazos y recordatorios",
+          uk: "Терміни та нагадування",
+        },
+        gradient: "linear-gradient(120deg, #0C4A6E, #7DD3FC)",
+      },
+    ],
+    title: {
+      pl: "AI Document",
+      en: "AI Document",
+      de: "AI Document",
+      es: "AI Document",
+      uk: "AI Document",
+    },
+    summary: {
+      pl: "Asystent spraw urzędowych — AI wyjaśnia pisma, generuje odpowiedzi z podpisem, terminy i przypomnienia.",
+      en: "Official-document assistant — AI explains letters, drafts replies with signature, deadlines and reminders.",
+      de: "Assistent für Behördensachen — KI erklärt Schreiben, erstellt Antworten mit Unterschrift, Fristen und Erinnerungen.",
+      es: "Asistente de trámites — la IA explica documentos, genera respuestas con firma, plazos y recordatorios.",
+      uk: "Асистент офіційних справ — AI пояснює листи, генерує відповіді з підписом, терміни та нагадування.",
+    },
+    body: {
+      pl: "AI Document prowadzi sprawy urzędowe od pierwszego skanu do odpowiedzi: wgrywasz pismo (PDF lub zdjęcie), AI wyjaśnia treść po ludzku, wyciąga kwoty i terminy, pomaga przygotować odpowiedź z podpisem odręcznym na ekranie oraz ustawia przypomnienia e-mail i wpisy w kalendarzu. Produkt działa w około 30 językach i obsługuje pisma z krajów UE oraz UK, Szwajcarii i Norwegii.",
+      en: "AI Document takes official paperwork from first scan to reply: upload a letter (PDF or photo), AI explains it in plain language, extracts amounts and deadlines, helps draft a response with on-screen handwritten signature, and sets email reminders plus calendar events. The product runs in about 30 languages and covers documents from EU countries plus the UK, Switzerland and Norway.",
+      de: "AI Document begleitet Behördensachen vom ersten Scan bis zur Antwort: Schreiben hochladen (PDF oder Foto), KI erklärt den Inhalt verständlich, extrahiert Beträge und Fristen, hilft bei der Antwort mit Handunterschrift am Bildschirm und setzt E-Mail-Erinnerungen sowie Kalendereinträge. Das Produkt läuft in rund 30 Sprachen und deckt Schreiben aus der EU sowie UK, Schweiz und Norwegen ab.",
+      es: "AI Document lleva los trámites oficiales del primer escaneo a la respuesta: subes un escrito (PDF o foto), la IA lo explica en lenguaje claro, extrae importes y plazos, ayuda a redactar la respuesta con firma manuscrita en pantalla y configura recordatorios por email y eventos de calendario. El producto funciona en unos 30 idiomas y cubre documentos de la UE más Reino Unido, Suiza y Noruega.",
+      uk: "AI Document веде офіційні справи від першого скану до відповіді: завантажуєш лист (PDF або фото), AI пояснює зміст простою мовою, витягує суми й терміни, допомагає підготувати відповідь з рукописним підписом на екрані та налаштовує email-нагадування й події в календарі. Продукт працює приблизно 30 мовами й охоплює документи з країн ЄС, а також UK, Швейцарії та Норвегії.",
+    },
+  },
+  {
     slug: "lyamo",
     category: "apps",
     featured: true,
@@ -132,6 +193,107 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "wc26-predictor",
+    category: "websites",
+    year: 2026,
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Server Actions",
+      "API-Football",
+      "Zod",
+      "Vercel",
+    ],
+    liveUrl: "https://wc26-predictor-zapraszam.vercel.app/",
+    coverSrc: "/projects/wc26-predictor/01-home.png",
+    coverGradient: "linear-gradient(135deg, #020617 0%, #1E3A8A 45%, #7C3AED 100%)",
+    gallery: [
+      {
+        src: "/projects/wc26-predictor/02-dashboard.png",
+        caption: {
+          pl: "Dashboard gracza — drzewko turniejowe, zakłady długoterminowe, Dream Team i terminarze faz",
+          en: "Player dashboard — tournament bracket, long-term bets, Dream Team and phase schedules",
+          de: "Spieler-Dashboard — Turnierbaum, Langzeitwetten, Dream Team und Phasen-Termine",
+          es: "Panel del jugador — cuadro del torneo, apuestas a largo plazo, Dream Team y calendarios",
+          uk: "Дашборд гравця — турнірна сітка, довгострокові ставки, Dream Team і розклади фаз",
+        },
+      },
+      {
+        src: "/projects/wc26-predictor/03-bracket.png",
+        caption: {
+          pl: "Drzewko pucharowe — faza 1/16 i 1/8, wyniki z API (dogrywki i karne)",
+          en: "Knockout bracket — round of 32 and 16, API results (extra time and penalties)",
+          de: "K.o.-Baum — Sechzehntel- und Achtelfinale, API-Ergebnisse (Verlängerung und Elfmeter)",
+          es: "Cuadro eliminatorio — dieciseisavos y octavos, resultados API (prórroga y penaltis)",
+          uk: "Плей-офф сітка — 1/16 і 1/8, результати з API (овертайм і пенальті)",
+        },
+      },
+      {
+        src: "/projects/wc26-predictor/04-match-receipt.png",
+        caption: {
+          pl: "Karta meczu po rozliczeniu — oś wydarzeń, rachunek punktowy, passa i Joker",
+          en: "Settled match card — event timeline, points receipt, streak bonus and Joker",
+          de: "Abgerechnete Matchkarte — Ereigniszeitleiste, Punktebeleg, Serie und Joker",
+          es: "Tarjeta de partido liquidada — línea de eventos, recibo de puntos, racha y Joker",
+          uk: "Картка матчу після розрахунку — стрічка подій, чек балів, серія та Joker",
+        },
+      },
+      {
+        src: "/projects/wc26-predictor/05-group-standings.png",
+        caption: {
+          pl: "Tabele grup — status zakończenia, awanse i wyniki meczów zsynchronizowane z API",
+          en: "Group tables — completion status, qualifiers and match results synced from the API",
+          de: "Gruppentabellen — Abschlussstatus, Aufsteiger und API-synchronisierte Ergebnisse",
+          es: "Tablas de grupos — estado final, clasificados y resultados sincronizados con la API",
+          uk: "Таблиці груп — статус завершення, вихід далі та результати з API",
+        },
+      },
+      {
+        src: "/projects/wc26-predictor/06-dream-team.png",
+        caption: {
+          pl: "Dream Team w karcie meczu — punkty za występy wybranych zawodników wśród graczy",
+          en: "Dream Team on the match card — points for selected players’ performances among contestants",
+          de: "Dream Team in der Matchkarte — Punkte für Auftritte gewählter Spieler im Vergleich",
+          es: "Dream Team en la tarjeta del partido — puntos por rendimiento de jugadores elegidos",
+          uk: "Dream Team у картці матчу — бали за виступи обраних гравців серед учасників",
+        },
+      },
+      {
+        src: "/projects/wc26-predictor/07-outrights.png",
+        caption: {
+          pl: "Zakłady specjalne — mistrz, król strzelców, MVP i rozliczenie fazy pucharowej",
+          en: "Special bets — champion, top scorer, MVP and knockout-phase settlement",
+          de: "Spezialwetten — Weltmeister, Torschützenkönig, MVP und K.o.-Abrechnung",
+          es: "Apuestas especiales — campeón, máximo goleador, MVP y liquidación de eliminatorias",
+          uk: "Спеціальні ставки — чемпіон, найкращий бомбардир, MVP і розрахунок плей-офф",
+        },
+      },
+    ],
+    title: {
+      pl: "WC26 Predictor",
+      en: "WC26 Predictor",
+      de: "WC26 Predictor",
+      es: "WC26 Predictor",
+      uk: "WC26 Predictor",
+    },
+    summary: {
+      pl: "Typer MŚ 2026 — typy na żywo, zakłady ryzykowne, Dream Team, drzewko turniejowe i ranking.",
+      en: "WC 2026 predictor — live tips, risky bets, Dream Team, tournament bracket and leaderboard.",
+      de: "WM-2026-Tippspiel — Live-Tipps, Risikowetten, Dream Team, Turnierbaum und Rangliste.",
+      es: "Predictor del Mundial 2026 — tipster en vivo, apuestas de riesgo, Dream Team, cuadro y ranking.",
+      uk: "Типер ЧС-2026 — ставки наживо, ризиковані купони, Dream Team, сітка та рейтинг.",
+    },
+    body: {
+      pl: "WC26 Predictor to aplikacja do typowania wyników Mistrzostw Świata 2026 zbudowana wokół grywalizacji: dokładny wynik (+3), trend zwycięzcy (+1), nagroda pocieszenia za gole jednej drużyny, zakłady ryzykowne (obie strzelą, karny, czerwona kartka) z ujemnymi punktami za błąd, taktyczny Joker ×2 oraz bonusy passy (Ogień). Po meczu widać rachunek punktowy i wyniki innych graczy; na żywo działa oś wydarzeń i Pub Kibica. Osobne moduły to drzewko turniejowe (tabele grup i faza pucharowa z API-Football), zakłady długoterminowe (mistrz, król strzelców, MVP) oraz Dream Team — jeden skład na turniej z punktacją za występy. Stack: Next.js (App Router) + TypeScript + Tailwind, Supabase (Auth/PostgreSQL), Server Actions i silnik rozliczeń, Zod, deploy na Vercel.",
+      en: "WC26 Predictor is a World Cup 2026 tipping app built around gamification: exact score (+3), correct winner trend (+1), consolation for one side’s goals, high-risk side bets (BTTS, penalty, red card) with negative points on misses, a tactical Joker ×2 and streak bonuses (Fire). After each match you get a points receipt and peers’ results; live play adds an event timeline and a fan chat pub. Separate modules cover the tournament bracket (group tables and knockout fed by API-Football), long-term outrights (champion, top scorer, MVP) and Dream Team — one locked squad for the tournament scored on performances. Stack: Next.js (App Router) + TypeScript + Tailwind, Supabase (Auth/PostgreSQL), Server Actions and a settlement engine, Zod, deployed on Vercel.",
+      de: "WC26 Predictor ist ein Tippspiel zur WM 2026 mit Gamification: exakter Score (+3), richtiger Siegertrend (+1), Trostpunkte für Tore einer Seite, Risikowetten (Beide treffen, Elfmeter, Rot) mit Minuspunkten bei Fehlern, taktischer Joker ×2 und Serien-Boni (Feuer). Nach dem Spiel erscheinen Punktebeleg und Ergebnisse anderer; live gibt es Ereigniszeitleiste und Fan-Chat. Weitere Module: Turnierbaum (Gruppentabellen und K.o. via API-Football), Langzeitwetten (Weltmeister, Torschützenkönig, MVP) und Dream Team — ein Turnierkader mit Punkten für Auftritte. Stack: Next.js (App Router) + TypeScript + Tailwind, Supabase (Auth/PostgreSQL), Server Actions und Abrechnungs-Engine, Zod, Deploy auf Vercel.",
+      es: "WC26 Predictor es una app de tipster del Mundial 2026 centrada en gamificación: marcador exacto (+3), tendencia de ganador (+1), consuelo por goles de un equipo, apuestas de riesgo (ambos marcan, penalti, tarjeta roja) con puntos negativos si fallas, Joker táctico ×2 y bonos de racha (Fuego). Tras el partido ves el recibo de puntos y resultados de otros; en vivo hay línea de eventos y chat de aficionados. Módulos aparte: cuadro del torneo (tablas de grupos y eliminatorias vía API-Football), apuestas a largo plazo (campeón, máximo goleador, MVP) y Dream Team — una plantilla para el torneo con puntos por rendimiento. Stack: Next.js (App Router) + TypeScript + Tailwind, Supabase (Auth/PostgreSQL), Server Actions y motor de liquidación, Zod, deploy en Vercel.",
+      uk: "WC26 Predictor — застосунок для прогнозів ЧС-2026 з гейміфікацією: точний рахунок (+3), тренд переможця (+1), бонус за голи однієї команди, ризиковані ставки (обидві заб’ють, пенальті, червона) з мінусом за помилку, тактичний Joker ×2 і бонуси серії (Вогонь). Після матчу — чек балів і результати інших; наживо — стрічка подій і чат уболівальників. Окремі модулі: турнірна сітка (таблиці груп і плей-офф з API-Football), довгострокові ставки (чемпіон, бомбардир, MVP) та Dream Team — один склад на турнір із балами за виступи. Стек: Next.js (App Router) + TypeScript + Tailwind, Supabase (Auth/PostgreSQL), Server Actions і рушій розрахунків, Zod, деплой на Vercel.",
+    },
+  },
+  {
     slug: "ak-gebaeudeservice",
     category: "websites",
     year: 2026,
@@ -221,67 +383,6 @@ export const projects: Project[] = [
       de: "Website für Arasim & Kedzierski Gebäudeservice (Berlin): dunkles UI mit Emerald-Akzenten, Full-Bleed-Hero, Leistungsraster (Hausmeister, Büroreinigung, Bauendreinigung, Außenanlagen, Graffiti, Winterdienst, Entrümpelung, Fenster, Malerarbeiten, Kleinreparaturen, Montage, Silikon) mit Detailmodals, AK-Standard, Philosophie und Kontaktformular mit Anhängen. Stack: React + Vite + Tailwind + Framer Motion + React Router; Deploy auf Vercel mit Domain akgebaeudeservice.com — end-to-end von UI bis Hosting.",
       es: "Web para Arasim & Kedzierski Gebäudeservice (Berlín): UI oscura con acentos esmeralda, hero a sangre completa, rejilla de servicios (conserjería, limpieza de oficinas, post-obra, exteriores, graffiti, invierno, vaciado, ventanas, pintura, reparaciones, montaje, silicona) con modales, sección AK-Standard, Filosofía y formulario de contacto con adjuntos. Stack: React + Vite + Tailwind + Framer Motion + React Router; deploy en Vercel con el dominio akgebaeudeservice.com — de extremo a extremo.",
       uk: "Сайт для Arasim & Kedzierski Gebäudeservice (Берлін): темний UI з emerald-акцентами, full-bleed hero, сітка послуг (догляд за будівлею, офісне прибирання, післябудівельне, озеленення, графіті, зимовий сервіс, розчищення, вікна, малярні, дрібний ремонт, монтаж, силікон) з модалями, секція AK-Standard, Філософія та контактна форма з вкладеннями. Стек: React + Vite + Tailwind + Framer Motion + React Router; деплой на Vercel з доменом akgebaeudeservice.com — end-to-end від UI до хостингу.",
-    },
-  },
-  {
-    slug: "ai-document",
-    category: "apps",
-    year: 2026,
-    tech: ["Next.js", "TypeScript", "AI", "i18n", "Vercel"],
-    liveUrl: "https://aidocument.eu/pl",
-    coverGradient: "linear-gradient(135deg, #0F172A 0%, #1D4ED8 45%, #38BDF8 100%)",
-    gallery: [
-      {
-        caption: {
-          pl: "Panel spraw",
-          en: "Cases dashboard",
-          de: "Akten-Dashboard",
-          es: "Panel de trámites",
-          uk: "Панель справ",
-        },
-        gradient: "linear-gradient(135deg, #0F172A, #1D4ED8)",
-      },
-      {
-        caption: {
-          pl: "Asystent AI",
-          en: "AI assistant",
-          de: "KI-Assistent",
-          es: "Asistente de IA",
-          uk: "AI-асистент",
-        },
-        gradient: "linear-gradient(150deg, #1E3A8A, #38BDF8)",
-      },
-      {
-        caption: {
-          pl: "Terminy i przypomnienia",
-          en: "Deadlines & reminders",
-          de: "Fristen & Erinnerungen",
-          es: "Plazos y recordatorios",
-          uk: "Терміни та нагадування",
-        },
-        gradient: "linear-gradient(120deg, #0C4A6E, #7DD3FC)",
-      },
-    ],
-    title: {
-      pl: "AI Document",
-      en: "AI Document",
-      de: "AI Document",
-      es: "AI Document",
-      uk: "AI Document",
-    },
-    summary: {
-      pl: "Asystent spraw urzędowych — AI wyjaśnia pisma, generuje odpowiedzi z podpisem, terminy i przypomnienia.",
-      en: "Official-document assistant — AI explains letters, drafts replies with signature, deadlines and reminders.",
-      de: "Assistent für Behördensachen — KI erklärt Schreiben, erstellt Antworten mit Unterschrift, Fristen und Erinnerungen.",
-      es: "Asistente de trámites — la IA explica documentos, genera respuestas con firma, plazos y recordatorios.",
-      uk: "Асистент офіційних справ — AI пояснює листи, генерує відповіді з підписом, терміни та нагадування.",
-    },
-    body: {
-      pl: "AI Document prowadzi sprawy urzędowe od pierwszego skanu do odpowiedzi: wgrywasz pismo (PDF lub zdjęcie), AI wyjaśnia treść po ludzku, wyciąga kwoty i terminy, pomaga przygotować odpowiedź z podpisem odręcznym na ekranie oraz ustawia przypomnienia e-mail i wpisy w kalendarzu. Produkt działa w około 30 językach i obsługuje pisma z krajów UE oraz UK, Szwajcarii i Norwegii.",
-      en: "AI Document takes official paperwork from first scan to reply: upload a letter (PDF or photo), AI explains it in plain language, extracts amounts and deadlines, helps draft a response with on-screen handwritten signature, and sets email reminders plus calendar events. The product runs in about 30 languages and covers documents from EU countries plus the UK, Switzerland and Norway.",
-      de: "AI Document begleitet Behördensachen vom ersten Scan bis zur Antwort: Schreiben hochladen (PDF oder Foto), KI erklärt den Inhalt verständlich, extrahiert Beträge und Fristen, hilft bei der Antwort mit Handunterschrift am Bildschirm und setzt E-Mail-Erinnerungen sowie Kalendereinträge. Das Produkt läuft in rund 30 Sprachen und deckt Schreiben aus der EU sowie UK, Schweiz und Norwegen ab.",
-      es: "AI Document lleva los trámites oficiales del primer escaneo a la respuesta: subes un escrito (PDF o foto), la IA lo explica en lenguaje claro, extrae importes y plazos, ayuda a redactar la respuesta con firma manuscrita en pantalla y configura recordatorios por email y eventos de calendario. El producto funciona en unos 30 idiomas y cubre documentos de la UE más Reino Unido, Suiza y Noruega.",
-      uk: "AI Document веде офіційні справи від першого скану до відповіді: завантажуєш лист (PDF або фото), AI пояснює зміст простою мовою, витягує суми й терміни, допомагає підготувати відповідь з рукописним підписом на екрані та налаштовує email-нагадування й події в календарі. Продукт працює приблизно 30 мовами й охоплює документи з країн ЄС, а також UK, Швейцарії та Норвегії.",
     },
   },
   {

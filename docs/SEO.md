@@ -53,14 +53,14 @@ Test: Debugger FB / LinkedIn Post Inspector / View Source (`og:title`, `og:image
 
 Źródło tras: `getIndexableRoutes()` w `seo.ts`.
 
-| Grupa        | Ścieżki (bez locale)                                                            | Priorytet (orientacyjnie) |
-| ------------ | ------------------------------------------------------------------------------- | ------------------------- |
-| Home         | `""`                                                                            | 1.0                       |
-| Główne       | `/about`, `/projects`, `/path`, `/contact`                                      | 0.8–0.9                   |
-| Case studies | `/projects/lyamo`, `ak-gebaeudeservice`, `ai-document`, `movieweb`, `sportclub` | 0.7                       |
-| Prawne       | `/privacy`, `/impressum`                                                        | 0.3                       |
+| Grupa        | Ścieżki (bez locale)                                                                              | Priorytet (orientacyjnie) |
+| ------------ | ------------------------------------------------------------------------------------------------- | ------------------------- |
+| Home         | `""`                                                                                              | 1.0                       |
+| Główne       | `/about`, `/projects`, `/path`, `/contact`                                                        | 0.8–0.9                   |
+| Case studies | `/projects/ai-document`, `lyamo`, `wc26-predictor`, `ak-gebaeudeservice`, `movieweb`, `sportclub` | 0.7                       |
+| Prawne       | `/privacy`, `/impressum`                                                                          | 0.3                       |
 
-**Łącznie:** (7 stron nawigacji/prawnych + 5 case studies) × 5 locale = **60 URL**.  
+**Łącznie:** (7 stron nawigacji/prawnych + 6 case studies) × 5 locale = **65 URL**.  
 Każdy `<url>` ma `xhtml:link` hreflang (jak metadata stron).
 
 Impressum i privacy **są** indeksowane (niższy priorytet).
@@ -71,10 +71,11 @@ GSC: po deployu wyślij ponownie `https://piotrkulbacki.com/sitemap.xml` — `do
 
 ## Produkty w portfolio (live)
 
-| Slug                 | Live URL                             | Uwagi                                            |
-| -------------------- | ------------------------------------ | ------------------------------------------------ |
-| `lyamo`              | `https://lyamo.eu/`                  | Flagowiec; screeny OK w `public/projects/lyamo/` |
-| `ai-document`        | `https://aidocument.eu/pl`           | Zastąpił `brand-site-system`; screeny TODO       |
-| `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/` | Screeny OK                                       |
+| Slug                 | Live URL                                       | Uwagi                                            |
+| -------------------- | ---------------------------------------------- | ------------------------------------------------ |
+| `ai-document`        | `https://aidocument.eu/pl`                     | Zastąpił `brand-site-system`; screeny TODO       |
+| `lyamo`              | `https://lyamo.eu/`                            | Flagowiec; screeny OK w `public/projects/lyamo/` |
+| `wc26-predictor`     | `https://wc26-predictor-zapraszam.vercel.app/` | Typer MŚ 2026; screeny OK                        |
+| `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/`           | Screeny OK                                       |
 
 `siteConfig.product.url` = `https://lyamo.eu`.

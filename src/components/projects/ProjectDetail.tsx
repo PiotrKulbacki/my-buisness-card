@@ -62,8 +62,8 @@ export function ProjectDetail({ project, locale, labels }: ProjectDetailProps) {
 
       <motion.div
         className="mt-5 md:mt-6"
-        initial={reduce ? false : { opacity: 0, y: 28, scale: 0.98 }}
-        animate={reduce ? undefined : { opacity: 1, y: 0, scale: 1 }}
+        initial={reduce ? false : { opacity: 0, y: 28 }}
+        animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={{ duration: 0.65, delay: 0.1, ease: EASE }}
       >
         <div

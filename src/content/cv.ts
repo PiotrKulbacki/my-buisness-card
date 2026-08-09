@@ -222,6 +222,18 @@ export const cv = {
       },
     },
     {
+      id: "wc26-predictor",
+      title: "WC26 Predictor",
+      liveUrl: "https://wc26-predictor-zapraszam.vercel.app/",
+      summary: {
+        pl: "Typer MŚ 2026: typy na żywo, zakłady ryzykowne, Joker, Dream Team, drzewko turniejowe i ranking.",
+        en: "WC 2026 predictor: live tips, risky bets, Joker, Dream Team, tournament bracket and leaderboard.",
+        de: "WM-2026-Tippspiel: Live-Tipps, Risikowetten, Joker, Dream Team, Turnierbaum und Rangliste.",
+        es: "Predictor del Mundial 2026: tipster en vivo, apuestas de riesgo, Joker, Dream Team, cuadro y ranking.",
+        uk: "Типер ЧС-2026: ставки наживо, ризиковані купони, Joker, Dream Team, сітка та рейтинг.",
+      },
+    },
+    {
       id: "ak-gebaeudeservice",
       title: "AK Gebäudeservice",
       liveUrl: "https://www.akgebaeudeservice.com/",

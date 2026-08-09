@@ -50,6 +50,7 @@
 - [ ] PDF Git/GitHub (Udemy) — odłożony (brak pliku); wpis na liście bez podglądu
 - [x] Screenshoty case study: MovieWeb + Sport Club PowerPlay + AK (`public/projects/…`; reguły: `docs/Projects_Section.md`)
 - [x] Screenshoty / pełne case study: Lyamo (`lyamo.eu`)
+- [x] Screenshoty / pełne case study: WC26 Predictor (`wc26-predictor`)
 - [ ] Screenshoty / pełne case study: AI Document (`aidocument.eu/pl`)
 - [ ] Finalne copy landing/about
 - [ ] Realne URL FB / IG / YT

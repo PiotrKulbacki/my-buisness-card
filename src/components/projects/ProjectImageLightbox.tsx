@@ -69,9 +69,10 @@ export function ProjectImageLightbox({ src, alt, closeLabel, onClose }: ProjectI
 
           <motion.div
             className="border-line bg-bg-elevated relative z-10 flex max-h-[92dvh] w-full max-w-5xl flex-col overflow-hidden rounded-[20px] border shadow-(--shadow)"
-            initial={reduce ? false : { opacity: 0, scale: 0.94, y: 16 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={reduce ? undefined : { opacity: 0, scale: 0.98, y: 8 }}
+            // Opacity/y only — CSS `scale` on the shell softens UI screenshots in the lightbox
+            initial={reduce ? false : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={reduce ? undefined : { opacity: 0, y: 8 }}
             transition={reduce ? { duration: 0 } : { duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="border-line flex items-center justify-between gap-3 border-b px-4 py-3">
@@ -91,7 +92,8 @@ export function ProjectImageLightbox({ src, alt, closeLabel, onClose }: ProjectI
               <img
                 src={src}
                 alt={alt}
-                className="max-h-[min(80dvh,52rem)] max-w-full object-contain"
+                className="max-h-[min(80dvh,52rem)] max-w-full object-contain [image-rendering:auto]"
+                decoding="sync"
               />
             </div>
           </motion.div>
