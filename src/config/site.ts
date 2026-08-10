@@ -46,10 +46,11 @@ export const siteConfig = {
   },
   social: {
     linkedin: "https://www.linkedin.com/in/it-piotr-kulbacki",
-    facebook: "https://facebook.com/",
+    facebook: "https://www.facebook.com/profile.php?id=61568507043528",
     github: "https://github.com/PiotrKulbacki?tab=repositories",
-    instagram: "https://instagram.com/",
-    youtube: "https://youtube.com/",
+    instagram: "https://www.instagram.com/piotr_kulbacki/",
+    tiktok: "https://www.tiktok.com/@piotr_kulbacki",
+    youtube: "https://www.youtube.com/@kulbackipiotr",
   },
   product: {
     name: "Lyamo",

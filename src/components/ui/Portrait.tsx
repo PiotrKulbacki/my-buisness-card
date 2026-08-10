@@ -17,7 +17,8 @@ export function Portrait({ className, priority }: PortraitProps) {
           alt={siteConfig.name}
           fill
           priority={priority}
-          sizes="(max-width: 768px) 100vw, 48vw"
+          fetchPriority={priority ? "high" : "auto"}
+          sizes="(max-width: 768px) 85vw, 48vw"
           className="object-cover object-top"
         />
       ) : (

@@ -20,8 +20,20 @@ export function LandingHero() {
             <span className="text-fg block font-normal opacity-90">{siteConfig.firstName}</span>
             <span className="mt-0.5 block font-bold md:mt-1">{siteConfig.lastName}</span>
           </h1>
-          <p className="text-accent-warm mt-3 flex items-center gap-2 text-sm font-medium md:mt-5 md:text-lg">
-            <span aria-hidden>▶</span>
+          <p className="text-accent-warm mt-3 flex items-center gap-2.5 text-sm font-medium md:mt-5 md:text-lg">
+            <span aria-hidden className="inline-flex size-2.5 shrink-0 items-center justify-center">
+              <svg viewBox="0 0 10 10" className="size-2.5" aria-hidden>
+                <rect
+                  x="2.2"
+                  y="2.2"
+                  width="5.6"
+                  height="5.6"
+                  rx="0.6"
+                  transform="rotate(45 5 5)"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
             {t("role")}
           </p>
           <p className="text-fg-muted mt-2 max-w-md text-sm leading-relaxed md:mt-4 md:text-base">
@@ -30,15 +42,13 @@ export function LandingHero() {
           <SocialLinks className="mt-4 md:mt-8" />
         </Reveal>
 
-        <Reveal
-          delay={0.1}
-          className="flex min-h-0 items-end justify-center overflow-hidden md:block md:items-center md:overflow-visible"
-        >
+        {/* LCP: no Reveal fade — opacity:0 delays Largest Contentful Paint on mobile. */}
+        <div className="flex min-h-0 items-end justify-center overflow-hidden md:block md:items-center md:overflow-visible">
           <Portrait
             priority
             className="mx-auto aspect-3/4 h-full max-h-full w-auto max-w-full md:ml-auto md:h-auto md:max-h-full md:w-full md:max-w-none"
           />
-        </Reveal>
+        </div>
       </div>
     </section>
   );

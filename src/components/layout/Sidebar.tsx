@@ -87,7 +87,6 @@ export function Sidebar() {
             <BrandLogo
               variant="lockupHorizontal"
               decorative
-              priority
               sizes="184px"
               className="h-7 w-auto max-w-full"
             />
@@ -143,7 +142,6 @@ export function Sidebar() {
             <BrandLogo
               variant="lockupSide"
               decorative
-              priority
               sizes="160px"
               className="mx-auto h-auto w-full max-w-40"
             />
