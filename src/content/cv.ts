@@ -198,6 +198,18 @@ export const cv = {
       },
     },
     {
+      id: "ai-document",
+      title: "AI Document",
+      liveUrl: "https://aidocument.eu/",
+      summary: {
+        pl: "Flagowy produkt: AI skanuje obce pisma, generuje gotowe odpowiedzi z podpisem, pilnuje terminów i przypomina e-mailem (30 języków).",
+        en: "Flagship product: AI scans foreign letters, drafts signed replies, tracks deadlines and email reminders (30 languages).",
+        de: "Flagship: KI scannt fremdsprachige Schreiben, erstellt Antworten mit Unterschrift, Fristen und E-Mail-Erinnerungen (30 Sprachen).",
+        es: "Producto estrella: la IA escanea escritos extranjeros, genera respuestas con firma, plazos y recordatorios (30 idiomas).",
+        uk: "Флагман: AI сканує іноземні листи, генерує відповіді з підписом, терміни та email-нагадування (30 мов).",
+      },
+    },
+    {
       id: "lyamo",
       title: "Lyamo",
       liveUrl: "https://lyamo.eu/",
@@ -207,18 +219,6 @@ export const cv = {
         de: "Persönliche Finanz-App (Web + Mobile): Budget, OCR, KI-Chat, Stripe-Pläne und skalierbares Monorepo.",
         es: "App de finanzas personales (web + móvil): presupuesto, OCR, chat IA, planes Stripe y monorepo listo para escalar.",
         uk: "Додаток особистих фінансів (web + mobile): бюджет, OCR, AI-чат, плани Stripe і monorepo під масштаб.",
-      },
-    },
-    {
-      id: "ai-document",
-      title: "AI Document",
-      liveUrl: "https://aidocument.eu/pl",
-      summary: {
-        pl: "Asystent spraw urzędowych: AI generuje pisma z podpisem odręcznym, dodaje terminy do kalendarza i przypomina e-mailem.",
-        en: "Official-document assistant: AI drafts letters with handwritten signature, calendar events and email reminders.",
-        de: "Assistent für Behördensachen: KI erstellt Schreiben mit Handunterschrift, Kalendertermine und E-Mail-Erinnerungen.",
-        es: "Asistente de trámites: la IA genera escritos con firma manuscrita, eventos de calendario y recordatorios por email.",
-        uk: "Асистент офіційних справ: AI генерує листи з рукописним підписом, події в календарі та email-нагадування.",
       },
     },
     {

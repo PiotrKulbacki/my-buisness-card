@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Piotr Kulbacki — Software Engineer",
-    "description": "I build modern digital products, websites and apps. Creator of Lyamo. Available for remote collaboration."
+    "description": "I build modern digital products, websites and apps. Creator of AI Document. Available for remote collaboration."
   },
   "nav": {
     "about": "Who I am",
@@ -31,9 +31,9 @@
     "buildingTitle": "What I build",
     "buildingBody": "I ship my own products and client work — with a strong focus on UX quality and solid engineering.",
     "buildingItems": {
-      "product": "Lyamo — personal finance app (web + mobile)",
+      "product": "AI Document — official-matters AI assistant (30 languages)",
       "websites": "Company sites and landings with SEO and motion",
-      "apps": "Web apps and operations dashboards"
+      "apps": "Lyamo and other web apps / ops dashboards"
     },
     "techTitle": "Technologies"
   },

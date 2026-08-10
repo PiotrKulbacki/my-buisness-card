@@ -71,11 +71,11 @@ GSC: po deployu wyślij ponownie `https://piotrkulbacki.com/sitemap.xml` — `do
 
 ## Produkty w portfolio (live)
 
-| Slug                 | Live URL                                       | Uwagi                                            |
-| -------------------- | ---------------------------------------------- | ------------------------------------------------ |
-| `ai-document`        | `https://aidocument.eu/pl`                     | Zastąpił `brand-site-system`; screeny TODO       |
-| `lyamo`              | `https://lyamo.eu/`                            | Flagowiec; screeny OK w `public/projects/lyamo/` |
-| `wc26-predictor`     | `https://wc26-predictor-zapraszam.vercel.app/` | Typer MŚ 2026; screeny OK                        |
-| `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/`           | Screeny OK                                       |
+| Slug                 | Live URL                                       | Uwagi                                               |
+| -------------------- | ---------------------------------------------- | --------------------------------------------------- |
+| `ai-document`        | `https://aidocument.eu/`                       | Flagowiec; screeny w `public/projects/ai-document/` |
+| `lyamo`              | `https://lyamo.eu/`                            | Flagowiec; screeny OK w `public/projects/lyamo/`    |
+| `wc26-predictor`     | `https://wc26-predictor-zapraszam.vercel.app/` | Typer MŚ 2026; screeny OK                           |
+| `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/`           | Screeny OK                                          |
 
 `siteConfig.product.url` = `https://lyamo.eu`.

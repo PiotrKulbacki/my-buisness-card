@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Piotr Kulbacki — Inżynier oprogramowania",
-    "description": "Buduję nowoczesne produkty cyfrowe, strony i aplikacje. Twórca Lyamo. Współpraca remote."
+    "description": "Buduję nowoczesne produkty cyfrowe, strony i aplikacje. Twórca AI Document. Współpraca remote."
   },
   "nav": {
     "about": "Kim jestem",
@@ -31,9 +31,9 @@
     "buildingTitle": "Co buduję",
     "buildingBody": "Tworzę produkty własne i realizacje dla klientów — ze szczególnym naciskiem na jakość UX oraz solidną inżynierię.",
     "buildingItems": {
-      "product": "Lyamo — aplikacja do finansów osobistych (web + mobile)",
+      "product": "AI Document — asystent spraw urzędowych (AI, 30 języków)",
       "websites": "Strony firmowe i landingi z naciskiem na SEO i motion",
-      "apps": "Aplikacje webowe i panele operacyjne"
+      "apps": "Lyamo i inne aplikacje webowe / panele operacyjne"
     },
     "techTitle": "Technologie"
   },

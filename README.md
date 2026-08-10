@@ -47,7 +47,7 @@ Landing na mobile: hero wypełnia pierwszy viewport; poniżej do scrolla główn
 
 Sekcja **CV / Doświadczenie** (`/path`): pełne CV online — [`docs/CV_Online.md`](docs/CV_Online.md).
 
-**Projekty (live):** Lyamo → [lyamo.eu](https://lyamo.eu/), AI Document → [aidocument.eu/pl](https://aidocument.eu/pl), AK Gebäudeservice. Reguły case study: [`docs/Projects_Section.md`](docs/Projects_Section.md).
+**Projekty (live):** AI Document → [aidocument.eu](https://aidocument.eu/), Lyamo → [lyamo.eu](https://lyamo.eu/), AK Gebäudeservice. Reguły case study: [`docs/Projects_Section.md`](docs/Projects_Section.md).
 
 Prawne: `/impressum`, `/privacy`, baner cookies — [`docs/Legal_and_Cookies.md`](docs/Legal_and_Cookies.md).  
 Analityka (Vercel + opcjonalne GA4, Consent Mode v2): [`docs/Analytics.md`](docs/Analytics.md).

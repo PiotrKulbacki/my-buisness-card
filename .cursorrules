@@ -43,7 +43,7 @@
 
 ## Design
 
-- Dark-only. Lewy sidebar. Brand: Piotr Kulbacki; produkt flagowy: Lyamo.
+- Dark-only. Lewy sidebar. Brand: Piotr Kulbacki; produkt flagowy: AI Document (Lyamo = drugi produkt SaaS).
 - Logo marki: assety `public/brand/`, komponent `BrandLogo`, mapa w `docs/Brand_Logo.md`. Nie mieszać z marką Lyamo.
 - Assety runtime w `public/` (`portrait.png`, `avatar.png`, `brand/`, `projects/<slug>/…`, `certificates/`). Źródła referencyjne w `docs/assets/`.
 - Nie wprowadzaj „AI default” looków (fioletowe gradienty, Inter/Roboto jako display, cream+terracotta).

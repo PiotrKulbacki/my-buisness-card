@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Piotr Kulbacki — Web & Product Engineer",
-    "description": "Створюю сучасні цифрові продукти, сайти та додатки. Автор Lyamo. Доступний для remote."
+    "description": "Створюю сучасні цифрові продукти, сайти та додатки. Автор AI Document. Доступний для remote."
   },
   "nav": {
     "about": "Хто я",
@@ -31,9 +31,9 @@
     "buildingTitle": "Що я створюю",
     "buildingBody": "Власні продукти та клієнтські проєкти — з фокусом на UX і міцну інженерію.",
     "buildingItems": {
-      "product": "Lyamo — додаток особистих фінансів (web + mobile)",
+      "product": "AI Document — AI-асистент офіційних справ (30 мов)",
       "websites": "Корпоративні сайти та лендинги з SEO і motion",
-      "apps": "Вебдодатки та ops-dashboardи"
+      "apps": "Lyamo та інші вебдодатки / ops-dashboardи"
     },
     "techTitle": "Технології"
   },

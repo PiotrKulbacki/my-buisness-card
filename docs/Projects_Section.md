@@ -60,7 +60,7 @@ Padding strony: kompaktowy u góry (`pt-4 md:pt-8`), żeby na desktopie cover mi
 ## Flagi treści
 
 - `courseProject: true` → badge „Podczas kursu…”, zwykle bez `liveUrl` (`notLive`).
-- `featured: true` → wyróżnienie (np. Lyamo).
+- `featured: true` → wyróżnienie (flagowiec: AI Document).
 - Brak `liveUrl` → `projects.notLive`, nie pusty link.
 
 ## Aktualny katalog projektów (2026-08-09)
@@ -69,14 +69,14 @@ Kolejność na liście = kolejność w `projects[]`.
 
 | Slug                 | Kategoria | Live                                           | Screeny                                |
 | -------------------- | --------- | ---------------------------------------------- | -------------------------------------- |
-| `ai-document`        | apps      | `https://aidocument.eu/pl`                     | TODO (zastąpił `brand-site-system`)    |
+| `ai-document`        | apps      | `https://aidocument.eu/`                       | OK w `public/projects/ai-document/`    |
 | `lyamo`              | apps      | `https://lyamo.eu/`                            | OK w `public/projects/lyamo/`          |
 | `wc26-predictor`     | websites  | `https://wc26-predictor-zapraszam.vercel.app/` | OK w `public/projects/wc26-predictor/` |
 | `ak-gebaeudeservice` | websites  | `https://www.akgebaeudeservice.com/`           | OK                                     |
 | `movieweb`           | apps      | — (kurs)                                       | OK                                     |
 | `sportclub`          | apps      | — (kurs)                                       | OK                                     |
 
-Przy pełnej konfiguracji AI Document: assety wg checklisty powyżej + doprecyzowanie tech stacku i ewentualnie live URL (`/pl` vs root z detekcją języka).
+AI Document: cover `01-dashboard.png`, galeria `02`–`08` + `10`; PII (imię, e-mail, adres) — wyłącznie soft blur na tekście, bez czarnych/szarych prostokątów.
 
 Sitemap case studies: `docs/SEO.md`.
 

@@ -150,8 +150,8 @@ Szczegóły → zakładka **Projekty**. Tu: nazwa, 1–2 zdania, opcjonalnie liv
 
 1. **MovieWeb App** — badge: podczas kursu programowania
 2. **Sport Club PowerPlay** — badge: podczas kursu programowania
-3. **Lyamo** — `https://lyamo.eu/`
-4. **AI Document** — `https://aidocument.eu/pl`
+3. **AI Document** — `https://aidocument.eu/`
+4. **Lyamo** — `https://lyamo.eu/`
 5. **AK Gebäudeservice** — `https://www.akgebaeudeservice.com/`
 6. **WC26 Predictor** — `https://wc26-predictor-zapraszam.vercel.app/`
 
