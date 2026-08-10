@@ -65,6 +65,7 @@ export function Avatar({ className, size = "lg" }: AvatarProps) {
           alt={siteConfig.name}
           fill
           sizes={size === "sm" ? "32px" : "112px"}
+          loading="eager"
           className={cn(
             "object-cover object-[center_8%]",
             // Mobile header: zoom so the crop ends at the waist; lightbox keeps the full portrait.

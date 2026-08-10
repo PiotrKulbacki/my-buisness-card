@@ -33,6 +33,8 @@ type BrandLogoProps = {
   /** Intrinsic layout hint for next/image `sizes` */
   sizes?: string;
   priority?: boolean;
+  /** Above-fold chrome: eager without competing LCP preload (`priority`). */
+  loading?: "eager" | "lazy";
   /** Decorative when parent already names the brand (e.g. linked logo). */
   decorative?: boolean;
 };
@@ -42,6 +44,7 @@ export function BrandLogo({
   className,
   sizes,
   priority = false,
+  loading,
   decorative = false,
 }: BrandLogoProps) {
   const asset = variants[variant];
@@ -54,6 +57,7 @@ export function BrandLogo({
       height={asset.height}
       sizes={sizes}
       priority={priority}
+      loading={priority ? undefined : loading}
       className={cn("object-contain", className)}
     />
   );
