@@ -5,20 +5,21 @@ Produkcja: [piotrkulbacki.com](https://piotrkulbacki.com)
 
 ## Struktura
 
-| Ścieżka                     | Opis                                                                          |
-| --------------------------- | ----------------------------------------------------------------------------- |
-| `src/`                      | Aplikacja Next.js                                                             |
-| `public/`                   | Assety publiczne (`portrait.png`, `avatar.png`, `brand/`, `certificates/`, …) |
-| `messages/`                 | Tłumaczenia (pl, en, de, es, uk)                                              |
-| `docs/`                     | Dokumentacja projektu + źródłowe zdjęcia w `docs/assets/`                     |
-| `docs/Brand_Logo.md`        | Logo PK: warianty, favicon, mapa w layoutcie                                  |
-| `docs/CV_Online.md`         | Spec i stan sekcji CV (`/path`)                                               |
-| `docs/Legal_and_Cookies.md` | Impressum, privacy, cookies, układ stopki                                     |
-| `docs/Analytics.md`         | Vercel Analytics, GA4, Google Consent Mode v2                                 |
-| `docs/Projects_Section.md`  | Reguły case study / galerii projektów                                         |
-| `docs/SEO.md`               | Canonical, hreflang, robots, sitemap, wspólny OG image                        |
-| `docs/DEPLOY.md`            | Env Vercel, GSC, GA, smoke launch                                             |
-| `PROJECT_CHECKLIST.md`      | Żywa checklista postępów                                                      |
+| Ścieżka                      | Opis                                                                          |
+| ---------------------------- | ----------------------------------------------------------------------------- |
+| `src/`                       | Aplikacja Next.js                                                             |
+| `public/`                    | Assety publiczne (`portrait.png`, `avatar.png`, `brand/`, `certificates/`, …) |
+| `messages/`                  | Tłumaczenia (pl, en, de, es, uk)                                              |
+| `docs/`                      | Dokumentacja projektu + źródłowe zdjęcia w `docs/assets/`                     |
+| `docs/Brand_Logo.md`         | Logo PK: warianty, favicon, mapa w layoutcie                                  |
+| `docs/CV_Online.md`          | Spec i stan sekcji CV (`/path`)                                               |
+| `docs/Legal_and_Cookies.md`  | Impressum, privacy, cookies, układ stopki                                     |
+| `docs/Analytics.md`          | Vercel Analytics, GA4, Google Consent Mode v2                                 |
+| `docs/Projects_Section.md`   | Reguły case study / galerii projektów                                         |
+| `docs/Project_Brief_Form.md` | Raport i specyfikacja briefu projektu (Kontakt → `/contact/brief`)            |
+| `docs/SEO.md`                | Canonical, hreflang, robots, sitemap, wspólny OG image                        |
+| `docs/DEPLOY.md`             | Env Vercel, GSC, GA, smoke launch                                             |
+| `PROJECT_CHECKLIST.md`       | Żywa checklista postępów                                                      |
 
 ## Start lokalny
 

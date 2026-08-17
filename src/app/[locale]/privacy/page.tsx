@@ -61,6 +61,11 @@ export default async function PrivacyPage({ params }: Props) {
           </div>
 
           <div className="space-y-2">
+            <h2 className="text-fg text-lg font-medium">{t("briefHeading")}</h2>
+            <p>{t("briefBody")}</p>
+          </div>
+
+          <div className="space-y-2">
             <h2 className="text-fg text-lg font-medium">{t("analyticsHeading")}</h2>
             <p>{t("analyticsBody")}</p>
           </div>

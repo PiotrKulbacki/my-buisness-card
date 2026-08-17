@@ -6,6 +6,7 @@ import pl from "../../../messages/pl.json";
 import uk from "../../../messages/uk.json";
 
 type EmailMessages = (typeof en)["email"];
+type BriefMessages = (typeof en)["brief"];
 
 const catalogs: Record<Locale, EmailMessages> = {
   en: en.email,
@@ -13,6 +14,14 @@ const catalogs: Record<Locale, EmailMessages> = {
   de: de.email,
   es: es.email,
   uk: uk.email,
+};
+
+const briefCatalogs: Record<Locale, BriefMessages> = {
+  en: en.brief,
+  pl: pl.brief,
+  de: de.brief,
+  es: es.brief,
+  uk: uk.brief,
 };
 
 export function resolveLocale(locale?: string | null): Locale {
@@ -24,6 +33,10 @@ export function resolveLocale(locale?: string | null): Locale {
 
 export function getEmailMessages(locale?: string | null): EmailMessages {
   return catalogs[resolveLocale(locale)];
+}
+
+export function getBriefMessages(locale?: string | null): BriefMessages {
+  return briefCatalogs[resolveLocale(locale)];
 }
 
 export function fillTemplate(template: string, vars: Record<string, string>): string {

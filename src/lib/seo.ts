@@ -54,6 +54,7 @@ export function getIndexableRoutes(): IndexableRoute[] {
     { path: "/projects", changeFrequency: "weekly", priority: 0.9 },
     { path: "/path", changeFrequency: "monthly", priority: 0.8 },
     { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/contact/brief", changeFrequency: "monthly", priority: 0.6 },
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/impressum", changeFrequency: "yearly", priority: 0.3 },
   ];

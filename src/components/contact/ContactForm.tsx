@@ -4,20 +4,10 @@ import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
-import { z } from "zod";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { locales } from "@/i18n/routing";
-
-const schema = z.object({
-  name: z.string().min(2).max(80),
-  email: z.string().email(),
-  phone: z.string().max(40).optional(),
-  message: z.string().min(10).max(4000),
-  website: z.string().optional(),
-  locale: z.enum(locales).optional(),
-  turnstileToken: z.string().optional(),
-});
+import { contactPayloadSchema } from "@/lib/schemas/contact";
 
 /**
  * text-base (16px) prevents iOS focus zoom. Focus ring via box-shadow;
@@ -64,7 +54,7 @@ export function ContactForm() {
       return;
     }
 
-    const parsed = schema.safeParse(payload);
+    const parsed = contactPayloadSchema.safeParse(payload);
     if (!parsed.success) {
       toast.error(t("validationError"));
       setLoading(false);

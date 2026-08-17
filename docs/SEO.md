@@ -26,7 +26,7 @@ Analityka (poza SEO tech, ale często weryfikowana razem z GSC): `docs/Analytics
 
 Każda strona: `alternates.canonical` + `languages` dla `pl` / `en` / `de` / `es` / `uk` oraz `x-default` → **EN** (`routing.defaultLocale`).
 
-Ścieżki bez locale: `""`, `/about`, `/projects`, `/path`, `/contact`, `/privacy`, `/impressum`, `/projects/<slug>`.
+Ścieżki bez locale: `""`, `/about`, `/projects`, `/path`, `/contact`, `/contact/brief`, `/privacy`, `/impressum`, `/projects/<slug>`.
 
 ---
 
@@ -56,11 +56,11 @@ Test: Debugger FB / LinkedIn Post Inspector / View Source (`og:title`, `og:image
 | Grupa        | Ścieżki (bez locale)                                                                              | Priorytet (orientacyjnie) |
 | ------------ | ------------------------------------------------------------------------------------------------- | ------------------------- |
 | Home         | `""`                                                                                              | 1.0                       |
-| Główne       | `/about`, `/projects`, `/path`, `/contact`                                                        | 0.8–0.9                   |
+| Główne       | `/about`, `/projects`, `/path`, `/contact`, `/contact/brief`                                      | 0.6–0.9                   |
 | Case studies | `/projects/ai-document`, `lyamo`, `wc26-predictor`, `ak-gebaeudeservice`, `movieweb`, `sportclub` | 0.7                       |
 | Prawne       | `/privacy`, `/impressum`                                                                          | 0.3                       |
 
-**Łącznie:** (7 stron nawigacji/prawnych + 6 case studies) × 5 locale = **65 URL**.  
+**Łącznie:** (8 stron nawigacji/prawnych/brief + 6 case studies) × 5 locale = **70 URL**.  
 Każdy `<url>` ma `xhtml:link` hreflang (jak metadata stron).
 
 Impressum i privacy **są** indeksowane (niższy priorytet).

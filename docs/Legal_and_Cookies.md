@@ -40,9 +40,10 @@ Dane adresowe i telefon: `src/config/site.ts` → `legal`.
 
 ## Polityka prywatności (`/[locale]/privacy`)
 
-Sekcje (i18n, 5 locale): administrator, hosting (Vercel), formularz kontaktowy, analityka (Vercel + GA4 + Consent Mode v2), cookies (`#cookies`), prawa, organ nadzorczy (Berlin).
+Sekcje (i18n, 5 locale): administrator, hosting (Vercel), formularz kontaktowy, brief projektu, analityka (Vercel + GA4 + Consent Mode v2), cookies (`#cookies`), prawa, organ nadzorczy (Berlin).
 
-- Formularz: imię, e-mail, opcjonalny telefon, treść — odpowiedź na zapytanie.
+- Formularz kontaktowy: imię, e-mail, opcjonalny telefon, treść — odpowiedź na zapytanie.
+- Brief projektu (`/contact/brief`): te same dane kontaktowe plus odpowiedzi o projekcie; szkic tylko w `sessionStorage` do wysłania.
 - Ochrona: honeypot + rate limit + **Cloudflare Turnstile**.
 - Wysyłka e-mail: **Brevo** (Sendinblue GmbH) — mail do inboxu + auto-reply do nadawcy; env `BREVO_*`, `CONTACT_TO_EMAIL`.
 - Inventarz w `#cookies`: `NEXT_LOCALE`, `pk_cookie_consent`, oraz (po zgodzie) cookies GA (`_ga` / `_ga_*`).

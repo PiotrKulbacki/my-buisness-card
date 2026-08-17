@@ -110,10 +110,154 @@
     "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
     "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie."
   },
+  "brief": {
+    "title": "Opisz swój projekt",
+    "lead": "Kilka pytań pomoże mi lepiej zrozumieć potrzeby i przygotować propozycję. Większość pól jest opcjonalna.",
+    "backToContact": "Wróć do kontaktu",
+    "progress": "Krok {current} z {total}",
+    "progressLabel": "Postęp formularza",
+    "next": "Dalej",
+    "back": "Wstecz",
+    "submit": "Wyślij",
+    "sending": "Wysyłanie…",
+    "optional": "opcjonalnie",
+    "successTitle": "Dziękuję — zapytanie wysłane",
+    "successBody": "Otrzymałem opis projektu i odezwę się zwykle w ciągu 1–2 dni roboczych. Na podany e-mail poszło potwierdzenie.",
+    "successContact": "Wróć do kontaktu",
+    "successHome": "Strona główna",
+    "validationError": "Sprawdź ten krok i spróbuj ponownie.",
+    "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
+    "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie.",
+    "error": "Nie udało się wysłać. Spróbuj ponownie lub napisz bezpośrednio na email.",
+    "successToast": "Zapytanie wysłane",
+    "privacyNote": "Wysyłając formularz akceptujesz",
+    "privacyLink": "politykę prywatności",
+    "empty": "Nie podano",
+    "ctaTitle": "Planujesz projekt?",
+    "ctaBody": "Jeśli interesuje Cię strona, aplikacja lub inna współpraca, możesz opisać projekt bardziej szczegółowo. Dzięki temu przygotuję trafniejszą propozycję.",
+    "ctaButton": "Opisz swój projekt",
+    "steps": {
+      "1": "Kontakt i rodzaj",
+      "2": "Cel",
+      "3": "Zakres",
+      "4": "Materiały",
+      "5": "Szczegóły",
+      "6": "Podsumowanie"
+    },
+    "fields": {
+      "name": "Imię",
+      "company": "Firma / marka",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "currentWebsite": "Obecna strona internetowa",
+      "projectType": "Rodzaj projektu",
+      "goals": "Główne cele",
+      "goalDescription": "Co chcesz osiągnąć dzięki projektowi?",
+      "pages": "Jakie podstrony przewidujesz?",
+      "appFeatures": "Jakie funkcje są potrzebne?",
+      "scopeExtra": "Dodatkowo",
+      "scopeNotes": "Co jest dla Ciebie szczególnie ważne?",
+      "hasLogo": "Czy masz logo / identyfikację wizualną?",
+      "hasPhotos": "Czy masz gotowe zdjęcia?",
+      "hasCopy": "Czy masz teksty?",
+      "inspiration": "Linki do inspiracji",
+      "rebuild": "Czy chcesz przebudować istniejącą stronę?",
+      "existingNeeds": "Co trzeba zachować lub przenieść?",
+      "existingNotes": "Adresy URL, funkcje lub inne uwagi o obecnej stronie",
+      "languages": "Języki strony lub aplikacji",
+      "translations": "Czy posiadasz gotowe tłumaczenia?",
+      "integrations": "Integracje",
+      "timeline": "Termin uruchomienia"
+    },
+    "projectTypes": {
+      "website": "Strona internetowa",
+      "app": "Aplikacja webowa / panel",
+      "other": "Nie wiem — potrzebuję konsultacji"
+    },
+    "goals": {
+      "clients": "Pozyskiwanie klientów",
+      "services": "Prezentacja usług",
+      "sales": "Sprzedaż",
+      "inquiries": "Generowanie zapytań",
+      "image": "Budowanie wizerunku",
+      "portfolio": "Portfolio",
+      "bookings": "Rezerwacje",
+      "opsPanel": "Panel operacyjny",
+      "informing": "Informowanie klientów",
+      "other": "Inne"
+    },
+    "pages": {
+      "home": "Start",
+      "about": "O nas",
+      "offer": "Oferta / usługi",
+      "work": "Realizacje",
+      "pricing": "Cennik",
+      "reviews": "Opinie",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "gallery": "Galeria",
+      "contact": "Kontakt",
+      "form": "Formularz",
+      "map": "Mapa",
+      "other": "Inne"
+    },
+    "appFeatures": {
+      "auth": "Logowanie / rejestracja",
+      "clientPanel": "Panel klienta",
+      "payments": "Płatności",
+      "cms": "CMS / blog",
+      "bookings": "Rezerwacje / kalendarz",
+      "newsletter": "Newsletter",
+      "search": "Wyszukiwarka",
+      "api": "Integracje API",
+      "other": "Inne",
+      "unsure": "Nie wiem — potrzebuję konsultacji"
+    },
+    "scopeExtra": {
+      "other": "Inne",
+      "unsure": "Nie wiem — potrzebuję konsultacji"
+    },
+    "material": {
+      "yes": "Tak",
+      "partial": "Częściowo",
+      "no": "Nie"
+    },
+    "rebuild": {
+      "yes": "Tak",
+      "no": "Nie",
+      "unsure": "Nie wiem"
+    },
+    "existingNeeds": {
+      "keepContent": "Zachować obecne treści",
+      "migrate": "Przenieść produkty / wpisy / dane",
+      "urls": "Zachować lub przekierować ważne adresy URL"
+    },
+    "siteLanguages": {
+      "pl": "Polski",
+      "en": "Angielski",
+      "de": "Niemiecki",
+      "es": "Hiszpański",
+      "uk": "Ukraiński",
+      "other": "Inny"
+    },
+    "translations": {
+      "yes": "Tak",
+      "partial": "Częściowo",
+      "no": "Nie"
+    },
+    "integrations": {
+      "maps": "Google Maps",
+      "analytics": "Analytics / SEO",
+      "social": "Social media",
+      "payments": "Płatności",
+      "crmNewsletter": "CRM / newsletter",
+      "other": "Inne"
+    }
+  },
   "privacy": {
     "title": "Polityka prywatności",
-    "updated": "Ostatnia aktualizacja: 8 sierpnia 2026",
-    "intro": "Ta strona przetwarza dane osobowe tylko w zakresie niezbędnym do działania witryny, odpowiedzi na zapytania kontaktowe oraz — po zgodzie — pomiaru ruchu (Vercel Analytics i Google Analytics 4).",
+    "updated": "Ostatnia aktualizacja: 17 sierpnia 2026",
+    "intro": "Ta strona przetwarza dane osobowe tylko w zakresie niezbędnym do działania witryny, odpowiedzi na zapytania kontaktowe i briefy projektów oraz — po zgodzie — pomiaru ruchu (Vercel Analytics i Google Analytics 4).",
     "controllerHeading": "Administrator danych",
     "controllerBody": "Administratorem danych jest {name} (Einzelunternehmen, Berlin).",
     "contact": "Kontakt w sprawach prywatności",
@@ -121,6 +265,8 @@
     "hostingBody": "Strona jest hostowana u Vercel Inc. W ramach dostarczenia treści mogą powstawać logi techniczne (np. adres IP, user agent, znacznik czasu) niezbędne do bezpieczeństwa i stabilności usługi.",
     "formHeading": "Formularz kontaktowy",
     "formBody": "Po wysłaniu formularza przetwarzane są imię, adres e-mail, opcjonalny telefon oraz treść wiadomości — wyłącznie w celu odpowiedzi (art. 6 ust. 1 lit. b lub f RODO). Formularz chroni Cloudflare Turnstile (ochrona przed botami). Wiadomości są dostarczane przez Brevo (Sendinblue GmbH, Niemcy) jako procesora; możesz też otrzymać automatyczne potwierdzenie. Dane nie są sprzedawane ani wykorzystywane do marketingu bez osobnej zgody. Przechowywane są tak długo, jak potrzeba do obsługi zapytania, a następnie usuwane lub archiwizowane w zakresie wymaganym prawnie.",
+    "briefHeading": "Brief projektu",
+    "briefBody": "Opcjonalny brief zbiera imię, e-mail, opcjonalny telefon oraz odpowiedzi o projekcie (rodzaj, cele, zakres, materiały, języki, integracje, termin) — wyłącznie po to, by przygotować propozycję i odpowiedzieć (art. 6 ust. 1 lit. b lub f RODO). Ochrona, procesor (Brevo) i zasady przechowywania są takie same jak przy formularzu kontaktowym. Szkic w przeglądarce (sessionStorage) nie jest wysyłany, dopóki nie zatwierdzisz formularza; po wysłaniu jest usuwany. Nie używam tych danych do marketingu bez osobnej zgody.",
     "analyticsHeading": "Analityka",
     "analyticsBody": "Po wyrażeniu zgody w bannerze cookies ładuję Vercel Analytics oraz Google Analytics 4 (GA4) z Google Consent Mode v2. Do decyzji wszystkie sygnały zgody Google są ustawione na „denied”. Po akceptacji analityki ustawiam analytics_storage=granted (bez reklam: ad_storage / ad_user_data / ad_personalization pozostają denied). Vercel Analytics mierzy ruch zminimalizowanie. GA4 (Google Ireland Ltd. / Google LLC) może wtedy ustawiać cookies analityczne (np. _ga). Bez zgody ani po wyborze „Tylko niezbędne” GA się nie uruchamia. Preferencje zmienisz linkiem Cookies w stopce. Podstawa przy zgodzie: art. 6 ust. 1 lit. a RODO.",
     "cookiesHeading": "Cookies",
@@ -202,6 +348,20 @@
       "greeting": "Cześć {name},",
       "body": "Dziękuję za kontakt. Otrzymałem Twoją wiadomość i odpowiem zwykle w ciągu 1–2 dni roboczych.",
       "messageLabel": "Twoja wiadomość:",
+      "signOff": "Pozdrawiam,\n{name}",
+      "footerNote": "To automatyczne potwierdzenie. Jeśli potrzebujesz czegoś innego, nie odpowiadaj na tę wiadomość — odezwę się z mojego adresu."
+    },
+    "briefInbox": {
+      "subject": "Zapytanie o projekt: {name}",
+      "title": "Nowe zapytanie o projekt",
+      "replyHint": "Użyj Odpowiedz, aby napisać bezpośrednio do nadawcy.",
+      "cta": "Odpowiedz e-mailem"
+    },
+    "briefAutoReply": {
+      "subject": "Dziękuję — otrzymałem Twoje zapytanie",
+      "greeting": "Cześć {name},",
+      "body": "Dziękuję za opis projektu. Przeczytam Twoje odpowiedzi i odezwę się zwykle w ciągu 1–2 dni roboczych.",
+      "summaryLabel": "Twoje odpowiedzi:",
       "signOff": "Pozdrawiam,\n{name}",
       "footerNote": "To automatyczne potwierdzenie. Jeśli potrzebujesz czegoś innego, nie odpowiadaj na tę wiadomość — odezwę się z mojego adresu."
     }

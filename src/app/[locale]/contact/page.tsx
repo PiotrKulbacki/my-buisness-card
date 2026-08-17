@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { ContactBriefCta } from "@/components/contact/ContactBriefCta";
 import { Reveal } from "@/components/motion/Reveal";
 import { siteConfig } from "@/config/site";
 import { buildPageMetadata } from "@/lib/seo";
@@ -44,6 +45,7 @@ export default async function ContactPage({ params }: Props) {
               <dd>{t("remote")}</dd>
             </div>
           </dl>
+          <ContactBriefCta />
         </Reveal>
         <Reveal delay={0.08} className="min-w-0">
           <ContactForm />

@@ -77,6 +77,7 @@
 - [x] Impressum (§ 5 DDG) + rozbudowana polityka prywatności — `docs/Legal_and_Cookies.md`
 - [x] Brevo zamiast Resend (formularz kontaktowy + auto-reply HTML)
 - [x] Cloudflare Turnstile na formularzu kontaktowym
+- [x] Brief projektu (`/contact/brief`) — multi-step, Brevo, Turnstile; spec: `docs/Project_Brief_Form.md`
 - [x] Cookies + zgoda na Vercel Analytics (banner; inventarz w `/privacy#cookies`)
 - [x] Google Analytics 4 via `@next/third-parties/google` (prod + consent; `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
 - [x] Google Consent Mode v2 (default denied → analytics_storage granted; bez CMP) — `docs/Analytics.md`
@@ -133,3 +134,4 @@
 | 2026-08-08 | Google Consent Mode v2: default denied → analytics_storage granted po Accept; ads denied; bez CMP              |
 | 2026-08-08 | Docs: `docs/Analytics.md`; update Legal / DEPLOY / README / SEO / checklist                                    |
 | 2026-08-09 | Case study Lyamo: cover + galeria (skaner/archiwum, AI chat, split, filtry wykresu), tech chips, i18n 5 locale |
+| 2026-08-17 | Brief projektu: `/contact/brief`, 6 kroków, Brevo + Turnstile; spec `docs/Project_Brief_Form.md`               |

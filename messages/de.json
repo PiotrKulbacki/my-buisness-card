@@ -110,10 +110,154 @@
     "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen.",
     "captchaError": "Bitte bestätigen Sie, dass Sie kein Bot sind, und versuchen Sie es erneut."
   },
+  "brief": {
+    "title": "Beschreiben Sie Ihr Projekt",
+    "lead": "Einige Fragen helfen mir, Ihre Bedürfnisse zu verstehen und ein Angebot vorzubereiten. Die meisten Felder sind optional.",
+    "backToContact": "Zurück zum Kontakt",
+    "progress": "Schritt {current} von {total}",
+    "progressLabel": "Formularfortschritt",
+    "next": "Weiter",
+    "back": "Zurück",
+    "submit": "Senden",
+    "sending": "Senden…",
+    "optional": "optional",
+    "successTitle": "Danke — Anfrage gesendet",
+    "successBody": "Ich habe Ihre Projektbeschreibung erhalten und antworte in der Regel innerhalb von 1–2 Werktagen. Eine Bestätigung ging an Ihre E-Mail-Adresse.",
+    "successContact": "Zurück zum Kontakt",
+    "successHome": "Startseite",
+    "validationError": "Bitte prüfen Sie diesen Schritt und versuchen Sie es erneut.",
+    "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen.",
+    "captchaError": "Bitte bestätigen Sie, dass Sie kein Bot sind, und versuchen Sie es erneut.",
+    "error": "Senden fehlgeschlagen. Bitte erneut versuchen oder direkt per E-Mail.",
+    "successToast": "Anfrage gesendet",
+    "privacyNote": "Mit dem Absenden akzeptieren Sie die",
+    "privacyLink": "Datenschutzerklärung",
+    "empty": "Nicht angegeben",
+    "ctaTitle": "Planen Sie ein Projekt?",
+    "ctaBody": "Wenn Sie eine Website, eine App oder eine andere Zusammenarbeit brauchen, können Sie das Projekt genauer beschreiben. So kann ich ein treffenderes Angebot vorbereiten.",
+    "ctaButton": "Projekt beschreiben",
+    "steps": {
+      "1": "Kontakt und Art",
+      "2": "Ziel",
+      "3": "Umfang",
+      "4": "Materialien",
+      "5": "Details",
+      "6": "Zusammenfassung"
+    },
+    "fields": {
+      "name": "Name",
+      "company": "Firma / Marke",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "currentWebsite": "Aktuelle Website",
+      "projectType": "Projektart",
+      "goals": "Hauptziele",
+      "goalDescription": "Was möchten Sie mit dem Projekt erreichen?",
+      "pages": "Welche Unterseiten brauchen Sie?",
+      "appFeatures": "Welche Funktionen brauchen Sie?",
+      "scopeExtra": "Zusätzlich",
+      "scopeNotes": "Was ist Ihnen besonders wichtig?",
+      "hasLogo": "Haben Sie ein Logo / eine Bildmarke?",
+      "hasPhotos": "Haben Sie Fotos?",
+      "hasCopy": "Haben Sie Texte?",
+      "inspiration": "Inspirationslinks",
+      "rebuild": "Möchten Sie die bestehende Website neu aufbauen?",
+      "existingNeeds": "Was soll erhalten oder übernommen werden?",
+      "existingNotes": "URLs, Funktionen oder andere Hinweise zur aktuellen Website",
+      "languages": "Sprachen der Website oder App",
+      "translations": "Haben Sie bereits Übersetzungen?",
+      "integrations": "Integrationen",
+      "timeline": "Zeitplan für den Launch"
+    },
+    "projectTypes": {
+      "website": "Website",
+      "app": "Web-App / Dashboard",
+      "other": "Unsicher — ich brauche eine Beratung"
+    },
+    "goals": {
+      "clients": "Kundengewinnung",
+      "services": "Leistungen präsentieren",
+      "sales": "Verkauf",
+      "inquiries": "Anfragen generieren",
+      "image": "Professionelles Image",
+      "portfolio": "Portfolio",
+      "bookings": "Buchungen",
+      "opsPanel": "Operatives Dashboard",
+      "informing": "Kunden informieren",
+      "other": "Sonstiges"
+    },
+    "pages": {
+      "home": "Start",
+      "about": "Über uns",
+      "offer": "Angebot / Leistungen",
+      "work": "Referenzen",
+      "pricing": "Preise",
+      "reviews": "Bewertungen",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "gallery": "Galerie",
+      "contact": "Kontakt",
+      "form": "Formular",
+      "map": "Karte",
+      "other": "Sonstiges"
+    },
+    "appFeatures": {
+      "auth": "Login / Registrierung",
+      "clientPanel": "Kundenbereich",
+      "payments": "Zahlungen",
+      "cms": "CMS / Blog",
+      "bookings": "Buchungen / Kalender",
+      "newsletter": "Newsletter",
+      "search": "Suche",
+      "api": "API-Integrationen",
+      "other": "Sonstiges",
+      "unsure": "Unsicher — ich brauche eine Beratung"
+    },
+    "scopeExtra": {
+      "other": "Sonstiges",
+      "unsure": "Unsicher — ich brauche eine Beratung"
+    },
+    "material": {
+      "yes": "Ja",
+      "partial": "Teilweise",
+      "no": "Nein"
+    },
+    "rebuild": {
+      "yes": "Ja",
+      "no": "Nein",
+      "unsure": "Unsicher"
+    },
+    "existingNeeds": {
+      "keepContent": "Bestehende Inhalte behalten",
+      "migrate": "Produkte / Beiträge / Daten übernehmen",
+      "urls": "Wichtige URLs behalten oder weiterleiten"
+    },
+    "siteLanguages": {
+      "pl": "Polnisch",
+      "en": "Englisch",
+      "de": "Deutsch",
+      "es": "Spanisch",
+      "uk": "Ukrainisch",
+      "other": "Andere"
+    },
+    "translations": {
+      "yes": "Ja",
+      "partial": "Teilweise",
+      "no": "Nein"
+    },
+    "integrations": {
+      "maps": "Google Maps",
+      "analytics": "Analytics / SEO",
+      "social": "Social Media",
+      "payments": "Zahlungen",
+      "crmNewsletter": "CRM / Newsletter",
+      "other": "Sonstiges"
+    }
+  },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "updated": "Zuletzt aktualisiert: 8. August 2026",
-    "intro": "Diese Website verarbeitet personenbezogene Daten nur, soweit dies für den Betrieb der Seite, die Beantwortung von Kontaktanfragen und — mit Ihrer Einwilligung — die Reichweitenmessung (Vercel Analytics und Google Analytics 4) erforderlich ist.",
+    "updated": "Zuletzt aktualisiert: 17. August 2026",
+    "intro": "Diese Website verarbeitet personenbezogene Daten nur, soweit dies für den Betrieb der Seite, die Beantwortung von Kontaktanfragen und Projekt-Briefs und — mit Ihrer Einwilligung — die Reichweitenmessung (Vercel Analytics und Google Analytics 4) erforderlich ist.",
     "controllerHeading": "Verantwortlicher",
     "controllerBody": "Verantwortlicher ist {name} (Einzelunternehmen, Berlin).",
     "contact": "Kontakt zum Datenschutz",
@@ -121,6 +265,8 @@
     "hostingBody": "Die Website wird bei Vercel Inc. gehostet. Im Rahmen der Bereitstellung können technische Logs (z. B. IP-Adresse, User-Agent, Zeitstempel) entstehen, soweit dies für Sicherheit und Stabilität erforderlich ist.",
     "formHeading": "Kontaktformular",
     "formBody": "Bei Absenden werden Name, E-Mail, optional Telefonnummer und Nachricht ausschließlich zur Beantwortung verarbeitet (Art. 6 Abs. 1 lit. b oder f DSGVO). Das Formular ist durch Cloudflare Turnstile (Bot-Schutz) geschützt. Der Versand erfolgt über Brevo (Sendinblue GmbH, Deutschland) als Auftragsverarbeiter; Sie können zudem eine automatische Empfangsbestätigung erhalten. Daten werden nicht verkauft und ohne gesonderte Einwilligung nicht für Marketing genutzt. Speicherung nur so lange wie zur Bearbeitung nötig, danach Löschung oder gesetzlich erforderliche Archivierung.",
+    "briefHeading": "Projekt-Brief",
+    "briefBody": "Der optionale Brief erfasst Name, E-Mail, optional Telefonnummer sowie Angaben zum Projekt (Art, Ziele, Umfang, Materialien, Sprachen, Integrationen, Zeitplan) ausschließlich zur Angebotserstellung und Antwort (Art. 6 Abs. 1 lit. b oder f DSGVO). Schutz, Auftragsverarbeiter (Brevo) und Speicherung entsprechen dem Kontaktformular. Ein Entwurf im Browser (sessionStorage) wird erst beim Absenden übertragen und danach gelöscht. Ohne gesonderte Einwilligung keine Marketingnutzung.",
     "analyticsHeading": "Analytics",
     "analyticsBody": "Nach Einwilligung im Cookie-Banner lade ich Vercel Analytics und Google Analytics 4 (GA4) mit Google Consent Mode v2. Bis zur Entscheidung bleiben alle Google-Consent-Signale „denied“. Bei Analytics-Akzeptanz setze ich analytics_storage=granted (Werbesignale ad_storage / ad_user_data / ad_personalization bleiben denied). Vercel Analytics erfasst Traffic minimiert. GA4 (Google Ireland Ltd. / Google LLC) darf dann Analytics-Cookies setzen (z. B. _ga). Ohne Einwilligung bzw. nach „Nur notwendige“ startet GA nicht. Einstellungen: Link Cookies in der Fußzeile. Rechtsgrundlage bei Einwilligung: Art. 6 Abs. 1 lit. a DSGVO.",
     "cookiesHeading": "Cookies",
@@ -202,6 +348,20 @@
       "greeting": "Hallo {name},",
       "body": "Vielen Dank für Ihre Nachricht. Ich habe sie erhalten und antworte in der Regel innerhalb von 1–2 Werktagen.",
       "messageLabel": "Ihre Nachricht:",
+      "signOff": "Freundliche Grüße,\n{name}",
+      "footerNote": "Dies ist eine automatische Bestätigung. Bitte antworten Sie nicht auf diese E-Mail, wenn Sie etwas anderes brauchen — ich melde mich von meiner Adresse."
+    },
+    "briefInbox": {
+      "subject": "Projektanfrage: {name}",
+      "title": "Neue Projektanfrage",
+      "replyHint": "Nutzen Sie Antworten, um dem Absender direkt zu schreiben.",
+      "cta": "Per E-Mail antworten"
+    },
+    "briefAutoReply": {
+      "subject": "Danke — ich habe Ihre Anfrage erhalten",
+      "greeting": "Hallo {name},",
+      "body": "Vielen Dank für die Projektbeschreibung. Ich lese Ihre Angaben und antworte in der Regel innerhalb von 1–2 Werktagen.",
+      "summaryLabel": "Ihre Angaben:",
       "signOff": "Freundliche Grüße,\n{name}",
       "footerNote": "Dies ist eine automatische Bestätigung. Bitte antworten Sie nicht auf diese E-Mail, wenn Sie etwas anderes brauchen — ich melde mich von meiner Adresse."
     }

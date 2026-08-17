@@ -3,9 +3,9 @@
 import { motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
-import { Link } from "@/i18n/navigation";
 import type { Project } from "@/content/projects";
 import type { Locale } from "@/i18n/routing";
+import { BackLink } from "@/components/ui/BackLink";
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
 import { ProjectImageLightbox } from "@/components/projects/ProjectImageLightbox";
 
@@ -41,9 +41,7 @@ export function ProjectDetail({ project, locale, labels }: ProjectDetailProps) {
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: EASE }}
       >
-        <Link href="/projects" className="text-fg-muted hover:text-fg text-sm">
-          ← {labels.back}
-        </Link>
+        <BackLink href="/projects">{labels.back}</BackLink>
         <p className="text-fg-muted mt-2 text-xs tracking-[0.18em] uppercase md:mt-4">
           {t(`filters.${project.category}`)} · {project.year}
         </p>

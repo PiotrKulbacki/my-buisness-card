@@ -87,12 +87,12 @@ body {
   color: var(--accent-ink);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 @layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   button,
   input,
   textarea {

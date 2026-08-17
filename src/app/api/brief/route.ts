@@ -1,15 +1,15 @@
 import { NextResponse } from "next/server";
 import { siteConfig } from "@/config/site";
 import { getContactInbox, isEmailConfigured, sendTransactionalEmail } from "@/lib/brevo";
-import { buildContactAutoReplyEmail } from "@/lib/email/contact-auto-reply";
-import { buildContactInboxEmail } from "@/lib/email/contact-inbox";
+import { buildBriefAutoReplyEmail } from "@/lib/email/brief-auto-reply";
+import { buildBriefInboxEmail } from "@/lib/email/brief-inbox";
 import { getClientIp, rateLimit } from "@/lib/rate-limit";
-import { contactPayloadSchema } from "@/lib/schemas/contact";
+import { briefPayloadSchema } from "@/lib/schemas/brief";
 import { isTurnstileConfigured, verifyTurnstileToken } from "@/lib/turnstile";
 
 export async function POST(request: Request) {
   try {
-    const limited = rateLimit(`contact:${getClientIp(request)}`);
+    const limited = rateLimit(`brief:${getClientIp(request)}`);
     if (!limited.ok) {
       return NextResponse.json(
         { error: "Too many requests" },
@@ -20,8 +20,8 @@ export async function POST(request: Request) {
       );
     }
 
-    const json = await request.json();
-    const parsed = contactPayloadSchema.safeParse(json);
+    const json: unknown = await request.json();
+    const parsed = briefPayloadSchema.safeParse(json);
     if (!parsed.success) {
       return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
     }
@@ -38,10 +38,10 @@ export async function POST(request: Request) {
     }
 
     if (!isEmailConfigured()) {
-      console.info("[contact]", {
+      console.info("[brief]", {
         name: parsed.data.name,
         email: parsed.data.email,
-        phone: parsed.data.phone,
+        projectType: parsed.data.projectType,
         locale: parsed.data.locale,
       });
       return NextResponse.json({
@@ -55,14 +55,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Failed to send" }, { status: 500 });
     }
 
-    const inboxMail = buildContactInboxEmail({
-      name: parsed.data.name,
-      email: parsed.data.email,
-      phone: parsed.data.phone,
-      message: parsed.data.message,
-      locale: parsed.data.locale,
-    });
-
+    const inboxMail = buildBriefInboxEmail(parsed.data);
     const inboxResult = await sendTransactionalEmail({
       to: inbox,
       subject: inboxMail.subject,
@@ -78,12 +71,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Failed to send" }, { status: 500 });
     }
 
-    const autoReply = buildContactAutoReplyEmail({
-      name: parsed.data.name,
-      message: parsed.data.message,
-      locale: parsed.data.locale,
-    });
-
+    const autoReply = buildBriefAutoReplyEmail(parsed.data);
     const autoReplyResult = await sendTransactionalEmail({
       to: parsed.data.email,
       subject: autoReply.subject,
@@ -96,7 +84,7 @@ export async function POST(request: Request) {
     });
 
     if (!autoReplyResult.ok) {
-      console.error("[contact] auto-reply failed", autoReplyResult.error);
+      console.error("[brief] auto-reply failed", autoReplyResult.error);
     }
 
     return NextResponse.json({ ok: true });

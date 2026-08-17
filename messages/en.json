@@ -110,10 +110,154 @@
     "rateLimited": "Too many attempts. Please wait a moment and try again.",
     "captchaError": "Please confirm you are not a bot and try again."
   },
+  "brief": {
+    "title": "Describe your project",
+    "lead": "A few questions help me understand your needs and prepare a proposal. Most fields are optional.",
+    "backToContact": "Back to contact",
+    "progress": "Step {current} of {total}",
+    "progressLabel": "Form progress",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Send",
+    "sending": "Sending…",
+    "optional": "optional",
+    "successTitle": "Thank you — enquiry sent",
+    "successBody": "I received your project outline and usually reply within 1–2 business days. A confirmation went to the email you provided.",
+    "successContact": "Back to contact",
+    "successHome": "Home",
+    "validationError": "Please check this step and try again.",
+    "rateLimited": "Too many attempts. Please wait a moment and try again.",
+    "captchaError": "Please confirm you are not a bot and try again.",
+    "error": "Couldn’t send. Try again or email me directly.",
+    "successToast": "Enquiry sent",
+    "privacyNote": "By submitting you accept the",
+    "privacyLink": "privacy policy",
+    "empty": "Not provided",
+    "ctaTitle": "Planning a project?",
+    "ctaBody": "If you need a website, an app or another collaboration, you can describe the project in more detail. That helps me prepare a better proposal.",
+    "ctaButton": "Describe your project",
+    "steps": {
+      "1": "Contact and type",
+      "2": "Goal",
+      "3": "Scope",
+      "4": "Materials",
+      "5": "Details",
+      "6": "Summary"
+    },
+    "fields": {
+      "name": "Name",
+      "company": "Company / brand",
+      "email": "Email",
+      "phone": "Phone",
+      "currentWebsite": "Current website",
+      "projectType": "Project type",
+      "goals": "Main goals",
+      "goalDescription": "What do you want to achieve with this project?",
+      "pages": "Which pages do you need?",
+      "appFeatures": "Which features do you need?",
+      "scopeExtra": "Additionally",
+      "scopeNotes": "What matters most to you?",
+      "hasLogo": "Do you have a logo / visual identity?",
+      "hasPhotos": "Do you have photos ready?",
+      "hasCopy": "Do you have copy ready?",
+      "inspiration": "Inspiration links",
+      "rebuild": "Do you want to rebuild the existing site?",
+      "existingNeeds": "What should be kept or migrated?",
+      "existingNotes": "URLs, features or other notes about the current site",
+      "languages": "Languages for the site or app",
+      "translations": "Do you already have translations?",
+      "integrations": "Integrations",
+      "timeline": "Launch timeline"
+    },
+    "projectTypes": {
+      "website": "Website",
+      "app": "Web app / dashboard",
+      "other": "Not sure — I need a consultation"
+    },
+    "goals": {
+      "clients": "Winning clients",
+      "services": "Presenting services",
+      "sales": "Sales",
+      "inquiries": "Generating enquiries",
+      "image": "Building a professional image",
+      "portfolio": "Portfolio",
+      "bookings": "Bookings",
+      "opsPanel": "Operations dashboard",
+      "informing": "Informing customers",
+      "other": "Other"
+    },
+    "pages": {
+      "home": "Home",
+      "about": "About",
+      "offer": "Offer / services",
+      "work": "Work / case studies",
+      "pricing": "Pricing",
+      "reviews": "Testimonials",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "gallery": "Gallery",
+      "contact": "Contact",
+      "form": "Form",
+      "map": "Map",
+      "other": "Other"
+    },
+    "appFeatures": {
+      "auth": "Login / registration",
+      "clientPanel": "Client dashboard",
+      "payments": "Payments",
+      "cms": "CMS / blog",
+      "bookings": "Bookings / calendar",
+      "newsletter": "Newsletter",
+      "search": "Search",
+      "api": "API integrations",
+      "other": "Other",
+      "unsure": "Not sure — I need a consultation"
+    },
+    "scopeExtra": {
+      "other": "Other",
+      "unsure": "Not sure — I need a consultation"
+    },
+    "material": {
+      "yes": "Yes",
+      "partial": "Partially",
+      "no": "No"
+    },
+    "rebuild": {
+      "yes": "Yes",
+      "no": "No",
+      "unsure": "Not sure"
+    },
+    "existingNeeds": {
+      "keepContent": "Keep existing content",
+      "migrate": "Migrate products / posts / data",
+      "urls": "Keep or redirect important URLs"
+    },
+    "siteLanguages": {
+      "pl": "Polish",
+      "en": "English",
+      "de": "German",
+      "es": "Spanish",
+      "uk": "Ukrainian",
+      "other": "Other"
+    },
+    "translations": {
+      "yes": "Yes",
+      "partial": "Partially",
+      "no": "No"
+    },
+    "integrations": {
+      "maps": "Google Maps",
+      "analytics": "Analytics / SEO",
+      "social": "Social media",
+      "payments": "Payments",
+      "crmNewsletter": "CRM / newsletter",
+      "other": "Other"
+    }
+  },
   "privacy": {
     "title": "Privacy policy",
-    "updated": "Last updated: 8 August 2026",
-    "intro": "This site processes personal data only as needed to run the website, reply to contact requests and — with your consent — measure traffic (Vercel Analytics and Google Analytics 4).",
+    "updated": "Last updated: 17 August 2026",
+    "intro": "This site processes personal data only as needed to run the website, reply to contact requests and project briefs and — with your consent — measure traffic (Vercel Analytics and Google Analytics 4).",
     "controllerHeading": "Data controller",
     "controllerBody": "The data controller is {name} (sole proprietorship / Einzelunternehmen, Berlin).",
     "contact": "Privacy contact",
@@ -121,6 +265,8 @@
     "hostingBody": "The site is hosted by Vercel Inc. Technical logs (e.g. IP address, user agent, timestamp) may be created as needed for security and service stability.",
     "formHeading": "Contact form",
     "formBody": "When you submit the form, your name, email, optional phone number and message are processed solely to reply (Art. 6(1)(b) or (f) GDPR). The form is protected by Cloudflare Turnstile (bot protection). Messages are delivered via Brevo (Sendinblue GmbH, Germany) as a processor; you may also receive an automatic acknowledgement. Data is not sold or used for marketing without separate consent. It is kept only as long as needed to handle the request, then deleted or archived where legally required.",
+    "briefHeading": "Project brief",
+    "briefBody": "The optional brief collects your name, email, optional phone number and answers about the project (type, goals, scope, materials, languages, integrations, timeline) solely to prepare a proposal and reply (Art. 6(1)(b) or (f) GDPR). Protection, the processor (Brevo) and retention follow the same rules as the contact form. A draft in the browser (sessionStorage) is not sent until you submit; it is cleared after a successful send. I do not use this data for marketing without separate consent.",
     "analyticsHeading": "Analytics",
     "analyticsBody": "After you accept analytics in the cookie banner, I load Vercel Analytics and Google Analytics 4 (GA4) with Google Consent Mode v2. Until you choose, all Google consent signals stay “denied”. On analytics accept I set analytics_storage=granted (ads signals ad_storage / ad_user_data / ad_personalization stay denied). Vercel Analytics measures traffic in a minimised way. GA4 (Google Ireland Ltd. / Google LLC) may then set analytics cookies (e.g. _ga). Without consent, or after “Necessary only”, GA does not run. Change preferences via Cookies in the footer. Legal basis with consent: Art. 6(1)(a) GDPR.",
     "cookiesHeading": "Cookies",
@@ -202,6 +348,20 @@
       "greeting": "Hi {name},",
       "body": "Thank you for getting in touch. I received your message and will reply within 1–2 business days.",
       "messageLabel": "Your message:",
+      "signOff": "Best regards,\n{name}",
+      "footerNote": "This is an automatic confirmation. Please do not reply to this email if you need something else — I will write back from my address."
+    },
+    "briefInbox": {
+      "subject": "Project enquiry: {name}",
+      "title": "New project enquiry",
+      "replyHint": "Use Reply to answer the sender directly.",
+      "cta": "Reply by email"
+    },
+    "briefAutoReply": {
+      "subject": "Thanks — I received your enquiry",
+      "greeting": "Hi {name},",
+      "body": "Thank you for outlining your project. I will review your answers and usually reply within 1–2 business days.",
+      "summaryLabel": "Your answers:",
       "signOff": "Best regards,\n{name}",
       "footerNote": "This is an automatic confirmation. Please do not reply to this email if you need something else — I will write back from my address."
     }
