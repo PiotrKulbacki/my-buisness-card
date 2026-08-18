@@ -31,18 +31,19 @@ Komponent: `<BrandLogo variant="lockupSide" | "lockupStacked" | "lockupHorizonta
 
 Ikony tylko z `public/` (stabilne URL). **Nie** kłaść `favicon.ico` / `icon.png` / `apple-icon.png` w `src/app/` — Next.js dokleja wtedy hash (`?favicon.…`), a Google wymaga stałego adresu.
 
-| Plik                          | Rozmiar / rola                                       |
-| ----------------------------- | ---------------------------------------------------- |
-| `public/favicon-192.png`      | Favicon 192×192 — pierwsza ikona w `<head>` (Google) |
-| `public/favicon-96.png`       | 96×96 (zalecenie Google: większy niż 48×48)          |
-| `public/favicon-48.png`       | 48×48                                                |
-| `public/favicon-32.png`       | 32×32                                                |
-| `public/favicon.ico`          | Klasyczny `.ico` (16 / 32 / 48)                      |
-| `public/apple-touch-icon.png` | Apple touch 180×180                                  |
-| `public/favicon.svg`          | SVG fallback                                         |
-| `public/brand/google-120.png` | `Organization.logo` w JSON-LD (120×120, min. 112)    |
+| Plik                          | Rozmiar / rola                                                                 |
+| ----------------------------- | ------------------------------------------------------------------------------ |
+| `public/brand/google-120.png` | Kanoniczny znak PK (120×120) — pierwsza ikona w `<head>` + `Organization.logo` |
+| `public/favicon-192.png`      | 192×192, ten sam znak (downscale z `05-icon-filled-master.png`)                |
+| `public/favicon-96.png`       | 96×96                                                                          |
+| `public/favicon-48.png`       | 48×48                                                                          |
+| `public/favicon-32.png`       | 32×32 (zakładka przeglądarki)                                                  |
+| `public/favicon.ico`          | Klasyczny `.ico` (16 / 32 / 48)                                                |
+| `public/apple-touch-icon.png` | Apple touch 180×180                                                            |
 
-Metadata ikon: `generateMetadata` w `src/app/[locale]/layout.tsx` (kolejność: 192 → 96 → 48 → 32 → SVG → ICO).
+Bez SVG — poprzedni `favicon.svg` był uproszczoną literą (w zakładce wyglądało jak „R”), nie monogramem PK.
+
+Metadata ikon: `generateMetadata` w `src/app/[locale]/layout.tsx` (kolejność: google-120 → 192 → 96 → 48 → 32 → ICO).
 
 ---
 
@@ -61,7 +62,7 @@ W `public/brand/` zostają też mastery (`01-mark-only.png`, `02-…`, `03-…`,
 | Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…`                                                                                            |
 | Open Graph / Twitter card      | `lockupHorizontal` w `opengraph-image.tsx`; wymuszane na **wszystkich** URL przez `brandShareImage()` w `src/lib/seo.ts` (szczegóły: `docs/SEO.md`) |
 | Footer (przy ©)                | `mark` (wys. `h-4`)                                                                                                                                 |
-| Zakładka przeglądarki / SERP   | `favicon-192.png` + mniejsze PNG / SVG / ICO                                                                                                        |
+| Zakładka przeglądarki / SERP   | `google-120.png` + PNG 192/96/48/32 + ICO (ten sam znak PK, bez SVG)                                                                                |
 | JSON-LD Organization.logo      | `google-120.png`                                                                                                                                    |
 | JSON-LD Person.image           | `portrait.png`                                                                                                                                      |
 

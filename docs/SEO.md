@@ -76,7 +76,7 @@ Mała ikona PK obok URL w SERP pochodzi z `<link rel="icon">` na stronie główn
 
 Wymogi Google (Search Central): kwadrat, min. 8×8 (zalecane **> 48×48**), crawlable dla Googlebot + Googlebot-Image, **stabilny URL**. Recrawl: od kilku dni do kilku tygodni. Po deployu: GSC → URL Inspection na `https://piotrkulbacki.com/en` (i `/pl`) → Request indexing.
 
-Pierwsza ikona w HTML: `/favicon-192.png`. Nie używać file-based `src/app/favicon.ico` (hash w query psuje stabilność).
+Pierwsza ikona w HTML: `/brand/google-120.png` (ten sam plik co `Organization.logo`). Dalej 192 / 96 / 48 / 32 PNG i ICO — downscale z `05-icon-filled-master.png`, bez SVG (stary SVG wyglądał w zakładce jak „R”). Nie używać file-based `src/app/favicon.ico` (hash w query psuje stabilność).
 
 ---
 
