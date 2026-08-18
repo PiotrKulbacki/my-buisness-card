@@ -83,8 +83,10 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
                 <td align="center" bgcolor="${EMAIL_BRAND.accent}" background="${accentUrl}" style="border-radius:10px;${ctaFill}">
                   <a href="${escapeHtml(cta.url)}"
                      class="email-cta-label"
-                     style="display:inline-block;padding:14px 28px;font-family:${fontSans};font-size:14px;font-weight:600;line-height:1.2;color:${EMAIL_BRAND.accentInk};text-decoration:none;border-radius:10px;${ctaFill}">
-                    <span class="email-cta-label" style="color:${EMAIL_BRAND.accentInk};-webkit-text-fill-color:${EMAIL_BRAND.accentInk};">${escapeHtml(cta.label)}</span>
+                     style="display:inline-block;padding:14px 28px;font-family:${fontSans};font-size:14px;font-weight:600;line-height:1.2;color:${EMAIL_BRAND.accentInk};text-decoration:none;border-radius:10px;">
+                    <font color="${EMAIL_BRAND.accentInk}" class="email-cta-label" style="color:${EMAIL_BRAND.accentInk};">
+                      <span class="email-cta-label" style="color:${EMAIL_BRAND.accentInk};">${escapeHtml(cta.label)}</span>
+                    </font>
                   </a>
                 </td>
               </tr>
@@ -119,8 +121,12 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
   <meta name="supported-color-schemes" content="light" />
   <title>${brand}</title>
   <style>
-    .email-cta-label { color: ${EMAIL_BRAND.accentInk} !important; -webkit-text-fill-color: ${EMAIL_BRAND.accentInk} !important; }
-    [data-ogsc] .email-cta-label { color: ${EMAIL_BRAND.accentInk} !important; -webkit-text-fill-color: ${EMAIL_BRAND.accentInk} !important; }
+    .email-cta-label { color: ${EMAIL_BRAND.accentInk} !important; }
+    [data-ogsc] .email-cta-label, [data-ogsb] .email-cta-label { color: ${EMAIL_BRAND.accentInk} !important; }
+    @media (prefers-color-scheme: dark) {
+      .email-cta-label { color: #ffffff !important; }
+      [data-ogsc] .email-cta-label, [data-ogsb] .email-cta-label { color: ${EMAIL_BRAND.accentInk} !important; }
+    }
   </style>
 </head>
 <body bgcolor="${EMAIL_BRAND.pageBg}" style="margin:0;padding:0;background:${EMAIL_BRAND.pageBg};">
