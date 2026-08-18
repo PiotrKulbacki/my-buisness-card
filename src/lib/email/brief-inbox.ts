@@ -6,7 +6,7 @@ import {
   resolveLocale,
 } from "@/lib/email/messages";
 import { resolveInboxReplyUrl } from "@/lib/reply-token";
-import type { BriefPayload } from "@/lib/schemas/brief";
+import { joinNameIdeas, type BriefPayload } from "@/lib/schemas/brief";
 
 function joinLabels(values: string[] | undefined, labels: Record<string, string>, empty: string) {
   if (!values?.length) return empty;
@@ -33,6 +33,10 @@ export function buildBriefRows(params: BriefPayload, locale?: string | null) {
       value: copy.projectTypes[params.projectType],
     },
     {
+      label: copy.fields.nameIdeas,
+      value: joinNameIdeas(params).join(", ") || empty,
+    },
+    {
       label: copy.fields.goals,
       value: joinLabels(params.goals, copy.goals, empty),
     },
@@ -50,10 +54,6 @@ export function buildBriefRows(params: BriefPayload, locale?: string | null) {
   }
 
   rows.push(
-    {
-      label: copy.fields.scopeExtra,
-      value: joinLabels(params.scopeExtra, copy.scopeExtra, empty),
-    },
     { label: copy.fields.scopeNotes, value: params.scopeNotes ?? empty },
     { label: copy.fields.hasLogo, value: singleLabel(params.hasLogo, copy.material, empty) },
     { label: copy.fields.hasPhotos, value: singleLabel(params.hasPhotos, copy.material, empty) },

@@ -1,5 +1,4 @@
-import type { BriefDraftValues } from "@/lib/schemas/brief";
-import { hasCurrentWebsite } from "@/lib/schemas/brief";
+import { hasCurrentWebsite, joinNameIdeas, type BriefDraftValues } from "@/lib/schemas/brief";
 
 type BriefSummaryProps = {
   values: BriefDraftValues;
@@ -29,6 +28,7 @@ export function BriefSummary({ values, emptyLabel, label, optionLabel }: BriefSu
       key: "projectType",
       value: values.projectType ? optionLabel("projectTypes", values.projectType) : emptyLabel,
     },
+    { key: "nameIdeas", value: joinNameIdeas(values).join(" · ") || emptyLabel },
     { key: "goals", value: join(values.goals, "goals", optionLabel, emptyLabel) },
     { key: "goalDescription", value: values.goalDescription || emptyLabel },
   ];
@@ -44,7 +44,6 @@ export function BriefSummary({ values, emptyLabel, label, optionLabel }: BriefSu
   }
 
   rows.push(
-    { key: "scopeExtra", value: join(values.scopeExtra, "scopeExtra", optionLabel, emptyLabel) },
     { key: "scopeNotes", value: values.scopeNotes || emptyLabel },
     {
       key: "hasLogo",

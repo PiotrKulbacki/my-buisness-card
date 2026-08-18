@@ -74,6 +74,9 @@ export const briefPayloadSchema = z.object({
   phone: optionalText(40),
   currentWebsite: optionalText(500),
   projectType: z.enum(projectTypes),
+  nameIdea1: optionalText(80),
+  nameIdea2: optionalText(80),
+  nameIdea3: optionalText(80),
   goals: z.array(z.enum(goalOptions)).min(1),
   goalDescription: z.string().trim().min(10).max(4000),
   pages: z.array(z.enum(pageOptions)).default([]),
@@ -105,6 +108,9 @@ export type BriefDraftValues = {
   phone: string;
   currentWebsite: string;
   projectType: (typeof projectTypes)[number] | "";
+  nameIdea1: string;
+  nameIdea2: string;
+  nameIdea3: string;
   goals: (typeof goalOptions)[number][];
   goalDescription: string;
   pages: (typeof pageOptions)[number][];
@@ -132,6 +138,9 @@ export const emptyBriefDraft = (): BriefDraftValues => ({
   phone: "",
   currentWebsite: "",
   projectType: "",
+  nameIdea1: "",
+  nameIdea2: "",
+  nameIdea3: "",
   goals: [],
   goalDescription: "",
   pages: [],
@@ -167,6 +176,14 @@ export function hasCurrentWebsite(values: Pick<BriefDraftValues, "currentWebsite
   return Boolean(values.currentWebsite.trim());
 }
 
+export function joinNameIdeas(
+  values: Pick<BriefDraftValues, "nameIdea1" | "nameIdea2" | "nameIdea3"> | BriefPayload,
+) {
+  return [values.nameIdea1, values.nameIdea2, values.nameIdea3]
+    .map((value) => value?.trim() ?? "")
+    .filter((value) => value.length > 0);
+}
+
 export function draftToPayload(
   values: BriefDraftValues,
   extras: { locale?: (typeof locales)[number]; turnstileToken?: string },
@@ -178,6 +195,9 @@ export function draftToPayload(
     phone: values.phone,
     currentWebsite: values.currentWebsite,
     projectType: values.projectType || undefined,
+    nameIdea1: values.nameIdea1,
+    nameIdea2: values.nameIdea2,
+    nameIdea3: values.nameIdea3,
     goals: values.goals,
     goalDescription: values.goalDescription,
     pages: values.pages,
@@ -209,6 +229,9 @@ export function isBriefDraftDirty(values: BriefDraftValues) {
     values.phone.trim() !== "" ||
     values.currentWebsite.trim() !== "" ||
     values.projectType !== "" ||
+    values.nameIdea1.trim() !== "" ||
+    values.nameIdea2.trim() !== "" ||
+    values.nameIdea3.trim() !== "" ||
     values.goals.length > 0 ||
     values.goalDescription.trim() !== "" ||
     values.pages.length > 0 ||

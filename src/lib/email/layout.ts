@@ -9,7 +9,7 @@ export const EMAIL_BRAND = {
   muted: "#9a9a9a",
   accent: "#c8f542",
   accentInk: "#0a0a0a",
-  pageBg: "#050505",
+  pageBg: "#f4f4f5",
   card: "#121212",
   quoteBg: "#1a1a1a",
   white: "#ffffff",
@@ -53,11 +53,12 @@ type WrapEmailHtmlParams = {
 };
 
 /**
- * Shared PK transactional email chrome: dark header + horizontal lockup, body, optional CTA, footer.
+ * Shared PK transactional email chrome: light canvas, dark card, void header + lockup, optional CTA.
  *
- * Header fill uses a tiled PNG (`background` + `background-image`) in addition to `bgcolor`.
- * Gmail iOS dark mode inverts CSS `background-color` on light emails, which turned the
- * header white around the lockup; background images are not inverted.
+ * Canvas stays the default light page color. Black fill is only the header band (logo).
+ * Header and CTA use tiled PNGs (`background` + `background-image`) in addition to `bgcolor`:
+ * Gmail iOS dark mode inverts CSS `background-color`, but not background images — that kept
+ * the header black around the lockup and the reply button in the PK lime (`#c8f542`).
  */
 export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
   const { locale, bodyHtml, cta } = params;
@@ -68,10 +69,12 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
   const assetBase = getEmailAssetBaseUrl();
   const lockupUrl = escapeHtml(`${assetBase}${siteConfig.brand.lockupHorizontal}`);
   const voidUrl = escapeHtml(`${assetBase}/brand/email-void.png`);
+  const accentUrl = escapeHtml(`${assetBase}/brand/email-accent.png`);
   const contactEmail = escapeHtml(siteConfig.email);
   const fontSans = "system-ui,-apple-system,'Segoe UI',sans-serif";
   const resolvedLocale = resolveLocale(locale);
   const headerFill = `background-color:${EMAIL_BRAND.void};background-image:url('${voidUrl}');background-repeat:repeat;`;
+  const ctaFill = `background-color:${EMAIL_BRAND.accent};background-image:linear-gradient(${EMAIL_BRAND.accent},${EMAIL_BRAND.accent});background-image:url('${accentUrl}');background-repeat:repeat;`;
 
   const ctaBlock = cta
     ? `
@@ -80,9 +83,10 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
           <td align="left">
             <table role="presentation" cellpadding="0" cellspacing="0" border="0">
               <tr>
-                <td align="center" bgcolor="${EMAIL_BRAND.accent}" style="border-radius:10px;background:${EMAIL_BRAND.accent};">
+                <td class="email-cta" align="center" bgcolor="${EMAIL_BRAND.accent}" background="${accentUrl}" style="border-radius:10px;${ctaFill}">
                   <a href="${escapeHtml(cta.url)}"
-                     style="display:inline-block;padding:14px 28px;font-family:${fontSans};font-size:14px;font-weight:600;line-height:1.2;color:${EMAIL_BRAND.accentInk};text-decoration:none;border-radius:10px;">
+                     class="email-cta-label"
+                     style="display:inline-block;padding:14px 28px;font-family:${fontSans};font-size:14px;font-weight:600;line-height:1.2;color:${EMAIL_BRAND.accentInk};text-decoration:none;border-radius:10px;${ctaFill}">
                     ${escapeHtml(cta.label)}
                   </a>
                 </td>
@@ -114,20 +118,23 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <meta name="supported-color-schemes" content="dark" />
+  <meta name="color-scheme" content="light" />
+  <meta name="supported-color-schemes" content="light" />
   <title>${brand}</title>
   <style>
-    :root { color-scheme: dark; supported-color-schemes: dark; }
+    :root { color-scheme: light; supported-color-schemes: light; }
     @media (prefers-color-scheme: dark) {
+      .email-canvas { background-color: ${EMAIL_BRAND.pageBg} !important; }
       .email-header { background-color: ${EMAIL_BRAND.void} !important; }
+      .email-cta { background-color: ${EMAIL_BRAND.accent} !important; }
+      .email-cta-label { background-color: ${EMAIL_BRAND.accent} !important; color: ${EMAIL_BRAND.accentInk} !important; }
     }
   </style>
 </head>
-<body bgcolor="${EMAIL_BRAND.pageBg}" style="margin:0;padding:0;background:${EMAIL_BRAND.pageBg};">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${EMAIL_BRAND.pageBg}" style="background:${EMAIL_BRAND.pageBg};">
+<body class="email-canvas" bgcolor="${EMAIL_BRAND.pageBg}" style="margin:0;padding:0;background:${EMAIL_BRAND.pageBg};">
+  <table class="email-canvas" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${EMAIL_BRAND.pageBg}" style="background:${EMAIL_BRAND.pageBg};">
     <tr>
-      <td align="center" bgcolor="${EMAIL_BRAND.pageBg}" style="padding:32px 16px;background:${EMAIL_BRAND.pageBg};">
+      <td class="email-canvas" align="center" bgcolor="${EMAIL_BRAND.pageBg}" style="padding:32px 16px;background:${EMAIL_BRAND.pageBg};">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${EMAIL_BRAND.card}" style="max-width:560px;background:${EMAIL_BRAND.card};border-radius:12px;overflow:hidden;border:1px solid ${EMAIL_BRAND.border};">
           <tr>
             <td class="email-header" bgcolor="${EMAIL_BRAND.void}" background="${voidUrl}" style="${headerFill}padding:22px 28px;border-bottom:2px solid ${EMAIL_BRAND.accent};">

@@ -147,37 +147,37 @@ Pierwszy krok: **rodzaj projektu** (`website` / `app` / `other`). Dalsze pytania
 
 Wymagane tylko to, co potrzeba do rozpoczęcia rozmowy: imię, e-mail, rodzaj, główny cel, krótki opis. Reszta z jawnym „opcjonalnie”.
 
-| Krok | Pytanie                                      | Typ pola                                                                | Wymagane?               | Warunek                                    |
-| ---- | -------------------------------------------- | ----------------------------------------------------------------------- | ----------------------- | ------------------------------------------ |
-| 1    | Imię                                         | tekst                                                                   | Tak                     | —                                          |
-| 1    | Firma / marka                                | tekst                                                                   | Nie                     | —                                          |
-| 1    | E-mail                                       | email                                                                   | Tak                     | —                                          |
-| 1    | Telefon                                      | tel                                                                     | Nie                     | —                                          |
-| 1    | Obecna strona                                | URL                                                                     | Nie                     | —                                          |
-| 1    | Rodzaj projektu                              | radio: strona / aplikacja / nie wiem                                    | Tak                     | —                                          |
-| 2    | Główne cele                                  | checkboxy (min. 1)                                                      | Tak                     | —                                          |
-| 2    | Co chcesz osiągnąć?                          | textarea                                                                | Tak                     | —                                          |
-| 3    | Podstrony                                    | checkboxy                                                               | Nie                     | rodzaj = strona                            |
-| 3    | Funkcje aplikacji                            | checkboxy                                                               | Nie                     | rodzaj = aplikacja                         |
-| 3    | Zakres — inne / nie wiem                     | checkboxy wspólne                                                       | Nie                     | zawsze na kroku 3                          |
-| 3    | Co jest szczególnie ważne?                   | textarea                                                                | Nie                     | —                                          |
-| 4    | Logo / identyfikacja                         | radio: tak / częściowo / nie                                            | Nie                     | —                                          |
-| 4    | Zdjęcia                                      | radio: tak / częściowo / nie                                            | Nie                     | —                                          |
-| 4    | Teksty                                       | radio: tak / częściowo / nie                                            | Nie                     | —                                          |
-| 4    | Linki do inspiracji                          | textarea (URL)                                                          | Nie                     | —                                          |
-| 4    | Przebudowa istniejącej strony                | radio                                                                   | Nie                     | wypełniony URL w kroku 1                   |
-| 4    | Zachować treści / migracja / URL i redirecty | textarea + checkboxy                                                    | Nie                     | wypełniony URL w kroku 1                   |
-| 5    | Języki                                       | checkboxy: PL, EN, DE, ES, UK, inny                                     | Nie                     | —                                          |
-| 5    | Gotowe tłumaczenia?                          | radio: tak / częściowo / nie                                            | Nie                     | —                                          |
-| 5    | Integracje                                   | checkboxy: Maps, Analytics/SEO, social, płatności, CRM/newsletter, inne | Nie                     | —                                          |
-| 5    | Termin uruchomienia                          | tekst (data / wydarzenie)                                               | Nie                     | —                                          |
-| 6    | Podsumowanie                                 | przegląd (read-only + Wstecz)                                           | —                       | —                                          |
-| 6    | Turnstile                                    | captcha                                                                 | Tak, gdy skonfigurowany | —                                          |
-| 6    | Nota privacy                                 | tekst + link `/privacy`                                                 | informacyjna            | jak kontakt — bez checkboxa marketingowego |
+| Krok | Pytanie                                      | Typ pola                                                                | Wymagane?               | Warunek                                        |
+| ---- | -------------------------------------------- | ----------------------------------------------------------------------- | ----------------------- | ---------------------------------------------- |
+| 1    | Imię                                         | tekst                                                                   | Tak                     | —                                              |
+| 1    | Firma / marka                                | tekst                                                                   | Nie                     | —                                              |
+| 1    | E-mail                                       | email                                                                   | Tak                     | —                                              |
+| 1    | Telefon                                      | tel                                                                     | Nie                     | —                                              |
+| 1    | Obecna strona                                | URL                                                                     | Nie                     | —                                              |
+| 1    | Rodzaj projektu                              | radio: strona / aplikacja / nie wiem                                    | Tak                     | —                                              |
+| 1    | Propozycje nazwy (do 3)                      | 3× tekst                                                                | Nie                     | do późniejszego omówienia i sprawdzenia domeny |
+| 2    | Główne cele                                  | checkboxy (min. 1)                                                      | Tak                     | —                                              |
+| 2    | Co chcesz osiągnąć?                          | textarea                                                                | Tak                     | —                                              |
+| 3    | Podstrony                                    | checkboxy                                                               | Nie                     | rodzaj = strona                                |
+| 3    | Funkcje aplikacji                            | checkboxy                                                               | Nie                     | rodzaj = aplikacja                             |
+| 3    | Co jest szczególnie ważne?                   | textarea                                                                | Nie                     | —                                              |
+| 4    | Logo                                         | radio: tak / częściowo / nie                                            | Nie                     | —                                              |
+| 4    | Zdjęcia                                      | radio: tak / częściowo / nie                                            | Nie                     | —                                              |
+| 4    | Teksty                                       | radio: tak / częściowo / nie                                            | Nie                     | —                                              |
+| 4    | Linki do inspiracji                          | textarea (URL)                                                          | Nie                     | —                                              |
+| 4    | Przebudowa istniejącej strony                | radio                                                                   | Nie                     | wypełniony URL w kroku 1                       |
+| 4    | Zachować treści / migracja / URL i redirecty | textarea + checkboxy                                                    | Nie                     | wypełniony URL w kroku 1                       |
+| 5    | Języki                                       | checkboxy: PL, EN, DE, ES, UK, inny                                     | Nie                     | —                                              |
+| 5    | Gotowe tłumaczenia?                          | radio: tak / częściowo / nie                                            | Nie                     | —                                              |
+| 5    | Integracje                                   | checkboxy: Maps, Analytics/SEO, social, płatności, CRM/newsletter, inne | Nie                     | —                                              |
+| 5    | Termin uruchomienia                          | tekst (data / wydarzenie)                                               | Nie                     | —                                              |
+| 6    | Podsumowanie                                 | przegląd (read-only + Wstecz)                                           | —                       | —                                              |
+| 6    | Turnstile                                    | captcha                                                                 | Tak, gdy skonfigurowany | —                                              |
+| 6    | Nota privacy                                 | tekst + link `/privacy`                                                 | informacyjna            | jak kontakt — bez checkboxa marketingowego     |
 
 ### Opcje celów (krok 2, wielokrotny)
 
-Pozyskiwanie klientów · prezentacja usług · sprzedaż · zapytania · wizerunek · portfolio · rezerwacje · panel operacyjny · informowanie klientów · inne.
+Pozyskiwanie klientów · prezentacja usług · sprzedaż · zapytania · wizerunek · portfolio · rezerwacje · zarządzanie firmą · informowanie klientów · inne.
 
 ### Opcje podstron (krok 3, tylko strona)
 
@@ -194,7 +194,7 @@ Logowanie / rejestracja · panel klienta · płatności · CMS / blog · rezerwa
 ### Dodać
 
 - Wybór **strona / aplikacja / nie wiem** na starcie.
-- Cel „panel operacyjny” (oferta Lyamo / dashboardy).
+- Cel „zarządzanie firmą” (oferta Lyamo / dashboardy).
 - Ekran sukcesu na miejscu (nie tylko toast + home).
 - Szkic w `sessionStorage` + `beforeunload`.
 - Wspólny schemat Zod (dziś kontakt duplikuje schema w kliencie i API).

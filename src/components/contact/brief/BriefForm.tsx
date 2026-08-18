@@ -37,7 +37,6 @@ import {
   pageOptions,
   projectTypes,
   rebuildOptions,
-  scopeExtraOptions,
   translationOptions,
   type BriefDraftValues,
 } from "@/lib/schemas/brief";
@@ -328,6 +327,31 @@ export function BriefForm() {
             options={optionsFrom(projectTypes, (id) => t(`projectTypes.${id}`))}
             onChange={(next) => patch({ projectType: next as BriefDraftValues["projectType"] })}
           />
+          <fieldset className="min-w-0">
+            <legend className="float-left mb-3 w-full px-0 text-sm leading-none">
+              {t("fields.nameIdeas")}
+              <OptionalHint label={t("optional")} />
+            </legend>
+            <p className="text-fg-muted clear-both mb-3 text-sm leading-snug">
+              {t("fields.nameIdeasHint")}
+            </p>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {(["nameIdea1", "nameIdea2", "nameIdea3"] as const).map((field, index) => (
+                <label key={field} className="flex flex-col gap-3 text-sm">
+                  <span className="leading-none">{t("fields.nameIdeaN", { n: index + 1 })}</span>
+                  <input
+                    name={field}
+                    maxLength={80}
+                    disabled={disabled}
+                    value={values[field]}
+                    onChange={(event) => patch({ [field]: event.target.value })}
+                    className={fieldClassName}
+                    autoComplete="off"
+                  />
+                </label>
+              ))}
+            </div>
+          </fieldset>
         </div>
       ) : null}
 
@@ -387,16 +411,6 @@ export function BriefForm() {
               onChange={(next) => patch({ appFeatures: next as BriefDraftValues["appFeatures"] })}
             />
           ) : null}
-          <BriefChoiceGroup
-            legend={t("fields.scopeExtra")}
-            optionalLabel={t("optional")}
-            name="scopeExtra"
-            type="checkbox"
-            disabled={disabled}
-            value={values.scopeExtra}
-            options={optionsFrom(scopeExtraOptions, (id) => t(`scopeExtra.${id}`))}
-            onChange={(next) => patch({ scopeExtra: next as BriefDraftValues["scopeExtra"] })}
-          />
           <label className="flex flex-col gap-3 text-sm">
             <span className="leading-none">
               {t("fields.scopeNotes")}
