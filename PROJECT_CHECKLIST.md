@@ -135,3 +135,4 @@
 | 2026-08-08 | Docs: `docs/Analytics.md`; update Legal / DEPLOY / README / SEO / checklist                                    |
 | 2026-08-09 | Case study Lyamo: cover + galeria (skaner/archiwum, AI chat, split, filtry wykresu), tech chips, i18n 5 locale |
 | 2026-08-17 | Brief projektu: `/contact/brief`, 6 kroków, Brevo + Turnstile; spec `docs/Project_Brief_Form.md`               |
+| 2026-08-18 | Favicon Google: PNG 192/96, stabilne URL (bez `src/app/icon`), JSON-LD Organization.logo + Person.image        |

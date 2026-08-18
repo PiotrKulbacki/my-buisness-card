@@ -19,6 +19,7 @@ Analityka (poza SEO tech, ale często weryfikowana razem z GSC): `docs/Analytics
 | `sitemap.xml`               | `src/app/sitemap.ts` → `/sitemap.xml`     |
 | Middleware (skip OG assets) | `src/proxy.ts`                            |
 | Logo w OG                   | `docs/Brand_Logo.md` → `lockupHorizontal` |
+| JSON-LD (org + person)      | `src/components/seo/JsonLd.tsx`           |
 
 ---
 
@@ -66,6 +67,28 @@ Każdy `<url>` ma `xhtml:link` hreflang (jak metadata stron).
 Impressum i privacy **są** indeksowane (niższy priorytet).
 
 GSC: po deployu wyślij ponownie `https://piotrkulbacki.com/sitemap.xml` — `docs/DEPLOY.md`.
+
+---
+
+## Favicon w Google Search
+
+Mała ikona PK obok URL w SERP pochodzi z `<link rel="icon">` na stronie głównej hosta — **nie** z `Organization.logo`.
+
+Wymogi Google (Search Central): kwadrat, min. 8×8 (zalecane **> 48×48**), crawlable dla Googlebot + Googlebot-Image, **stabilny URL**. Recrawl: od kilku dni do kilku tygodni. Po deployu: GSC → URL Inspection na `https://piotrkulbacki.com/en` (i `/pl`) → Request indexing.
+
+Pierwsza ikona w HTML: `/favicon-192.png`. Nie używać file-based `src/app/favicon.ico` (hash w query psuje stabilność).
+
+---
+
+## JSON-LD
+
+`JsonLd` na każdej stronie (`[locale]/layout.tsx`):
+
+- `Organization` — `logo` → `https://piotrkulbacki.com/brand/google-120.png` (min. 112×112; Knowledge Panel / marka)
+- `Person` — `image` → portret; `worksFor` → Organization
+- `WebSite` — `publisher` / `author`
+
+Test: [Rich Results Test](https://search.google.com/test/rich-results) na stronie głównej locale.
 
 ---
 

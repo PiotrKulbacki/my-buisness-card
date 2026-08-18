@@ -25,6 +25,8 @@ export const siteConfig = {
     lockupStacked: "/brand/ui-lockup-stacked.png",
     /** PK left + Piotr / Kulbacki / role on 3 lines */
     lockupSide: "/brand/ui-lockup-side.png",
+    /** Square mark for Google Organization.logo (min. 112×112) */
+    googleLogo: "/brand/google-120.png",
   },
   location: {
     city: "Berlin",

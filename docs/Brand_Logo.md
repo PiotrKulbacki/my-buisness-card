@@ -29,15 +29,20 @@ Komponent: `<BrandLogo variant="lockupSide" | "lockupStacked" | "lockupHorizonta
 
 ## Favicon / ikony systemowe
 
-| Plik                                                    | Rozmiar / rola              |
-| ------------------------------------------------------- | --------------------------- |
-| `src/app/icon.png`, `public/favicon-32.png`             | Favicon 32×32 (lime filled) |
-| `public/favicon-48.png`                                 | 48×48                       |
-| `src/app/favicon.ico`, `public/favicon.ico`             | Klasyczny `.ico`            |
-| `src/app/apple-icon.png`, `public/apple-touch-icon.png` | Apple touch 180×180         |
-| `public/favicon.svg`                                    | SVG fallback                |
+Ikony tylko z `public/` (stabilne URL). **Nie** kłaść `favicon.ico` / `icon.png` / `apple-icon.png` w `src/app/` — Next.js dokleja wtedy hash (`?favicon.…`), a Google wymaga stałego adresu.
 
-Metadata ikon: `generateMetadata` w `src/app/[locale]/layout.tsx`.
+| Plik                          | Rozmiar / rola                                       |
+| ----------------------------- | ---------------------------------------------------- |
+| `public/favicon-192.png`      | Favicon 192×192 — pierwsza ikona w `<head>` (Google) |
+| `public/favicon-96.png`       | 96×96 (zalecenie Google: większy niż 48×48)          |
+| `public/favicon-48.png`       | 48×48                                                |
+| `public/favicon-32.png`       | 32×32                                                |
+| `public/favicon.ico`          | Klasyczny `.ico` (16 / 32 / 48)                      |
+| `public/apple-touch-icon.png` | Apple touch 180×180                                  |
+| `public/favicon.svg`          | SVG fallback                                         |
+| `public/brand/google-120.png` | `Organization.logo` w JSON-LD (120×120, min. 112)    |
+
+Metadata ikon: `generateMetadata` w `src/app/[locale]/layout.tsx` (kolejność: 192 → 96 → 48 → 32 → SVG → ICO).
 
 ---
 
@@ -56,7 +61,9 @@ W `public/brand/` zostają też mastery (`01-mark-only.png`, `02-…`, `03-…`,
 | Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…`                                                                                            |
 | Open Graph / Twitter card      | `lockupHorizontal` w `opengraph-image.tsx`; wymuszane na **wszystkich** URL przez `brandShareImage()` w `src/lib/seo.ts` (szczegóły: `docs/SEO.md`) |
 | Footer (przy ©)                | `mark` (wys. `h-4`)                                                                                                                                 |
-| Zakładka przeglądarki          | favicon / `icon.png`                                                                                                                                |
+| Zakładka przeglądarki / SERP   | `favicon-192.png` + mniejsze PNG / SVG / ICO                                                                                                        |
+| JSON-LD Organization.logo      | `google-120.png`                                                                                                                                    |
+| JSON-LD Person.image           | `portrait.png`                                                                                                                                      |
 
 Desktop sidebar: lockup side `max-w-40`. Stopka treści i pas LanguageSwitcher: wspólna wysokość `--site-footer-h` (3.25rem), oba flush do dołu viewportu (separatory w jednej linii). Desktop shell: `md:h-svh` — stopka zawsze na dole; Home / Kontakt bez scrollbara okna (`h-(--site-main-h)`).
 
