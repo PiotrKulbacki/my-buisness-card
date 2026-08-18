@@ -1,10 +1,4 @@
-import {
-  EMAIL_BRAND,
-  escapeHtml,
-  inkCss,
-  mutedParagraphHtml,
-  wrapEmailHtml,
-} from "@/lib/email/layout";
+import { EMAIL_BRAND, escapeHtml, mutedParagraphHtml, wrapEmailHtml } from "@/lib/email/layout";
 import { fillTemplate, getEmailMessages, resolveLocale } from "@/lib/email/messages";
 import { resolveInboxReplyUrl } from "@/lib/reply-token";
 
@@ -42,20 +36,19 @@ export function buildContactInboxEmail(params: ContactInboxEmailParams): {
   }
   textLines.push("", `${copy.inbox.messageLabel}:`, params.message);
 
-  const bodyInk = inkCss(EMAIL_BRAND.text);
   const bodyParts = [
-    `<h2 style="margin:0 0 20px;font-size:18px;font-weight:700;${bodyInk}">${escapeHtml(copy.inbox.title)}</h2>`,
-    `<p style="margin:0 0 8px;${bodyInk}"><strong style="${bodyInk}">${escapeHtml(copy.inbox.nameLabel)}:</strong> ${escapeHtml(params.name)}</p>`,
-    `<p style="margin:0 0 8px;${bodyInk}"><strong style="${bodyInk}">${escapeHtml(copy.inbox.emailLabel)}:</strong> ${escapeHtml(params.email)}</p>`,
+    `<h2 style="margin:0 0 20px;font-size:18px;font-weight:700;color:${EMAIL_BRAND.text};">${escapeHtml(copy.inbox.title)}</h2>`,
+    `<p style="margin:0 0 8px;"><strong>${escapeHtml(copy.inbox.nameLabel)}:</strong> ${escapeHtml(params.name)}</p>`,
+    `<p style="margin:0 0 8px;"><strong>${escapeHtml(copy.inbox.emailLabel)}:</strong> ${escapeHtml(params.email)}</p>`,
   ];
   if (params.phone) {
     bodyParts.push(
-      `<p style="margin:0 0 8px;${bodyInk}"><strong style="${bodyInk}">${escapeHtml(copy.inbox.phoneLabel)}:</strong> ${escapeHtml(params.phone)}</p>`,
+      `<p style="margin:0 0 8px;"><strong>${escapeHtml(copy.inbox.phoneLabel)}:</strong> ${escapeHtml(params.phone)}</p>`,
     );
   }
   bodyParts.push(
-    `<p style="margin:16px 0 8px;${bodyInk}"><strong style="${bodyInk}">${escapeHtml(copy.inbox.messageLabel)}:</strong></p>`,
-    `<p style="margin:0;white-space:pre-wrap;${bodyInk}">${escapeHtml(params.message)}</p>`,
+    `<p style="margin:16px 0 8px;"><strong>${escapeHtml(copy.inbox.messageLabel)}:</strong></p>`,
+    `<p style="margin:0;white-space:pre-wrap;">${escapeHtml(params.message)}</p>`,
     mutedParagraphHtml(copy.inbox.replyHint),
   );
 

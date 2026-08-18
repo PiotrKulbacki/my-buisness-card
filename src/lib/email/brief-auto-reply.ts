@@ -1,11 +1,4 @@
-import {
-  EMAIL_BRAND,
-  escapeHtml,
-  inkCss,
-  mutedParagraphHtml,
-  quoteBoxHtml,
-  wrapEmailHtml,
-} from "@/lib/email/layout";
+import { escapeHtml, mutedParagraphHtml, quoteBoxHtml, wrapEmailHtml } from "@/lib/email/layout";
 import { fillTemplate, getEmailMessages, resolveLocale } from "@/lib/email/messages";
 import { buildBriefRows } from "@/lib/email/brief-inbox";
 import { siteConfig } from "@/config/site";
@@ -34,20 +27,19 @@ export function buildBriefAutoReplyEmail(params: BriefPayload): {
     signOff,
   ].join("\n");
 
-  const bodyInk = inkCss(EMAIL_BRAND.text);
   const summaryHtml = summaryRows
     .map(
       (row) =>
-        `<p style="margin:0 0 10px;${bodyInk}"><strong style="${bodyInk}">${escapeHtml(row.label)}:</strong><br /><span style="white-space:pre-wrap;${bodyInk}">${escapeHtml(row.value)}</span></p>`,
+        `<p style="margin:0 0 10px;"><strong>${escapeHtml(row.label)}:</strong><br /><span style="white-space:pre-wrap;">${escapeHtml(row.value)}</span></p>`,
     )
     .join("");
 
   const bodyHtml = [
-    `<p style="margin:0 0 16px;${bodyInk}">${escapeHtml(greeting)}</p>`,
-    `<p style="margin:0 0 20px;${bodyInk}">${escapeHtml(copy.briefAutoReply.body)}</p>`,
-    `<p style="margin:0 0 8px;${bodyInk}"><strong style="${bodyInk}">${escapeHtml(copy.briefAutoReply.summaryLabel)}</strong></p>`,
+    `<p style="margin:0 0 16px;">${escapeHtml(greeting)}</p>`,
+    `<p style="margin:0 0 20px;">${escapeHtml(copy.briefAutoReply.body)}</p>`,
+    `<p style="margin:0 0 8px;"><strong>${escapeHtml(copy.briefAutoReply.summaryLabel)}</strong></p>`,
     quoteBoxHtml(summaryHtml),
-    `<p style="margin:0;${bodyInk}">${escapeHtml(signOff).replaceAll("\n", "<br />")}</p>`,
+    `<p style="margin:0;">${escapeHtml(signOff).replaceAll("\n", "<br />")}</p>`,
     mutedParagraphHtml(copy.briefAutoReply.footerNote),
   ].join("");
 
