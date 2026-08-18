@@ -329,6 +329,20 @@
     "title": "Page not found.",
     "home": "Home"
   },
+  "reply": {
+    "title": "Reply",
+    "lead": "The message will go out in the PK template to the person who submitted the form.",
+    "toLabel": "To",
+    "message": "Message",
+    "submit": "Send",
+    "sending": "Sending…",
+    "success": "Message sent",
+    "error": "Could not send. Please try again.",
+    "validationError": "Enter a reply (at least 10 characters).",
+    "rateLimited": "Too many attempts. Please wait a moment and try again.",
+    "invalid": "This link is invalid or has expired. Use the button from the latest email.",
+    "backHome": "Home"
+  },
   "email": {
     "layout": {
       "footerLead": "{name} — personal website"
@@ -340,8 +354,8 @@
       "emailLabel": "Email",
       "phoneLabel": "Phone",
       "messageLabel": "Message",
-      "replyHint": "Use Reply to answer the sender directly.",
-      "cta": "Reply by email"
+      "replyHint": "The button opens the on-site reply form — the message will use the same template.",
+      "cta": "Reply in template"
     },
     "autoReply": {
       "subject": "Thanks — I received your message",
@@ -354,8 +368,8 @@
     "briefInbox": {
       "subject": "Project enquiry: {name}",
       "title": "New project enquiry",
-      "replyHint": "Use Reply to answer the sender directly.",
-      "cta": "Reply by email"
+      "replyHint": "The button opens the on-site reply form — the message will use the same template.",
+      "cta": "Reply in template"
     },
     "briefAutoReply": {
       "subject": "Thanks — I received your enquiry",
@@ -364,6 +378,12 @@
       "summaryLabel": "Your answers:",
       "signOff": "Best regards,\n{name}",
       "footerNote": "This is an automatic confirmation. Please do not reply to this email if you need something else — I will write back from my address."
+    },
+    "ownerReply": {
+      "subject": "Re: {originalSubject}",
+      "greeting": "Hi {name},",
+      "signOff": "Best regards,\n{name}",
+      "footerNote": "You can reply to this email — it will reach my address."
     }
   }
 }

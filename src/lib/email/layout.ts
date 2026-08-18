@@ -5,13 +5,15 @@ import type { Locale } from "@/i18n/routing";
 export const EMAIL_BRAND = {
   void: "#050505",
   surface: "#121212",
-  text: "#1a1a1a",
-  muted: "#6b6b6b",
+  text: "#f5f5f5",
+  muted: "#9a9a9a",
   accent: "#c8f542",
   accentInk: "#0a0a0a",
-  pageBg: "#f0f0f0",
+  pageBg: "#050505",
+  card: "#121212",
+  quoteBg: "#1a1a1a",
   white: "#ffffff",
-  border: "#e4e4e4",
+  border: "#2e2e2e",
   wordmark: "#f5f5f5",
 } as const;
 
@@ -52,6 +54,10 @@ type WrapEmailHtmlParams = {
 
 /**
  * Shared PK transactional email chrome: dark header + horizontal lockup, body, optional CTA, footer.
+ *
+ * Header fill uses a tiled PNG (`background` + `background-image`) in addition to `bgcolor`.
+ * Gmail iOS dark mode inverts CSS `background-color` on light emails, which turned the
+ * header white around the lockup; background images are not inverted.
  */
 export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
   const { locale, bodyHtml, cta } = params;
@@ -59,10 +65,13 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
   const brand = escapeHtml(siteConfig.name);
   const siteUrl = getSiteUrl();
   const siteUrlEscaped = escapeHtml(siteUrl);
-  const lockupUrl = escapeHtml(`${getEmailAssetBaseUrl()}${siteConfig.brand.lockupHorizontal}`);
+  const assetBase = getEmailAssetBaseUrl();
+  const lockupUrl = escapeHtml(`${assetBase}${siteConfig.brand.lockupHorizontal}`);
+  const voidUrl = escapeHtml(`${assetBase}/brand/email-void.png`);
   const contactEmail = escapeHtml(siteConfig.email);
   const fontSans = "system-ui,-apple-system,'Segoe UI',sans-serif";
   const resolvedLocale = resolveLocale(locale);
+  const headerFill = `background-color:${EMAIL_BRAND.void};background-image:url('${voidUrl}');background-repeat:repeat;`;
 
   const ctaBlock = cta
     ? `
@@ -71,7 +80,7 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
           <td align="left">
             <table role="presentation" cellpadding="0" cellspacing="0" border="0">
               <tr>
-                <td align="center" style="border-radius:10px;background:${EMAIL_BRAND.accent};">
+                <td align="center" bgcolor="${EMAIL_BRAND.accent}" style="border-radius:10px;background:${EMAIL_BRAND.accent};">
                   <a href="${escapeHtml(cta.url)}"
                      style="display:inline-block;padding:14px 28px;font-family:${fontSans};font-size:14px;font-weight:600;line-height:1.2;color:${EMAIL_BRAND.accentInk};text-decoration:none;border-radius:10px;">
                     ${escapeHtml(cta.label)}
@@ -92,7 +101,7 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
         width="${EMAIL_LOCKUP_WIDTH}"
         height="${EMAIL_LOCKUP_HEIGHT}"
         alt="${brand}"
-        style="display:block;width:${EMAIL_LOCKUP_WIDTH}px;max-width:100%;height:auto;border:0;outline:none;text-decoration:none;"
+        style="display:block;width:${EMAIL_LOCKUP_WIDTH}px;max-width:100%;height:auto;border:0;outline:none;text-decoration:none;background-color:${EMAIL_BRAND.void};"
       />
     </a>
   `;
@@ -105,26 +114,34 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="supported-color-schemes" content="dark" />
   <title>${brand}</title>
+  <style>
+    :root { color-scheme: dark; supported-color-schemes: dark; }
+    @media (prefers-color-scheme: dark) {
+      .email-header { background-color: ${EMAIL_BRAND.void} !important; }
+    }
+  </style>
 </head>
-<body style="margin:0;padding:0;background:${EMAIL_BRAND.pageBg};">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:${EMAIL_BRAND.pageBg};">
+<body bgcolor="${EMAIL_BRAND.pageBg}" style="margin:0;padding:0;background:${EMAIL_BRAND.pageBg};">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${EMAIL_BRAND.pageBg}" style="background:${EMAIL_BRAND.pageBg};">
     <tr>
-      <td align="center" style="padding:32px 16px;">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;background:${EMAIL_BRAND.white};border-radius:12px;overflow:hidden;border:1px solid ${EMAIL_BRAND.border};">
+      <td align="center" bgcolor="${EMAIL_BRAND.pageBg}" style="padding:32px 16px;background:${EMAIL_BRAND.pageBg};">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${EMAIL_BRAND.card}" style="max-width:560px;background:${EMAIL_BRAND.card};border-radius:12px;overflow:hidden;border:1px solid ${EMAIL_BRAND.border};">
           <tr>
-            <td style="background:${EMAIL_BRAND.void};padding:22px 28px;border-bottom:2px solid ${EMAIL_BRAND.accent};">
+            <td class="email-header" bgcolor="${EMAIL_BRAND.void}" background="${voidUrl}" style="${headerFill}padding:22px 28px;border-bottom:2px solid ${EMAIL_BRAND.accent};">
               ${headerHtml}
             </td>
           </tr>
           <tr>
-            <td style="padding:32px 28px;font-family:${fontSans};font-size:16px;line-height:1.55;color:${EMAIL_BRAND.text};">
+            <td bgcolor="${EMAIL_BRAND.card}" style="padding:32px 28px;font-family:${fontSans};font-size:16px;line-height:1.55;color:${EMAIL_BRAND.text};background:${EMAIL_BRAND.card};">
               ${bodyHtml}
               ${ctaBlock}
             </td>
           </tr>
           <tr>
-            <td style="padding:20px 28px 28px;border-top:1px solid ${EMAIL_BRAND.border};font-family:${fontSans};font-size:13px;line-height:1.5;color:${EMAIL_BRAND.muted};text-align:center;">
+            <td bgcolor="${EMAIL_BRAND.card}" style="padding:20px 28px 28px;border-top:1px solid ${EMAIL_BRAND.border};font-family:${fontSans};font-size:13px;line-height:1.5;color:${EMAIL_BRAND.muted};text-align:center;background:${EMAIL_BRAND.card};">
               <p style="margin:0 0 4px;">${footerLead}</p>
               <p style="margin:0;">
                 <a href="mailto:${contactEmail}" style="color:${EMAIL_BRAND.text};text-decoration:underline;">${contactEmail}</a>
@@ -142,4 +159,8 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
 
 export function mutedParagraphHtml(text: string, marginTop = 24): string {
   return `<p style="margin:${marginTop}px 0 0;font-size:14px;color:${EMAIL_BRAND.muted};">${escapeHtml(text)}</p>`;
+}
+
+export function quoteBoxHtml(innerHtml: string): string {
+  return `<div style="margin:0 0 20px;padding:14px 16px;background:${EMAIL_BRAND.quoteBg};border-radius:10px;border:1px solid ${EMAIL_BRAND.border};">${innerHtml}</div>`;
 }

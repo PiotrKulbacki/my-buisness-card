@@ -1,5 +1,6 @@
 import { EMAIL_BRAND, escapeHtml, mutedParagraphHtml, wrapEmailHtml } from "@/lib/email/layout";
 import { fillTemplate, getEmailMessages, resolveLocale } from "@/lib/email/messages";
+import { resolveInboxReplyUrl } from "@/lib/reply-token";
 
 export type ContactInboxEmailParams = {
   name: string;
@@ -17,7 +18,12 @@ export function buildContactInboxEmail(params: ContactInboxEmailParams): {
   const locale = resolveLocale(params.locale);
   const copy = getEmailMessages(locale);
   const subject = fillTemplate(copy.inbox.subject, { name: params.name });
-  const replyUrl = `mailto:${encodeURIComponent(params.email)}`;
+  const replyUrl = resolveInboxReplyUrl({
+    to: params.email,
+    name: params.name,
+    locale,
+    source: "contact",
+  });
 
   const textLines = [
     copy.inbox.title,

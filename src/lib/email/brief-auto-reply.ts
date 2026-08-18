@@ -1,4 +1,4 @@
-import { EMAIL_BRAND, escapeHtml, mutedParagraphHtml, wrapEmailHtml } from "@/lib/email/layout";
+import { escapeHtml, mutedParagraphHtml, quoteBoxHtml, wrapEmailHtml } from "@/lib/email/layout";
 import { fillTemplate, getEmailMessages, resolveLocale } from "@/lib/email/messages";
 import { buildBriefRows } from "@/lib/email/brief-inbox";
 import { siteConfig } from "@/config/site";
@@ -38,7 +38,7 @@ export function buildBriefAutoReplyEmail(params: BriefPayload): {
     `<p style="margin:0 0 16px;">${escapeHtml(greeting)}</p>`,
     `<p style="margin:0 0 20px;">${escapeHtml(copy.briefAutoReply.body)}</p>`,
     `<p style="margin:0 0 8px;"><strong>${escapeHtml(copy.briefAutoReply.summaryLabel)}</strong></p>`,
-    `<div style="margin:0 0 20px;padding:14px 16px;background:#f7f7f7;border-radius:10px;border:1px solid ${EMAIL_BRAND.border};">${summaryHtml}</div>`,
+    quoteBoxHtml(summaryHtml),
     `<p style="margin:0;">${escapeHtml(signOff).replaceAll("\n", "<br />")}</p>`,
     mutedParagraphHtml(copy.briefAutoReply.footerNote),
   ].join("");

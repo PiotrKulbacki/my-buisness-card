@@ -329,6 +329,20 @@
     "title": "Página no encontrada.",
     "home": "Inicio"
   },
+  "reply": {
+    "title": "Respuesta",
+    "lead": "El mensaje saldrá en la plantilla PK a la persona que envió el formulario.",
+    "toLabel": "Para",
+    "message": "Mensaje",
+    "submit": "Enviar",
+    "sending": "Enviando…",
+    "success": "Mensaje enviado",
+    "error": "No se pudo enviar. Inténtalo de nuevo.",
+    "validationError": "Escribe una respuesta (mínimo 10 caracteres).",
+    "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo.",
+    "invalid": "Este enlace no es válido o ha caducado. Usa el botón del correo más reciente.",
+    "backHome": "Inicio"
+  },
   "email": {
     "layout": {
       "footerLead": "{name} — sitio personal"
@@ -340,8 +354,8 @@
       "emailLabel": "Email",
       "phoneLabel": "Teléfono",
       "messageLabel": "Mensaje",
-      "replyHint": "Usa Responder para escribir directamente al remitente.",
-      "cta": "Responder por email"
+      "replyHint": "El botón abre el formulario de respuesta en la web — el mensaje usará la misma plantilla.",
+      "cta": "Responder en la plantilla"
     },
     "autoReply": {
       "subject": "Gracias — he recibido tu mensaje",
@@ -354,8 +368,8 @@
     "briefInbox": {
       "subject": "Consulta de proyecto: {name}",
       "title": "Nueva consulta de proyecto",
-      "replyHint": "Usa Responder para escribir directamente al remitente.",
-      "cta": "Responder por email"
+      "replyHint": "El botón abre el formulario de respuesta en la web — el mensaje usará la misma plantilla.",
+      "cta": "Responder en la plantilla"
     },
     "briefAutoReply": {
       "subject": "Gracias — he recibido tu consulta",
@@ -364,6 +378,12 @@
       "summaryLabel": "Tus respuestas:",
       "signOff": "Un saludo,\n{name}",
       "footerNote": "Esta es una confirmación automática. No respondas a este email si necesitas otra cosa — te escribiré desde mi dirección."
+    },
+    "ownerReply": {
+      "subject": "Re: {originalSubject}",
+      "greeting": "Hola {name},",
+      "signOff": "Un saludo,\n{name}",
+      "footerNote": "Puedes responder a este email — llegará a mi dirección."
     }
   }
 }

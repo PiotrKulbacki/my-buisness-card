@@ -329,6 +329,20 @@
     "title": "Nie znaleziono strony.",
     "home": "Strona główna"
   },
+  "reply": {
+    "title": "Odpowiedź",
+    "lead": "Wiadomość wyjdzie w szablonie PK na adres osoby, która napisała przez formularz.",
+    "toLabel": "Do",
+    "message": "Treść",
+    "submit": "Wyślij",
+    "sending": "Wysyłanie…",
+    "success": "Wiadomość wysłana",
+    "error": "Nie udało się wysłać. Spróbuj ponownie.",
+    "validationError": "Wpisz treść odpowiedzi (min. 10 znaków).",
+    "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
+    "invalid": "Ten link jest nieprawidłowy lub wygasł. Użyj przycisku z najświeższego maila.",
+    "backHome": "Strona główna"
+  },
   "email": {
     "layout": {
       "footerLead": "{name} — strona osobista"
@@ -340,8 +354,8 @@
       "emailLabel": "E-mail",
       "phoneLabel": "Telefon",
       "messageLabel": "Wiadomość",
-      "replyHint": "Użyj Odpowiedz, aby napisać bezpośrednio do nadawcy.",
-      "cta": "Odpowiedz e-mailem"
+      "replyHint": "Przycisk otwiera formularz odpowiedzi na stronie — wiadomość wyjdzie w tym samym szablonie.",
+      "cta": "Odpowiedz w szablonie"
     },
     "autoReply": {
       "subject": "Dziękuję — otrzymałem Twoją wiadomość",
@@ -354,8 +368,8 @@
     "briefInbox": {
       "subject": "Zapytanie o projekt: {name}",
       "title": "Nowe zapytanie o projekt",
-      "replyHint": "Użyj Odpowiedz, aby napisać bezpośrednio do nadawcy.",
-      "cta": "Odpowiedz e-mailem"
+      "replyHint": "Przycisk otwiera formularz odpowiedzi na stronie — wiadomość wyjdzie w tym samym szablonie.",
+      "cta": "Odpowiedz w szablonie"
     },
     "briefAutoReply": {
       "subject": "Dziękuję — otrzymałem Twoje zapytanie",
@@ -364,6 +378,12 @@
       "summaryLabel": "Twoje odpowiedzi:",
       "signOff": "Pozdrawiam,\n{name}",
       "footerNote": "To automatyczne potwierdzenie. Jeśli potrzebujesz czegoś innego, nie odpowiadaj na tę wiadomość — odezwę się z mojego adresu."
+    },
+    "ownerReply": {
+      "subject": "Re: {originalSubject}",
+      "greeting": "Cześć {name},",
+      "signOff": "Pozdrawiam,\n{name}",
+      "footerNote": "Możesz odpowiedzieć na tę wiadomość — trafi na mój adres."
     }
   }
 }

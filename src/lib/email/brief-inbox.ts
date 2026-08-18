@@ -5,6 +5,7 @@ import {
   getEmailMessages,
   resolveLocale,
 } from "@/lib/email/messages";
+import { resolveInboxReplyUrl } from "@/lib/reply-token";
 import type { BriefPayload } from "@/lib/schemas/brief";
 
 function joinLabels(values: string[] | undefined, labels: Record<string, string>, empty: string) {
@@ -99,7 +100,12 @@ export function buildBriefInboxEmail(params: BriefPayload): {
   const copy = getEmailMessages(locale);
   const rows = buildBriefRows(params, locale);
   const subject = fillTemplate(copy.briefInbox.subject, { name: params.name });
-  const replyUrl = `mailto:${encodeURIComponent(params.email)}`;
+  const replyUrl = resolveInboxReplyUrl({
+    to: params.email,
+    name: params.name,
+    locale,
+    source: "brief",
+  });
 
   const textLines = [copy.briefInbox.title, ""];
   for (const row of rows) {

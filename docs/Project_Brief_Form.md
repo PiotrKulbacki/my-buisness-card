@@ -51,7 +51,7 @@ Przepływ: walidacja Zod (klient **i** serwer — schemat zduplikowany) → `POS
 
 Maile ([`src/lib/email/`](../src/lib/email/)):
 
-1. **Inbox** na `CONTACT_TO_EMAIL` — HTML z `wrapEmailHtml`, CTA „Odpowiedz”, `replyTo` = nadawca.
+1. **Inbox** na `CONTACT_TO_EMAIL` — HTML z `wrapEmailHtml`, CTA „Odpowiedz w szablonie” (podpisany link na `/{locale}/reply`), `replyTo` = nadawca.
 2. **Auto-reply** do klienta — potwierdzenie + cytat wiadomości; błąd auto-reply **nie** psuje requestu.
 
 UX: toast (Sonner) wyłącznie — bez błędów pod polami. Submit: `loading` + disabled + spinner na `Button`. Sukces: toast + **redirect na `/`**.
@@ -275,7 +275,7 @@ Przy okazji (nie blokuje briefu): wyciągnąć schema kontaktu do `src/lib/schem
 - Honeypot: to samo pole `website`.
 - Brak bazy — uporządkowanie = HTML maila (sekcje jak kroki) + plain text. Żadnego CMS / inboxa w appce (zakaz autonomicznego rozszerzania zakresu).
 - Nowe buildery: `buildBriefInboxEmail`, `buildBriefAutoReplyEmail` na `wrapEmailHtml`.
-- Inbox: subject np. „Brief projektu: {name}”; CTA mailto; `replyTo` = klient.
+- Inbox: subject np. „Brief projektu: {name}”; CTA „Odpowiedz w szablonie”; `replyTo` = klient.
 - Auto-reply: podziękowanie + skrót odpowiedzi (cele, rodzaj, opis) + informacja 1–2 dni robocze.
 - Copy: `messages/*/email.briefInbox` i `email.briefAutoReply` (5 locale).
 

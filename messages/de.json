@@ -329,6 +329,20 @@
     "title": "Seite nicht gefunden.",
     "home": "Start"
   },
+  "reply": {
+    "title": "Antwort",
+    "lead": "Die Nachricht geht im PK-Template an die Person, die das Formular abgeschickt hat.",
+    "toLabel": "An",
+    "message": "Nachricht",
+    "submit": "Senden",
+    "sending": "Senden…",
+    "success": "Nachricht gesendet",
+    "error": "Senden fehlgeschlagen. Bitte erneut versuchen.",
+    "validationError": "Bitte eine Antwort eingeben (mindestens 10 Zeichen).",
+    "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen.",
+    "invalid": "Dieser Link ist ungültig oder abgelaufen. Nutzen Sie die Schaltfläche aus der neuesten E-Mail.",
+    "backHome": "Start"
+  },
   "email": {
     "layout": {
       "footerLead": "{name} — persönliche Website"
@@ -340,8 +354,8 @@
       "emailLabel": "E-Mail",
       "phoneLabel": "Telefon",
       "messageLabel": "Nachricht",
-      "replyHint": "Nutzen Sie Antworten, um dem Absender direkt zu schreiben.",
-      "cta": "Per E-Mail antworten"
+      "replyHint": "Die Schaltfläche öffnet das Antwortformular auf der Website — die Nachricht nutzt dasselbe Template.",
+      "cta": "Im Template antworten"
     },
     "autoReply": {
       "subject": "Danke — ich habe Ihre Nachricht erhalten",
@@ -354,8 +368,8 @@
     "briefInbox": {
       "subject": "Projektanfrage: {name}",
       "title": "Neue Projektanfrage",
-      "replyHint": "Nutzen Sie Antworten, um dem Absender direkt zu schreiben.",
-      "cta": "Per E-Mail antworten"
+      "replyHint": "Die Schaltfläche öffnet das Antwortformular auf der Website — die Nachricht nutzt dasselbe Template.",
+      "cta": "Im Template antworten"
     },
     "briefAutoReply": {
       "subject": "Danke — ich habe Ihre Anfrage erhalten",
@@ -364,6 +378,12 @@
       "summaryLabel": "Ihre Angaben:",
       "signOff": "Freundliche Grüße,\n{name}",
       "footerNote": "Dies ist eine automatische Bestätigung. Bitte antworten Sie nicht auf diese E-Mail, wenn Sie etwas anderes brauchen — ich melde mich von meiner Adresse."
+    },
+    "ownerReply": {
+      "subject": "Re: {originalSubject}",
+      "greeting": "Hallo {name},",
+      "signOff": "Freundliche Grüße,\n{name}",
+      "footerNote": "Sie können auf diese E-Mail antworten — sie kommt auf meine Adresse."
     }
   }
 }

@@ -98,20 +98,25 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} h-full overflow-hidden antialiased`}
     >
-      <body className="relative min-h-full md:h-full" suppressHydrationWarning>
+      <body className="relative h-dvh overflow-hidden md:h-full" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <div className="site-grid" aria-hidden />
           <div className="site-grain" aria-hidden />
           <Sidebar />
-          <div className="relative z-10 flex min-h-full flex-col pt-14 pb-[calc(3.5rem+env(safe-area-inset-bottom,0px))] md:h-svh md:overflow-hidden md:pt-0 md:pb-0 md:pl-(--sidebar-w)">
-            <div className="min-h-0 flex-1 overflow-y-auto" id="site-scroll">
+          <div className="relative z-10 flex h-dvh flex-col overflow-hidden pt-14 pb-[calc(3.5rem+env(safe-area-inset-bottom,0px))] md:h-svh md:pt-0 md:pb-0 md:pl-(--sidebar-w)">
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-y-contain" id="site-scroll">
               <main className="mx-auto w-full max-w-5xl px-5 py-6 md:px-8 md:py-8">
                 <PageTransition>{children}</PageTransition>
               </main>
+              <div className="md:hidden">
+                <Footer />
+              </div>
             </div>
-            <Footer />
+            <div className="hidden shrink-0 md:block">
+              <Footer />
+            </div>
           </div>
           <AppToaster />
           <JsonLd />

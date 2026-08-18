@@ -24,7 +24,7 @@ export function BriefStepNav({
   onSubmit,
 }: BriefStepNavProps) {
   return (
-    <div className="border-line bg-bg/95 sticky bottom-[calc(3.5rem+env(safe-area-inset-bottom,0px))] z-20 -mx-1 mt-8 flex flex-wrap gap-3 border-t px-1 pt-5 pb-3 backdrop-blur-md md:static md:bottom-auto md:bg-transparent md:px-0 md:pt-6 md:pb-0 md:backdrop-blur-none">
+    <div className="border-line bg-bg/95 sticky bottom-0 z-20 -mx-1 mt-8 flex flex-wrap gap-3 border-t px-1 pt-5 pb-3 backdrop-blur-md md:static md:bottom-auto md:bg-transparent md:px-0 md:pt-6 md:pb-0 md:backdrop-blur-none">
       {step > 1 ? (
         <Button type="button" variant="secondary" disabled={loading} onClick={onBack}>
           {backLabel}
