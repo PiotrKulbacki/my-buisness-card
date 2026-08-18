@@ -107,6 +107,16 @@
     "location": "Location",
     "remote": "Remote · Berlin / EU",
     "validationError": "Please check the form and try again.",
+    "validation": {
+      "nameHint": "min. 2 characters",
+      "nameMin": "Name must be at least 2 characters.",
+      "nameMax": "Name can be at most 80 characters.",
+      "emailInvalid": "Enter a valid email address.",
+      "messageHint": "min. 10 characters",
+      "messageMin": "Message must be at least 10 characters.",
+      "messageMax": "Message can be at most 4000 characters.",
+      "phoneMax": "Phone can be at most 40 characters."
+    },
     "rateLimited": "Too many attempts. Please wait a moment and try again.",
     "captchaError": "Please confirm you are not a bot and try again."
   },
@@ -126,6 +136,19 @@
     "successContact": "Back to contact",
     "successHome": "Home",
     "validationError": "Please check this step and try again.",
+    "validation": {
+      "nameHint": "min. 2 characters",
+      "nameMin": "Name must be at least 2 characters.",
+      "nameMax": "Name can be at most 80 characters.",
+      "emailInvalid": "Enter a valid email address.",
+      "projectTypeHint": "select one option",
+      "projectTypeSelect": "Select a project type.",
+      "goalsHint": "select at least one",
+      "goalsSelect": "Select at least one main goal.",
+      "goalDescriptionHint": "min. 10 characters",
+      "goalDescriptionMin": "Describe what you want to achieve — at least 10 characters.",
+      "goalDescriptionMax": "The goal description can be at most 4000 characters."
+    },
     "rateLimited": "Too many attempts. Please wait a moment and try again.",
     "captchaError": "Please confirm you are not a bot and try again.",
     "error": "Couldn’t send. Try again or email me directly.",
@@ -342,6 +365,11 @@
     "success": "Message sent",
     "error": "Could not send. Please try again.",
     "validationError": "Enter a reply (at least 10 characters).",
+    "messageHint": "min. 10 characters",
+    "validation": {
+      "messageMin": "Enter a reply (at least 10 characters).",
+      "messageMax": "The reply can be at most 4000 characters."
+    },
     "rateLimited": "Too many attempts. Please wait a moment and try again.",
     "invalid": "This link is invalid or has expired. Use the button from the latest email.",
     "backHome": "Home"

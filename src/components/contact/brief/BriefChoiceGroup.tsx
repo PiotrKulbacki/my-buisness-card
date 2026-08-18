@@ -22,6 +22,7 @@ type Option = { value: string; label: string };
 type BriefChoiceGroupProps = {
   legend: string;
   required?: boolean;
+  hint?: string;
   optionalLabel?: string;
   name: string;
   type: "radio" | "checkbox";
@@ -34,6 +35,7 @@ type BriefChoiceGroupProps = {
 export function BriefChoiceGroup({
   legend,
   required,
+  hint,
   optionalLabel,
   name,
   type,
@@ -53,6 +55,7 @@ export function BriefChoiceGroup({
         ) : optionalLabel ? (
           <OptionalHint label={optionalLabel} />
         ) : null}
+        {hint ? <OptionalHint label={hint} /> : null}
       </legend>
       <div className="clear-both mt-0 grid w-full gap-2 sm:grid-cols-2">
         {options.map((option) => {

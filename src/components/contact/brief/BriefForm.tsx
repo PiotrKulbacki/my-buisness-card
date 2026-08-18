@@ -20,6 +20,7 @@ import {
   saveBriefDraft,
   subscribeBriefDraft,
 } from "@/lib/brief-draft";
+import { resolveValidationMessage } from "@/lib/form-validation";
 import {
   BRIEF_STEP_COUNT,
   appFeatureOptions,
@@ -112,7 +113,7 @@ export function BriefForm() {
         projectType: values.projectType,
       });
       if (!parsed.success) {
-        toast.error(t("validationError"));
+        toast.error(resolveValidationMessage(parsed.error, t));
         return;
       }
     }
@@ -122,7 +123,7 @@ export function BriefForm() {
         goalDescription: values.goalDescription,
       });
       if (!parsed.success) {
-        toast.error(t("validationError"));
+        toast.error(resolveValidationMessage(parsed.error, t));
         return;
       }
     }
@@ -167,7 +168,7 @@ export function BriefForm() {
       }),
     );
     if (!parsed.success) {
-      toast.error(t("validationError"));
+      toast.error(resolveValidationMessage(parsed.error, t));
       setLoading(false);
       return;
     }
@@ -242,6 +243,7 @@ export function BriefForm() {
               <span className="leading-none">
                 {t("fields.name")}
                 <RequiredMark />
+                <OptionalHint label={t("validation.nameHint")} />
               </span>
               <input
                 name="name"
@@ -320,6 +322,7 @@ export function BriefForm() {
           <BriefChoiceGroup
             legend={t("fields.projectType")}
             required
+            hint={t("validation.projectTypeHint")}
             name="projectType"
             type="radio"
             disabled={disabled}
@@ -360,6 +363,7 @@ export function BriefForm() {
           <BriefChoiceGroup
             legend={t("fields.goals")}
             required
+            hint={t("validation.goalsHint")}
             name="goals"
             type="checkbox"
             disabled={disabled}
@@ -371,6 +375,7 @@ export function BriefForm() {
             <span className="leading-none">
               {t("fields.goalDescription")}
               <RequiredMark />
+              <OptionalHint label={t("validation.goalDescriptionHint")} />
             </span>
             <textarea
               name="goalDescription"

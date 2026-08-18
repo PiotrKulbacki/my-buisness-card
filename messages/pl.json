@@ -107,6 +107,16 @@
     "location": "Lokalizacja",
     "remote": "Remote · Berlin / EU",
     "validationError": "Sprawdź poprawność formularza i spróbuj ponownie.",
+    "validation": {
+      "nameHint": "min. 2 znaki",
+      "nameMin": "Imię musi mieć co najmniej 2 znaki.",
+      "nameMax": "Imię może mieć maksymalnie 80 znaków.",
+      "emailInvalid": "Podaj poprawny adres e-mail.",
+      "messageHint": "min. 10 znaków",
+      "messageMin": "Wiadomość musi mieć co najmniej 10 znaków.",
+      "messageMax": "Wiadomość może mieć maksymalnie 4000 znaków.",
+      "phoneMax": "Telefon może mieć maksymalnie 40 znaków."
+    },
     "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
     "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie."
   },
@@ -126,6 +136,19 @@
     "successContact": "Wróć do kontaktu",
     "successHome": "Strona główna",
     "validationError": "Sprawdź ten krok i spróbuj ponownie.",
+    "validation": {
+      "nameHint": "min. 2 znaki",
+      "nameMin": "Imię musi mieć co najmniej 2 znaki.",
+      "nameMax": "Imię może mieć maksymalnie 80 znaków.",
+      "emailInvalid": "Podaj poprawny adres e-mail.",
+      "projectTypeHint": "zaznacz jedną opcję",
+      "projectTypeSelect": "Zaznacz rodzaj projektu.",
+      "goalsHint": "zaznacz co najmniej jeden",
+      "goalsSelect": "Zaznacz co najmniej jeden główny cel.",
+      "goalDescriptionHint": "min. 10 znaków",
+      "goalDescriptionMin": "Opisz, co chcesz osiągnąć — co najmniej 10 znaków.",
+      "goalDescriptionMax": "Opis celu może mieć maksymalnie 4000 znaków."
+    },
     "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
     "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie.",
     "error": "Nie udało się wysłać. Spróbuj ponownie lub napisz bezpośrednio na email.",
@@ -342,6 +365,11 @@
     "success": "Wiadomość wysłana",
     "error": "Nie udało się wysłać. Spróbuj ponownie.",
     "validationError": "Wpisz treść odpowiedzi (min. 10 znaków).",
+    "messageHint": "min. 10 znaków",
+    "validation": {
+      "messageMin": "Wpisz treść odpowiedzi (min. 10 znaków).",
+      "messageMax": "Odpowiedź może mieć maksymalnie 4000 znaków."
+    },
     "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
     "invalid": "Ten link jest nieprawidłowy lub wygasł. Użyj przycisku z najświeższego maila.",
     "backHome": "Strona główna"

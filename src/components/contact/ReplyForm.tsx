@@ -5,6 +5,7 @@ import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/Button";
 import { replyPayloadSchema } from "@/lib/schemas/reply";
+import { resolveValidationMessage } from "@/lib/form-validation";
 
 const fieldClassName =
   "border-line bg-bg-elevated w-full rounded-2xl border px-4 py-3 text-base transition-[border-color,box-shadow] focus-visible:border-accent focus-visible:shadow-[0_0_0_3px_color-mix(in_oklab,var(--accent)_35%,transparent)] focus-visible:outline-none disabled:opacity-60";
@@ -31,7 +32,7 @@ export function ReplyForm({ token, recipientName, recipientEmail }: ReplyFormPro
       website: website || undefined,
     });
     if (!parsed.success) {
-      toast.error(t("validationError"));
+      toast.error(resolveValidationMessage(parsed.error, t));
       setLoading(false);
       return;
     }
@@ -78,6 +79,7 @@ export function ReplyForm({ token, recipientName, recipientEmail }: ReplyFormPro
           <span className="ml-0.5 text-red-500" aria-hidden="true">
             *
           </span>
+          <span className="text-fg-muted ml-1">({t("messageHint")})</span>
         </span>
         <textarea
           name="message"

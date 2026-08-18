@@ -82,8 +82,9 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
               <tr>
                 <td align="center" bgcolor="${EMAIL_BRAND.accent}" background="${accentUrl}" style="border-radius:10px;${ctaFill}">
                   <a href="${escapeHtml(cta.url)}"
+                     class="email-cta-label"
                      style="display:inline-block;padding:14px 28px;font-family:${fontSans};font-size:14px;font-weight:600;line-height:1.2;color:${EMAIL_BRAND.accentInk};text-decoration:none;border-radius:10px;${ctaFill}">
-                    ${escapeHtml(cta.label)}
+                    <span class="email-cta-label" style="color:${EMAIL_BRAND.accentInk};-webkit-text-fill-color:${EMAIL_BRAND.accentInk};">${escapeHtml(cta.label)}</span>
                   </a>
                 </td>
               </tr>
@@ -117,6 +118,10 @@ export function wrapEmailHtml(params: WrapEmailHtmlParams): string {
   <meta name="color-scheme" content="light" />
   <meta name="supported-color-schemes" content="light" />
   <title>${brand}</title>
+  <style>
+    .email-cta-label { color: ${EMAIL_BRAND.accentInk} !important; -webkit-text-fill-color: ${EMAIL_BRAND.accentInk} !important; }
+    [data-ogsc] .email-cta-label { color: ${EMAIL_BRAND.accentInk} !important; -webkit-text-fill-color: ${EMAIL_BRAND.accentInk} !important; }
+  </style>
 </head>
 <body bgcolor="${EMAIL_BRAND.pageBg}" style="margin:0;padding:0;background:${EMAIL_BRAND.pageBg};">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${EMAIL_BRAND.pageBg}" style="background:${EMAIL_BRAND.pageBg};">

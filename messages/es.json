@@ -107,6 +107,16 @@
     "location": "Ubicación",
     "remote": "Remote · Berlin / EU",
     "validationError": "Revisa el formulario e inténtalo de nuevo.",
+    "validation": {
+      "nameHint": "mín. 2 caracteres",
+      "nameMin": "El nombre debe tener al menos 2 caracteres.",
+      "nameMax": "El nombre puede tener como máximo 80 caracteres.",
+      "emailInvalid": "Introduce un email válido.",
+      "messageHint": "mín. 10 caracteres",
+      "messageMin": "El mensaje debe tener al menos 10 caracteres.",
+      "messageMax": "El mensaje puede tener como máximo 4000 caracteres.",
+      "phoneMax": "El teléfono puede tener como máximo 40 caracteres."
+    },
     "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo.",
     "captchaError": "Confirma que no eres un bot e inténtalo de nuevo."
   },
@@ -126,6 +136,19 @@
     "successContact": "Volver a contacto",
     "successHome": "Inicio",
     "validationError": "Revisa este paso e inténtalo de nuevo.",
+    "validation": {
+      "nameHint": "mín. 2 caracteres",
+      "nameMin": "El nombre debe tener al menos 2 caracteres.",
+      "nameMax": "El nombre puede tener como máximo 80 caracteres.",
+      "emailInvalid": "Introduce un email válido.",
+      "projectTypeHint": "elige una opción",
+      "projectTypeSelect": "Selecciona el tipo de proyecto.",
+      "goalsHint": "elige al menos uno",
+      "goalsSelect": "Selecciona al menos un objetivo principal.",
+      "goalDescriptionHint": "mín. 10 caracteres",
+      "goalDescriptionMin": "Describe qué quieres conseguir — al menos 10 caracteres.",
+      "goalDescriptionMax": "La descripción del objetivo puede tener como máximo 4000 caracteres."
+    },
     "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo.",
     "captchaError": "Confirma que no eres un bot e inténtalo de nuevo.",
     "error": "No se pudo enviar. Inténtalo de nuevo o escríbeme por email.",
@@ -342,6 +365,11 @@
     "success": "Mensaje enviado",
     "error": "No se pudo enviar. Inténtalo de nuevo.",
     "validationError": "Escribe una respuesta (mínimo 10 caracteres).",
+    "messageHint": "mín. 10 caracteres",
+    "validation": {
+      "messageMin": "Escribe una respuesta (mínimo 10 caracteres).",
+      "messageMax": "La respuesta puede tener como máximo 4000 caracteres."
+    },
     "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo.",
     "invalid": "Este enlace no es válido o ha caducado. Usa el botón del correo más reciente.",
     "backHome": "Inicio"

@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { locales } from "@/i18n/routing";
+import { resolveValidationMessage } from "@/lib/form-validation";
 import { contactPayloadSchema } from "@/lib/schemas/contact";
 
 /**
@@ -56,7 +57,7 @@ export function ContactForm() {
 
     const parsed = contactPayloadSchema.safeParse(payload);
     if (!parsed.success) {
-      toast.error(t("validationError"));
+      toast.error(resolveValidationMessage(parsed.error, t));
       setLoading(false);
       return;
     }
@@ -104,6 +105,7 @@ export function ContactForm() {
           <span className="leading-none">
             {t("name")}
             <RequiredMark />
+            <span className="text-fg-muted ml-1">({t("validation.nameHint")})</span>
           </span>
           <input
             required
@@ -145,6 +147,7 @@ export function ContactForm() {
         <span className="leading-none">
           {t("message")}
           <RequiredMark />
+          <span className="text-fg-muted ml-1">({t("validation.messageHint")})</span>
         </span>
         <textarea
           required
