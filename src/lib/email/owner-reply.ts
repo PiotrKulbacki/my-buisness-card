@@ -1,4 +1,10 @@
-import { escapeHtml, mutedParagraphHtml, wrapEmailHtml } from "@/lib/email/layout";
+import {
+  EMAIL_BRAND,
+  escapeHtml,
+  inkCss,
+  mutedParagraphHtml,
+  wrapEmailHtml,
+} from "@/lib/email/layout";
 import { fillTemplate, getEmailMessages, resolveLocale } from "@/lib/email/messages";
 import { siteConfig } from "@/config/site";
 import type { ReplyTokenPayload } from "@/lib/schemas/reply";
@@ -18,10 +24,11 @@ export function buildOwnerReplyEmail(params: { token: ReplyTokenPayload; message
 
   const text = [greeting, "", params.message, "", signOff].join("\n");
 
+  const bodyInk = inkCss(EMAIL_BRAND.text);
   const bodyHtml = [
-    `<p style="margin:0 0 16px;">${escapeHtml(greeting)}</p>`,
-    `<p style="margin:0 0 20px;white-space:pre-wrap;">${escapeHtml(params.message)}</p>`,
-    `<p style="margin:0;">${escapeHtml(signOff).replaceAll("\n", "<br />")}</p>`,
+    `<p style="margin:0 0 16px;${bodyInk}">${escapeHtml(greeting)}</p>`,
+    `<p style="margin:0 0 20px;white-space:pre-wrap;${bodyInk}">${escapeHtml(params.message)}</p>`,
+    `<p style="margin:0;${bodyInk}">${escapeHtml(signOff).replaceAll("\n", "<br />")}</p>`,
     mutedParagraphHtml(copy.ownerReply.footerNote),
   ].join("");
 

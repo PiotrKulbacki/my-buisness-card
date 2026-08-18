@@ -1,4 +1,10 @@
-import { EMAIL_BRAND, escapeHtml, mutedParagraphHtml, wrapEmailHtml } from "@/lib/email/layout";
+import {
+  EMAIL_BRAND,
+  escapeHtml,
+  inkCss,
+  mutedParagraphHtml,
+  wrapEmailHtml,
+} from "@/lib/email/layout";
 import {
   fillTemplate,
   getBriefMessages,
@@ -112,11 +118,12 @@ export function buildBriefInboxEmail(params: BriefPayload): {
     textLines.push(`${row.label}: ${row.value}`, "");
   }
 
+  const bodyInk = inkCss(EMAIL_BRAND.text);
   const bodyParts = [
-    `<h2 style="margin:0 0 20px;font-size:18px;font-weight:700;color:${EMAIL_BRAND.text};">${escapeHtml(copy.briefInbox.title)}</h2>`,
+    `<h2 style="margin:0 0 20px;font-size:18px;font-weight:700;${bodyInk}">${escapeHtml(copy.briefInbox.title)}</h2>`,
     ...rows.map(
       (row) =>
-        `<p style="margin:0 0 12px;"><strong>${escapeHtml(row.label)}:</strong><br /><span style="white-space:pre-wrap;">${escapeHtml(row.value)}</span></p>`,
+        `<p style="margin:0 0 12px;${bodyInk}"><strong style="${bodyInk}">${escapeHtml(row.label)}:</strong><br /><span style="white-space:pre-wrap;${bodyInk}">${escapeHtml(row.value)}</span></p>`,
     ),
     mutedParagraphHtml(copy.briefInbox.replyHint),
   ];
