@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props) {
   });
 
   const facebookAppId = process.env.NEXT_PUBLIC_FACEBOOK_APP_ID?.trim();
-  const shareImage = brandShareImage(locale);
+  const shareImage = brandShareImage();
 
   return {
     metadataBase: new URL(siteConfig.url),

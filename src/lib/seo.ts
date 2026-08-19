@@ -68,13 +68,12 @@ export function getIndexableRoutes(): IndexableRoute[] {
   return [...staticRoutes, ...projectRoutes];
 }
 
-/** Shared brand OG/Twitter card (logo lockup) — same graphic for every public URL. */
-export function brandShareImage(locale: string) {
-  const code = (
-    routing.locales.includes(locale as Locale) ? locale : routing.defaultLocale
-  ) as Locale;
+/** Shared brand OG/Twitter card — static `/og.png` (WhatsApp needs a file extension). */
+export function brandShareImage() {
+  const url = `${getSiteOrigin()}${siteConfig.brand.shareOg}`;
   return {
-    url: `${getSiteOrigin()}/${code}/opengraph-image`,
+    url,
+    secureUrl: url,
     width: 1200,
     height: 630,
     alt: `${siteConfig.name} — ${siteConfig.role}`,
@@ -96,7 +95,7 @@ export function buildPageMetadata(options: {
   ) as Locale;
   const normalizedPath = normalizeSitePath(options.path);
   const pathname = localePathname(locale, normalizedPath);
-  const shareImage = brandShareImage(locale);
+  const shareImage = brandShareImage();
 
   const languages = Object.fromEntries(
     routing.locales.map((code) => [code, localePathname(code, normalizedPath)]),

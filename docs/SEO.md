@@ -13,11 +13,12 @@ Analityka (poza SEO tech, ale często weryfikowana razem z GSC): `docs/Analytics
 | Helpery URL + lista tras    | `src/lib/seo.ts`                          |
 | Metadata layout (title, OG) | `src/app/[locale]/layout.tsx`             |
 | Metadata stron              | `buildPageMetadata()` w każdej `page.tsx` |
-| OG / Twitter image (logo)   | `src/app/[locale]/opengraph-image.tsx`    |
+| OG / Twitter image (logo)   | `public/og.png` (kanoniczny URL share)    |
+| Generator karty OG          | `src/app/[locale]/opengraph-image.tsx`    |
 | Alias Twitter               | `src/app/[locale]/twitter-image.tsx`      |
 | `robots.txt`                | `src/app/robots.ts` → `/robots.txt`       |
 | `sitemap.xml`               | `src/app/sitemap.ts` → `/sitemap.xml`     |
-| Middleware (skip OG assets) | `src/proxy.ts`                            |
+| Middleware (crawlerzy OG)   | `src/proxy.ts`                            |
 | Logo w OG                   | `docs/Brand_Logo.md` → `lockupHorizontal` |
 | JSON-LD (org + person)      | `src/components/seo/JsonLd.tsx`           |
 
@@ -33,12 +34,13 @@ Każda strona: `alternates.canonical` + `languages` dla `pl` / `en` / `de` / `es
 
 ## Open Graph / Twitter
 
-- **Jedna grafika** dla wszystkich publicznych URL: brand lockup z maili (`ui-lockup-horizontal.png`) generowany w `opengraph-image.tsx`.
-- `brandShareImage(locale)` w `seo.ts` wstawia jawne `og:image` / `twitter:images` — bez tego podstrony nadpisywały `openGraph` i Facebook brał losowy obraz ze strony (np. portret na `/about`).
+- **Jedna grafika** dla wszystkich publicznych URL: `https://piotrkulbacki.com/og.png` (1200×630, PNG, <100 KB). WhatsApp wymaga rozszerzenia `.png` / `.jpg` — dynamiczny `/{locale}/opengraph-image` bez rozszerzenia nie wystarcza.
+- `brandShareImage()` w `seo.ts` wstawia jawne `og:image` / `twitter:images` — bez tego podstrony nadpisywały `openGraph` i Facebook brał losowy obraz ze strony (np. portret na `/about`).
+- `src/proxy.ts`: crawlerzy share (WhatsApp, `facebookexternalhit`, …) dostają **rewrite** na locale (bez 307 na `/`) i **bez** cookie `NEXT_LOCALE`.
 - Opcjonalnie: `NEXT_PUBLIC_FACEBOOK_APP_ID` → meta `fb:app_id` (Sharing Debugger). App może zostać w Development; Live nie jest wymagane do share preview.
-- Po zmianie OG: Facebook Sharing Debugger → **Scrape Again**. WhatsApp cache’uje agresywnie — preview może dojść z opóźnieniem.
+- Po zmianie OG: Facebook Sharing Debugger → **Scrape Again**. Potem wklej w WhatsApp **nową** wiadomość (stary czat może trzymać cache). Po deployu generatora odśwież `public/og.png`.
 
-Test: Debugger FB / LinkedIn Post Inspector / View Source (`og:title`, `og:image`).
+Test: Debugger FB / LinkedIn Post Inspector / View Source (`og:title`, `og:image` → `/og.png`).
 
 ---
 

@@ -27,6 +27,8 @@ export const siteConfig = {
     lockupSide: "/brand/ui-lockup-side.png",
     /** Square mark for Google Organization.logo (min. 112×112) */
     googleLogo: "/brand/google-120.png",
+    /** Static OG/Twitter card (1200×630). WhatsApp requires a `.png` URL. */
+    shareOg: "/og.png",
   },
   location: {
     city: "Berlin",

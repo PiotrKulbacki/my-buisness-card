@@ -60,9 +60,10 @@ Szczegóły sitemap / hreflang / OG: [`docs/SEO.md`](SEO.md).
 
 ## 5. Open Graph / share preview
 
-1. Facebook Sharing Debugger → Scrape Again dla `/pl`, `/pl/about`, case study
-2. Wszystkie URL powinny mieć **tę samą** grafikę z logo (nie portret)
-3. WhatsApp: cache bywa wolny — goły link tuż po deployu nie zawsze oznacza błąd OG
+1. Facebook Sharing Debugger → Scrape Again dla `/`, `/en`, `/pl`, `/pl/about`
+2. `og:image` = `https://piotrkulbacki.com/og.png` (nie `/{locale}/opengraph-image`)
+3. Wszystkie URL powinny mieć **tę samą** grafikę z logo (nie portret)
+4. WhatsApp: wklej link z paska adresu w **nowej** wiadomości; stary czat może trzymać cache. Debugger FB nie odświeża cache WhatsApp automatycznie.
 
 ## 6. Google Analytics 4 (opcjonalnie)
 

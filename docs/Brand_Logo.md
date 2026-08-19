@@ -55,16 +55,16 @@ W `public/brand/` zostają też mastery (`01-mark-only.png`, `02-…`, `03-…`,
 
 ## Mapa w layoutcie
 
-| Miejsce                        | Asset                                                                                                                                               |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Desktop sidebar (pod avatarem) | `lockupSide`                                                                                                                                        |
-| Mobile top bar                 | `lockupHorizontal`                                                                                                                                  |
-| Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…`                                                                                            |
-| Open Graph / Twitter card      | `lockupHorizontal` w `opengraph-image.tsx`; wymuszane na **wszystkich** URL przez `brandShareImage()` w `src/lib/seo.ts` (szczegóły: `docs/SEO.md`) |
-| Footer (przy ©)                | `mark` (wys. `h-4`)                                                                                                                                 |
-| Zakładka przeglądarki / SERP   | `google-120.png` + PNG 192/96/48/32 + ICO (ten sam znak PK, bez SVG)                                                                                |
-| JSON-LD Organization.logo      | `google-120.png`                                                                                                                                    |
-| JSON-LD Person.image           | `portrait.png`                                                                                                                                      |
+| Miejsce                        | Asset                                                                                                                                           |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Desktop sidebar (pod avatarem) | `lockupSide`                                                                                                                                    |
+| Mobile top bar                 | `lockupHorizontal`                                                                                                                              |
+| Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…`                                                                                        |
+| Open Graph / Twitter card      | `public/og.png` (1200×630); źródło wizualne: `lockupHorizontal` w `opengraph-image.tsx`; `brandShareImage()` w `src/lib/seo.ts` (`docs/SEO.md`) |
+| Footer (przy ©)                | `mark` (wys. `h-4`)                                                                                                                             |
+| Zakładka przeglądarki / SERP   | `google-120.png` + PNG 192/96/48/32 + ICO (ten sam znak PK, bez SVG)                                                                            |
+| JSON-LD Organization.logo      | `google-120.png`                                                                                                                                |
+| JSON-LD Person.image           | `portrait.png`                                                                                                                                  |
 
 Desktop sidebar: lockup side `max-w-40`. Stopka treści i pas LanguageSwitcher: wspólna wysokość `--site-footer-h` (3.25rem), oba flush do dołu viewportu (separatory w jednej linii). Desktop shell: `md:h-svh` — stopka zawsze na dole; Home / Kontakt bez scrollbara okna (`h-(--site-main-h)`).
 
