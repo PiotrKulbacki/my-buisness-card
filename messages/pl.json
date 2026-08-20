@@ -118,7 +118,8 @@
       "phoneMax": "Telefon może mieć maksymalnie 40 znaków."
     },
     "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
-    "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie."
+    "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie.",
+    "noContractNote": "Wysłanie formularza nie stanowi zawarcia umowy ani obowiązku zakupu."
   },
   "brief": {
     "title": "Opisz swój projekt",
@@ -278,33 +279,55 @@
       "payments": "Płatności",
       "crmNewsletter": "CRM / newsletter",
       "other": "Inne"
-    }
+    },
+    "noContractNote": "Wysłanie briefu nie stanowi zawarcia umowy ani zamówienia. Dane służą do kontaktu i przygotowania indywidualnej oferty."
   },
   "privacy": {
     "title": "Polityka prywatności",
-    "updated": "Ostatnia aktualizacja: 17 sierpnia 2026",
-    "intro": "Ta strona przetwarza dane osobowe tylko w zakresie niezbędnym do działania witryny, odpowiedzi na zapytania kontaktowe i briefy projektów oraz — po zgodzie — pomiaru ruchu (Vercel Analytics i Google Analytics 4).",
+    "updated": "Ostatnia aktualizacja: 20 sierpnia 2026",
+    "intro": "Ta strona przetwarza dane osobowe tylko w zakresie niezbędnym do działania witryny, odpowiedzi na zapytania i briefy oraz — po zgodzie — pomiaru ruchu. Nie opisuję tu usług, których ta witryna nie używa (np. własnej bazy Supabase).",
     "controllerHeading": "Administrator danych",
     "controllerBody": "Administratorem danych jest {name} (Einzelunternehmen, Berlin).",
-    "contact": "Kontakt w sprawach prywatności",
-    "hostingHeading": "Hosting",
-    "hostingBody": "Strona jest hostowana u Vercel Inc. W ramach dostarczenia treści mogą powstawać logi techniczne (np. adres IP, user agent, znacznik czasu) niezbędne do bezpieczeństwa i stabilności usługi.",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "mapHeading": "Jakie dane przetwarzam",
+    "mapIntro": "Poniżej: jakie dane, w jakim celu, na jakiej podstawie, kto je otrzymuje, czy mogą trafić poza EOG i jak długo je trzymam. Dotyczy wyłącznie technologii faktycznie używanych na piotrkulbacki.com.",
+    "hostingHeading": "Hosting (Vercel)",
+    "hostingBody": "Dane: adres IP, user agent, znacznik czasu, URL żądania, ewentualne logi błędów.\n\nCel: dostarczenie strony, bezpieczeństwo, diagnostyka awarii.\n\nPodstawa: art. 6 ust. 1 lit. f RODO (uzasadniony interes: stabilny i bezpieczny hosting).\n\nOdbiorca: Vercel Inc., USA.\n\nTransfer poza EOG: tak (USA), na podstawie standardowych klauzul umownych Vercel.\n\nPrzechowywanie: logi techniczne zwykle krótko, zgodnie z praktyką Vercel (zazwyczaj do kilku tygodni, chyba że dłużej potrzeba do wyjaśnienia incydentu).",
+    "turnstileHeading": "Ochrona formularzy (Cloudflare Turnstile)",
+    "turnstileBody": "Dane: token wyzwania, adres IP, podstawowe sygnały przeglądarki potrzebne do odróżnienia człowieka od bota.\n\nCel: ochrona formularza kontaktowego i briefu przed spamem i nadużyciami.\n\nPodstawa: art. 6 ust. 1 lit. f RODO.\n\nOdbiorca: Cloudflare, Inc., USA.\n\nTransfer poza EOG: tak (USA), na podstawie standardowych klauzul umownych Cloudflare.\n\nPrzechowywanie: weryfikacja jest krótkotrwała; Cloudflare może przechowywać ograniczone logi bezpieczeństwa zgodnie ze swoją polityką.",
     "formHeading": "Formularz kontaktowy",
-    "formBody": "Po wysłaniu formularza przetwarzane są imię, adres e-mail, opcjonalny telefon oraz treść wiadomości — wyłącznie w celu odpowiedzi (art. 6 ust. 1 lit. b lub f RODO). Formularz chroni Cloudflare Turnstile (ochrona przed botami). Wiadomości są dostarczane przez Brevo (Sendinblue GmbH, Niemcy) jako procesora; możesz też otrzymać automatyczne potwierdzenie. Dane nie są sprzedawane ani wykorzystywane do marketingu bez osobnej zgody. Przechowywane są tak długo, jak potrzeba do obsługi zapytania, a następnie usuwane lub archiwizowane w zakresie wymaganym prawnie.",
+    "formBody": "Dane podane przez Ciebie: imię, e-mail, opcjonalny telefon, treść wiadomości; plus locale i wynik Turnstile.\n\nCel: kontakt, wyjaśnienie potrzeby i — jeśli dojdzie do rozmowy — przygotowanie oferty oraz realizacja współpracy. Wysłanie formularza nie zawiera umowy.\n\nPodstawa: art. 6 ust. 1 lit. b RODO (kroki przedumowne na Twoje żądanie) oraz lit. f (obsługa zapytań).\n\nOdbiorca: ja jako administrator; dostawa maila przez Brevo (Sendinblue GmbH, Niemcy).\n\nTransfer poza EOG: sam formularz nie jest do tego przeznaczony; Brevo przetwarza w UE.\n\nPrzechowywanie: zapytania bez umowy — do 12 miesięcy od ostatniego kontaktu, potem usunięcie, chyba że dłużej wymaga obrona roszczeń. Jeśli dojdzie do współpracy — według zasad retencji korespondencji i dokumentów księgowych poniżej.",
     "briefHeading": "Brief projektu",
-    "briefBody": "Opcjonalny brief zbiera imię, e-mail, opcjonalny telefon oraz odpowiedzi o projekcie (rodzaj, propozycje nazwy, cele, zakres, materiały, języki, integracje, termin) — wyłącznie po to, by przygotować propozycję i odpowiedzieć (art. 6 ust. 1 lit. b lub f RODO). Ochrona, procesor (Brevo) i zasady przechowywania są takie same jak przy formularzu kontaktowym. Szkic w przeglądarce (sessionStorage) nie jest wysyłany, dopóki nie zatwierdzisz formularza; po wysłaniu jest usuwany. Nie używam tych danych do marketingu bez osobnej zgody.",
-    "analyticsHeading": "Analityka",
-    "analyticsBody": "Po wyrażeniu zgody w bannerze cookies ładuję Vercel Analytics oraz Google Analytics 4 (GA4) z Google Consent Mode v2. Do decyzji wszystkie sygnały zgody Google są ustawione na „denied”. Po akceptacji analityki ustawiam analytics_storage=granted (bez reklam: ad_storage / ad_user_data / ad_personalization pozostają denied). Vercel Analytics mierzy ruch zminimalizowanie. GA4 (Google Ireland Ltd. / Google LLC) może wtedy ustawiać cookies analityczne (np. _ga). Bez zgody ani po wyborze „Tylko niezbędne” GA się nie uruchamia. Preferencje zmienisz linkiem Cookies w stopce. Podstawa przy zgodzie: art. 6 ust. 1 lit. a RODO.",
-    "cookiesHeading": "Cookies",
-    "cookiesBody": "Używam first-party cookies niezbędnych do działania strony oraz zapamiętania Twojej decyzji o zgodzie. Po zgodzie na analitykę mogą pojawić się cookies Google Analytics. Czas życia zgody: 12 miesięcy. Preferencje możesz zmienić w każdej chwili linkiem „Cookies” w stopce.",
-    "cookieLocale": "niezbędne — zapamiętuje wybrany język (next-intl).",
-    "cookieConsent": "niezbędne — przechowuje Twoją decyzję o zgodzie na analitykę (wersja, flaga analytics, data).",
-    "cookieGa": "analityczne (po zgodzie) — Google Analytics 4, m.in. _ga / _ga_*.",
-    "cookiesNoMarketing": "Nie używam cookies reklamowych ani trackerów marketingowych (np. Meta Pixel).",
+    "briefBody": "Dane: imię, e-mail, opcjonalny telefon oraz odpowiedzi o projekcie (rodzaj, nazwy, cele, zakres, materiały, języki, integracje, termin).\n\nCel: zrozumienie projektu i przygotowanie indywidualnej oferty. Brief nie jest zamówieniem.\n\nPodstawa: art. 6 ust. 1 lit. b lub f RODO.\n\nOdbiorca i transfer: jak przy formularzu kontaktowym (Brevo w UE).\n\nPrzechowywanie: jak zapytania kontaktowe. Szkic w przeglądarce (sessionStorage) zostaje na Twoim urządzeniu do wysłania lub porzucenia sesji; po udanym wysłaniu jest usuwany. Nie wysyłam szkicu na serwer wcześniej.\n\nNie używam tych danych do marketingu bez osobnej zgody.",
+    "emailHeading": "Poczta transakcyjna (Brevo)",
+    "emailBody": "Dane: adresy e-mail, imię, treść wiadomości / briefu, metadane wysyłki.\n\nCel: dostarczenie maila do mojej skrzynki, auto-odpowiedź z potwierdzeniem, ewentualna dalsza korespondencja z tego kanału.\n\nPodstawa: art. 6 ust. 1 lit. b lub f RODO.\n\nOdbiorca: Sendinblue GmbH (Brevo), Niemcy, jako podmiot przetwarzający.\n\nTransfer poza EOG: co do zasady nie — przetwarzanie w UE.\n\nPrzechowywanie: kopie operacyjne w Brevo tak długo, jak potrzeba do doręczenia i obsługi zapytania, potem zgodnie z retencją korespondencji.",
+    "analyticsHeading": "Analityka (Vercel Analytics i Google Analytics 4)",
+    "analyticsBody": "Dane przy Vercel Analytics: zminimalizowane metryki ruchu (bez klasycznych tracking cookies).\n\nDane przy GA4 (tylko po zgodzie): identyfikatory cookies (_ga / _ga_*), przybliżona lokalizacja, urządzenie, odsłony, źródło wizyty.\n\nCel: zrozumienie, które strony są użyteczne, i poprawa witryny — nie reklamy.\n\nPodstawa: art. 6 ust. 1 lit. a RODO (zgoda w bannerze). Do decyzji Google Consent Mode v2 ustawia analytics_storage i sygnały ad_* na „denied”. Po „Akceptuję wszystkie” ustawiam tylko analytics_storage=granted; ad_storage, ad_user_data i ad_personalization zostają denied. „Tylko niezbędne” albo późniejsza zmiana w stopce wyłącza GA.\n\nOdbiorcy: Vercel Inc.; Google Ireland Ltd. / Google LLC.\n\nTransfer poza EOG: Vercel i Google LLC (USA) — standardowe klauzule umowne / ramy transferu stosowane przez tych dostawców.\n\nPrzechowywanie: zgoda w cookie pk_cookie_consent — 12 miesięcy. Cookies GA — według polityki Google (zazwyczaj do 14 miesięcy w standardowej retencji GA4, o ile nie skrócę w panelu).",
+    "recipientsHeading": "Odbiorcy danych",
+    "recipientsBody": "W zależności od funkcji mogą to być:\n\n• Vercel Inc. — hosting i opcjonalna analityka po zgodzie\n• Cloudflare, Inc. — Turnstile (ochrona formularzy)\n• Sendinblue GmbH (Brevo) — wysyłka e-mail\n• Google Ireland Ltd. / Google LLC — GA4 wyłącznie po zgodzie na analitykę\n\nNie sprzedaję danych. Nie ma tu Meta Pixel, Google Ads ani zewnętrznego CMP.",
+    "transfersHeading": "Transfer poza EOG",
+    "transfersBody": "Vercel, Cloudflare i Google LLC mają siedziby lub podwykonawców w USA. Stosują standardowe klauzule umowne (SCC) lub równoważny mechanizm transferu. Brevo (Sendinblue GmbH) działa z UE.\n\nNie przekazuję danych „na cały świat” bez wskazania dostawcy.",
+    "retentionHeading": "Jak długo przechowuję dane",
+    "retentionBody": "• Zapytania i briefy bez umowy: do 12 miesięcy od ostatniego kontaktu.\n• Korespondencja biznesowa przy ofercie / realizacji: do 3 lat po zakończeniu sprawy (ew. roszczenia), o ile krótszy okres nie wystarczy.\n• Dane klientów i dokumenty księgowe / faktury: 10 lat, jeśli powstanie obowiązek podatkowy (AO / HGB analogicznie do praktyki DE).\n• Logi techniczne hostingu: krótko, według Vercel, chyba że incydent bezpieczeństwa.\n• Zgoda analityczna: 12 miesięcy lub do cofnięcia.\n• Ustawienia cookies: do wygaśnięcia cookie zgody lub wyczyszczenia przeglądarki.\n• sessionStorage briefu: lokalnie, do wysłania lub zamknięcia karty.\n\nPo upływie okresu dane usuwam lub anonimizuję, chyba że prawo każe je zachować.",
+    "cookiesHeading": "Cookies i zgody",
+    "cookiesBody": "Używam first-party cookies niezbędnych do działania strony oraz zapamiętania decyzji o analityce. Analityka (Vercel Analytics + GA4) jest blokowana przed zgodą. Odmowa („Tylko niezbędne”) jest równie dostępna jak akceptacja. Decyzję zmienisz w każdej chwili linkiem w stopce. Czas życia zgody: 12 miesięcy.",
+    "cookieLocale": "niezbędne — zapamiętuje wybrany język (next-intl), 12 miesięcy.",
+    "cookieConsent": "niezbędne — przechowuje decyzję o analityce (wersja, flaga analytics, data), 12 miesięcy.",
+    "cookieGa": "analityczne (wyłącznie po zgodzie) — Google Analytics 4, m.in. _ga / _ga_*.",
+    "cookiesNoMarketing": "Nie używam cookies reklamowych ani trackerów marketingowych (np. Meta Pixel). Na tej witrynie nie ma Supabase jako bazy produkcyjnej.",
     "rightsHeading": "Twoje prawa",
-    "rightsBody": "Masz prawo do dostępu, sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz sprzeciwu — napisz na adres e-mail administratora.",
-    "complaintHeading": "Skarga do organu nadzorczego",
-    "complaintBody": "Masz prawo złożyć skargę do właściwego organu ochrony danych. Dla Berlina: Berliner Beauftragte für Datenschutz und Informationsfreiheit."
+    "rightsIntro": "Przysługuje Ci (w granicach RODO):",
+    "rightsAccess": "dostęp do danych",
+    "rightsRectification": "sprostowanie",
+    "rightsErasure": "usunięcie",
+    "rightsRestriction": "ograniczenie przetwarzania",
+    "rightsPortability": "przenoszenie danych",
+    "rightsObjection": "sprzeciw wobec przetwarzania opartego na uzasadnionym interesie",
+    "rightsWithdraw": "cofnięcie zgody (analityka) w dowolnym momencie, bez wpływu na zgodność wcześniejszego przetwarzania",
+    "rightsComplaint": "skarga do organu nadzorczego",
+    "complaintHeading": "Organ nadzorczy",
+    "complaintBody": "Możesz złożyć skargę do właściwego organu ochrony danych. Dla siedziby w Berlinie:"
   },
   "cookies": {
     "title": "Cookies i analityka",
@@ -315,21 +338,30 @@
   },
   "impressum": {
     "title": "Impressum",
-    "legalBasis": "Informacje zgodnie z § 5 DDG (Digitale-Dienste-Gesetz).",
+    "legalBasis": "Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).",
     "providerHeading": "Dostawca usługi",
     "entity": "Einzelunternehmen (działalność jednoosobowa)",
+    "businessHeading": "Przedmiot działalności",
+    "businessBody": "Tworzenie stron internetowych, webdesign, cyfrowych wizytówek oraz indywidualnych usług i rozwiązań cyfrowych.",
     "contactHeading": "Kontakt",
     "email": "E-mail",
     "phone": "Telefon",
-    "vatHeading": "Identyfikacja podatkowa",
-    "vatBody": "Jako Kleinunternehmer według § 19 UStG nie posiadam USt-IdNr. Numer podatkowy (Steuernummer) nie jest publikowany.",
+    "vatHeading": "Podatek od towarów i usług",
+    "vatBody": "Jako Kleinunternehmer według § 19 UStG nie doliczam VAT i nie posiadam USt-IdNr. Numer podatkowy (Steuernummer) nie jest publikowany.",
+    "registerHeading": "Rejestr handlowy",
+    "registerBody": "Działalność nie jest wpisana do Handelsregister. Numer rejestrowy nie istnieje i nie jest podawany.",
     "responsibleHeading": "Odpowiedzialność za treści",
-    "responsibleBody": "Za treści tej witryny odpowiada {name}."
+    "responsibleBody": "Za treści tej witryny odpowiada {name}.",
+    "disputeHeading": "Rozstrzyganie sporów konsumenckich",
+    "disputeBody": "Nie jestem zobowiązany ani gotów do udziału w postępowaniu przed konsumencką jednostką arbitrażową (Verbraucherschlichtungsstelle) w rozumieniu VSBG. Unijna platforma ODR została zamknięta 20 lipca 2025 r. — nie podaję już odnośnika do niej."
   },
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone.",
+    "legalNav": "Informacje prawne",
     "impressum": "Impressum",
-    "privacy": "Polityka prywatności",
+    "privacy": "Prywatność",
+    "agb": "AGB",
+    "widerruf": "Odstąpienie",
     "cookies": "Cookies"
   },
   "common": {
@@ -416,5 +448,103 @@
       "signOff": "Pozdrawiam,\n{name}",
       "footerNote": "Możesz odpowiedzieć na tę wiadomość — trafi na mój adres."
     }
+  },
+  "agb": {
+    "title": "Warunki współpracy (AGB)",
+    "updated": "Ostatnia aktualizacja: 20 sierpnia 2026",
+    "intro": "Poniższe warunki opisują, jak zawieram i realizuję zlecenia (strony, aplikacje, usługi cyfrowe). Nie zastępują indywidualnej oferty. Korzystanie z witryny ani wysłanie formularza nie oznacza zakupu.",
+    "model": "Model: kontakt → analiza potrzeb → indywidualny zakres → indywidualna oferta → akceptacja → rozpoczęcie realizacji.",
+    "withdrawalLink": "Informacja o prawie odstąpienia (dla konsumentów)",
+    "sections": {
+      "scope": {
+        "heading": "1. Zakres",
+        "body": "Warunki dotyczą umów o tworzenie stron, webdesign, cyfrowe obecności online oraz indywidualne usługi i oprogramowanie, zawieranych ze mną jako Einzelunternehmen z siedzibą w Berlinie. Mają zastosowanie od chwili zawarcia umowy, nie od samego odwiedzenia strony."
+      },
+      "clients": {
+        "heading": "2. Klienci B2B i B2C",
+        "body": "Pracuję z przedsiębiorcami i konsumentami. Konsumenci zachowują uprawnienia ustawowe, w tym prawo odstąpienia przy umowie zawartej na odległość — szczegóły na stronie Widerruf. Postanowienia, które byłyby niedozwolone wobec konsumenta, nie są wobec niego stosowane."
+      },
+      "conclusion": {
+        "heading": "3. Kontakt i zawarcie umowy",
+        "body": "Kontakt jest możliwy przez formularz, brief, e-mail, telefon lub inne podane kanały. Wysłanie formularza lub briefu to zapytanie, nie oferta wiążąca i nie obowiązek zakupu.\n\nUmowa dochodzi do skutku, gdy obie strony uzgodnią indywidualny zakres i cenę — zwykle przez pisemne lub mailowe potwierdzenie oferty. Do tego momentu mogę odmówić realizacji bez podania przyczyny."
+      },
+      "offers": {
+        "heading": "4. Oferty i wycena",
+        "body": "Każdy projekt ma indywidualny zakres i cenę. Oferta wiąże w terminie w niej wskazanym; jeśli termin nie jest podany — 14 dni. Ceny są netto w rozumieniu Kleinunternehmer: nie doliczam VAT (§ 19 UStG)."
+      },
+      "services": {
+        "heading": "5. Zakres usług",
+        "body": "Świadczę to, co wynika z zaakceptowanej oferty (np. projekt, wdrożenie, treści w uzgodnionym zakresie, wsparcie powykonawcze jeśli w ofercie). Usługi spoza oferty wymagają osobnego uzgodnienia."
+      },
+      "clientDuties": {
+        "heading": "6. Obowiązki klienta",
+        "body": "Klient dostarcza w terminie teksty, zdjęcia, logo, dane dostępowe i decyzje niezbędne do pracy. Opóźnienia z jego strony przesuwają terminy. Klient wskazuje jedną osobę kontaktową do odbioru ustaleń."
+      },
+      "materials": {
+        "heading": "7. Materiały klienta",
+        "body": "Klient oświadcza, że ma prawa do przekazanych materiałów i że ich użycie w projekcie nie narusza praw osób trzecich. Na wezwanie zwolni mnie z uzasadnionych roszczeń osób trzecich wynikających z tych materiałów, w zakresie dopuszczalnym prawem."
+      },
+      "changes": {
+        "heading": "8. Zmiana zakresu",
+        "body": "Zmiana uzgodnionego zakresu (nowe podstrony, funkcje, integracje) wymaga aktualizacji oferty albo pisemnego potwierdzenia dodatkowego wynagrodzenia i terminu."
+      },
+      "revisions": {
+        "heading": "9. Poprawki",
+        "body": "W cenie jest liczba rund poprawek wskazana w ofercie (domyślnie dwie rundy do uzgodnionego zakresu). Dalsze poprawki lub zmiana koncepcji po akceptacji etapu są dodatkowo płatne."
+      },
+      "extras": {
+        "heading": "10. Prace dodatkowe",
+        "body": "Prace spoza oferty wyceniam osobno przed wykonaniem, o ile nie są nieznaczne i nie zostały wyraźnie zlecone jako pilne na koszt klienta."
+      },
+      "fees": {
+        "heading": "11. Wynagrodzenie",
+        "body": "Wynagrodzenie i waluta wynikają z oferty. Faktury są płatne w terminie tam wskazanym (domyślnie 14 dni). Przy opóźnieniu przysługują ustawowe odsetki; wobec przedsiębiorców — także pozostałe uprawnienia z BGB."
+      },
+      "payments": {
+        "heading": "12. Zaliczki i etapy",
+        "body": "Zaliczka lub płatności etapowe obowiązują tylko wtedy, gdy oferta je przewiduje (np. część na start, reszta przy odbiorze). Nie zaczynam odpłatnej realizacji przed uzgodnioną wpłatą startową, jeśli była zastrzeżona."
+      },
+      "acceptance": {
+        "heading": "13. Odbiór",
+        "body": "Po zgłoszeniu gotowości klient ma rozsądny czas na odbiór (domyślnie 7 dni). Brak istotnych zastrzeżeń w tym terminie oznacza odbiór. Drobne usterki nie wstrzymują odbioru i są poprawiane w ramach rękojmi / uzgodnionych poprawek."
+      },
+      "ip": {
+        "heading": "14. Prawa i licencja",
+        "body": "Do pełnej zapłaty prawa majątkowe / licencja do rezultatów uzgodnionych w ofercie pozostają przy mnie. Po pełnej zapłacie klient otrzymuje licencję wyłączną, nieograniczoną terytorialnie i czasowo, do korzystania z rezultatów w uzgodnionym celu, o ile oferta nie stanowi inaczej. Narzędzia, biblioteki open source i zasoby osób trzecich podlegają ich licencjom."
+      },
+      "thirdParties": {
+        "heading": "15. Usługi osób trzecich, hosting, domeny, licencje",
+        "body": "Domeny, hosting, skrzynki, czcionki, zdjęcia stock, API i abonamenty SaaS klient zawiera we własnym imieniu, chyba że oferta wyraźnie wlicza je w moje świadczenie. Nie odpowiadam za awarie lub zmiany cennika tych dostawców."
+      },
+      "contentLiability": {
+        "heading": "16. Treści i zgodność prawna",
+        "body": "Za treść merytoryczną, oświadczenia, ceny, obowiązki informacyjne branżowe oraz legalność materiałów klienta odpowiada klient. Nie świadczę porady prawnej. Impressum, polityki i AGB klienta końcowego klient zatwierdza we własnym zakresie albo zleca prawnikowi."
+      },
+      "liability": {
+        "heading": "17. Odpowiedzialność",
+        "body": "Odpowiadam bez ograniczenia za winę umyślną, rażące niedbalstwo oraz szkodę na życiu, ciele i zdrowiu.\n\nW razie zwykłego niedbalstwa odpowiadam — wobec przedsiębiorców — tylko za naruszenie istotnych obowiązków umownych i ograniczone do typowej, przewidywalnej szkody. Wobec konsumentów ograniczenia stosuje się tylko w granicach bezwzględnie obowiązującego prawa.\n\nNie odpowiadam za utracone korzyści ani dane, których klient nie zarchiwizował, o ile prawo tego nie zakazuje."
+      },
+      "withdrawal": {
+        "heading": "18. Prawo odstąpienia (konsumenci)",
+        "body": "Jeżeli klient jest konsumentem i umowa zostaje zawarta na odległość, przysługuje mu ustawowe prawo odstąpienia. Nie dotyczy to przedsiębiorców działających w ramach działalności gospodarczej. Samo zapytanie przez formularz nie uruchamia jeszcze tego prawa — dopiero zawarta umowa."
+      },
+      "final": {
+        "heading": "19. Postanowienia końcowe",
+        "body": "Prawem właściwym jest prawo niemieckie. Wobec konsumenta nie pozbawia to ochrony, której nie można wyłączyć na podstawie prawa państwa jego zwykłego pobytu.\n\nWłaściwym sądem dla sporów z przedsiębiorcami jest Berlin, o ile ustawa nie stanowi inaczej.\n\nJeśli któreś postanowienie okaże się nieskuteczne, pozostałe pozostają w mocy. Umowy zawierane indywidualnie mają pierwszeństwo przed tymi AGB, gdy są wyraźnie uzgodnione."
+      }
+    }
+  },
+  "widerruf": {
+    "title": "Prawo odstąpienia",
+    "updated": "Ostatnia aktualizacja: 20 sierpnia 2026",
+    "intro": "Poniższa informacja dotyczy konsumentów (nie przedsiębiorców), gdy dojdzie do umowy o usługi zawartej na odległość (np. akceptacja indywidualnej oferty e-mailem). Wysłanie formularza kontaktowego lub briefu nie zawiera umowy i nie rozpoczyna biegu odstąpienia.",
+    "instructionHeading": "Informacja o prawie odstąpienia",
+    "instructionBody": "Mają Państwo prawo odstąpić od umowy w terminie 14 dni bez podawania przyczyny.\n\nTermin odstąpienia kończy się po 14 dniach od dnia zawarcia umowy.\n\nAby skorzystać z prawa odstąpienia, należy poinformować mnie (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com, tel. +49 157 35166871) o swojej decyzji w drodze jednoznacznego oświadczenia (np. pismo wysłane pocztą lub e-mail). Można skorzystać z poniższego wzoru, ale nie jest to obowiązkowe.\n\nAby zachować termin, wystarczy wysłać informację o wykonaniu prawa odstąpienia przed jego upływem.",
+    "earlyStartHeading": "Skutki odstąpienia i wcześniejsze rozpoczęcie usługi",
+    "earlyStartBody": "W przypadku odstąpienia zwracam wszystkie otrzymane płatności niezwłocznie, nie później niż w 14 dni od otrzymania informacji o odstąpieniu, tym samym kanałem płatności, chyba że wyraźnie uzgodniono inaczej; bez opłat z tego tytułu.\n\nJeżeli zażądali Państwo rozpoczęcia usługi przed upływem 14 dni, zapłacą Państwo kwotę proporcjonalną do świadczeń spełnionych do chwili poinformowania o odstąpieniu, w stosunku do pełnego zakresu umowy.\n\nJeśli usługa zostanie w pełni wykonana, a wyrazili Państwo uprzednio wyraźną zgodę na rozpoczęcie przed końcem terminu oraz potwierdzenie, że tracą Państwo prawo odstąpienia z chwilą pełnego wykonania — prawo odstąpienia wygasa.\n\nTakiego potwierdzenia nie zbieram przez formularz na stronie. Gdyby konsument chciał start przed upływem 14 dni, zrobię to wyłącznie po wyraźnym żądaniu na trwałym nośniku (e-mail) z wymaganymi oświadczeniami. Do tego czasu mogę wstrzymać odpłatną realizację.",
+    "formHeading": "Wzór formularza odstąpienia",
+    "formIntro": "Wypełnić i wysłać tylko wtedy, gdy chcą Państwo odstąpić od już zawartej umowy:",
+    "formTo": "Do:",
+    "formTemplate": "Niniejszym odstępuję/odstępujemy od zawartej przeze mnie/nas umowy o świadczenie następującej usługi:\n\nZamówiono / umowę zawarto dnia:\nImię i nazwisko konsumenta(-ów):\nAdres konsumenta(-ów):\n\nData:\nPodpis (tylko jeśli formularz jest przesyłany w wersji papierowej):"
   }
 }

@@ -99,7 +99,7 @@ Jeżeli dany język nie będzie dostępny, domyślnym językiem powinien być j�
 - **Mobile:** górny pasek (avatar + logo lockup poziome, język) oraz dolny tab bar jak w aplikacji (bez hamburger menu).
 - **Avatar:** klik otwiera powiększony podgląd (lightbox) na mobile i desktop.
 - **Logo:** monogram PK + wordmark — szczegóły i mapa plików w `docs/Brand_Logo.md`. Favicon i apple-touch z tego samego systemu znaku.
-- **Stopka:** monogram PK obok copyrightu; linki Impressum · Privacy · Cookies. Desktop: jeden rząd (`--site-footer-h`). Mobile: dwie linie, wyśrodkowane (logo+© / linki). Szczegóły: `docs/Legal_and_Cookies.md`, `docs/Brand_Logo.md`.
+- **Stopka:** monogram PK obok copyrightu; linki Impressum · Privacy · AGB · Widerruf · Cookies. Desktop: rząd z `flex-wrap` (`min-h-(--site-footer-h)`). Mobile: dwie linie, wyśrodkowane (logo+© / linki). Szczegóły: `docs/Legal_and_Cookies.md`, `docs/Brand_Logo.md`.
 - **Landing (mobile):** pierwszy ekran wypełniony treścią hero; stopka dostępna po scrollu.
 - **Stopka / język (desktop):** wspólna wysokość pasa `--site-footer-h` (stopka treści = LanguageSwitcher w sidebarze).
 
@@ -115,10 +115,10 @@ Dane kontaktowe oraz inne często wykorzystywane informacje powinny być zarząd
 
 Wdrożone dla działalności w Niemczech (Einzelunternehmen / Kleinunternehmer):
 
-- **Impressum** (`/impressum`) — § 5 DDG; adres, e-mail, telefon; bez USt-IdNr.
-- **Polityka prywatności** (`/privacy`) — formularz, hosting, analityka po zgodzie (Vercel + opcjonalne GA4), inventarz cookies.
+- **Impressum** (`/impressum`) — § 5 DDG; przedmiot działalności, Kleinunternehmer, brak HR, VSBG.
+- **Polityka prywatności** (`/privacy`) — mapa przetwarzania faktycznych usług, odbiorcy, transfer poza EOG, retencja.
+- **AGB** (`/agb`) i **Widerruf** (`/widerruf`) — umowa dopiero po akceptacji indywidualnej oferty; formularz nie zawiera umowy.
 - **Cookies** — `NEXT_LOCALE` + `pk_cookie_consent`; baner; Vercel Analytics + GA4 (Consent Mode v2) tylko po „Akceptuję wszystkie”. Szczegóły: `docs/Analytics.md`.
-- **Regulamin / AGB** — nie wymagany przy samej wizytówce + formularzu.
 
 Pełny opis: **`docs/Legal_and_Cookies.md`**.
 ---

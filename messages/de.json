@@ -118,7 +118,8 @@
       "phoneMax": "Die Telefonnummer darf höchstens 40 Zeichen haben."
     },
     "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen.",
-    "captchaError": "Bitte bestätigen Sie, dass Sie kein Bot sind, und versuchen Sie es erneut."
+    "captchaError": "Bitte bestätigen Sie, dass Sie kein Bot sind, und versuchen Sie es erneut.",
+    "noContractNote": "Das Absenden des Formulars stellt keinen Vertragsschluss und keine Kaufverpflichtung dar."
   },
   "brief": {
     "title": "Beschreiben Sie Ihr Projekt",
@@ -278,33 +279,55 @@
       "payments": "Zahlungen",
       "crmNewsletter": "CRM / Newsletter",
       "other": "Sonstiges"
-    }
+    },
+    "noContractNote": "Das Absenden des Briefs ist kein Vertrag und keine Bestellung. Die Angaben dienen der Kontaktaufnahme und der Erstellung eines individuellen Angebots."
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "updated": "Zuletzt aktualisiert: 17. August 2026",
-    "intro": "Diese Website verarbeitet personenbezogene Daten nur, soweit dies für den Betrieb der Seite, die Beantwortung von Kontaktanfragen und Projekt-Briefs und — mit Ihrer Einwilligung — die Reichweitenmessung (Vercel Analytics und Google Analytics 4) erforderlich ist.",
+    "updated": "Zuletzt aktualisiert: 20. August 2026",
+    "intro": "Diese Website verarbeitet personenbezogene Daten nur, soweit dies für den Betrieb, die Beantwortung von Anfragen und Projekt-Briefs und — mit Einwilligung — die Reichweitenmessung erforderlich ist. Dienste, die hier nicht eingesetzt werden (z. B. keine eigene Supabase-Datenbank), werden nicht beschrieben.",
     "controllerHeading": "Verantwortlicher",
     "controllerBody": "Verantwortlicher ist {name} (Einzelunternehmen, Berlin).",
-    "contact": "Kontakt zum Datenschutz",
-    "hostingHeading": "Hosting",
-    "hostingBody": "Die Website wird bei Vercel Inc. gehostet. Im Rahmen der Bereitstellung können technische Logs (z. B. IP-Adresse, User-Agent, Zeitstempel) entstehen, soweit dies für Sicherheit und Stabilität erforderlich ist.",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "mapHeading": "Welche Daten ich verarbeite",
+    "mapIntro": "Je tatsächlich genutztem Dienst: welche Daten, zu welchem Zweck, auf welcher Rechtsgrundlage, wer Empfänger ist, ob eine Drittlandübermittlung stattfindet und wie lange gespeichert wird. Nur Technologien auf piotrkulbacki.com.",
+    "hostingHeading": "Hosting (Vercel)",
+    "hostingBody": "Daten: IP-Adresse, User-Agent, Zeitstempel, aufgerufene URL, ggf. Fehlerlogs.\n\nZweck: Bereitstellung der Website, Sicherheit, Störungsanalyse.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an stabilem Hosting).\n\nEmpfänger: Vercel Inc., USA.\n\nDrittland: ja (USA), auf Grundlage der Standardvertragsklauseln von Vercel.\n\nSpeicherung: technische Logs in der Regel kurz, nach Praxis von Vercel (typisch wenige Wochen, länger nur bei Sicherheitsvorfällen).",
+    "turnstileHeading": "Formulare (Cloudflare Turnstile)",
+    "turnstileBody": "Daten: Challenge-Token, IP-Adresse, begrenzte Browsersignale zur Bot-Abwehr.\n\nZweck: Schutz von Kontaktformular und Brief vor Missbrauch.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.\n\nEmpfänger: Cloudflare, Inc., USA.\n\nDrittland: ja (USA), Standardvertragsklauseln von Cloudflare.\n\nSpeicherung: die Prüfung ist kurzfristig; Cloudflare kann begrenzte Sicherheitslogs gemäß eigener Policy behalten.",
     "formHeading": "Kontaktformular",
-    "formBody": "Bei Absenden werden Name, E-Mail, optional Telefonnummer und Nachricht ausschließlich zur Beantwortung verarbeitet (Art. 6 Abs. 1 lit. b oder f DSGVO). Das Formular ist durch Cloudflare Turnstile (Bot-Schutz) geschützt. Der Versand erfolgt über Brevo (Sendinblue GmbH, Deutschland) als Auftragsverarbeiter; Sie können zudem eine automatische Empfangsbestätigung erhalten. Daten werden nicht verkauft und ohne gesonderte Einwilligung nicht für Marketing genutzt. Speicherung nur so lange wie zur Bearbeitung nötig, danach Löschung oder gesetzlich erforderliche Archivierung.",
+    "formBody": "Von Ihnen: Name, E-Mail, optional Telefon, Nachricht; plus Locale und Turnstile-Ergebnis.\n\nZweck: Kontakt, Klärung des Bedarfs und — falls es zum Gespräch kommt — Angebot und Vertragsdurchführung. Das Absenden ist kein Vertragsschluss.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Schritte auf Ihre Anfrage) sowie lit. f.\n\nEmpfänger: ich als Verantwortlicher; Versand über Brevo (Sendinblue GmbH, Deutschland).\n\nDrittland: das Formular ist nicht darauf gerichtet; Brevo verarbeitet in der EU.\n\nSpeicherung: Anfragen ohne Vertrag bis 12 Monate nach letztem Kontakt, danach Löschung, soweit nicht längere Aufbewahrung zur Rechtsverteidigung nötig ist. Bei Zusammenarbeit gelten die Fristen für Geschäftskorrespondenz und Buchhaltung unten.",
     "briefHeading": "Projekt-Brief",
-    "briefBody": "Der optionale Brief erfasst Name, E-Mail, optional Telefonnummer sowie Angaben zum Projekt (Art, Namensvorschläge, Ziele, Umfang, Materialien, Sprachen, Integrationen, Zeitplan) ausschließlich zur Angebotserstellung und Antwort (Art. 6 Abs. 1 lit. b oder f DSGVO). Schutz, Auftragsverarbeiter (Brevo) und Speicherung entsprechen dem Kontaktformular. Ein Entwurf im Browser (sessionStorage) wird erst beim Absenden übertragen und danach gelöscht. Ohne gesonderte Einwilligung keine Marketingnutzung.",
-    "analyticsHeading": "Analytics",
-    "analyticsBody": "Nach Einwilligung im Cookie-Banner lade ich Vercel Analytics und Google Analytics 4 (GA4) mit Google Consent Mode v2. Bis zur Entscheidung bleiben alle Google-Consent-Signale „denied“. Bei Analytics-Akzeptanz setze ich analytics_storage=granted (Werbesignale ad_storage / ad_user_data / ad_personalization bleiben denied). Vercel Analytics erfasst Traffic minimiert. GA4 (Google Ireland Ltd. / Google LLC) darf dann Analytics-Cookies setzen (z. B. _ga). Ohne Einwilligung bzw. nach „Nur notwendige“ startet GA nicht. Einstellungen: Link Cookies in der Fußzeile. Rechtsgrundlage bei Einwilligung: Art. 6 Abs. 1 lit. a DSGVO.",
-    "cookiesHeading": "Cookies",
-    "cookiesBody": "Ich verwende First-Party-Cookies, die für den Betrieb der Seite und zur Speicherung Ihrer Einwilligung erforderlich sind. Nach Analytics-Einwilligung können Google-Analytics-Cookies gesetzt werden. Speicherdauer der Einwilligung: 12 Monate. Einstellungen können Sie jederzeit über den Link „Cookies“ in der Fußzeile ändern.",
-    "cookieLocale": "erforderlich — speichert die gewählte Sprache (next-intl).",
-    "cookieConsent": "erforderlich — speichert Ihre Analytics-Einwilligung (Version, Analytics-Flag, Datum).",
-    "cookieGa": "analytisch (nach Einwilligung) — Google Analytics 4, u. a. _ga / _ga_*.",
-    "cookiesNoMarketing": "Ich verwende keine Werbe-Cookies und keine Marketing-Tracker (z. B. Meta Pixel).",
+    "briefBody": "Daten: Name, E-Mail, optional Telefon sowie Angaben zum Projekt (Art, Namen, Ziele, Umfang, Materialien, Sprachen, Integrationen, Zeitplan).\n\nZweck: Verständnis des Vorhabens und individuelles Angebot. Der Brief ist keine Bestellung.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. b oder f DSGVO.\n\nEmpfänger/Drittland: wie Kontaktformular (Brevo in der EU).\n\nSpeicherung: wie Kontaktanfragen. Ein Entwurf im Browser (sessionStorage) bleibt auf Ihrem Gerät bis zum Absenden oder Sitzungsende; nach erfolgreichem Versand wird er gelöscht. Der Entwurf wird vorher nicht an den Server gesendet.\n\nKeine Marketingnutzung ohne gesonderte Einwilligung.",
+    "emailHeading": "Transaktions-E-Mail (Brevo)",
+    "emailBody": "Daten: E-Mail-Adressen, Name, Inhalt von Nachricht/Brief, Versandmetadaten.\n\nZweck: Zustellung in mein Postfach, automatische Empfangsbestätigung, ggf. weitere Korrespondenz.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. b oder f DSGVO.\n\nEmpfänger: Sendinblue GmbH (Brevo), Deutschland, als Auftragsverarbeiter.\n\nDrittland: grundsätzlich nein — Verarbeitung in der EU.\n\nSpeicherung: operative Kopien bei Brevo so lange wie für Zustellung und Bearbeitung nötig, danach gemäß Korrespondenzfristen.",
+    "analyticsHeading": "Analytics (Vercel Analytics und Google Analytics 4)",
+    "analyticsBody": "Vercel Analytics: minimierte Reichweitenmessung (keine klassischen Tracking-Cookies).\n\nGA4 (nur nach Einwilligung): Cookie-IDs (_ga / _ga_*), ungefähre Region, Gerät, Seitenaufrufe, Traffic-Quelle.\n\nZweck: Verbesserung der Website — keine Werbung.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO. Bis zur Entscheidung setzt Google Consent Mode v2 analytics_storage und ad_*-Signale auf „denied“. Nach „Alle akzeptieren“ setze ich nur analytics_storage=granted; ad_storage, ad_user_data und ad_personalization bleiben denied. „Nur notwendige“ oder spätere Änderung in der Fußzeile verhindert GA.\n\nEmpfänger: Vercel Inc.; Google Ireland Ltd. / Google LLC.\n\nDrittland: Vercel und Google LLC (USA) — SCCs bzw. Transferrahmen der Anbieter.\n\nSpeicherung: Einwilligung in pk_cookie_consent — 12 Monate. GA-Cookies nach Google-Vorgaben (typisch bis 14 Monate in der Standard-GA4-Retention, sofern nicht kürzer konfiguriert).",
+    "recipientsHeading": "Empfänger personenbezogener Daten",
+    "recipientsBody": "Je nach Funktion:\n\n• Vercel Inc. — Hosting und optionale Analytics nach Einwilligung\n• Cloudflare, Inc. — Turnstile\n• Sendinblue GmbH (Brevo) — E-Mail-Versand\n• Google Ireland Ltd. / Google LLC — GA4 nur nach Analytics-Einwilligung\n\nKein Verkauf. Kein Meta Pixel, keine Google Ads, kein externes CMP.",
+    "transfersHeading": "Drittlandübermittlung",
+    "transfersBody": "Vercel, Cloudflare und Google LLC haben Sitze oder Subprozessoren in den USA und nutzen Standardvertragsklauseln oder einen gleichwertigen Transfermechanismus. Brevo (Sendinblue GmbH) verarbeitet in der EU.\n\nEs gibt keine pauschale Klausel „Übermittlung weltweit“ ohne Benennung des Empfängers.",
+    "retentionHeading": "Speicherdauer",
+    "retentionBody": "• Anfragen und Briefs ohne Vertrag: bis 12 Monate nach letztem Kontakt.\n• Geschäftskorrespondenz bei Angebot/Umsetzung: bis 3 Jahre nach Abschluss der Sache (Ansprüche), soweit nicht kürzer ausreichend.\n• Kundendaten und Buchhaltungsunterlagen/Rechnungen: 10 Jahre, soweit steuerliche Pflichten entstehen.\n• Technische Hosting-Logs: kurz, nach Vercel, außer Sicherheitsvorfall.\n• Analytics-Einwilligung: 12 Monate oder bis Widerruf.\n• Cookie-Einstellungen: bis Ablauf des Consent-Cookies oder Löschen im Browser.\n• sessionStorage des Briefs: lokal, bis Versand oder Tab-Ende.\n\nDanach Löschung oder Anonymisierung, soweit keine gesetzliche Pflicht entgegensteht.",
+    "cookiesHeading": "Cookies und Einwilligung",
+    "cookiesBody": "Ich nutze First-Party-Cookies, die für Betrieb und Speicherung Ihrer Analytics-Entscheidung nötig sind. Analytics (Vercel Analytics + GA4) ist vor Einwilligung blockiert. Die Ablehnung („Nur notwendige“) ist ebenso erreichbar wie die Zustimmung. Änderung jederzeit über den Link in der Fußzeile. Speicherdauer der Entscheidung: 12 Monate.",
+    "cookieLocale": "erforderlich — speichert die Sprache (next-intl), 12 Monate.",
+    "cookieConsent": "erforderlich — speichert die Analytics-Entscheidung (Version, Flag, Datum), 12 Monate.",
+    "cookieGa": "analytisch (nur nach Einwilligung) — Google Analytics 4, u. a. _ga / _ga_*.",
+    "cookiesNoMarketing": "Keine Werbe-Cookies und keine Marketing-Tracker (z. B. Meta Pixel). Diese Website betreibt keine eigene Supabase-Datenbank.",
     "rightsHeading": "Ihre Rechte",
-    "rightsBody": "Sie haben Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch — bitte per E-Mail an den Verantwortlichen.",
-    "complaintHeading": "Beschwerde bei der Aufsichtsbehörde",
-    "complaintBody": "Sie können Beschwerde bei der zuständigen Datenschutzbehörde einlegen. Für Berlin: Berliner Beauftragte für Datenschutz und Informationsfreiheit."
+    "rightsIntro": "Im Rahmen der DSGVO haben Sie:",
+    "rightsAccess": "Auskunft",
+    "rightsRectification": "Berichtigung",
+    "rightsErasure": "Löschung",
+    "rightsRestriction": "Einschränkung der Verarbeitung",
+    "rightsPortability": "Datenübertragbarkeit",
+    "rightsObjection": "Widerspruch gegen Verarbeitung auf berechtigtem Interesse",
+    "rightsWithdraw": "Widerruf einer Einwilligung (Analytics) jederzeit, ohne die Rechtmäßigkeit der bisherigen Verarbeitung zu berühren",
+    "rightsComplaint": "Beschwerde bei einer Aufsichtsbehörde",
+    "complaintHeading": "Aufsichtsbehörde",
+    "complaintBody": "Sie können Beschwerde bei der zuständigen Datenschutzaufsicht einlegen. Für den Sitz in Berlin:"
   },
   "cookies": {
     "title": "Cookies & Analytics",
@@ -318,19 +341,28 @@
     "legalBasis": "Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).",
     "providerHeading": "Diensteanbieter",
     "entity": "Einzelunternehmen",
+    "businessHeading": "Unternehmensgegenstand",
+    "businessBody": "Erstellung von Websites, Webdesign, digitalen Online-Präsenzen sowie individuelle digitale Dienstleistungen und Softwarelösungen.",
     "contactHeading": "Kontakt",
     "email": "E-Mail",
     "phone": "Telefon",
     "vatHeading": "Umsatzsteuer",
-    "vatBody": "Als Kleinunternehmer nach § 19 UStG verfüge ich über keine USt-IdNr. Die Steuernummer wird nicht veröffentlicht.",
+    "vatBody": "Als Kleinunternehmer nach § 19 UStG weise ich keine Umsatzsteuer aus und verfüge über keine USt-IdNr. Die Steuernummer wird nicht veröffentlicht.",
+    "registerHeading": "Registerangaben",
+    "registerBody": "Es besteht keine Eintragung im Handelsregister. Eine Handelsregisternummer wird daher nicht angegeben.",
     "responsibleHeading": "Verantwortlich für den Inhalt",
-    "responsibleBody": "Für den Inhalt dieser Website ist {name} verantwortlich."
+    "responsibleBody": "Für den Inhalt dieser Website ist {name} verantwortlich.",
+    "disputeHeading": "Verbraucherstreitbeilegung",
+    "disputeBody": "Ich bin nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle im Sinne des VSBG teilzunehmen. Die EU-OS-Plattform wurde zum 20. Juli 2025 eingestellt; ein Link dorthin wird nicht mehr angegeben."
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
+    "legalNav": "Rechtliche Hinweise",
     "impressum": "Impressum",
-    "privacy": "Datenschutzerklärung",
-    "cookies": "Cookies"
+    "privacy": "Datenschutz",
+    "agb": "AGB",
+    "widerruf": "Widerruf",
+    "cookies": "Cookie-Einstellungen"
   },
   "common": {
     "availability": "Offen für Projekte",
@@ -416,5 +448,103 @@
       "signOff": "Freundliche Grüße,\n{name}",
       "footerNote": "Sie können auf diese E-Mail antworten — sie kommt auf meine Adresse."
     }
+  },
+  "agb": {
+    "title": "Allgemeine Geschäftsbedingungen (AGB)",
+    "updated": "Zuletzt aktualisiert: 20. August 2026",
+    "intro": "Diese AGB beschreiben, wie ich Aufträge (Websites, Anwendungen, digitale Leistungen) annehme und ausführe. Sie ersetzen kein individuelles Angebot. Die Nutzung der Website und das Absenden eines Formulars sind kein Kauf.",
+    "model": "Ablauf: Kontakt → Bedarfsanalyse → individueller Leistungsumfang → individuelles Angebot → Annahme → Leistungsbeginn.",
+    "withdrawalLink": "Widerrufsbelehrung (für Verbraucher)",
+    "sections": {
+      "scope": {
+        "heading": "1. Geltungsbereich",
+        "body": "Die AGB gelten für Verträge über Website-Erstellung, Webdesign, digitale Online-Präsenzen sowie individuelle digitale Dienstleistungen und Softwarelösungen mit mir als Einzelunternehmen mit Sitz in Berlin. Sie gelten ab Vertragsschluss, nicht schon durch den bloßen Besuch der Website."
+      },
+      "clients": {
+        "heading": "2. Unternehmer und Verbraucher",
+        "body": "Ich arbeite mit Unternehmern und Verbrauchern. Verbraucher behalten ihre gesetzlichen Rechte, einschließlich des Widerrufsrechts bei Fernabsatzverträgen — Einzelheiten auf der Seite Widerruf. Klauseln, die gegenüber Verbrauchern unwirksam wären, werden ihnen gegenüber nicht angewandt."
+      },
+      "conclusion": {
+        "heading": "3. Kontakt und Vertragsschluss",
+        "body": "Kontakt ist über Formular, Brief, E-Mail, Telefon oder andere angegebene Kanäle möglich. Das Absenden von Formular oder Brief ist eine Anfrage, kein verbindliches Angebot und keine Kaufpflicht.\n\nEin Vertrag kommt zustande, wenn beide Seiten individuellen Umfang und Preis vereinbaren — in der Regel durch schriftliche oder E-Mail-Bestätigung des Angebots. Bis dahin kann ich die Ausführung ohne Angabe von Gründen ablehnen."
+      },
+      "offers": {
+        "heading": "4. Angebote und Vergütung",
+        "body": "Jeder Auftrag wird individuell beschrieben und bepreist. Angebote gelten für die darin genannte Frist; ohne Fristangabe 14 Tage. Preise verstehen sich im Kleinunternehmerstatus: keine Umsatzsteuer (§ 19 UStG)."
+      },
+      "services": {
+        "heading": "5. Leistungsumfang",
+        "body": "Geschuldet ist, was das angenommene Angebot ausweist. Leistungen außerhalb des Angebots bedürfen gesonderter Vereinbarung."
+      },
+      "clientDuties": {
+        "heading": "6. Mitwirkung des Kunden",
+        "body": "Der Kunde stellt rechtzeitig Texte, Bilder, Logo, Zugänge und Entscheidungen bereit. Verzögerungen auf Kundenseite verschieben Termine. Der Kunde benennt eine Ansprechperson."
+      },
+      "materials": {
+        "heading": "7. Rechte an Kundenmaterial",
+        "body": "Der Kunde versichert, über die überlassenen Materialien verfügungsberechtigt zu sein und dass ihre Nutzung keine Rechte Dritter verletzt. Er stellt mich auf erstes Anfordern von berechtigten Ansprüchen Dritter aus diesen Materialien frei, soweit gesetzlich zulässig."
+      },
+      "changes": {
+        "heading": "8. Leistungsänderungen",
+        "body": "Änderungen des vereinbarten Umfangs (zusätzliche Seiten, Funktionen, Integrationen) erfordern ein aktualisiertes Angebot oder eine Bestätigung von Mehrvergütung und Termin."
+      },
+      "revisions": {
+        "heading": "9. Korrekturen",
+        "body": "Im Preis enthalten ist die im Angebot genannte Zahl von Korrekturrunden (standardmäßig zwei Runden zum vereinbarten Umfang). Weitere Korrekturen oder Konzeptwechsel nach Abnahme einer Stufe sind zusätzlich vergütungspflichtig."
+      },
+      "extras": {
+        "heading": "10. Zusatzleistungen",
+        "body": "Leistungen außerhalb des Angebots kalkuliere ich vor Ausführung gesondert, soweit sie nicht geringfügig sind oder ausdrücklich als eilig auf Kosten des Kunden beauftragt wurden."
+      },
+      "fees": {
+        "heading": "11. Vergütung und Zahlung",
+        "body": "Vergütung und Währung ergeben sich aus dem Angebot. Rechnungen sind innerhalb der dort genannten Frist zahlbar (standardmäßig 14 Tage). Bei Verzug gelten die gesetzlichen Verzugszinsen; gegenüber Unternehmern zusätzlich die übrigen Rechte nach BGB."
+      },
+      "payments": {
+        "heading": "12. Abschläge und Meilensteine",
+        "body": "An- oder Abschlagszahlungen gelten nur, wenn das Angebot sie vorsieht. Eine entgeltliche Ausführung beginne ich nicht vor der vereinbarten Startzahlung, sofern eine solche vorbehalten ist."
+      },
+      "acceptance": {
+        "heading": "13. Abnahme",
+        "body": "Nach Fertigstellungsanzeige hat der Kunde eine angemessene Prüffrist (standardmäßig 7 Tage). Ohne wesentliche Mängelrüge gilt die Leistung als abgenommen. Unwesentliche Mängel hindern die Abnahme nicht."
+      },
+      "ip": {
+        "heading": "14. Nutzungsrechte",
+        "body": "Bis zur vollständigen Zahlung verbleiben die vereinbarten Nutzungsrechte bei mir. Nach vollständiger Zahlung erhält der Kunde — soweit nicht anders angeboten — ein ausschließliches, räumlich und zeitlich unbeschränktes Recht, die Arbeitsergebnisse im vereinbarten Zweck zu nutzen. Open-Source-Komponenten und Drittmaterial unterliegen deren Lizenzen."
+      },
+      "thirdParties": {
+        "heading": "15. Drittleistungen, Hosting, Domains, Lizenzen",
+        "body": "Domains, Hosting, Postfächer, Fonts, Stock, APIs und SaaS-Abos schließt der Kunde selbst ab, soweit das Angebot sie nicht ausdrücklich als meine Leistung ausweist. Für Ausfälle oder Preisänderungen dieser Anbieter hafte ich nicht."
+      },
+      "contentLiability": {
+        "heading": "16. Inhalte und rechtliche Verantwortung",
+        "body": "Für fachliche Inhalte, Angaben, Preise, branchenspezifische Pflichtinformationen und die Rechtmäßigkeit der Kundenmaterialien ist der Kunde verantwortlich. Ich erbringe keine Rechtsberatung. Impressum und Policies des Kunden prüft bzw. beauftragt der Kunde selbst."
+      },
+      "liability": {
+        "heading": "17. Haftung",
+        "body": "Unbeschränkt hafte ich für Vorsatz, grobe Fahrlässigkeit sowie Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit.\n\nBei einfacher Fahrlässigkeit hafte ich gegenüber Unternehmern nur bei Verletzung wesentlicher Vertragspflichten und begrenzt auf den vertragstypischen, vorhersehbaren Schaden. Gegenüber Verbrauchern gelten Beschränkungen nur im gesetzlich zulässigen Rahmen.\n\nKeine Haftung für entgangenen Gewinn oder nicht vom Kunden gesicherte Daten, soweit gesetzlich nicht anders vorgeschrieben."
+      },
+      "withdrawal": {
+        "heading": "18. Widerrufsrecht (Verbraucher)",
+        "body": "Ist der Kunde Verbraucher und kommt ein Fernabsatzvertrag zustande, besteht das gesetzliche Widerrufsrecht. Es gilt nicht für Unternehmer im Rahmen ihrer gewerblichen Tätigkeit. Eine bloße Anfrage über das Formular löst das Recht noch nicht aus — erst der geschlossene Vertrag."
+      },
+      "final": {
+        "heading": "19. Schlussbestimmungen",
+        "body": "Es gilt deutsches Recht. Gegenüber Verbrauchern bleibt der zwingende Schutz des Staates ihres gewöhnlichen Aufenthalts unberührt.\n\nGerichtsstand für Streitigkeiten mit Unternehmern ist Berlin, soweit gesetzlich zulässig.\n\nSollten einzelne Klauseln unwirksam sein, bleibt der übrige Vertrag wirksam. Individuelle Vereinbarungen gehen diesen AGB vor, wenn sie ausdrücklich getroffen werden."
+      }
+    }
+  },
+  "widerruf": {
+    "title": "Widerrufsbelehrung",
+    "updated": "Zuletzt aktualisiert: 20. August 2026",
+    "intro": "Die folgende Belehrung gilt für Verbraucher (nicht für Unternehmer), wenn ein Fernabsatzvertrag über Dienstleistungen zustande kommt (z. B. Annahme eines individuellen Angebots per E-Mail). Das Absenden von Kontaktformular oder Brief ist noch kein Vertragsschluss und setzt keine Widerrufsfrist in Lauf.",
+    "instructionHeading": "Widerrufsbelehrung",
+    "instructionBody": "Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.\n\nDie Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.\n\nUm Ihr Widerrufsrecht auszuüben, müssen Sie mich (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com, Tel. +49 157 35166871) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.\n\nZur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",
+    "earlyStartHeading": "Folgen des Widerrufs und vorzeitiger Leistungsbeginn",
+    "earlyStartBody": "Wenn Sie diesen Vertrag widerrufen, habe ich Ihnen alle Zahlungen, die ich von Ihnen erhalten habe, unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf bei mir eingegangen ist. Für diese Rückzahlung verwende ich dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet.\n\nHaben Sie verlangt, dass die Dienstleistungen während der Widerrufsfrist beginnen sollen, so haben Sie einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie mich von der Ausübung des Widerrufsrechts unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht.\n\nDas Widerrufsrecht erlischt bei einem Vertrag zur Erbringung von Dienstleistungen, wenn ich die Dienstleistung vollständig erbracht habe und mit der Ausführung erst begonnen habe, nachdem Sie dazu Ihre ausdrückliche Zustimmung gegeben und gleichzeitig Ihre Kenntnis davon bestätigt haben, dass Sie Ihr Widerrufsrecht bei vollständiger Vertragserfüllung durch mich verlieren.\n\nEine solche Bestätigung erhebe ich nicht über das Website-Formular. Soll ein Verbraucher vor Ablauf der 14 Tage den Beginn wünschen, erfolgt dies nur nach ausdrücklichem Verlangen auf einem dauerhaften Datenträger (E-Mail) mit den gesetzlich erforderlichen Hinweisen. Bis dahin kann ich eine entgeltliche Ausführung zurückstellen.",
+    "formHeading": "Muster-Widerrufsformular",
+    "formIntro": "Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück.",
+    "formTo": "An:",
+    "formTemplate": "Hiermit widerrufe(n) ich/wir den von mir/uns abgeschlossenen Vertrag über die Erbringung der folgenden Dienstleistung:\n\nBestellt am / Vertrag geschlossen am:\nName des/der Verbraucher(s):\nAnschrift des/der Verbraucher(s):\n\nDatum:\nUnterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier):"
   }
 }

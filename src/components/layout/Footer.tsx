@@ -9,7 +9,7 @@ export async function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-line mt-auto shrink-0 border-t py-3 md:h-(--site-footer-h) md:py-0">
+    <footer className="border-line mt-auto shrink-0 border-t py-3 md:min-h-(--site-footer-h) md:py-0">
       <div className="text-fg-muted mx-auto flex h-full max-w-5xl flex-col items-center gap-2.5 px-5 text-xs leading-none md:flex-row md:items-center md:justify-between md:gap-4 md:px-8">
         <div className="flex min-w-0 items-center justify-center gap-2.5">
           <Link href="/" className="focus-ring shrink-0 rounded" aria-label={siteConfig.name}>
@@ -19,15 +19,24 @@ export async function Footer() {
             © {year} {siteConfig.name}. {t("rights")}
           </p>
         </div>
-        <div className="flex shrink-0 items-center justify-center gap-3 md:gap-4">
+        <nav
+          aria-label={t("legalNav")}
+          className="flex max-w-full shrink-0 flex-wrap items-center justify-center gap-x-3 gap-y-2 md:justify-end md:gap-x-4"
+        >
           <Link className="focus-ring hover:text-fg rounded" href="/impressum">
             {t("impressum")}
           </Link>
           <Link className="focus-ring hover:text-fg rounded" href="/privacy">
             {t("privacy")}
           </Link>
+          <Link className="focus-ring hover:text-fg rounded" href="/agb">
+            {t("agb")}
+          </Link>
+          <Link className="focus-ring hover:text-fg rounded" href="/widerruf">
+            {t("widerruf")}
+          </Link>
           <CookieSettingsButton className="focus-ring hover:text-fg cursor-pointer rounded" />
-        </div>
+        </nav>
       </div>
     </footer>
   );

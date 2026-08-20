@@ -56,7 +56,7 @@ Maile ([`src/lib/email/`](../src/lib/email/)):
 
 UX: toast (Sonner) wyłącznie — bez błędów pod polami. Submit: `loading` + disabled + spinner na `Button`. Sukces: toast + **redirect na `/`**.
 
-Zgoda: nota „Wysyłając formularz akceptujesz politykę prywatności” + link. Brak checkboxa marketingowego. Podstawa w privacy: art. 6 ust. 1 lit. b lub f RODO.
+Zgoda: nota, że wysłanie nie zawiera umowy, plus „Wysyłając formularz akceptujesz politykę prywatności” + link. Brak checkboxa marketingowego. Podstawa w privacy: art. 6 ust. 1 lit. b lub f RODO.
 
 ### Komponenty do ponownego użycia
 
@@ -78,7 +78,7 @@ Brak: wspólnych `Input` / checkbox / radio; `sessionStorage` w projekcie; test�
 
 - Locale: `pl`, `en`, `de`, `es`, `uk`; prefix always; default EN. Zakaz hardkodu UI.
 - Privacy opisuje **tylko** pola kontaktu — brief wymaga aktualizacji copy.
-- AGB / regulamin: nadal niepotrzebny (brak automatycznego zawierania umów).
+- AGB / Widerruf: strony `/agb` i `/widerruf` — formularz nadal **nie** zawiera umowy; umowa po akceptacji indywidualnej oferty.
 - Sitemap: `getIndexableRoutes()` w [`src/lib/seo.ts`](../src/lib/seo.ts) — nowa trasa musi tam wejść.
 - Analityka: Vercel + GA4 dopiero po zgodzie w bannerze; brak Meta Pixel. Brief nie dodaje trackerów.
 
@@ -286,7 +286,7 @@ Env: te same `BREVO_*`, `CONTACT_TO_EMAIL`, Turnstile — bez nowych sekretów.
 - Turnstile + honeypot + Zod + rate limit jak kontakt.
 - Privacy: rozszerzyć `privacy.formBody` **albo** dodać `privacy.briefHeading` / `briefBody` (5 locale) — imię, e-mail, opcjonalny telefon, treść briefu; Brevo; Turnstile; bez marketingu.
 - Szkic w `sessionStorage` nie wymaga cookie. Nie opisywać jako nowej kategorii cookies.
-- AGB nadal nie.
+- AGB / Widerruf: osobne strony; brief nie zawiera umowy.
 
 ### i18n
 

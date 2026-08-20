@@ -57,6 +57,8 @@ export function getIndexableRoutes(): IndexableRoute[] {
     { path: "/contact/brief", changeFrequency: "monthly", priority: 0.6 },
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/impressum", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/agb", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/widerruf", changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const projectRoutes: IndexableRoute[] = projects.map((project) => ({

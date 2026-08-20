@@ -70,7 +70,7 @@ Desktop sidebar: lockup side `max-w-40`. Stopka treści i pas LanguageSwitcher: 
 
 **Stopka — układ:**
 
-- Desktop: jeden rząd (logo + © | Impressum · Privacy · Cookies), `h-(--site-footer-h)`.
+- Desktop: logo + © | Impressum · Privacy · AGB · Widerruf · Cookies, `min-h-(--site-footer-h)`, linki mogą się zawijać.
 - Mobile: dwie linie wyśrodkowane (logo + ©; potem linki), wysokość auto + `py-3`.
 
 Prawne / cookies: `docs/Legal_and_Cookies.md`.

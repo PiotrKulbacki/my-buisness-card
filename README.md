@@ -50,10 +50,10 @@ Sekcja **CV / Doświadczenie** (`/path`): pełne CV online — [`docs/CV_Online.
 
 **Projekty (live):** AI Document → [aidocument.eu](https://aidocument.eu/), Lyamo → [lyamo.eu](https://lyamo.eu/), AK Gebäudeservice. Reguły case study: [`docs/Projects_Section.md`](docs/Projects_Section.md).
 
-Prawne: `/impressum`, `/privacy`, baner cookies — [`docs/Legal_and_Cookies.md`](docs/Legal_and_Cookies.md).  
+Prawne: `/impressum`, `/privacy`, `/agb`, `/widerruf`, baner cookies — [`docs/Legal_and_Cookies.md`](docs/Legal_and_Cookies.md).  
 Analityka (Vercel + opcjonalne GA4, Consent Mode v2): [`docs/Analytics.md`](docs/Analytics.md).
 
-SEO (robots, sitemap 60 URL, OG z logo): [`docs/SEO.md`](docs/SEO.md).
+SEO (robots, sitemap, OG z logo): [`docs/SEO.md`](docs/SEO.md).
 
 ## Następny krok
 

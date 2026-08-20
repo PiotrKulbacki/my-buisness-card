@@ -118,7 +118,8 @@
       "phoneMax": "Phone can be at most 40 characters."
     },
     "rateLimited": "Too many attempts. Please wait a moment and try again.",
-    "captchaError": "Please confirm you are not a bot and try again."
+    "captchaError": "Please confirm you are not a bot and try again.",
+    "noContractNote": "Sending this form does not conclude a contract or create an obligation to buy."
   },
   "brief": {
     "title": "Describe your project",
@@ -278,33 +279,55 @@
       "payments": "Payments",
       "crmNewsletter": "CRM / newsletter",
       "other": "Other"
-    }
+    },
+    "noContractNote": "Sending the brief is not a contract or an order. The details are used to contact you and prepare an individual proposal."
   },
   "privacy": {
     "title": "Privacy policy",
-    "updated": "Last updated: 17 August 2026",
-    "intro": "This site processes personal data only as needed to run the website, reply to contact requests and project briefs and — with your consent — measure traffic (Vercel Analytics and Google Analytics 4).",
+    "updated": "Last updated: 20 August 2026",
+    "intro": "This site processes personal data only as needed to run the website, reply to enquiries and project briefs and — with consent — measure traffic. I do not describe services this site does not use (for example there is no Supabase database here).",
     "controllerHeading": "Data controller",
-    "controllerBody": "The data controller is {name} (sole proprietorship / Einzelunternehmen, Berlin).",
-    "contact": "Privacy contact",
-    "hostingHeading": "Hosting",
-    "hostingBody": "The site is hosted by Vercel Inc. Technical logs (e.g. IP address, user agent, timestamp) may be created as needed for security and service stability.",
+    "controllerBody": "The controller is {name} (sole proprietorship / Einzelunternehmen, Berlin).",
+    "email": "Email",
+    "phone": "Phone",
+    "mapHeading": "What data I process",
+    "mapIntro": "For each service actually used: which data, for what purpose, legal basis, recipient, whether a transfer outside the EEA occurs, and how long it is kept. Only technologies on piotrkulbacki.com.",
+    "hostingHeading": "Hosting (Vercel)",
+    "hostingBody": "Data: IP address, user agent, timestamp, requested URL, possible error logs.\n\nPurpose: delivering the site, security, incident diagnosis.\n\nLegal basis: Art. 6(1)(f) GDPR (legitimate interest in stable, secure hosting).\n\nRecipient: Vercel Inc., USA.\n\nTransfer outside the EEA: yes (USA), based on Vercel’s standard contractual clauses.\n\nRetention: technical logs usually short, following Vercel practice (typically a few weeks unless a security incident requires longer).",
+    "turnstileHeading": "Form protection (Cloudflare Turnstile)",
+    "turnstileBody": "Data: challenge token, IP address, limited browser signals used to tell humans from bots.\n\nPurpose: protecting the contact form and brief from spam and abuse.\n\nLegal basis: Art. 6(1)(f) GDPR.\n\nRecipient: Cloudflare, Inc., USA.\n\nTransfer outside the EEA: yes (USA), Cloudflare SCCs.\n\nRetention: verification is short-lived; Cloudflare may keep limited security logs under its own policy.",
     "formHeading": "Contact form",
-    "formBody": "When you submit the form, your name, email, optional phone number and message are processed solely to reply (Art. 6(1)(b) or (f) GDPR). The form is protected by Cloudflare Turnstile (bot protection). Messages are delivered via Brevo (Sendinblue GmbH, Germany) as a processor; you may also receive an automatic acknowledgement. Data is not sold or used for marketing without separate consent. It is kept only as long as needed to handle the request, then deleted or archived where legally required.",
+    "formBody": "Data you provide: name, email, optional phone, message; plus locale and the Turnstile result.\n\nPurpose: contact, clarifying the request and — if we talk — preparing an offer and performing a contract. Submitting the form does not conclude a contract.\n\nLegal basis: Art. 6(1)(b) GDPR (pre-contractual steps at your request) and (f).\n\nRecipient: me as controller; email delivery via Brevo (Sendinblue GmbH, Germany).\n\nTransfer outside the EEA: the form is not designed for that; Brevo processes in the EU.\n\nRetention: enquiries without a contract — up to 12 months after last contact, then deletion unless longer storage is needed to defend claims. If we work together, correspondence and accounting rules below apply.",
     "briefHeading": "Project brief",
-    "briefBody": "The optional brief collects your name, email, optional phone number and answers about the project (type, name ideas, goals, scope, materials, languages, integrations, timeline) solely to prepare a proposal and reply (Art. 6(1)(b) or (f) GDPR). Protection, the processor (Brevo) and retention follow the same rules as the contact form. A draft in the browser (sessionStorage) is not sent until you submit; it is cleared after a successful send. I do not use this data for marketing without separate consent.",
-    "analyticsHeading": "Analytics",
-    "analyticsBody": "After you accept analytics in the cookie banner, I load Vercel Analytics and Google Analytics 4 (GA4) with Google Consent Mode v2. Until you choose, all Google consent signals stay “denied”. On analytics accept I set analytics_storage=granted (ads signals ad_storage / ad_user_data / ad_personalization stay denied). Vercel Analytics measures traffic in a minimised way. GA4 (Google Ireland Ltd. / Google LLC) may then set analytics cookies (e.g. _ga). Without consent, or after “Necessary only”, GA does not run. Change preferences via Cookies in the footer. Legal basis with consent: Art. 6(1)(a) GDPR.",
-    "cookiesHeading": "Cookies",
-    "cookiesBody": "I use first-party cookies that are necessary for the site to work and to remember your consent choice. After analytics consent, Google Analytics cookies may be set. Consent lifetime: 12 months. You can change preferences anytime via the “Cookies” link in the footer.",
-    "cookieLocale": "necessary — remembers the selected language (next-intl).",
-    "cookieConsent": "necessary — stores your analytics consent choice (version, analytics flag, date).",
-    "cookieGa": "analytics (after consent) — Google Analytics 4, e.g. _ga / _ga_*.",
-    "cookiesNoMarketing": "I do not use advertising cookies or marketing trackers (e.g. Meta Pixel).",
+    "briefBody": "Data: name, email, optional phone and answers about the project (type, names, goals, scope, materials, languages, integrations, timeline).\n\nPurpose: understanding the project and preparing an individual proposal. The brief is not an order.\n\nLegal basis: Art. 6(1)(b) or (f) GDPR.\n\nRecipient and transfer: same as the contact form (Brevo in the EU).\n\nRetention: same as contact enquiries. A browser draft (sessionStorage) stays on your device until you send or leave the session; after a successful send it is cleared. The draft is not uploaded beforehand.\n\nNo marketing use without separate consent.",
+    "emailHeading": "Transactional email (Brevo)",
+    "emailBody": "Data: email addresses, name, message/brief content, delivery metadata.\n\nPurpose: delivering mail to my inbox, an automatic acknowledgement, and any follow-up on that channel.\n\nLegal basis: Art. 6(1)(b) or (f) GDPR.\n\nRecipient: Sendinblue GmbH (Brevo), Germany, as processor.\n\nTransfer outside the EEA: generally no — processing in the EU.\n\nRetention: operational copies at Brevo as long as needed for delivery and handling, then according to correspondence retention.",
+    "analyticsHeading": "Analytics (Vercel Analytics and Google Analytics 4)",
+    "analyticsBody": "Vercel Analytics: minimised traffic metrics (no classic tracking cookies).\n\nGA4 (only after consent): cookie IDs (_ga / _ga_*), approximate region, device, page views, traffic source.\n\nPurpose: understanding which pages help and improving the site — not ads.\n\nLegal basis: Art. 6(1)(a) GDPR (banner consent). Until you choose, Google Consent Mode v2 sets analytics_storage and ad_* to “denied”. After “Accept all” I set only analytics_storage=granted; ad_storage, ad_user_data and ad_personalization stay denied. “Necessary only” or a later footer change keeps GA off.\n\nRecipients: Vercel Inc.; Google Ireland Ltd. / Google LLC.\n\nTransfer outside the EEA: Vercel and Google LLC (USA) — SCCs / the providers’ transfer frameworks.\n\nRetention: consent in pk_cookie_consent — 12 months. GA cookies according to Google (typically up to 14 months in default GA4 retention unless I shorten it).",
+    "recipientsHeading": "Recipients of personal data",
+    "recipientsBody": "Depending on the feature:\n\n• Vercel Inc. — hosting and optional analytics after consent\n• Cloudflare, Inc. — Turnstile\n• Sendinblue GmbH (Brevo) — email sending\n• Google Ireland Ltd. / Google LLC — GA4 only after analytics consent\n\nI do not sell data. No Meta Pixel, Google Ads or external CMP.",
+    "transfersHeading": "Transfers outside the EEA",
+    "transfersBody": "Vercel, Cloudflare and Google LLC have establishments or subprocessors in the USA and use standard contractual clauses or an equivalent transfer tool. Brevo (Sendinblue GmbH) processes in the EU.\n\nThere is no generic “data may be sent worldwide” clause without naming the recipient.",
+    "retentionHeading": "How long I keep data",
+    "retentionBody": "• Enquiries and briefs without a contract: up to 12 months after last contact.\n• Business correspondence during an offer / project: up to 3 years after the matter ends (possible claims), unless a shorter period is enough.\n• Client data and invoices / accounting records: 10 years if tax duties arise.\n• Hosting logs: short, per Vercel, unless a security incident.\n• Analytics consent: 12 months or until withdrawn.\n• Cookie choice: until the consent cookie expires or you clear the browser.\n• Brief sessionStorage: locally, until send or tab close.\n\nAfter that I delete or anonymise, unless the law requires keeping the data.",
+    "cookiesHeading": "Cookies and consent",
+    "cookiesBody": "I use first-party cookies that are necessary for the site and to remember your analytics choice. Analytics (Vercel Analytics + GA4) is blocked before consent. Refusal (“Necessary only”) is as available as acceptance. You can change the choice anytime via the footer. Consent lifetime: 12 months.",
+    "cookieLocale": "necessary — remembers the selected language (next-intl), 12 months.",
+    "cookieConsent": "necessary — stores your analytics choice (version, flag, date), 12 months.",
+    "cookieGa": "analytics (only after consent) — Google Analytics 4, e.g. _ga / _ga_*.",
+    "cookiesNoMarketing": "No advertising cookies or marketing trackers (e.g. Meta Pixel). This site does not run a Supabase database.",
     "rightsHeading": "Your rights",
-    "rightsBody": "You have the right of access, rectification, erasure, restriction, data portability and objection — email the controller.",
+    "rightsIntro": "Under the GDPR you may:",
+    "rightsAccess": "access your data",
+    "rightsRectification": "rectify it",
+    "rightsErasure": "have it erased",
+    "rightsRestriction": "restrict processing",
+    "rightsPortability": "receive it in a portable format",
+    "rightsObjection": "object to processing based on legitimate interests",
+    "rightsWithdraw": "withdraw consent (analytics) at any time, without affecting the lawfulness of earlier processing",
+    "rightsComplaint": "lodge a complaint with a supervisory authority",
     "complaintHeading": "Supervisory authority",
-    "complaintBody": "You may lodge a complaint with the competent data protection authority. For Berlin: Berliner Beauftragte für Datenschutz und Informationsfreiheit."
+    "complaintBody": "You may lodge a complaint with the competent data protection authority. For the Berlin establishment:"
   },
   "cookies": {
     "title": "Cookies & analytics",
@@ -318,18 +341,27 @@
     "legalBasis": "Information pursuant to § 5 DDG (Digitale-Dienste-Gesetz).",
     "providerHeading": "Service provider",
     "entity": "Sole proprietorship (Einzelunternehmen)",
+    "businessHeading": "Business purpose",
+    "businessBody": "Creation of websites, web design, digital online presences, and individual digital services and software solutions.",
     "contactHeading": "Contact",
     "email": "Email",
     "phone": "Phone",
-    "vatHeading": "VAT identification",
-    "vatBody": "As a small business under § 19 UStG (Kleinunternehmer) I do not hold a USt-IdNr. The tax office number (Steuernummer) is not published.",
+    "vatHeading": "VAT",
+    "vatBody": "As a small business under § 19 UStG (Kleinunternehmer) I do not charge VAT and do not hold a USt-IdNr. The tax office number (Steuernummer) is not published.",
+    "registerHeading": "Commercial register",
+    "registerBody": "The business is not entered in the Handelsregister. No register number is issued or published.",
     "responsibleHeading": "Responsibility for content",
-    "responsibleBody": "{name} is responsible for the content of this website."
+    "responsibleBody": "{name} is responsible for the content of this website.",
+    "disputeHeading": "Consumer dispute resolution",
+    "disputeBody": "I am neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board (Verbraucherschlichtungsstelle) under the VSBG. The EU ODR platform was discontinued on 20 July 2025; no link to it is provided."
   },
   "footer": {
     "rights": "All rights reserved.",
+    "legalNav": "Legal",
     "impressum": "Impressum",
-    "privacy": "Privacy policy",
+    "privacy": "Privacy",
+    "agb": "Terms",
+    "widerruf": "Withdrawal",
     "cookies": "Cookies"
   },
   "common": {
@@ -416,5 +448,103 @@
       "signOff": "Best regards,\n{name}",
       "footerNote": "You can reply to this email — it will reach my address."
     }
+  },
+  "agb": {
+    "title": "Terms of cooperation (AGB)",
+    "updated": "Last updated: 20 August 2026",
+    "intro": "These terms describe how I accept and deliver paid work (websites, apps, digital services). They do not replace an individual offer. Using the site or sending a form is not a purchase.",
+    "model": "Flow: contact → needs analysis → individual scope → individual offer → acceptance → start of work.",
+    "withdrawalLink": "Withdrawal information (consumers)",
+    "sections": {
+      "scope": {
+        "heading": "1. Scope",
+        "body": "These terms apply to contracts for websites, web design, digital online presences and individual digital services and software, concluded with me as a sole proprietorship based in Berlin. They apply from contract conclusion, not from merely visiting the site."
+      },
+      "clients": {
+        "heading": "2. B2B and B2C clients",
+        "body": "I work with businesses and consumers. Consumers keep their statutory rights, including withdrawal for distance contracts — see the Withdrawal page. Clauses that would be invalid toward a consumer are not applied to them."
+      },
+      "conclusion": {
+        "heading": "3. Contact and conclusion of contract",
+        "body": "You can contact me via the form, brief, email, phone or other listed channels. Sending a form or brief is an enquiry, not a binding offer and not an obligation to buy.\n\nA contract is formed when both sides agree an individual scope and price — usually by written or email confirmation of an offer. Until then I may decline the work without giving reasons."
+      },
+      "offers": {
+        "heading": "4. Offers and pricing",
+        "body": "Each project is scoped and priced individually. Offers bind for the period stated; if none is stated — 14 days. Prices are under the small-business VAT scheme: I do not charge VAT (§ 19 UStG)."
+      },
+      "services": {
+        "heading": "5. Services",
+        "body": "I deliver what the accepted offer describes. Work outside the offer needs a separate agreement."
+      },
+      "clientDuties": {
+        "heading": "6. Client duties",
+        "body": "The client provides texts, photos, logo, access and decisions on time. Delays on the client side move deadlines. The client names one contact person."
+      },
+      "materials": {
+        "heading": "7. Client materials",
+        "body": "The client warrants they have the rights to materials they supply and that using them will not infringe third-party rights. On request they shall indemnify me against justified third-party claims arising from those materials, to the extent permitted by law."
+      },
+      "changes": {
+        "heading": "8. Scope changes",
+        "body": "Changes to the agreed scope (extra pages, features, integrations) require an updated offer or written confirmation of extra fees and timing."
+      },
+      "revisions": {
+        "heading": "9. Revisions",
+        "body": "The fee includes the number of revision rounds stated in the offer (by default two rounds within the agreed scope). Further revisions or a concept change after a stage is accepted are billed extra."
+      },
+      "extras": {
+        "heading": "10. Extra work",
+        "body": "Work outside the offer is quoted before it is done, unless it is minor or expressly commissioned as urgent at the client’s cost."
+      },
+      "fees": {
+        "heading": "11. Fees and payment",
+        "body": "Fees and currency follow the offer. Invoices are payable within the stated period (14 days by default). Late payment attracts statutory interest; businesses also have the other BGB remedies."
+      },
+      "payments": {
+        "heading": "12. Deposits and milestones",
+        "body": "Deposits or staged payments apply only if the offer provides for them. I do not start paid work before an agreed kickoff payment if one is reserved."
+      },
+      "acceptance": {
+        "heading": "13. Acceptance",
+        "body": "After I report completion the client has a reasonable review period (7 days by default). No substantial objections in that time means acceptance. Minor defects do not block acceptance and are fixed under the agreed revisions / warranty."
+      },
+      "ip": {
+        "heading": "14. Rights and licence",
+        "body": "Until full payment, the agreed usage rights stay with me. After full payment the client receives — unless the offer says otherwise — an exclusive, geographically and temporally unlimited licence to use the deliverables for the agreed purpose. Open-source components and third-party assets stay under their own licences."
+      },
+      "thirdParties": {
+        "heading": "15. Third-party services, hosting, domains, licences",
+        "body": "Domains, hosting, mailboxes, fonts, stock, APIs and SaaS subscriptions are contracted by the client unless the offer expressly includes them as my service. I am not liable for those providers’ outages or price changes."
+      },
+      "contentLiability": {
+        "heading": "16. Content and legal responsibility",
+        "body": "The client is responsible for substantive content, statements, prices, sector information duties and the lawfulness of their materials. I do not provide legal advice. The client approves or has a lawyer review their own imprint and policies."
+      },
+      "liability": {
+        "heading": "17. Liability",
+        "body": "I am fully liable for intent, gross negligence and injury to life, body or health.\n\nFor ordinary negligence I am liable toward businesses only for breach of essential contractual duties and limited to typical, foreseeable damage. Toward consumers, limits apply only as far as mandatory law allows.\n\nNo liability for lost profit or data the client did not back up, unless the law forbids that exclusion."
+      },
+      "withdrawal": {
+        "heading": "18. Withdrawal (consumers)",
+        "body": "If the client is a consumer and a distance contract is concluded, the statutory withdrawal right applies. It does not apply to traders acting in the course of business. A mere form enquiry does not start that right — only a concluded contract does."
+      },
+      "final": {
+        "heading": "19. Final provisions",
+        "body": "German law applies. For consumers this does not take away protection that cannot be waived under the law of their habitual residence.\n\nVenue for disputes with businesses is Berlin, unless statute says otherwise.\n\nIf a clause is invalid, the rest remains. Individually agreed terms prevail over these AGB when they are expressly agreed."
+      }
+    }
+  },
+  "widerruf": {
+    "title": "Right of withdrawal",
+    "updated": "Last updated: 20 August 2026",
+    "intro": "The following information is for consumers (not businesses) when a distance contract for services is concluded (for example accepting an individual offer by email). Sending the contact form or brief does not conclude a contract and does not start the withdrawal period.",
+    "instructionHeading": "Instructions on withdrawal",
+    "instructionBody": "You have the right to withdraw from this contract within 14 days without giving any reason.\n\nThe withdrawal period is 14 days from the day the contract is concluded.\n\nTo exercise the right of withdrawal, you must inform me (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com, tel. +49 157 35166871) of your decision by a clear statement (e.g. a letter sent by post or email). You may use the model withdrawal form below, but it is not obligatory.\n\nTo meet the deadline it is sufficient to send your communication concerning the exercise of the right of withdrawal before the period has expired.",
+    "earlyStartHeading": "Effects of withdrawal and starting early",
+    "earlyStartBody": "If you withdraw, I will reimburse all payments received from you without undue delay and in any event not later than 14 days from the day I am informed of the withdrawal, using the same means of payment as in the original transaction unless expressly agreed otherwise; you will not incur any fees as a result of such reimbursement.\n\nIf you requested that services begin during the withdrawal period, you shall pay an amount proportionate to what has been provided until you informed me of withdrawal, compared with the full coverage of the contract.\n\nThe withdrawal right is lost for a service contract if I have fully performed the service and started only after you gave prior express consent and acknowledged that you lose the right of withdrawal once performance is complete.\n\nI do not collect that confirmation through the website form. If a consumer wants work to start before 14 days, I will do so only after an express request on a durable medium (email) with the legally required statements. Until then I may hold paid performance.",
+    "formHeading": "Model withdrawal form",
+    "formIntro": "Complete and return this form only if you wish to withdraw from a concluded contract:",
+    "formTo": "To:",
+    "formTemplate": "I/We hereby give notice that I/We withdraw from my/our contract for the provision of the following service:\n\nOrdered on / contract concluded on:\nName of consumer(s):\nAddress of consumer(s):\n\nDate:\nSignature of consumer(s) (only if this form is notified on paper):"
   }
 }

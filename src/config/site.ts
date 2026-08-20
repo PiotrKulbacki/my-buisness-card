@@ -47,6 +47,14 @@ export const siteConfig = {
     phoneDisplay: "+49 157 35166871",
     phoneTel: "+4915735166871",
     entity: "Einzelunternehmen",
+    /** Berlin supervisory authority (privacy page). */
+    dpa: {
+      name: "Berliner Beauftragte für Datenschutz und Informationsfreiheit",
+      street: "Alt-Moabit 59-61",
+      postalCode: "10555",
+      city: "Berlin",
+      url: "https://www.datenschutz-berlin.de",
+    },
   },
   social: {
     linkedin: "https://www.linkedin.com/in/it-piotr-kulbacki",

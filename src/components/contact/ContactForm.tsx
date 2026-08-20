@@ -177,6 +177,7 @@ export function ContactForm() {
           />
         </div>
       ) : null}
+      <p className="text-fg-muted text-sm">{t("noContractNote")}</p>
       <p className="text-fg-muted text-sm">
         {t("privacyNote")}{" "}
         <Link href="/privacy" className="underline underline-offset-4">
