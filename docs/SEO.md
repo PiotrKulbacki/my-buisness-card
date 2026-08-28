@@ -60,7 +60,7 @@ Test: Debugger FB / LinkedIn Post Inspector / View Source (`og:title`, `og:image
 | ------------ | ------------------------------------------------------------------------------------------------- | ------------------------- |
 | Home         | `""`                                                                                              | 1.0                       |
 | Główne       | `/about`, `/projects`, `/path`, `/contact`, `/contact/brief`                                      | 0.6–0.9                   |
-| Case studies | `/projects/ai-document`, `lyamo`, `wc26-predictor`, `ak-gebaeudeservice`, `movieweb`, `sportclub` | 0.7                       |
+| Case studies | `/projects/dokiero`, `lyamo`, `wc26-predictor`, `ak-gebaeudeservice`, `movieweb`, `sportclub`     | 0.7                       |
 | Prawne       | `/privacy`, `/impressum`, `/agb`, `/widerruf`                                                     | 0.3                       |
 
 **Łącznie:** (10 stron nawigacji/prawnych/brief + 6 case studies) × 5 locale = **80 URL**.  
@@ -98,7 +98,7 @@ Test: [Rich Results Test](https://search.google.com/test/rich-results) na stroni
 
 | Slug                 | Live URL                                       | Uwagi                                               |
 | -------------------- | ---------------------------------------------- | --------------------------------------------------- |
-| `ai-document`        | `https://aidocument.eu/`                       | Flagowiec; screeny w `public/projects/ai-document/` |
+| `dokiero`            | `https://dokiero.com/`                         | Flagowiec; screeny w `public/projects/dokiero/`     |
 | `lyamo`              | `https://lyamo.eu/`                            | Flagowiec; screeny OK w `public/projects/lyamo/`    |
 | `wc26-predictor`     | `https://wc26-predictor-zapraszam.vercel.app/` | Typer MŚ 2026; screeny OK                           |
 | `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/`           | Screeny OK                                          |

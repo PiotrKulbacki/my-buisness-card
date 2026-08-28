@@ -51,7 +51,7 @@
 - [x] Screenshoty case study: MovieWeb + Sport Club PowerPlay + AK (`public/projects/…`; reguły: `docs/Projects_Section.md`)
 - [x] Screenshoty / pełne case study: Lyamo (`lyamo.eu`)
 - [x] Screenshoty / pełne case study: WC26 Predictor (`wc26-predictor`)
-- [x] Screenshoty / pełne case study: AI Document (`aidocument.eu`)
+- [x] Screenshoty / pełne case study: Dokiero (`dokiero.com`)
 - [ ] Finalne copy landing/about
 - [ ] Realne URL FB / IG / YT
 
@@ -105,7 +105,7 @@
 
 - [ ] Canvas, Lyamo teaser, `/now`, ⌘K, CMS…
 - [x] Pełne case study Lyamo (screeny, tech stack)
-- [x] Pełne case study AI Document (screeny, tech stack)
+- [x] Pełne case study Dokiero (screeny, tech stack)
 
 ---
 
@@ -129,6 +129,7 @@
 | 2026-08-08 | Stopka mobile: 2 linie wyśrodkowane; docs `Legal_and_Cookies.md` + update Brand_Logo / checklist                    |
 | 2026-08-08 | Brevo zamiast Resend: HTML inbox + auto-reply; publiczny email `kontakt@piotrkulbacki.com`                          |
 | 2026-08-08 | Domena `piotrkulbacki.com` na Vercel; Turnstile; toast sukcesu skrócony; logo maila z domeny                        |
+| 2026-08-28 | Rebrand case study: Dokiero (`dokiero.com`), slug `/projects/dokiero`, 301 ze starego `/projects/ai-document`       |
 | 2026-08-09 | Case study AI Document: screeny (PII blur), tech stack, `featured`, live `aidocument.eu`                            |
 | 2026-08-08 | GA4: `@next/third-parties/google` w root layout (prod + zgoda cookies); privacy i18n 5 locale                       |
 | 2026-08-08 | Google Consent Mode v2: default denied → analytics_storage granted po Accept; ads denied; bez CMP                   |

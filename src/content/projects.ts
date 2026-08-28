@@ -39,7 +39,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "ai-document",
+    slug: "dokiero",
     category: "apps",
     featured: true,
     year: 2026,
@@ -55,12 +55,12 @@ export const projects: Project[] = [
       "next-intl",
       "Vercel",
     ],
-    liveUrl: "https://aidocument.eu/",
-    coverSrc: "/projects/ai-document/01-dashboard.png",
-    coverGradient: "linear-gradient(135deg, #0F172A 0%, #1D4ED8 45%, #38BDF8 100%)",
+    liveUrl: "https://dokiero.com/",
+    coverSrc: "/projects/dokiero/01-dashboard.png",
+    coverGradient: "linear-gradient(135deg, #0c1220 0%, #1a2744 50%, #c4b8a4 100%)",
     gallery: [
       {
-        src: "/projects/ai-document/02-case-analysis.png",
+        src: "/projects/dokiero/02-case-analysis.png",
         caption: {
           pl: "Analiza sprawy — kwoty, IBAN, terminy i pełne tłumaczenie obcego pisma",
           en: "Case analysis — amounts, IBAN, deadlines and a full translation of the foreign letter",
@@ -70,7 +70,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ai-document/03-document-history.png",
+        src: "/projects/dokiero/03-document-history.png",
         caption: {
           pl: "Historia dokumentów — archiwum spraw z ważnością i eksportem PDF",
           en: "Document history — case archive with validity tracking and PDF export",
@@ -80,7 +80,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ai-document/04-upload.png",
+        src: "/projects/dokiero/04-upload.png",
         caption: {
           pl: "Upload do analizy — zdjęcie lub PDF, kraj prawa i wybór kredytu Standard / Pro",
           en: "Upload for analysis — photo or PDF, country of law and Standard / Pro credit",
@@ -90,7 +90,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ai-document/05-ready-letter.png",
+        src: "/projects/dokiero/05-ready-letter.png",
         caption: {
           pl: "Gotowe pismo do urzędu — dane, treść, data i własnoręczny podpis",
           en: "Ready-to-send office letter — details, body, date and handwritten signature",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ai-document/06-deadlines.png",
+        src: "/projects/dokiero/06-deadlines.png",
         caption: {
           pl: "Terminy i zadania — przypomnienia oraz eksport do Google / Apple / Outlook",
           en: "Deadlines and tasks — reminders plus export to Google / Apple / Outlook",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ai-document/07-languages.png",
+        src: "/projects/dokiero/07-languages.png",
         caption: {
           pl: "30 języków interfejsu — aplikacja gotowa dla użytkowników z prawie całego świata",
           en: "30 UI languages — ready for users from almost anywhere in the world",
@@ -120,7 +120,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ai-document/08-pdf-translation.png",
+        src: "/projects/dokiero/08-pdf-translation.png",
         caption: {
           pl: "PDF z tłumaczeniem — podsumowanie, szczegóły płatności i treść pisma",
           en: "Translated PDF — summary, payment details and letter body",
@@ -130,7 +130,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ai-document/10-extend-validity.png",
+        src: "/projects/dokiero/10-extend-validity.png",
         caption: {
           pl: "Przedłużenie ważności w archiwum — kredyty ze Standard i Pro",
           en: "Extend archive validity — spend Standard and Pro credits",
@@ -141,11 +141,11 @@ export const projects: Project[] = [
       },
     ],
     title: {
-      pl: "AI Document",
-      en: "AI Document",
-      de: "AI Document",
-      es: "AI Document",
-      uk: "AI Document",
+      pl: "Dokiero",
+      en: "Dokiero",
+      de: "Dokiero",
+      es: "Dokiero",
+      uk: "Dokiero",
     },
     summary: {
       pl: "Mój flagowy produkt — AI skanuje obce pisma, generuje gotowe odpowiedzi do urzędu z podpisem, pilnuje terminów i przypomina e-mailem.",
@@ -155,11 +155,11 @@ export const projects: Project[] = [
       uk: "Мій флагманський продукт — AI сканує іноземні листи, генерує готові відповіді з підписом, стежить за термінами та email-нагадуваннями.",
     },
     body: {
-      pl: "AI Document to mój flagowy produkt live na aidocument.eu — asystent spraw urzędowych dla osób, które dostają pisma w obcym języku (lub we własnym) i nie chcą ryzykować przeoczonego terminu. Wgrywasz PDF albo zdjęcie z telefonu: AI rozpoznaje kraj i przepisy, wyjaśnia treść po ludzku, wyciąga kwoty, IBAN i daty, a potem prowadzi dialog — dopytuje o brakujące fakty, żeby wygenerować pismo odpowiedzi gotowe do wysyłki e-mailem lub listownie po wydruku (z nagłówkiem, adresem urzędu, datą, treścią i własnoręcznym podpisem z ustawień). Plik Word zostaje edytowalny, gdy trzeba coś poprawić. Wykryte terminy trafiają do panelu zadań: przypomnienie na maila 1, 2 lub 3 dni wcześniej oraz dodanie do kalendarza Google albo Apple/Outlook. Interfejs w 30 językach; pisma z UE, UK, Szwajcarii i Norwegii. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deploy na Vercel — produkt webowy z planem aplikacji mobilnej.",
-      en: "AI Document is my flagship product live at aidocument.eu — an official-matters assistant for people who receive letters in a foreign language (or their own) and cannot afford a missed deadline. Upload a PDF or phone photo: AI detects the country and legal context, explains the letter in plain language, extracts amounts, IBAN and dates, then runs a guided dialogue — asking for missing facts so it can draft a reply ready to email or print and post (header, office address, date, body and a handwritten signature from settings). The Word file stays editable when you need a tweak. Detected deadlines land in the tasks panel: email reminders 1, 2 or 3 days ahead plus Google Calendar or Apple/Outlook export. UI in 30 languages; documents from the EU, UK, Switzerland and Norway. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deployed on Vercel — a web product with a mobile app on the roadmap.",
-      de: "AI Document ist mein Flagship live unter aidocument.eu — Assistent für Behördensachen für alle, die Schreiben in einer Fremdsprache (oder der eigenen) erhalten und keine Frist verpassen dürfen. PDF oder Handyfoto hochladen: KI erkennt Land und Rechtskontext, erklärt den Inhalt verständlich, extrahiert Beträge, IBAN und Daten und führt danach einen Dialog — fehlende Fakten nachfragen, damit eine Antwort entsteht, die per E-Mail oder ausgedruckt per Post versandfertig ist (Kopf, Behördenadresse, Datum, Text und Handunterschrift aus den Einstellungen). Die Word-Datei bleibt editierbar. Erkannte Fristen landen im Aufgabenpanel: E-Mail-Erinnerung 1, 2 oder 3 Tage vorher plus Export nach Google Calendar oder Apple/Outlook. UI in 30 Sprachen; Schreiben aus EU, UK, Schweiz und Norwegen. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, Deploy auf Vercel — Webprodukt mit geplanter Mobile-App.",
-      es: "AI Document es mi producto estrella en aidocument.eu — asistente de trámites para quien recibe escritos en otro idioma (o el propio) y no puede permitirse un plazo perdido. Subes un PDF o una foto del móvil: la IA detecta el país y el marco legal, explica el contenido en lenguaje claro, extrae importes, IBAN y fechas, y luego dialoga — pregunta lo que falta para generar una respuesta lista para enviar por email o imprimir y enviar por correo (cabecera, dirección de la oficina, fecha, cuerpo y firma manuscrita desde ajustes). El Word sigue siendo editable. Los plazos detectados van al panel de tareas: recordatorio por email 1, 2 o 3 días antes y exportación a Google Calendar o Apple/Outlook. Interfaz en 30 idiomas; documentos de la UE, Reino Unido, Suiza y Noruega. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deploy en Vercel — producto web con app móvil en el roadmap.",
-      uk: "AI Document — мій флагманський продукт на aidocument.eu: асистент офіційних справ для тих, хто отримує листи іноземною (або рідною) мовою й не може пропустити термін. Завантажуєш PDF або фото з телефону: AI визначає країну й правовий контекст, пояснює зміст простою мовою, витягує суми, IBAN і дати, а потім веде діалог — запитує відсутні факти, щоб згенерувати відповідь, готову надіслати emailом або роздрукувати й відправити поштою (шапка, адреса установи, дата, текст і власний підпис із налаштувань). Файл Word залишається редагованим. Виявлені терміни потрапляють у панель завдань: email-нагадування за 1, 2 або 3 дні та експорт у Google Calendar чи Apple/Outlook. Інтерфейс 30 мовами; документи з ЄС, UK, Швейцарії та Норвегії. Стек: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, деплой на Vercel — вебпродукт із планом мобільного додатка.",
+      pl: "Dokiero to mój flagowy produkt live na dokiero.com — asystent spraw urzędowych dla osób, które dostają pisma w obcym języku (lub we własnym) i nie chcą ryzykować przeoczonego terminu. Wgrywasz PDF albo zdjęcie z telefonu: AI rozpoznaje kraj i przepisy, wyjaśnia treść po ludzku, wyciąga kwoty, IBAN i daty, a potem prowadzi dialog — dopytuje o brakujące fakty, żeby wygenerować pismo odpowiedzi gotowe do wysyłki e-mailem lub listownie po wydruku (z nagłówkiem, adresem urzędu, datą, treścią i własnoręcznym podpisem z ustawień). Plik Word zostaje edytowalny, gdy trzeba coś poprawić. Wykryte terminy trafiają do panelu zadań: przypomnienie na maila 1, 2 lub 3 dni wcześniej oraz dodanie do kalendarza Google albo Apple/Outlook. Interfejs w 30 językach; pisma z UE, UK, Szwajcarii i Norwegii. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deploy na Vercel — produkt webowy z planem aplikacji mobilnej.",
+      en: "Dokiero is my flagship product live at dokiero.com — an official-matters assistant for people who receive letters in a foreign language (or their own) and cannot afford a missed deadline. Upload a PDF or phone photo: AI detects the country and legal context, explains the letter in plain language, extracts amounts, IBAN and dates, then runs a guided dialogue — asking for missing facts so it can draft a reply ready to email or print and post (header, office address, date, body and a handwritten signature from settings). The Word file stays editable when you need a tweak. Detected deadlines land in the tasks panel: email reminders 1, 2 or 3 days ahead plus Google Calendar or Apple/Outlook export. UI in 30 languages; documents from the EU, UK, Switzerland and Norway. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deployed on Vercel — a web product with a mobile app on the roadmap.",
+      de: "Dokiero ist mein Flagship live unter dokiero.com — Assistent für Behördensachen für alle, die Schreiben in einer Fremdsprache (oder der eigenen) erhalten und keine Frist verpassen dürfen. PDF oder Handyfoto hochladen: KI erkennt Land und Rechtskontext, erklärt den Inhalt verständlich, extrahiert Beträge, IBAN und Daten und führt danach einen Dialog — fehlende Fakten nachfragen, damit eine Antwort entsteht, die per E-Mail oder ausgedruckt per Post versandfertig ist (Kopf, Behördenadresse, Datum, Text und Handunterschrift aus den Einstellungen). Die Word-Datei bleibt editierbar. Erkannte Fristen landen im Aufgabenpanel: E-Mail-Erinnerung 1, 2 oder 3 Tage vorher plus Export nach Google Calendar oder Apple/Outlook. UI in 30 Sprachen; Schreiben aus EU, UK, Schweiz und Norwegen. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, Deploy auf Vercel — Webprodukt mit geplanter Mobile-App.",
+      es: "Dokiero es mi producto estrella en dokiero.com — asistente de trámites para quien recibe escritos en otro idioma (o el propio) y no puede permitirse un plazo perdido. Subes un PDF o una foto del móvil: la IA detecta el país y el marco legal, explica el contenido en lenguaje claro, extrae importes, IBAN y fechas, y luego dialoga — pregunta lo que falta para generar una respuesta lista para enviar por email o imprimir y enviar por correo (cabecera, dirección de la oficina, fecha, cuerpo y firma manuscrita desde ajustes). El Word sigue siendo editable. Los plazos detectados van al panel de tareas: recordatorio por email 1, 2 o 3 días antes y exportación a Google Calendar o Apple/Outlook. Interfaz en 30 idiomas; documentos de la UE, Reino Unido, Suiza y Noruega. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deploy en Vercel — producto web con app móvil en el roadmap.",
+      uk: "Dokiero — мій флагманський продукт на dokiero.com: асистент офіційних справ для тих, хто отримує листи іноземною (або рідною) мовою й не може пропустити термін. Завантажуєш PDF або фото з телефону: AI визначає країну й правовий контекст, пояснює зміст простою мовою, витягує суми, IBAN і дати, а потім веде діалог — запитує відсутні факти, щоб згенерувати відповідь, готову надіслати emailом або роздрукувати й відправити поштою (шапка, адреса установи, дата, текст і власний підпис із налаштувань). Файл Word залишається редагованим. Виявлені терміни потрапляють у панель завдань: email-нагадування за 1, 2 або 3 дні та експорт у Google Calendar чи Apple/Outlook. Інтерфейс 30 мовами; документи з ЄС, UK, Швейцарії та Норвегії. Стек: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, деплой на Vercel — вебпродукт із планом мобільного додатка.",
     },
   },
   {

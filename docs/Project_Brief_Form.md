@@ -15,12 +15,12 @@ Nie ma osobnej strony `/services`, pakietów ani cennika. Oferta wynika z copy i
 | Powierzchnia | Przekaz                                                                          | Źródło                                           |
 | ------------ | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | Landing      | Produkty cyfrowe, strony i aplikacje — od koncepcji po wdrożenie                 | `messages/*/landing.tagline`                     |
-| Kim jestem   | AI Document; strony firmowe i landingi (SEO + motion); Lyamo i panele operacyjne | `about.buildingItems.*`                          |
+| Kim jestem   | Dokiero; strony firmowe i landingi (SEO + motion); Lyamo i panele operacyjne | `about.buildingItems.*`                          |
 | Projekty     | Filtry **Strony internetowe** / **Aplikacje**                                    | `src/content/projects.ts` (`websites` \| `apps`) |
 | Kontakt      | „Masz pomysł na produkt, stronę lub współpracę?”                                 | `contact.lead`                                   |
 | CV           | Full-stack: aplikacje, SaaS/AI, strony komercyjne                                | `src/content/cv.ts`                              |
 
-Dowód klientcki stron: case study AK Gebäudeservice (end-to-end: design, domena, hosting). Dowód aplikacji: AI Document, Lyamo.
+Dowód klientcki stron: case study AK Gebäudeservice (end-to-end: design, domena, hosting). Dowód aplikacji: Dokiero, Lyamo.
 
 Klucz: wizytówka pozycjonuje Piotra jako inżyniera produktu / foundera, który bierze też zlecenia — **nie jako agencję tylko od stron WWW**.
 

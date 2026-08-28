@@ -75,7 +75,7 @@ Szczegóły sitemap / hreflang / OG: [`docs/SEO.md`](SEO.md).
 ## 7. Post-launch smoke
 
 - [ ] `/pl`, `/en`, language switcher
-- [ ] Projects: AI Document (`aidocument.eu`), Lyamo (`lyamo.eu`), AK
+- [ ] Projects: Dokiero (`dokiero.com`), Lyamo (`lyamo.eu`), AK
 - [ ] Contact form (Turnstile + Brevo: inbox + auto-reply)
 - [ ] Logo w mailach z `https://piotrkulbacki.com/brand/…`
 - [ ] OG preview (FB Debugger) + GSC sitemap

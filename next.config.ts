@@ -5,6 +5,15 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  async redirects() {
+    return [
+      {
+        source: "/:locale(pl|en|de|es|uk)/projects/ai-document",
+        destination: "/:locale/projects/dokiero",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

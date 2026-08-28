@@ -48,7 +48,7 @@ Landing na mobile: hero wypełnia pierwszy viewport; poniżej do scrolla główn
 
 Sekcja **CV / Doświadczenie** (`/path`): pełne CV online — [`docs/CV_Online.md`](docs/CV_Online.md).
 
-**Projekty (live):** AI Document → [aidocument.eu](https://aidocument.eu/), Lyamo → [lyamo.eu](https://lyamo.eu/), AK Gebäudeservice. Reguły case study: [`docs/Projects_Section.md`](docs/Projects_Section.md).
+**Projekty (live):** Dokiero → [dokiero.com](https://dokiero.com/), Lyamo → [lyamo.eu](https://lyamo.eu/), AK Gebäudeservice. Reguły case study: [`docs/Projects_Section.md`](docs/Projects_Section.md).
 
 Prawne: `/impressum`, `/privacy`, `/agb`, `/widerruf`, baner cookies — [`docs/Legal_and_Cookies.md`](docs/Legal_and_Cookies.md).  
 Analityka (Vercel + opcjonalne GA4, Consent Mode v2): [`docs/Analytics.md`](docs/Analytics.md).
@@ -59,7 +59,7 @@ SEO (robots, sitemap, OG z logo): [`docs/SEO.md`](docs/SEO.md).
 
 1. **Google Search Console** — weryfikacja + submit `sitemap.xml`
 2. (Opcjonalnie) **GA4** — `NEXT_PUBLIC_GA_MEASUREMENT_ID` na Vercel + smoke Consent Mode
-3. Case study: screenshoty AI Document
+3. Case study: screenshoty Dokiero
 4. Lighthouse + LinkedIn
 
 Szczegóły: [`PROJECT_CHECKLIST.md`](PROJECT_CHECKLIST.md).

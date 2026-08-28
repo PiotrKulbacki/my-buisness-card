@@ -198,9 +198,9 @@ export const cv = {
       },
     },
     {
-      id: "ai-document",
-      title: "AI Document",
-      liveUrl: "https://aidocument.eu/",
+      id: "dokiero",
+      title: "Dokiero",
+      liveUrl: "https://dokiero.com/",
       summary: {
         pl: "Flagowy produkt: AI skanuje obce pisma, generuje gotowe odpowiedzi z podpisem, pilnuje terminów i przypomina e-mailem (30 języków).",
         en: "Flagship product: AI scans foreign letters, drafts signed replies, tracks deadlines and email reminders (30 languages).",

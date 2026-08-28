@@ -60,7 +60,7 @@ Padding strony: kompaktowy u góry (`pt-4 md:pt-8`), żeby na desktopie cover mi
 ## Flagi treści
 
 - `courseProject: true` → badge „Podczas kursu…”, zwykle bez `liveUrl` (`notLive`).
-- `featured: true` → wyróżnienie (flagowiec: AI Document).
+- `featured: true` → wyróżnienie (flagowiec: Dokiero).
 - Brak `liveUrl` → `projects.notLive`, nie pusty link.
 
 ## Aktualny katalog projektów (2026-08-09)
@@ -69,14 +69,14 @@ Kolejność na liście = kolejność w `projects[]`.
 
 | Slug                 | Kategoria | Live                                           | Screeny                                |
 | -------------------- | --------- | ---------------------------------------------- | -------------------------------------- |
-| `ai-document`        | apps      | `https://aidocument.eu/`                       | OK w `public/projects/ai-document/`    |
+| `dokiero`            | apps      | `https://dokiero.com/`                         | OK w `public/projects/dokiero/`        |
 | `lyamo`              | apps      | `https://lyamo.eu/`                            | OK w `public/projects/lyamo/`          |
 | `wc26-predictor`     | websites  | `https://wc26-predictor-zapraszam.vercel.app/` | OK w `public/projects/wc26-predictor/` |
 | `ak-gebaeudeservice` | websites  | `https://www.akgebaeudeservice.com/`           | OK                                     |
 | `movieweb`           | apps      | — (kurs)                                       | OK                                     |
 | `sportclub`          | apps      | — (kurs)                                       | OK                                     |
 
-AI Document: cover `01-dashboard.png`, galeria `02`–`08` + `10`; PII (imię, e-mail, adres) — wyłącznie soft blur na tekście, bez czarnych/szarych prostokątów.
+Dokiero: cover `01-dashboard.png`, galeria `02`–`08` + `10`; PII (imię, e-mail, adres) — wyłącznie soft blur na tekście, bez czarnych/szarych prostokątów. Stary slug `/projects/ai-document` → 301 na `/projects/dokiero`.
 
 Sitemap case studies: `docs/SEO.md`.
 

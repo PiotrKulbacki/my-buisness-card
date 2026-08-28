@@ -106,7 +106,7 @@ Wdrożone summary podkreśla:
 
 ## Stack — grupy
 
-Źródła: PDF + aktualna praktyka (Lyamo, AI Document, strony klientów, wizytówka).
+Źródła: PDF + aktualna praktyka (Lyamo, Dokiero, strony klientów, wizytówka).
 
 ### Frontend
 
@@ -150,7 +150,7 @@ Szczegóły → zakładka **Projekty**. Tu: nazwa, 1–2 zdania, opcjonalnie liv
 
 1. **MovieWeb App** — badge: podczas kursu programowania
 2. **Sport Club PowerPlay** — badge: podczas kursu programowania
-3. **AI Document** — `https://aidocument.eu/`
+3. **Dokiero** — `https://dokiero.com/`
 4. **Lyamo** — `https://lyamo.eu/`
 5. **AK Gebäudeservice** — `https://www.akgebaeudeservice.com/`
 6. **WC26 Predictor** — `https://wc26-predictor-zapraszam.vercel.app/`

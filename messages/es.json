@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Piotr Kulbacki — Web & Product Engineer",
-    "description": "Construyo productos digitales modernos, webs y apps. Creador de AI Document. Disponible en remoto."
+    "description": "Construyo productos digitales modernos, webs y apps. Creador de Dokiero. Disponible en remoto."
   },
   "nav": {
     "about": "Quién soy",
@@ -31,7 +31,7 @@
     "buildingTitle": "Qué construyo",
     "buildingBody": "Productos propios y trabajo para clientes — con foco en UX y buena ingeniería.",
     "buildingItems": {
-      "product": "AI Document — asistente de trámites con IA (30 idiomas)",
+      "product": "Dokiero — asistente de trámites con IA (30 idiomas)",
       "websites": "Webs corporativas y landings con SEO y motion",
       "apps": "Lyamo y otras apps web / dashboards operativos"
     },

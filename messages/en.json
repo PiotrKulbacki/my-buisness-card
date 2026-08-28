@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Piotr Kulbacki — Software Engineer",
-    "description": "I build modern digital products, websites and apps. Creator of AI Document. Available for remote collaboration."
+    "description": "I build modern digital products, websites and apps. Creator of Dokiero. Available for remote collaboration."
   },
   "nav": {
     "about": "Who I am",
@@ -31,7 +31,7 @@
     "buildingTitle": "What I build",
     "buildingBody": "I ship my own products and client work — with a strong focus on UX quality and solid engineering.",
     "buildingItems": {
-      "product": "AI Document — official-matters AI assistant (30 languages)",
+      "product": "Dokiero — official-matters AI assistant (30 languages)",
       "websites": "Company sites and landings with SEO and motion",
       "apps": "Lyamo and other web apps / ops dashboards"
     },
