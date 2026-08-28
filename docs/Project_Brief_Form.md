@@ -12,13 +12,13 @@ Status: **wdrożone**. Specyfikacja i uzasadnienie decyzji poniżej.
 
 Nie ma osobnej strony `/services`, pakietów ani cennika. Oferta wynika z copy i portfolio:
 
-| Powierzchnia | Przekaz                                                                          | Źródło                                           |
-| ------------ | -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| Landing      | Produkty cyfrowe, strony i aplikacje — od koncepcji po wdrożenie                 | `messages/*/landing.tagline`                     |
+| Powierzchnia | Przekaz                                                                      | Źródło                                           |
+| ------------ | ---------------------------------------------------------------------------- | ------------------------------------------------ |
+| Landing      | Produkty cyfrowe, strony i aplikacje — od koncepcji po wdrożenie             | `messages/*/landing.tagline`                     |
 | Kim jestem   | Dokiero; strony firmowe i landingi (SEO + motion); Lyamo i panele operacyjne | `about.buildingItems.*`                          |
-| Projekty     | Filtry **Strony internetowe** / **Aplikacje**                                    | `src/content/projects.ts` (`websites` \| `apps`) |
-| Kontakt      | „Masz pomysł na produkt, stronę lub współpracę?”                                 | `contact.lead`                                   |
-| CV           | Full-stack: aplikacje, SaaS/AI, strony komercyjne                                | `src/content/cv.ts`                              |
+| Projekty     | Filtry **Strony internetowe** / **Aplikacje**                                | `src/content/projects.ts` (`websites` \| `apps`) |
+| Kontakt      | „Masz pomysł na produkt, stronę lub współpracę?”                             | `contact.lead`                                   |
+| CV           | Full-stack: aplikacje, SaaS/AI, strony komercyjne                            | `src/content/cv.ts`                              |
 
 Dowód klientcki stron: case study AK Gebäudeservice (end-to-end: design, domena, hosting). Dowód aplikacji: Dokiero, Lyamo.
 

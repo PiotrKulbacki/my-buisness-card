@@ -56,12 +56,12 @@ Test: Debugger FB / LinkedIn Post Inspector / View Source (`og:title`, `og:image
 
 Źródło tras: `getIndexableRoutes()` w `seo.ts`.
 
-| Grupa        | Ścieżki (bez locale)                                                                              | Priorytet (orientacyjnie) |
-| ------------ | ------------------------------------------------------------------------------------------------- | ------------------------- |
-| Home         | `""`                                                                                              | 1.0                       |
-| Główne       | `/about`, `/projects`, `/path`, `/contact`, `/contact/brief`                                      | 0.6–0.9                   |
-| Case studies | `/projects/dokiero`, `lyamo`, `wc26-predictor`, `ak-gebaeudeservice`, `movieweb`, `sportclub`     | 0.7                       |
-| Prawne       | `/privacy`, `/impressum`, `/agb`, `/widerruf`                                                     | 0.3                       |
+| Grupa        | Ścieżki (bez locale)                                                                          | Priorytet (orientacyjnie) |
+| ------------ | --------------------------------------------------------------------------------------------- | ------------------------- |
+| Home         | `""`                                                                                          | 1.0                       |
+| Główne       | `/about`, `/projects`, `/path`, `/contact`, `/contact/brief`                                  | 0.6–0.9                   |
+| Case studies | `/projects/dokiero`, `lyamo`, `wc26-predictor`, `ak-gebaeudeservice`, `movieweb`, `sportclub` | 0.7                       |
+| Prawne       | `/privacy`, `/impressum`, `/agb`, `/widerruf`                                                 | 0.3                       |
 
 **Łącznie:** (10 stron nawigacji/prawnych/brief + 6 case studies) × 5 locale = **80 URL**.  
 Każdy `<url>` ma `xhtml:link` hreflang (jak metadata stron).
@@ -96,11 +96,11 @@ Test: [Rich Results Test](https://search.google.com/test/rich-results) na stroni
 
 ## Produkty w portfolio (live)
 
-| Slug                 | Live URL                                       | Uwagi                                               |
-| -------------------- | ---------------------------------------------- | --------------------------------------------------- |
-| `dokiero`            | `https://dokiero.com/`                         | Flagowiec; screeny w `public/projects/dokiero/`     |
-| `lyamo`              | `https://lyamo.eu/`                            | Flagowiec; screeny OK w `public/projects/lyamo/`    |
-| `wc26-predictor`     | `https://wc26-predictor-zapraszam.vercel.app/` | Typer MŚ 2026; screeny OK                           |
-| `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/`           | Screeny OK                                          |
+| Slug                 | Live URL                                       | Uwagi                                            |
+| -------------------- | ---------------------------------------------- | ------------------------------------------------ |
+| `dokiero`            | `https://dokiero.com/`                         | Flagowiec; screeny w `public/projects/dokiero/`  |
+| `lyamo`              | `https://lyamo.eu/`                            | Flagowiec; screeny OK w `public/projects/lyamo/` |
+| `wc26-predictor`     | `https://wc26-predictor-zapraszam.vercel.app/` | Typer MŚ 2026; screeny OK                        |
+| `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/`           | Screeny OK                                       |
 
 `siteConfig.product.url` = `https://lyamo.eu`.
