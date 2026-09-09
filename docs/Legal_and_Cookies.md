@@ -35,11 +35,15 @@ Podstawa: **§ 5 DDG** (Digitale-Dienste-Gesetz).
 | Adres           | `siteConfig.legal` — Bendastr. 11, 12051 Berlin                                                   |
 | E-mail          | `siteConfig.email`                                                                                |
 | Telefon         | `siteConfig.legal.phoneDisplay`                                                                   |
-| USt-IdNr.       | **Brak** — Kleinunternehmer (§ 19 UStG); Steuernummer **nie** publikujemy                         |
+| USt-IdNr.       | `NEXT_PUBLIC_UST_IDNR` — publiczny, gdy wydany (§ 5 DDG); Steuernummer **nie** publikujemy        |
+| Nazwa handlowa  | brak — na Gewerbe jest wyłącznie **Piotr Kulbacki** (bez dopisku Web Development)                 |
 | Handelsregister | brak wpisu — numeru nie podajemy                                                                  |
 | Streitbeilegung | brak udziału w Verbraucherschlichtung (VSBG); **bez** linku do zamkniętej platformy ODR UE (2025) |
 
-Dane adresowe, telefon i organ DPA: `src/config/site.ts` → `legal`.
+Dane adresowe, telefon i organ DPA: `src/config/site.ts` → `legal`.  
+`NEXT_PUBLIC_UST_IDNR` ustaw w **`.env.local`** oraz na **Vercel Production** (Preview opcjonalnie), potem **redeploy** — zmienne `NEXT_PUBLIC_*` są wklejane przy buildzie.
+
+Brak sekcji „odpowiedzialność za treści” (§ 18 MStV): strona to wizytówka / CV / projekty, nie oferta dziennikarsko-redakcyjna.
 
 ---
 
@@ -47,7 +51,7 @@ Dane adresowe, telefon i organ DPA: `src/config/site.ts` → `legal`.
 
 Jedyna strona prywatności (DE: tytuł **Datenschutzerklärung**). Nie dublować pod drugim URL.
 
-Sekcje (i18n, 5 locale): administrator (adres, e-mail, telefon), mapa przetwarzania, hosting (Vercel), Turnstile, formularz, brief, Brevo, analityka (Consent Mode v2), odbiorcy, transfer poza EOG, retencja, cookies (`#cookies`), prawa, organ nadzorczy Berlin (`legal.dpa`).
+Sekcje (i18n, 5 locale): administrator (adres, e-mail, telefon), **brak IOD**, mapa przetwarzania, hosting (Vercel), Turnstile, formularz, brief, **odpowiedź z szablonu (`/reply`, token HMAC 90 dni)**, **art. 9 RODO** (nie zbieramy danych szczególnych), Brevo, analityka (Consent Mode v2), odbiorcy, transfer poza EOG, retencja, cookies (`#cookies`), prawa, organ nadzorczy Berlin (`legal.dpa`).
 
 **Aktywnie używane na tej witrynie:** Vercel (hosting + Analytics po zgodzie), Cloudflare Turnstile, Brevo, GA4 + Consent Mode v2, własny banner cookies, formularz kontaktowy, brief (`sessionStorage` szkicu), first-party cookies `NEXT_LOCALE` / `pk_cookie_consent`.
 
@@ -59,7 +63,7 @@ Sekcje (i18n, 5 locale): administrator (adres, e-mail, telefon), mapa przetwarza
 
 Model współpracy na stronie: **kontakt → analiza → indywidualny zakres → oferta → akceptacja → start**. Formularz / brief **nie** zawierają umowy.
 
-- **AGB** — warunki współpracy B2B i B2C (zakres, oferty, obowiązki, IP po zapłacie, odpowiedzialność w granicach prawa, odesłanie do Widerruf dla konsumentów).
+- **AGB** — warunki współpracy B2B i B2C (zakres, oferty, obowiązki, IP po zapłacie, odpowiedzialność w granicach prawa, odesłanie do Widerruf dla konsumentów). USt-IdNr. w ofercie/AGB tylko jako odesłanie do Impressum, gdy `NEXT_PUBLIC_UST_IDNR` jest ustawione.
 - **Widerruf** — pouczenie + wzór formularza dla **konsumentów** przy umowie na odległość. Bieg 14 dni od **zawarcia umowy**, nie od wysłania formularza.
 
 Brak automatycznego flow w aplikacji na „start usługi przed 14 dniami” — to proces mailowy na trwałym nośniku, opisany w treści Widerruf i w ofercie, nie jako checkbox w formularzu.

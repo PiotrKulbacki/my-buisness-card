@@ -29,6 +29,7 @@ git push origin main
 | `CONTACT_TO_EMAIL`               | `it.piotr.kulbacki@gmail.com` (skrzynka, w której czytasz)                                         |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Cloudflare Turnstile site key                                                                      |
 | `TURNSTILE_SECRET_KEY`           | Cloudflare Turnstile secret key                                                                    |
+| `NEXT_PUBLIC_UST_IDNR`           | USt-IdNr. (publiczny) — Impressum; **Production** + redeploy (`NEXT_PUBLIC_*` jest bake-time)      |
 | `REPLY_FORM_SECRET`              | opcjonalnie — HMAC linku „Odpowiedz w szablonie”; bez tego używany jest `BREVO_API_KEY`            |
 
 5. Domains: `piotrkulbacki.com` + redirect `www` → apex

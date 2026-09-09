@@ -59,14 +59,15 @@ export default async function ImpressumPage({ params }: Props) {
 
       <LegalSection heading={t("vatHeading")}>
         <p>{t("vatBody")}</p>
+        {legal.vatId ? (
+          <p>
+            {t("vatId")}: {legal.vatId}
+          </p>
+        ) : null}
       </LegalSection>
 
       <LegalSection heading={t("registerHeading")}>
         <p>{t("registerBody")}</p>
-      </LegalSection>
-
-      <LegalSection heading={t("responsibleHeading")}>
-        <p>{t("responsibleBody", { name: siteConfig.name })}</p>
       </LegalSection>
 
       <LegalSection heading={t("disputeHeading")}>

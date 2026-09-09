@@ -35,7 +35,7 @@ Otwórz [http://localhost:3000](http://localhost:3000).
 
 1. Import repo [PiotrKulbacki/my-buisness-card](https://github.com/PiotrKulbacki/my-buisness-card)
 2. **Root Directory:** zostaw puste / `.` (aplikacja jest w rootcie)
-3. Env vars — patrz [`docs/DEPLOY.md`](docs/DEPLOY.md)
+3. Env vars — patrz [`docs/DEPLOY.md`](docs/DEPLOY.md) (`NEXT_PUBLIC_UST_IDNR` lokalnie w `.env.local` i na Vercel Production + redeploy)
 
 ## Nawigacja (stan obecny)
 

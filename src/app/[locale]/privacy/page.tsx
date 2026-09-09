@@ -64,6 +64,10 @@ export default async function PrivacyPage({ params }: Props) {
         </p>
       </LegalSection>
 
+      <LegalSection heading={t("dpoHeading")}>
+        <p>{t("dpoBody")}</p>
+      </LegalSection>
+
       <LegalSection heading={t("mapHeading")}>
         <p>{t("mapIntro")}</p>
       </LegalSection>
@@ -82,6 +86,14 @@ export default async function PrivacyPage({ params }: Props) {
 
       <LegalSection heading={t("briefHeading")}>
         <LegalParagraphs text={t("briefBody")} />
+      </LegalSection>
+
+      <LegalSection heading={t("replyHeading")}>
+        <LegalParagraphs text={t("replyBody")} />
+      </LegalSection>
+
+      <LegalSection heading={t("specialCategoriesHeading")}>
+        <LegalParagraphs text={t("specialCategoriesBody")} />
       </LegalSection>
 
       <LegalSection heading={t("emailHeading")}>

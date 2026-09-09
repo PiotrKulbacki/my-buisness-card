@@ -75,6 +75,7 @@
 - [x] Contact API, privacy, robots, sitemap, metadata, JSON-LD
 - [x] SEO: wspólny OG (logo) na wszystkich URL, hreflang w sitemap, `fb:app_id` (env) — `docs/SEO.md`
 - [x] Impressum (§ 5 DDG, VSBG) + privacy (mapa przetwarzania) + AGB + Widerruf — `docs/Legal_and_Cookies.md`
+- [x] USt-IdNr. w Impressum z `NEXT_PUBLIC_UST_IDNR`; privacy: brak IOD, art. 9, branded reply `/reply`
 - [x] Brevo zamiast Resend (formularz kontaktowy + auto-reply HTML)
 - [x] Cloudflare Turnstile na formularzu kontaktowym
 - [x] Brief projektu (`/contact/brief`) — multi-step, Brevo, Turnstile; spec: `docs/Project_Brief_Form.md`
@@ -139,3 +140,4 @@
 | 2026-08-18 | Favicon Google: PNG 192/96, stabilne URL (bez `src/app/icon`), JSON-LD Organization.logo + Person.image             |
 | 2026-08-19 | WhatsApp/OG: statyczny `/og.png`, crawlerzy bez 307 i bez cookie `NEXT_LOCALE` (`docs/SEO.md`)                      |
 | 2026-08-20 | Strony prawne: Impressum (przedmiot, VSBG), rozbudowana privacy, AGB, Widerruf; nota „brak umowy” przy formularzach |
+| 2026-09-09 | Impressum: USt-IdNr. z env; usunięto § 18 MStV; privacy: brak IOD, art. 9, `/reply`; AGB odesłanie do numeru        |

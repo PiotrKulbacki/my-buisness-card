@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { siteConfig } from "@/config/site";
 import { LegalArticle, LegalParagraphs, LegalSection } from "@/components/legal/LegalArticle";
 import { AGB_SECTION_KEYS } from "@/content/legal";
 import { buildPageMetadata } from "@/lib/seo";
@@ -32,6 +33,9 @@ export default async function AgbPage({ params }: Props) {
       {AGB_SECTION_KEYS.map((key) => (
         <LegalSection key={key} heading={t(`sections.${key}.heading`)}>
           <LegalParagraphs text={t(`sections.${key}.body`)} />
+          {key === "offers" && siteConfig.legal.vatId ? (
+            <p>{t("vatNote", { vatId: siteConfig.legal.vatId })}</p>
+          ) : null}
           {key === "withdrawal" ? (
             <p>
               <Link href="/widerruf" className="underline underline-offset-4">

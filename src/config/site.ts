@@ -36,7 +36,8 @@ export const siteConfig = {
   },
   /**
    * Legal / Impressum (§ 5 DDG) — Einzelunternehmen, Kleinunternehmer (§ 19 UStG).
-   * USt-IdNr. only if issued; Steuernummer must not be published.
+   * Gewerbe name is the natural person (no separate trade name).
+   * USt-IdNr. from NEXT_PUBLIC_UST_IDNR when issued; Steuernummer must not be published.
    */
   legal: {
     street: "Bendastr. 11",
@@ -47,6 +48,7 @@ export const siteConfig = {
     phoneDisplay: "+49 157 35166871",
     phoneTel: "+4915735166871",
     entity: "Einzelunternehmen",
+    vatId: process.env.NEXT_PUBLIC_UST_IDNR?.trim() ?? "",
     /** Berlin supervisory authority (privacy page). */
     dpa: {
       name: "Berliner Beauftragte für Datenschutz und Informationsfreiheit",
