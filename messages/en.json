@@ -285,7 +285,7 @@
   "privacy": {
     "title": "Privacy policy",
     "updated": "Last updated: 9 September 2026",
-    "intro": "This site processes personal data only as needed to run the website, reply to enquiries and project briefs and — with consent — measure traffic. I do not describe services this site does not use (for example there is no Supabase database here).",
+    "intro": "This site processes personal data only as needed to run the website, reply to enquiries and project briefs and - with consent - measure traffic. I do not describe services this site does not use (for example there is no Supabase database here).",
     "controllerHeading": "Data controller",
     "controllerBody": "The controller is {name} (sole proprietorship / Einzelunternehmen, Berlin).",
     "email": "Email",
@@ -299,28 +299,28 @@
     "turnstileHeading": "Form protection (Cloudflare Turnstile)",
     "turnstileBody": "Data: challenge token, IP address, limited browser signals used to tell humans from bots.\n\nPurpose: protecting the contact form and brief from spam and abuse.\n\nLegal basis: Art. 6(1)(f) GDPR.\n\nRecipient: Cloudflare, Inc., USA.\n\nTransfer outside the EEA: yes (USA), Cloudflare SCCs.\n\nRetention: verification is short-lived; Cloudflare may keep limited security logs under its own policy.",
     "formHeading": "Contact form",
-    "formBody": "Data you provide: name, email, optional phone, message; plus locale and the Turnstile result.\n\nPurpose: contact, clarifying the request and — if we talk — preparing an offer and performing a contract. Submitting the form does not conclude a contract.\n\nLegal basis: Art. 6(1)(b) GDPR (pre-contractual steps at your request) and (f).\n\nRecipient: me as controller; email delivery via Brevo (Sendinblue GmbH, Germany).\n\nTransfer outside the EEA: the form is not designed for that; Brevo processes in the EU.\n\nRetention: enquiries without a contract — up to 12 months after last contact, then deletion unless longer storage is needed to defend claims. If we work together, correspondence and accounting rules below apply.",
+    "formBody": "Data you provide: name, email, optional phone, message; plus locale and the Turnstile result.\n\nPurpose: contact, clarifying the request and - if we talk - preparing an offer and performing a contract. Submitting the form does not conclude a contract.\n\nLegal basis: Art. 6(1)(b) GDPR (pre-contractual steps at your request) and (f).\n\nRecipient: me as controller; email delivery via Brevo (Sendinblue GmbH, Germany).\n\nTransfer outside the EEA: the form is not designed for that; Brevo processes in the EU.\n\nRetention: enquiries without a contract - up to 12 months after last contact, then deletion unless longer storage is needed to defend claims. If we work together, correspondence and accounting rules below apply.",
     "briefHeading": "Project brief",
     "briefBody": "Data: name, email, optional phone and answers about the project (type, names, goals, scope, materials, languages, integrations, timeline).\n\nPurpose: understanding the project and preparing an individual proposal. The brief is not an order.\n\nLegal basis: Art. 6(1)(b) or (f) GDPR.\n\nRecipient and transfer: same as the contact form (Brevo in the EU).\n\nRetention: same as contact enquiries. A browser draft (sessionStorage) stays on your device until you send or leave the session; after a successful send it is cleared. The draft is not uploaded beforehand.\n\nNo marketing use without separate consent.",
     "replyHeading": "Branded reply from notification emails",
     "replyBody": "When you write via the contact form or brief, the notification in my inbox may include a reply button. It opens a private /reply page (not indexed) with a signed HMAC token: your name, email, enquiry source, language and an expiry (90 days). The token lives in the link; it is not stored in a database.\n\nThe form sends my reply through Brevo in the site email template to your address; a copy may go to my inbox (BCC). Legal basis: Art. 6(1)(b) or (f) GDPR. The reply page is not protected by Turnstile (only the link holder can open it); requests are rate-limited. After sending, correspondence retention below applies.",
     "specialCategoriesHeading": "Special categories of data (Art. 9 GDPR)",
-    "specialCategoriesBody": "The forms, brief and reply channel are not meant to collect special categories of personal data (Art. 9 GDPR) — for example health, racial or ethnic origin, political opinions, religion, trade-union membership, genetic or biometric data, or data concerning sex life or sexual orientation. Please do not send those data.\n\nIf they appear incidentally in a message, I process them only to handle the enquiry or to ask you to resend without them, then delete them when they are no longer needed. I do not collect Art. 9 data on purpose and do not rely on explicit Art. 9(2)(a) consent for this site.",
+    "specialCategoriesBody": "The forms, brief and reply channel are not meant to collect special categories of personal data (Art. 9 GDPR) - for example health, racial or ethnic origin, political opinions, religion, trade-union membership, genetic or biometric data, or data concerning sex life or sexual orientation. Please do not send those data.\n\nIf they appear incidentally in a message, I process them only to handle the enquiry or to ask you to resend without them, then delete them when they are no longer needed. I do not collect Art. 9 data on purpose and do not rely on explicit Art. 9(2)(a) consent for this site.",
     "emailHeading": "Transactional email (Brevo)",
-    "emailBody": "Data: email addresses, name, message/brief content, delivery metadata.\n\nPurpose: delivering mail to my inbox, an automatic acknowledgement, and any follow-up on that channel.\n\nLegal basis: Art. 6(1)(b) or (f) GDPR.\n\nRecipient: Sendinblue GmbH (Brevo), Germany, as processor.\n\nTransfer outside the EEA: generally no — processing in the EU.\n\nRetention: operational copies at Brevo as long as needed for delivery and handling, then according to correspondence retention.",
+    "emailBody": "Data: email addresses, name, message/brief content, delivery metadata.\n\nPurpose: delivering mail to my inbox, an automatic acknowledgement, and any follow-up on that channel.\n\nLegal basis: Art. 6(1)(b) or (f) GDPR.\n\nRecipient: Sendinblue GmbH (Brevo), Germany, as processor.\n\nTransfer outside the EEA: generally no - processing in the EU.\n\nRetention: operational copies at Brevo as long as needed for delivery and handling, then according to correspondence retention.",
     "analyticsHeading": "Analytics (Vercel Analytics and Google Analytics 4)",
-    "analyticsBody": "Vercel Analytics: minimised traffic metrics (no classic tracking cookies).\n\nGA4 (only after consent): cookie IDs (_ga / _ga_*), approximate region, device, page views, traffic source.\n\nPurpose: understanding which pages help and improving the site — not ads.\n\nLegal basis: Art. 6(1)(a) GDPR (banner consent). Until you choose, Google Consent Mode v2 sets analytics_storage and ad_* to “denied”. After “Accept all” I set only analytics_storage=granted; ad_storage, ad_user_data and ad_personalization stay denied. “Necessary only” or a later footer change keeps GA off.\n\nRecipients: Vercel Inc.; Google Ireland Ltd. / Google LLC.\n\nTransfer outside the EEA: Vercel and Google LLC (USA) — SCCs / the providers’ transfer frameworks.\n\nRetention: consent in pk_cookie_consent — 12 months. GA cookies according to Google (typically up to 14 months in default GA4 retention unless I shorten it).",
+    "analyticsBody": "Vercel Analytics: minimised traffic metrics (no classic tracking cookies).\n\nGA4 (only after consent): cookie IDs (_ga / _ga_*), approximate region, device, page views, traffic source.\n\nPurpose: understanding which pages help and improving the site - not ads.\n\nLegal basis: Art. 6(1)(a) GDPR (banner consent). Until you choose, Google Consent Mode v2 sets analytics_storage and ad_* to “denied”. After “Accept all” I set only analytics_storage=granted; ad_storage, ad_user_data and ad_personalization stay denied. “Necessary only” or a later footer change keeps GA off.\n\nRecipients: Vercel Inc.; Google Ireland Ltd. / Google LLC.\n\nTransfer outside the EEA: Vercel and Google LLC (USA) - SCCs / the providers’ transfer frameworks.\n\nRetention: consent in pk_cookie_consent - 12 months. GA cookies according to Google (typically up to 14 months in default GA4 retention unless I shorten it).",
     "recipientsHeading": "Recipients of personal data",
-    "recipientsBody": "Depending on the feature:\n\n• Vercel Inc. — hosting and optional analytics after consent\n• Cloudflare, Inc. — Turnstile\n• Sendinblue GmbH (Brevo) — email sending, including branded replies from the notification link\n• Google Ireland Ltd. / Google LLC — GA4 only after analytics consent\n\nI do not sell data. No Meta Pixel, Google Ads or external CMP.",
+    "recipientsBody": "Depending on the feature:\n\n• Vercel Inc. - hosting and optional analytics after consent\n• Cloudflare, Inc. - Turnstile\n• Sendinblue GmbH (Brevo) - email sending, including branded replies from the notification link\n• Google Ireland Ltd. / Google LLC - GA4 only after analytics consent\n\nI do not sell data. No Meta Pixel, Google Ads or external CMP.",
     "transfersHeading": "Transfers outside the EEA",
     "transfersBody": "Vercel, Cloudflare and Google LLC have establishments or subprocessors in the USA and use standard contractual clauses or an equivalent transfer tool. Brevo (Sendinblue GmbH) processes in the EU.\n\nThere is no generic “data may be sent worldwide” clause without naming the recipient.",
     "retentionHeading": "How long I keep data",
     "retentionBody": "• Enquiries and briefs without a contract: up to 12 months after last contact.\n• Signed reply-form tokens: 90 days in the link, then invalid.\n• Business correspondence during an offer / project: up to 3 years after the matter ends (possible claims), unless a shorter period is enough.\n• Client data and invoices / accounting records: 10 years if tax duties arise.\n• Hosting logs: short, per Vercel, unless a security incident.\n• Analytics consent: 12 months or until withdrawn.\n• Cookie choice: until the consent cookie expires or you clear the browser.\n• Brief sessionStorage: locally, until send or tab close.\n\nAfter that I delete or anonymise, unless the law requires keeping the data.",
     "cookiesHeading": "Cookies and consent",
     "cookiesBody": "I use first-party cookies that are necessary for the site and to remember your analytics choice. Analytics (Vercel Analytics + GA4) is blocked before consent. Refusal (“Necessary only”) is as available as acceptance. You can change the choice anytime via the footer. Consent lifetime: 12 months.",
-    "cookieLocale": "necessary — remembers the selected language (next-intl), 12 months.",
-    "cookieConsent": "necessary — stores your analytics choice (version, flag, date), 12 months.",
-    "cookieGa": "analytics (only after consent) — Google Analytics 4, e.g. _ga / _ga_*.",
+    "cookieLocale": "necessary - remembers the selected language (next-intl), 12 months.",
+    "cookieConsent": "necessary - stores your analytics choice (version, flag, date), 12 months.",
+    "cookieGa": "analytics (only after consent) - Google Analytics 4, e.g. _ga / _ga_*.",
     "cookiesNoMarketing": "No advertising cookies or marketing trackers (e.g. Meta Pixel). This site does not run a Supabase database.",
     "rightsHeading": "Your rights",
     "rightsIntro": "Under the GDPR you may:",
@@ -337,7 +337,7 @@
   },
   "cookies": {
     "title": "Cookies & analytics",
-    "body": "I use necessary cookies (language and consent memory). Analytics (Vercel Analytics + Google Analytics 4) runs only with your consent — no advertising cookies.",
+    "body": "I use necessary cookies (language and consent memory). Analytics (Vercel Analytics + Google Analytics 4) runs only with your consent - no advertising cookies.",
     "learnMore": "More in the privacy policy",
     "necessaryOnly": "Necessary only",
     "acceptAll": "Accept all"
@@ -413,7 +413,7 @@
   },
   "email": {
     "layout": {
-      "footerLead": "{name} — personal website"
+      "footerLead": "{name} - personal website"
     },
     "inbox": {
       "subject": "Portfolio contact from {name}",
@@ -431,7 +431,7 @@
       "body": "Thank you for getting in touch. I received your message and will reply within 1–2 business days.",
       "messageLabel": "Your message:",
       "signOff": "Best regards,\n{name}",
-      "footerNote": "This is an automatic confirmation. Please do not reply to this email if you need something else — I will write back from my address."
+      "footerNote": "This is an automatic confirmation. Please do not reply to this email if you need something else - I will write back from my address."
     },
     "briefInbox": {
       "subject": "Project enquiry: {name}",
@@ -445,13 +445,13 @@
       "body": "Thank you for outlining your project. I will review your answers and usually reply within 1–2 business days.",
       "summaryLabel": "Your answers:",
       "signOff": "Best regards,\n{name}",
-      "footerNote": "This is an automatic confirmation. Please do not reply to this email if you need something else — I will write back from my address."
+      "footerNote": "This is an automatic confirmation. Please do not reply to this email if you need something else - I will write back from my address."
     },
     "ownerReply": {
       "subject": "Re: {originalSubject}",
       "greeting": "Hi {name},",
       "signOff": "Best regards,\n{name}",
-      "footerNote": "You can reply to this email — it will reach my address."
+      "footerNote": "You can reply to this email - it will reach my address."
     }
   },
   "agb": {
@@ -468,15 +468,15 @@
       },
       "clients": {
         "heading": "2. B2B and B2C clients",
-        "body": "I work with businesses and consumers. Consumers keep their statutory rights, including withdrawal for distance contracts — see the Withdrawal page. Clauses that would be invalid toward a consumer are not applied to them."
+        "body": "I work with businesses and consumers. Consumers keep their statutory rights, including withdrawal for distance contracts - see the Withdrawal page. Clauses that would be invalid toward a consumer are not applied to them."
       },
       "conclusion": {
         "heading": "3. Contact and conclusion of contract",
-        "body": "You can contact me via the form, brief, email, phone or other listed channels. Sending a form or brief is an enquiry, not a binding offer and not an obligation to buy.\n\nA contract is formed when both sides agree an individual scope and price — usually by written or email confirmation of an offer. Until then I may decline the work without giving reasons."
+        "body": "You can contact me via the form, brief, email, phone or other listed channels. Sending a form or brief is an enquiry, not a binding offer and not an obligation to buy.\n\nA contract is formed when both sides agree an individual scope and price - usually by written or email confirmation of an offer. Until then I may decline the work without giving reasons."
       },
       "offers": {
         "heading": "4. Offers and pricing",
-        "body": "Each project is scoped and priced individually. Offers bind for the period stated; if none is stated — 14 days. Prices are under the small-business VAT scheme: I do not charge VAT (§ 19 UStG)."
+        "body": "Each project is scoped and priced individually. Offers bind for the period stated; if none is stated - 14 days. Prices are under the small-business VAT scheme: I do not charge VAT (§ 19 UStG)."
       },
       "services": {
         "heading": "5. Services",
@@ -516,7 +516,7 @@
       },
       "ip": {
         "heading": "14. Rights and licence",
-        "body": "Until full payment, the agreed usage rights stay with me. After full payment the client receives — unless the offer says otherwise — an exclusive, geographically and temporally unlimited licence to use the deliverables for the agreed purpose. Open-source components and third-party assets stay under their own licences."
+        "body": "Until full payment, the agreed usage rights stay with me. After full payment the client receives - unless the offer says otherwise - an exclusive, geographically and temporally unlimited licence to use the deliverables for the agreed purpose. Open-source components and third-party assets stay under their own licences."
       },
       "thirdParties": {
         "heading": "15. Third-party services, hosting, domains, licences",
@@ -532,7 +532,7 @@
       },
       "withdrawal": {
         "heading": "18. Withdrawal (consumers)",
-        "body": "If the client is a consumer and a distance contract is concluded, the statutory withdrawal right applies. It does not apply to traders acting in the course of business. A mere form enquiry does not start that right — only a concluded contract does."
+        "body": "If the client is a consumer and a distance contract is concluded, the statutory withdrawal right applies. It does not apply to traders acting in the course of business. A mere form enquiry does not start that right - only a concluded contract does."
       },
       "final": {
         "heading": "19. Final provisions",

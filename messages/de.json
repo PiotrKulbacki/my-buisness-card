@@ -285,7 +285,7 @@
   "privacy": {
     "title": "Datenschutzerklärung",
     "updated": "Zuletzt aktualisiert: 9. September 2026",
-    "intro": "Diese Website verarbeitet personenbezogene Daten nur, soweit dies für den Betrieb, die Beantwortung von Anfragen und Projekt-Briefs und — mit Einwilligung — die Reichweitenmessung erforderlich ist. Dienste, die hier nicht eingesetzt werden (z. B. keine eigene Supabase-Datenbank), werden nicht beschrieben.",
+    "intro": "Diese Website verarbeitet personenbezogene Daten nur, soweit dies für den Betrieb, die Beantwortung von Anfragen und Projekt-Briefs und - mit Einwilligung - die Reichweitenmessung erforderlich ist. Dienste, die hier nicht eingesetzt werden (z. B. keine eigene Supabase-Datenbank), werden nicht beschrieben.",
     "controllerHeading": "Verantwortlicher",
     "controllerBody": "Verantwortlicher ist {name} (Einzelunternehmen, Berlin).",
     "email": "E-Mail",
@@ -299,28 +299,28 @@
     "turnstileHeading": "Formulare (Cloudflare Turnstile)",
     "turnstileBody": "Daten: Challenge-Token, IP-Adresse, begrenzte Browsersignale zur Bot-Abwehr.\n\nZweck: Schutz von Kontaktformular und Brief vor Missbrauch.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.\n\nEmpfänger: Cloudflare, Inc., USA.\n\nDrittland: ja (USA), Standardvertragsklauseln von Cloudflare.\n\nSpeicherung: die Prüfung ist kurzfristig; Cloudflare kann begrenzte Sicherheitslogs gemäß eigener Policy behalten.",
     "formHeading": "Kontaktformular",
-    "formBody": "Von Ihnen: Name, E-Mail, optional Telefon, Nachricht; plus Locale und Turnstile-Ergebnis.\n\nZweck: Kontakt, Klärung des Bedarfs und — falls es zum Gespräch kommt — Angebot und Vertragsdurchführung. Das Absenden ist kein Vertragsschluss.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Schritte auf Ihre Anfrage) sowie lit. f.\n\nEmpfänger: ich als Verantwortlicher; Versand über Brevo (Sendinblue GmbH, Deutschland).\n\nDrittland: das Formular ist nicht darauf gerichtet; Brevo verarbeitet in der EU.\n\nSpeicherung: Anfragen ohne Vertrag bis 12 Monate nach letztem Kontakt, danach Löschung, soweit nicht längere Aufbewahrung zur Rechtsverteidigung nötig ist. Bei Zusammenarbeit gelten die Fristen für Geschäftskorrespondenz und Buchhaltung unten.",
+    "formBody": "Von Ihnen: Name, E-Mail, optional Telefon, Nachricht; plus Locale und Turnstile-Ergebnis.\n\nZweck: Kontakt, Klärung des Bedarfs und - falls es zum Gespräch kommt - Angebot und Vertragsdurchführung. Das Absenden ist kein Vertragsschluss.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Schritte auf Ihre Anfrage) sowie lit. f.\n\nEmpfänger: ich als Verantwortlicher; Versand über Brevo (Sendinblue GmbH, Deutschland).\n\nDrittland: das Formular ist nicht darauf gerichtet; Brevo verarbeitet in der EU.\n\nSpeicherung: Anfragen ohne Vertrag bis 12 Monate nach letztem Kontakt, danach Löschung, soweit nicht längere Aufbewahrung zur Rechtsverteidigung nötig ist. Bei Zusammenarbeit gelten die Fristen für Geschäftskorrespondenz und Buchhaltung unten.",
     "briefHeading": "Projekt-Brief",
     "briefBody": "Daten: Name, E-Mail, optional Telefon sowie Angaben zum Projekt (Art, Namen, Ziele, Umfang, Materialien, Sprachen, Integrationen, Zeitplan).\n\nZweck: Verständnis des Vorhabens und individuelles Angebot. Der Brief ist keine Bestellung.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. b oder f DSGVO.\n\nEmpfänger/Drittland: wie Kontaktformular (Brevo in der EU).\n\nSpeicherung: wie Kontaktanfragen. Ein Entwurf im Browser (sessionStorage) bleibt auf Ihrem Gerät bis zum Absenden oder Sitzungsende; nach erfolgreichem Versand wird er gelöscht. Der Entwurf wird vorher nicht an den Server gesendet.\n\nKeine Marketingnutzung ohne gesonderte Einwilligung.",
     "replyHeading": "Antwort im Website-Template (Link aus der Benachrichtigung)",
     "replyBody": "Wenn Sie über Formular oder Brief schreiben, kann die Benachrichtigung in meinem Postfach eine Antwort-Schaltfläche enthalten. Sie öffnet eine private Seite /reply (ohne Indexierung) mit einem signierten HMAC-Token: Name, E-Mail, Herkunft der Anfrage, Sprache und Ablauf (90 Tage). Das Token steckt im Link und wird nicht in einer Datenbank gespeichert.\n\nDas Formular sendet meine Antwort über Brevo im Website-Template an Ihre Adresse; eine Kopie kann in mein Postfach (BCC) gehen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b oder f DSGVO. Die Antwortseite ist nicht durch Turnstile geschützt (nur der Linkinhaber öffnet sie); Anfragen sind ratenbegrenzt. Nach dem Versand gelten die Korrespondenzfristen unten.",
     "specialCategoriesHeading": "Besondere Kategorien von Daten (Art. 9 DSGVO)",
-    "specialCategoriesBody": "Formulare, Brief und Antwortkanal dienen nicht der Erhebung besonderer Kategorien personenbezogener Daten (Art. 9 DSGVO) — etwa Gesundheit, rassische oder ethnische Herkunft, politische Meinungen, Religion, Gewerkschaftszugehörigkeit, genetische oder biometrische Daten oder Daten zum Sexualleben oder zur sexuellen Orientierung. Bitte senden Sie solche Daten nicht.\n\nTauchen sie beiläufig in einer Nachricht auf, verarbeite ich sie nur, um die Anfrage zu bearbeiten oder um eine Fassung ohne diese Daten zu bitten, und lösche sie, sobald sie nicht mehr nötig sind. Ich erhebe Art.-9-Daten nicht gezielt und stütze mich auf dieser Website nicht auf eine ausdrückliche Einwilligung nach Art. 9 Abs. 2 lit. a DSGVO.",
+    "specialCategoriesBody": "Formulare, Brief und Antwortkanal dienen nicht der Erhebung besonderer Kategorien personenbezogener Daten (Art. 9 DSGVO) - etwa Gesundheit, rassische oder ethnische Herkunft, politische Meinungen, Religion, Gewerkschaftszugehörigkeit, genetische oder biometrische Daten oder Daten zum Sexualleben oder zur sexuellen Orientierung. Bitte senden Sie solche Daten nicht.\n\nTauchen sie beiläufig in einer Nachricht auf, verarbeite ich sie nur, um die Anfrage zu bearbeiten oder um eine Fassung ohne diese Daten zu bitten, und lösche sie, sobald sie nicht mehr nötig sind. Ich erhebe Art.-9-Daten nicht gezielt und stütze mich auf dieser Website nicht auf eine ausdrückliche Einwilligung nach Art. 9 Abs. 2 lit. a DSGVO.",
     "emailHeading": "Transaktions-E-Mail (Brevo)",
-    "emailBody": "Daten: E-Mail-Adressen, Name, Inhalt von Nachricht/Brief, Versandmetadaten.\n\nZweck: Zustellung in mein Postfach, automatische Empfangsbestätigung, ggf. weitere Korrespondenz.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. b oder f DSGVO.\n\nEmpfänger: Sendinblue GmbH (Brevo), Deutschland, als Auftragsverarbeiter.\n\nDrittland: grundsätzlich nein — Verarbeitung in der EU.\n\nSpeicherung: operative Kopien bei Brevo so lange wie für Zustellung und Bearbeitung nötig, danach gemäß Korrespondenzfristen.",
+    "emailBody": "Daten: E-Mail-Adressen, Name, Inhalt von Nachricht/Brief, Versandmetadaten.\n\nZweck: Zustellung in mein Postfach, automatische Empfangsbestätigung, ggf. weitere Korrespondenz.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. b oder f DSGVO.\n\nEmpfänger: Sendinblue GmbH (Brevo), Deutschland, als Auftragsverarbeiter.\n\nDrittland: grundsätzlich nein - Verarbeitung in der EU.\n\nSpeicherung: operative Kopien bei Brevo so lange wie für Zustellung und Bearbeitung nötig, danach gemäß Korrespondenzfristen.",
     "analyticsHeading": "Analytics (Vercel Analytics und Google Analytics 4)",
-    "analyticsBody": "Vercel Analytics: minimierte Reichweitenmessung (keine klassischen Tracking-Cookies).\n\nGA4 (nur nach Einwilligung): Cookie-IDs (_ga / _ga_*), ungefähre Region, Gerät, Seitenaufrufe, Traffic-Quelle.\n\nZweck: Verbesserung der Website — keine Werbung.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO. Bis zur Entscheidung setzt Google Consent Mode v2 analytics_storage und ad_*-Signale auf „denied“. Nach „Alle akzeptieren“ setze ich nur analytics_storage=granted; ad_storage, ad_user_data und ad_personalization bleiben denied. „Nur notwendige“ oder spätere Änderung in der Fußzeile verhindert GA.\n\nEmpfänger: Vercel Inc.; Google Ireland Ltd. / Google LLC.\n\nDrittland: Vercel und Google LLC (USA) — SCCs bzw. Transferrahmen der Anbieter.\n\nSpeicherung: Einwilligung in pk_cookie_consent — 12 Monate. GA-Cookies nach Google-Vorgaben (typisch bis 14 Monate in der Standard-GA4-Retention, sofern nicht kürzer konfiguriert).",
+    "analyticsBody": "Vercel Analytics: minimierte Reichweitenmessung (keine klassischen Tracking-Cookies).\n\nGA4 (nur nach Einwilligung): Cookie-IDs (_ga / _ga_*), ungefähre Region, Gerät, Seitenaufrufe, Traffic-Quelle.\n\nZweck: Verbesserung der Website - keine Werbung.\n\nRechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO. Bis zur Entscheidung setzt Google Consent Mode v2 analytics_storage und ad_*-Signale auf „denied“. Nach „Alle akzeptieren“ setze ich nur analytics_storage=granted; ad_storage, ad_user_data und ad_personalization bleiben denied. „Nur notwendige“ oder spätere Änderung in der Fußzeile verhindert GA.\n\nEmpfänger: Vercel Inc.; Google Ireland Ltd. / Google LLC.\n\nDrittland: Vercel und Google LLC (USA) - SCCs bzw. Transferrahmen der Anbieter.\n\nSpeicherung: Einwilligung in pk_cookie_consent - 12 Monate. GA-Cookies nach Google-Vorgaben (typisch bis 14 Monate in der Standard-GA4-Retention, sofern nicht kürzer konfiguriert).",
     "recipientsHeading": "Empfänger personenbezogener Daten",
-    "recipientsBody": "Je nach Funktion:\n\n• Vercel Inc. — Hosting und optionale Analytics nach Einwilligung\n• Cloudflare, Inc. — Turnstile\n• Sendinblue GmbH (Brevo) — E-Mail-Versand, einschließlich Antworten im Website-Template über den Benachrichtigungslink\n• Google Ireland Ltd. / Google LLC — GA4 nur nach Analytics-Einwilligung\n\nKein Verkauf. Kein Meta Pixel, keine Google Ads, kein externes CMP.",
+    "recipientsBody": "Je nach Funktion:\n\n• Vercel Inc. - Hosting und optionale Analytics nach Einwilligung\n• Cloudflare, Inc. - Turnstile\n• Sendinblue GmbH (Brevo) - E-Mail-Versand, einschließlich Antworten im Website-Template über den Benachrichtigungslink\n• Google Ireland Ltd. / Google LLC - GA4 nur nach Analytics-Einwilligung\n\nKein Verkauf. Kein Meta Pixel, keine Google Ads, kein externes CMP.",
     "transfersHeading": "Drittlandübermittlung",
     "transfersBody": "Vercel, Cloudflare und Google LLC haben Sitze oder Subprozessoren in den USA und nutzen Standardvertragsklauseln oder einen gleichwertigen Transfermechanismus. Brevo (Sendinblue GmbH) verarbeitet in der EU.\n\nEs gibt keine pauschale Klausel „Übermittlung weltweit“ ohne Benennung des Empfängers.",
     "retentionHeading": "Speicherdauer",
     "retentionBody": "• Anfragen und Briefs ohne Vertrag: bis 12 Monate nach letztem Kontakt.\n• Signierte Tokens des Antwortformulars: 90 Tage im Link, danach ungültig.\n• Geschäftskorrespondenz bei Angebot/Umsetzung: bis 3 Jahre nach Abschluss der Sache (Ansprüche), soweit nicht kürzer ausreichend.\n• Kundendaten und Buchhaltungsunterlagen/Rechnungen: 10 Jahre, soweit steuerliche Pflichten entstehen.\n• Technische Hosting-Logs: kurz, nach Vercel, außer Sicherheitsvorfall.\n• Analytics-Einwilligung: 12 Monate oder bis Widerruf.\n• Cookie-Einstellungen: bis Ablauf des Consent-Cookies oder Löschen im Browser.\n• sessionStorage des Briefs: lokal, bis Versand oder Tab-Ende.\n\nDanach Löschung oder Anonymisierung, soweit keine gesetzliche Pflicht entgegensteht.",
     "cookiesHeading": "Cookies und Einwilligung",
     "cookiesBody": "Ich nutze First-Party-Cookies, die für Betrieb und Speicherung Ihrer Analytics-Entscheidung nötig sind. Analytics (Vercel Analytics + GA4) ist vor Einwilligung blockiert. Die Ablehnung („Nur notwendige“) ist ebenso erreichbar wie die Zustimmung. Änderung jederzeit über den Link in der Fußzeile. Speicherdauer der Entscheidung: 12 Monate.",
-    "cookieLocale": "erforderlich — speichert die Sprache (next-intl), 12 Monate.",
-    "cookieConsent": "erforderlich — speichert die Analytics-Entscheidung (Version, Flag, Datum), 12 Monate.",
-    "cookieGa": "analytisch (nur nach Einwilligung) — Google Analytics 4, u. a. _ga / _ga_*.",
+    "cookieLocale": "erforderlich - speichert die Sprache (next-intl), 12 Monate.",
+    "cookieConsent": "erforderlich - speichert die Analytics-Entscheidung (Version, Flag, Datum), 12 Monate.",
+    "cookieGa": "analytisch (nur nach Einwilligung) - Google Analytics 4, u. a. _ga / _ga_*.",
     "cookiesNoMarketing": "Keine Werbe-Cookies und keine Marketing-Tracker (z. B. Meta Pixel). Diese Website betreibt keine eigene Supabase-Datenbank.",
     "rightsHeading": "Ihre Rechte",
     "rightsIntro": "Im Rahmen der DSGVO haben Sie:",
@@ -337,7 +337,7 @@
   },
   "cookies": {
     "title": "Cookies & Analytics",
-    "body": "Ich nutze notwendige Cookies (Sprache und Einwilligungsspeicher). Analytics (Vercel Analytics + Google Analytics 4) läuft nur mit Ihrer Einwilligung — ohne Werbe-Cookies.",
+    "body": "Ich nutze notwendige Cookies (Sprache und Einwilligungsspeicher). Analytics (Vercel Analytics + Google Analytics 4) läuft nur mit Ihrer Einwilligung - ohne Werbe-Cookies.",
     "learnMore": "Mehr in der Datenschutzerklärung",
     "necessaryOnly": "Nur notwendige",
     "acceptAll": "Alle akzeptieren"
@@ -413,7 +413,7 @@
   },
   "email": {
     "layout": {
-      "footerLead": "{name} — persönliche Website"
+      "footerLead": "{name} - persönliche Website"
     },
     "inbox": {
       "subject": "Portfolio-Kontakt von {name}",
@@ -431,7 +431,7 @@
       "body": "Vielen Dank für Ihre Nachricht. Ich habe sie erhalten und antworte in der Regel innerhalb von 1–2 Werktagen.",
       "messageLabel": "Ihre Nachricht:",
       "signOff": "Freundliche Grüße,\n{name}",
-      "footerNote": "Dies ist eine automatische Bestätigung. Bitte antworten Sie nicht auf diese E-Mail, wenn Sie etwas anderes brauchen — ich melde mich von meiner Adresse."
+      "footerNote": "Dies ist eine automatische Bestätigung. Bitte antworten Sie nicht auf diese E-Mail, wenn Sie etwas anderes brauchen - ich melde mich von meiner Adresse."
     },
     "briefInbox": {
       "subject": "Projektanfrage: {name}",
@@ -445,13 +445,13 @@
       "body": "Vielen Dank für die Projektbeschreibung. Ich lese Ihre Angaben und antworte in der Regel innerhalb von 1–2 Werktagen.",
       "summaryLabel": "Ihre Angaben:",
       "signOff": "Freundliche Grüße,\n{name}",
-      "footerNote": "Dies ist eine automatische Bestätigung. Bitte antworten Sie nicht auf diese E-Mail, wenn Sie etwas anderes brauchen — ich melde mich von meiner Adresse."
+      "footerNote": "Dies ist eine automatische Bestätigung. Bitte antworten Sie nicht auf diese E-Mail, wenn Sie etwas anderes brauchen - ich melde mich von meiner Adresse."
     },
     "ownerReply": {
       "subject": "Re: {originalSubject}",
       "greeting": "Hallo {name},",
       "signOff": "Freundliche Grüße,\n{name}",
-      "footerNote": "Sie können auf diese E-Mail antworten — sie kommt auf meine Adresse."
+      "footerNote": "Sie können auf diese E-Mail antworten - sie kommt auf meine Adresse."
     }
   },
   "agb": {
@@ -468,11 +468,11 @@
       },
       "clients": {
         "heading": "2. Unternehmer und Verbraucher",
-        "body": "Ich arbeite mit Unternehmern und Verbrauchern. Verbraucher behalten ihre gesetzlichen Rechte, einschließlich des Widerrufsrechts bei Fernabsatzverträgen — Einzelheiten auf der Seite Widerruf. Klauseln, die gegenüber Verbrauchern unwirksam wären, werden ihnen gegenüber nicht angewandt."
+        "body": "Ich arbeite mit Unternehmern und Verbrauchern. Verbraucher behalten ihre gesetzlichen Rechte, einschließlich des Widerrufsrechts bei Fernabsatzverträgen - Einzelheiten auf der Seite Widerruf. Klauseln, die gegenüber Verbrauchern unwirksam wären, werden ihnen gegenüber nicht angewandt."
       },
       "conclusion": {
         "heading": "3. Kontakt und Vertragsschluss",
-        "body": "Kontakt ist über Formular, Brief, E-Mail, Telefon oder andere angegebene Kanäle möglich. Das Absenden von Formular oder Brief ist eine Anfrage, kein verbindliches Angebot und keine Kaufpflicht.\n\nEin Vertrag kommt zustande, wenn beide Seiten individuellen Umfang und Preis vereinbaren — in der Regel durch schriftliche oder E-Mail-Bestätigung des Angebots. Bis dahin kann ich die Ausführung ohne Angabe von Gründen ablehnen."
+        "body": "Kontakt ist über Formular, Brief, E-Mail, Telefon oder andere angegebene Kanäle möglich. Das Absenden von Formular oder Brief ist eine Anfrage, kein verbindliches Angebot und keine Kaufpflicht.\n\nEin Vertrag kommt zustande, wenn beide Seiten individuellen Umfang und Preis vereinbaren - in der Regel durch schriftliche oder E-Mail-Bestätigung des Angebots. Bis dahin kann ich die Ausführung ohne Angabe von Gründen ablehnen."
       },
       "offers": {
         "heading": "4. Angebote und Vergütung",
@@ -516,7 +516,7 @@
       },
       "ip": {
         "heading": "14. Nutzungsrechte",
-        "body": "Bis zur vollständigen Zahlung verbleiben die vereinbarten Nutzungsrechte bei mir. Nach vollständiger Zahlung erhält der Kunde — soweit nicht anders angeboten — ein ausschließliches, räumlich und zeitlich unbeschränktes Recht, die Arbeitsergebnisse im vereinbarten Zweck zu nutzen. Open-Source-Komponenten und Drittmaterial unterliegen deren Lizenzen."
+        "body": "Bis zur vollständigen Zahlung verbleiben die vereinbarten Nutzungsrechte bei mir. Nach vollständiger Zahlung erhält der Kunde - soweit nicht anders angeboten - ein ausschließliches, räumlich und zeitlich unbeschränktes Recht, die Arbeitsergebnisse im vereinbarten Zweck zu nutzen. Open-Source-Komponenten und Drittmaterial unterliegen deren Lizenzen."
       },
       "thirdParties": {
         "heading": "15. Drittleistungen, Hosting, Domains, Lizenzen",
@@ -532,7 +532,7 @@
       },
       "withdrawal": {
         "heading": "18. Widerrufsrecht (Verbraucher)",
-        "body": "Ist der Kunde Verbraucher und kommt ein Fernabsatzvertrag zustande, besteht das gesetzliche Widerrufsrecht. Es gilt nicht für Unternehmer im Rahmen ihrer gewerblichen Tätigkeit. Eine bloße Anfrage über das Formular löst das Recht noch nicht aus — erst der geschlossene Vertrag."
+        "body": "Ist der Kunde Verbraucher und kommt ein Fernabsatzvertrag zustande, besteht das gesetzliche Widerrufsrecht. Es gilt nicht für Unternehmer im Rahmen ihrer gewerblichen Tätigkeit. Eine bloße Anfrage über das Formular löst das Recht noch nicht aus - erst der geschlossene Vertrag."
       },
       "final": {
         "heading": "19. Schlussbestimmungen",

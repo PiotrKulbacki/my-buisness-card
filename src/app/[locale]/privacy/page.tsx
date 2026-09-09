@@ -122,17 +122,17 @@ export default async function PrivacyPage({ params }: Props) {
         <ul className="list-disc space-y-2 pl-5">
           <li>
             <span className="text-fg font-medium">{LOCALE_COOKIE_NAME}</span>
-            {" — "}
+            {" - "}
             {t("cookieLocale")}
           </li>
           <li>
             <span className="text-fg font-medium">{COOKIE_CONSENT_NAME}</span>
-            {" — "}
+            {" - "}
             {t("cookieConsent")}
           </li>
           <li>
             <span className="text-fg font-medium">_ga / _ga_*</span>
-            {" — "}
+            {" - "}
             {t("cookieGa")}
           </li>
         </ul>
