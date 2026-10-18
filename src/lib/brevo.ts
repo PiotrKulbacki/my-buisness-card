@@ -53,6 +53,7 @@ export async function sendTransactionalEmail(params: {
   text: string;
   replyTo?: { email: string; name?: string };
   bcc?: string;
+  attachment?: { name: string; content: string }[];
 }): Promise<{ ok: true } | { ok: false; error: string }> {
   const apiKey = getApiKey();
   const sender = getSender();
@@ -87,6 +88,7 @@ export async function sendTransactionalEmail(params: {
             }
           : {}),
         ...(params.bcc ? { bcc: [{ email: params.bcc }] } : {}),
+        ...(params.attachment?.length ? { attachment: params.attachment } : {}),
       }),
     });
 

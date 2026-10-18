@@ -148,11 +148,23 @@
       "goalsSelect": "Zaznacz co najmniej jeden główny cel.",
       "goalDescriptionHint": "min. 10 znaków",
       "goalDescriptionMin": "Opisz, co chcesz osiągnąć — co najmniej 10 znaków.",
-      "goalDescriptionMax": "Opis celu może mieć maksymalnie 4000 znaków."
+      "goalDescriptionMax": "Opis celu może mieć maksymalnie 4000 znaków.",
+      "attachmentsTooMany": "Możesz dodać maksymalnie {maxFiles} pliki.",
+      "attachmentsTooLarge": "Każdy plik musi mieć mniej niż {maxFileSize}.",
+      "attachmentsTotalTooLarge": "Wszystkie załączniki razem muszą mieć mniej niż {maxTotalSize}.",
+      "attachmentsInvalidType": "Nieobsługiwany typ pliku. Dozwolone: PDF, JPG, PNG, WEBP, GIF, DOCX, XLSX, PPTX.",
+      "attachmentsOriginalTooLarge": "To zdjęcie jest za duże. Maksymalny rozmiar przed kompresją to {maxOriginalImageSize}.",
+      "attachmentsDecodeFailed": "Nie udało się odczytać „{name}” jako zdjęcia. Spróbuj innego pliku.",
+      "attachmentsCouldNotOptimize": "Nie udało się skompresować „{name}” na tyle, by zmieścić się w limicie. Spróbuj mniejszego zdjęcia."
     },
     "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
     "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie.",
     "error": "Nie udało się wysłać. Spróbuj ponownie lub napisz bezpośrednio na email.",
+    "attachmentsHint": "Dokumenty (PDF, DOCX, XLSX, PPTX): do {maxDocumentSize} każdy. Zdjęcia (JPG, PNG, WEBP, GIF): do {maxOriginalImageSize} każde — zdjęcia są automatycznie kompresowane. Maks. {maxFiles} pliki, {maxTotalSize} łącznie po przetworzeniu.",
+    "attachmentsDropHint": "Możesz też przeciągnąć pliki tutaj.",
+    "attachmentsOptimizing": "Optymalizowanie zdjęć…",
+    "attachmentsRemove": "Usuń {name}",
+    "attachmentsError": "Wystąpił problem z załącznikami. Sprawdź je i spróbuj ponownie.",
     "successToast": "Zapytanie wysłane",
     "privacyNote": "Wysyłając formularz akceptujesz",
     "privacyLink": "politykę prywatności",
@@ -194,7 +206,8 @@
       "languages": "Języki strony lub aplikacji",
       "translations": "Czy posiadasz gotowe tłumaczenia?",
       "integrations": "Integracje",
-      "timeline": "Termin uruchomienia"
+      "timeline": "Termin uruchomienia",
+      "attachments": "Załączniki"
     },
     "projectTypes": {
       "website": "Strona internetowa",

@@ -18,7 +18,11 @@ function singleLabel(value: string | undefined, labels: Record<string, string>, 
   return labels[value] ?? value;
 }
 
-export function buildBriefRows(params: BriefPayload, locale?: string | null) {
+export function buildBriefRows(
+  params: BriefPayload,
+  locale?: string | null,
+  attachmentNames: string[] = [],
+) {
   const copy = getBriefMessages(locale);
   const empty = copy.empty;
 
@@ -88,17 +92,24 @@ export function buildBriefRows(params: BriefPayload, locale?: string | null) {
     { label: copy.fields.timeline, value: params.timeline ?? empty },
   );
 
+  if (attachmentNames.length > 0) {
+    rows.push({ label: copy.fields.attachments, value: attachmentNames.join(", ") });
+  }
+
   return rows;
 }
 
-export function buildBriefInboxEmail(params: BriefPayload): {
+export function buildBriefInboxEmail(
+  params: BriefPayload,
+  attachmentNames: string[] = [],
+): {
   subject: string;
   html: string;
   text: string;
 } {
   const locale = resolveLocale(params.locale);
   const copy = getEmailMessages(locale);
-  const rows = buildBriefRows(params, locale);
+  const rows = buildBriefRows(params, locale, attachmentNames);
   const subject = fillTemplate(copy.briefInbox.subject, { name: params.name });
   const replyUrl = resolveInboxReplyUrl({
     to: params.email,

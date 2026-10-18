@@ -7,12 +7,25 @@ import {
   useRef,
   useState,
   useSyncExternalStore,
+  type ChangeEvent,
+  type DragEvent,
   type FormEvent,
   type KeyboardEvent,
 } from "react";
 import { toast } from "sonner";
 import { Link } from "@/i18n/navigation";
 import { locales } from "@/i18n/routing";
+import {
+  ATTACHMENT_ACCEPT_ATTRIBUTE,
+  MAX_ATTACHMENTS,
+  MAX_ATTACHMENT_SIZE_BYTES,
+  MAX_ORIGINAL_IMAGE_SIZE_BYTES,
+  MAX_TOTAL_ATTACHMENT_SIZE_BYTES,
+  formatBytes,
+  isCompressibleImageExtension,
+  validateAttachmentSelection,
+  type AttachmentRejectionReason,
+} from "@/lib/attachments";
 import {
   clearBriefDraft,
   getBriefDraftServerSnapshot,
@@ -21,6 +34,7 @@ import {
   subscribeBriefDraft,
 } from "@/lib/brief-draft";
 import { resolveValidationMessage } from "@/lib/form-validation";
+import { ImageOptimizeError, optimizeImageFile } from "@/lib/image-optimize";
 import {
   BRIEF_STEP_COUNT,
   appFeatureOptions,
@@ -41,6 +55,7 @@ import {
   translationOptions,
   type BriefDraftValues,
 } from "@/lib/schemas/brief";
+import { cn } from "@/lib/utils";
 import { BriefChoiceGroup, OptionalHint, RequiredMark, fieldClassName } from "./BriefChoiceGroup";
 import { BriefProgress } from "./BriefProgress";
 import { BriefStepNav } from "./BriefStepNav";
@@ -72,6 +87,10 @@ export function BriefForm() {
   const { step, values } = snapshot;
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [files, setFiles] = useState<File[]>([]);
+  const [optimizing, setOptimizing] = useState(false);
+  const [isDraggingOver, setIsDraggingOver] = useState(false);
+  const disabled = loading || optimizing;
   const turnstileTokenRef = useRef<string | null>(null);
   const turnstileRef = useRef<TurnstileInstance | null>(null);
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim() || null;
@@ -130,6 +149,105 @@ export function BriefForm() {
     goTo(step + 1);
   }
 
+  function attachmentErrorMessage(reason: AttachmentRejectionReason): string {
+    switch (reason) {
+      case "count":
+        return t("validation.attachmentsTooMany", { maxFiles: MAX_ATTACHMENTS });
+      case "size":
+        return t("validation.attachmentsTooLarge", {
+          maxFileSize: formatBytes(MAX_ATTACHMENT_SIZE_BYTES),
+        });
+      case "total":
+        return t("validation.attachmentsTotalTooLarge", {
+          maxTotalSize: formatBytes(MAX_TOTAL_ATTACHMENT_SIZE_BYTES),
+        });
+      case "type":
+        return t("validation.attachmentsInvalidType");
+    }
+  }
+
+  async function addFiles(selected: File[]) {
+    if (selected.length === 0) return;
+
+    const oversizedOriginal = selected.find(
+      (file) =>
+        isCompressibleImageExtension(file.name) && file.size > MAX_ORIGINAL_IMAGE_SIZE_BYTES,
+    );
+    if (oversizedOriginal) {
+      toast.error(
+        t("validation.attachmentsOriginalTooLarge", {
+          maxOriginalImageSize: formatBytes(MAX_ORIGINAL_IMAGE_SIZE_BYTES),
+        }),
+      );
+      return;
+    }
+
+    setOptimizing(true);
+    let processed: File[];
+    try {
+      processed = await Promise.all(
+        selected.map((file) =>
+          isCompressibleImageExtension(file.name) ? optimizeImageFile(file) : file,
+        ),
+      );
+    } catch (error) {
+      if (error instanceof ImageOptimizeError) {
+        toast.error(
+          t(
+            error.reason === "decode"
+              ? "validation.attachmentsDecodeFailed"
+              : "validation.attachmentsCouldNotOptimize",
+            { name: error.fileName },
+          ),
+        );
+      } else {
+        toast.error(t("attachmentsError"));
+      }
+      setOptimizing(false);
+      return;
+    }
+    setOptimizing(false);
+
+    const nextFiles = [...files, ...processed];
+    const validation = validateAttachmentSelection(nextFiles);
+    if (!validation.ok) {
+      toast.error(attachmentErrorMessage(validation.reason));
+      return;
+    }
+    setFiles(nextFiles);
+  }
+
+  async function handleFilesSelected(event: ChangeEvent<HTMLInputElement>) {
+    const selected = Array.from(event.target.files ?? []);
+    event.target.value = "";
+    await addFiles(selected);
+  }
+
+  const canAcceptMoreFiles = !disabled && files.length < MAX_ATTACHMENTS;
+
+  function handleDragOver(event: DragEvent<HTMLInputElement>) {
+    event.preventDefault();
+    if (!canAcceptMoreFiles) return;
+    event.dataTransfer.dropEffect = "copy";
+    setIsDraggingOver(true);
+  }
+
+  function handleDragLeave(event: DragEvent<HTMLInputElement>) {
+    event.preventDefault();
+    setIsDraggingOver(false);
+  }
+
+  async function handleDrop(event: DragEvent<HTMLInputElement>) {
+    event.preventDefault();
+    setIsDraggingOver(false);
+    if (!canAcceptMoreFiles) return;
+    await addFiles(Array.from(event.dataTransfer.files ?? []));
+  }
+
+  function removeFile(index: number) {
+    setFiles((prev) => prev.filter((_, fileIndex) => fileIndex !== index));
+  }
+
   function onKeyDown(event: KeyboardEvent<HTMLFormElement>) {
     if (event.key !== "Enter") return;
     const target = event.target as HTMLElement;
@@ -147,7 +265,7 @@ export function BriefForm() {
   }
 
   async function submitBrief() {
-    if (step !== BRIEF_STEP_COUNT || loading) return;
+    if (step !== BRIEF_STEP_COUNT || loading || optimizing) return;
 
     setLoading(true);
     const resolvedLocale = locales.includes(locale as (typeof locales)[number])
@@ -173,11 +291,16 @@ export function BriefForm() {
       return;
     }
 
+    const body = new FormData();
+    body.set("payload", JSON.stringify(parsed.data));
+    for (const file of files) {
+      body.append("files", file, file.name);
+    }
+
     try {
       const response = await fetch("/api/brief", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(parsed.data),
+        body,
       });
 
       if (response.status === 429) {
@@ -186,11 +309,15 @@ export function BriefForm() {
       }
 
       if (response.status === 400) {
-        const body = (await response.json().catch(() => null)) as { error?: string } | null;
-        if (body?.error === "Captcha failed") {
+        const errorBody = (await response.json().catch(() => null)) as { error?: string } | null;
+        if (errorBody?.error === "Captcha failed") {
           toast.error(t("captchaError"));
           turnstileRef.current?.reset();
           updateTurnstileToken(null);
+          return;
+        }
+        if (errorBody?.error === "Invalid attachment") {
+          toast.error(t("attachmentsError"));
           return;
         }
         toast.error(t("validationError"));
@@ -200,6 +327,7 @@ export function BriefForm() {
       if (!response.ok) throw new Error("Request failed");
       toast.success(t("successToast"));
       clearBriefDraft();
+      setFiles([]);
       setSuccess(true);
       turnstileRef.current?.reset();
       updateTurnstileToken(null);
@@ -220,8 +348,6 @@ export function BriefForm() {
       />
     );
   }
-
-  const disabled = loading;
 
   return (
     <form
@@ -578,6 +704,69 @@ export function BriefForm() {
             label={(key) => t(`fields.${key}`)}
             optionLabel={(group, value) => t(`${group}.${value}`)}
           />
+          <div className="space-y-3">
+            <span className="block text-sm leading-none">
+              {t("fields.attachments")}
+              <OptionalHint label={t("optional")} />
+            </span>
+            <p className="text-fg-muted text-sm leading-snug">
+              {t("attachmentsHint", {
+                maxFiles: MAX_ATTACHMENTS,
+                maxDocumentSize: formatBytes(MAX_ATTACHMENT_SIZE_BYTES),
+                maxOriginalImageSize: formatBytes(MAX_ORIGINAL_IMAGE_SIZE_BYTES),
+                maxTotalSize: formatBytes(MAX_TOTAL_ATTACHMENT_SIZE_BYTES),
+              })}
+            </p>
+            <input
+              type="file"
+              multiple
+              accept={ATTACHMENT_ACCEPT_ATTRIBUTE}
+              disabled={!canAcceptMoreFiles}
+              onChange={handleFilesSelected}
+              onDragOver={handleDragOver}
+              onDragLeave={handleDragLeave}
+              onDrop={handleDrop}
+              aria-label={t("fields.attachments")}
+              className={cn(
+                fieldClassName,
+                "file:focus-ring file:bg-accent file:text-accent-ink file:mr-3 file:cursor-pointer file:rounded-full file:border-0 file:px-4 file:py-2 file:text-sm file:font-medium disabled:cursor-not-allowed",
+                isDraggingOver && "border-accent bg-accent/10",
+              )}
+            />
+            <p className="text-fg-muted text-xs leading-snug">{t("attachmentsDropHint")}</p>
+            {optimizing ? (
+              <p role="status" className="text-fg-muted flex items-center gap-2 text-sm">
+                <span
+                  className="border-line border-t-fg size-3.5 shrink-0 animate-spin rounded-full border-2"
+                  aria-hidden="true"
+                />
+                {t("attachmentsOptimizing")}
+              </p>
+            ) : null}
+            {files.length > 0 ? (
+              <ul className="space-y-2">
+                {files.map((file, index) => (
+                  <li
+                    key={`${file.name}-${file.lastModified}-${index}`}
+                    className="border-line bg-bg-elevated flex items-center justify-between gap-3 rounded-2xl border px-4 py-2 text-sm"
+                  >
+                    <span className="min-w-0 truncate">
+                      {file.name} <span className="text-fg-muted">({formatBytes(file.size)})</span>
+                    </span>
+                    <button
+                      type="button"
+                      disabled={disabled}
+                      onClick={() => removeFile(index)}
+                      aria-label={t("attachmentsRemove", { name: file.name })}
+                      className="focus-ring text-fg-muted hover:text-fg shrink-0 rounded-full px-2 py-1 disabled:cursor-not-allowed"
+                    >
+                      ✕
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
           <input
             type="text"
             name="website"

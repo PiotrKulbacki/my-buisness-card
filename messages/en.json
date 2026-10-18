@@ -148,11 +148,23 @@
       "goalsSelect": "Select at least one main goal.",
       "goalDescriptionHint": "min. 10 characters",
       "goalDescriptionMin": "Describe what you want to achieve — at least 10 characters.",
-      "goalDescriptionMax": "The goal description can be at most 4000 characters."
+      "goalDescriptionMax": "The goal description can be at most 4000 characters.",
+      "attachmentsTooMany": "You can attach up to {maxFiles} files.",
+      "attachmentsTooLarge": "Each file must be under {maxFileSize}.",
+      "attachmentsTotalTooLarge": "All attachments together must be under {maxTotalSize}.",
+      "attachmentsInvalidType": "Unsupported file type. Allowed: PDF, JPG, PNG, WEBP, GIF, DOCX, XLSX, PPTX.",
+      "attachmentsOriginalTooLarge": "This photo is too large. Maximum size before compression is {maxOriginalImageSize}.",
+      "attachmentsDecodeFailed": "Couldn’t read “{name}” as an image. Try a different file.",
+      "attachmentsCouldNotOptimize": "Couldn’t compress “{name}” enough to fit the size limit. Try a smaller photo."
     },
     "rateLimited": "Too many attempts. Please wait a moment and try again.",
     "captchaError": "Please confirm you are not a bot and try again.",
     "error": "Couldn’t send. Try again or email me directly.",
+    "attachmentsHint": "Documents (PDF, DOCX, XLSX, PPTX): up to {maxDocumentSize} each. Photos (JPG, PNG, WEBP, GIF): up to {maxOriginalImageSize} each — photos are compressed automatically. Up to {maxFiles} files, {maxTotalSize} total after processing.",
+    "attachmentsDropHint": "Or drag and drop files here.",
+    "attachmentsOptimizing": "Optimizing photos…",
+    "attachmentsRemove": "Remove {name}",
+    "attachmentsError": "There was a problem with your attachments. Please check them and try again.",
     "successToast": "Enquiry sent",
     "privacyNote": "By submitting you accept the",
     "privacyLink": "privacy policy",
@@ -194,7 +206,8 @@
       "languages": "Languages for the site or app",
       "translations": "Do you already have translations?",
       "integrations": "Integrations",
-      "timeline": "Launch timeline"
+      "timeline": "Launch timeline",
+      "attachments": "Attachments"
     },
     "projectTypes": {
       "website": "Website",

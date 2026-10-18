@@ -79,6 +79,7 @@
 - [x] Brevo zamiast Resend (formularz kontaktowy + auto-reply HTML)
 - [x] Cloudflare Turnstile na formularzu kontaktowym
 - [x] Brief projektu (`/contact/brief`) — multi-step, Brevo, Turnstile; spec: `docs/Project_Brief_Form.md`
+- [x] Brief: załączniki (do 3 plików, kompresja zdjęć w przeglądarce, weryfikacja sygnatur na serwerze)
 - [x] Cookies + zgoda na Vercel Analytics (banner; inventarz w `/privacy#cookies`)
 - [x] Google Analytics 4 via `@next/third-parties/google` (prod + consent; `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
 - [x] Google Consent Mode v2 (default denied → analytics_storage granted; bez CMP) — `docs/Analytics.md`
@@ -141,3 +142,4 @@
 | 2026-08-19 | WhatsApp/OG: statyczny `/og.png`, crawlerzy bez 307 i bez cookie `NEXT_LOCALE` (`docs/SEO.md`)                      |
 | 2026-08-20 | Strony prawne: Impressum (przedmiot, VSBG), rozbudowana privacy, AGB, Widerruf; nota „brak umowy” przy formularzach |
 | 2026-09-09 | Impressum: USt-IdNr. z env; usunięto § 18 MStV; privacy: brak IOD, art. 9, `/reply`; AGB odesłanie do numeru        |
+| 2026-10-18 | Brief: załączniki (PDF/obrazy/OOXML, max 3, kompresja zdjęć w przeglądarce, magic bytes na serwerze, Brevo)         |

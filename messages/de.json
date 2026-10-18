@@ -148,11 +148,23 @@
       "goalsSelect": "Bitte mindestens ein Hauptziel auswählen.",
       "goalDescriptionHint": "min. 10 Zeichen",
       "goalDescriptionMin": "Beschreiben Sie, was Sie erreichen möchten — mindestens 10 Zeichen.",
-      "goalDescriptionMax": "Die Zielbeschreibung darf höchstens 4000 Zeichen haben."
+      "goalDescriptionMax": "Die Zielbeschreibung darf höchstens 4000 Zeichen haben.",
+      "attachmentsTooMany": "Sie können bis zu {maxFiles} Dateien anhängen.",
+      "attachmentsTooLarge": "Jede Datei muss kleiner als {maxFileSize} sein.",
+      "attachmentsTotalTooLarge": "Alle Anhänge zusammen müssen kleiner als {maxTotalSize} sein.",
+      "attachmentsInvalidType": "Nicht unterstützter Dateityp. Erlaubt: PDF, JPG, PNG, WEBP, GIF, DOCX, XLSX, PPTX.",
+      "attachmentsOriginalTooLarge": "Dieses Foto ist zu groß. Maximale Größe vor der Komprimierung: {maxOriginalImageSize}.",
+      "attachmentsDecodeFailed": "„{name}“ konnte nicht als Bild gelesen werden. Bitte eine andere Datei wählen.",
+      "attachmentsCouldNotOptimize": "„{name}“ konnte nicht ausreichend komprimiert werden. Bitte ein kleineres Foto verwenden."
     },
     "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen.",
     "captchaError": "Bitte bestätigen Sie, dass Sie kein Bot sind, und versuchen Sie es erneut.",
     "error": "Senden fehlgeschlagen. Bitte erneut versuchen oder direkt per E-Mail.",
+    "attachmentsHint": "Dokumente (PDF, DOCX, XLSX, PPTX): je bis zu {maxDocumentSize}. Fotos (JPG, PNG, WEBP, GIF): je bis zu {maxOriginalImageSize} — Fotos werden automatisch komprimiert. Bis zu {maxFiles} Dateien, insgesamt {maxTotalSize} nach der Verarbeitung.",
+    "attachmentsDropHint": "Oder Dateien hierher ziehen.",
+    "attachmentsOptimizing": "Fotos werden optimiert…",
+    "attachmentsRemove": "{name} entfernen",
+    "attachmentsError": "Es gab ein Problem mit den Anhängen. Bitte prüfen Sie sie und versuchen Sie es erneut.",
     "successToast": "Anfrage gesendet",
     "privacyNote": "Mit dem Absenden akzeptieren Sie die",
     "privacyLink": "Datenschutzerklärung",
@@ -194,7 +206,8 @@
       "languages": "Sprachen der Website oder App",
       "translations": "Haben Sie bereits Übersetzungen?",
       "integrations": "Integrationen",
-      "timeline": "Zeitplan für den Launch"
+      "timeline": "Zeitplan für den Launch",
+      "attachments": "Anhänge"
     },
     "projectTypes": {
       "website": "Website",

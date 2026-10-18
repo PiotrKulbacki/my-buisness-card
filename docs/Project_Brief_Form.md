@@ -172,6 +172,7 @@ Wymagane tylko to, co potrzeba do rozpoczęcia rozmowy: imię, e-mail, rodzaj, g
 | 5    | Integracje                                   | checkboxy: Maps, Analytics/SEO, social, płatności, CRM/newsletter, inne | Nie                     | —                                              |
 | 5    | Termin uruchomienia                          | tekst (data / wydarzenie)                                               | Nie                     | —                                              |
 | 6    | Podsumowanie                                 | przegląd (read-only + Wstecz)                                           | —                       | —                                              |
+| 6    | Załączniki (do 3)                            | plik: PDF, JPG, PNG, WEBP, GIF, DOCX, XLSX, PPTX                        | Nie                     | —                                              |
 | 6    | Turnstile                                    | captcha                                                                 | Tak, gdy skonfigurowany | —                                              |
 | 6    | Nota privacy                                 | tekst + link `/privacy`                                                 | informacyjna            | jak kontakt — bez checkboxa marketingowego     |
 
@@ -280,6 +281,14 @@ Przy okazji (nie blokuje briefu): wyciągnąć schema kontaktu do `src/lib/schem
 - Copy: `messages/*/email.briefInbox` i `email.briefAutoReply` (5 locale).
 
 Env: te same `BREVO_*`, `CONTACT_TO_EMAIL`, Turnstile — bez nowych sekretów.
+
+### Załączniki (wdrożone)
+
+- Klient wysyła `multipart/form-data`: pole `payload` (JSON briefu) + `files` (0-3 pliki).
+- Reguły wspólne dla klienta i serwera: `src/lib/attachments.ts` - max 3 pliki, 3 MB na plik, 4 MB łącznie (poniżej limitu 4,5 MB body funkcji Vercel). Dokumenty i GIF-y idą bez zmian.
+- Zdjęcia (JPG/PNG/WEBP, do 10 MB przed kompresją) są kompresowane w przeglądarce przez `<canvas>`: `src/lib/image-optimize.ts`.
+- Serwer (`/api/brief`): ponowna walidacja liczby, rozszerzeń i rozmiarów, sprawdzenie sygnatury pliku (magic bytes), oczyszczenie nazwy pliku. Typ MIME od klienta nie jest brany pod uwagę.
+- Pliki nie są zapisywane - trafiają jako załączniki maila Brevo do skrzynki; nazwy pojawiają się w mailu i w auto-reply.
 
 ### Bezpieczeństwo i prywatność
 

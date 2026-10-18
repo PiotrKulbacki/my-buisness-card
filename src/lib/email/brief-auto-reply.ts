@@ -4,7 +4,10 @@ import { buildBriefRows } from "@/lib/email/brief-inbox";
 import { siteConfig } from "@/config/site";
 import type { BriefPayload } from "@/lib/schemas/brief";
 
-export function buildBriefAutoReplyEmail(params: BriefPayload): {
+export function buildBriefAutoReplyEmail(
+  params: BriefPayload,
+  attachmentNames: string[] = [],
+): {
   subject: string;
   html: string;
   text: string;
@@ -14,7 +17,7 @@ export function buildBriefAutoReplyEmail(params: BriefPayload): {
   const subject = copy.briefAutoReply.subject;
   const greeting = fillTemplate(copy.briefAutoReply.greeting, { name: params.name });
   const signOff = fillTemplate(copy.briefAutoReply.signOff, { name: siteConfig.name });
-  const summaryRows = buildBriefRows(params, locale);
+  const summaryRows = buildBriefRows(params, locale, attachmentNames);
 
   const text = [
     greeting,

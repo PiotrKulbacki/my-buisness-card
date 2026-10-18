@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
 import { siteConfig } from "@/config/site";
+import {
+  matchesFileSignature,
+  sanitizeAttachmentFilename,
+  validateAttachmentSelection,
+} from "@/lib/attachments";
 import { getContactInbox, isEmailConfigured, sendTransactionalEmail } from "@/lib/brevo";
 import { buildBriefAutoReplyEmail } from "@/lib/email/brief-auto-reply";
 import { buildBriefInboxEmail } from "@/lib/email/brief-inbox";
@@ -20,7 +25,19 @@ export async function POST(request: Request) {
       );
     }
 
-    const json: unknown = await request.json();
+    const formData = await request.formData();
+    const payloadRaw = formData.get("payload");
+    if (typeof payloadRaw !== "string") {
+      return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
+    }
+
+    let json: unknown;
+    try {
+      json = JSON.parse(payloadRaw);
+    } catch {
+      return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
+    }
+
     const parsed = briefPayloadSchema.safeParse(json);
     if (!parsed.success) {
       return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
@@ -37,12 +54,35 @@ export async function POST(request: Request) {
       }
     }
 
+    const uploadedFiles = formData
+      .getAll("files")
+      .filter((entry): entry is File => entry instanceof File && entry.size > 0);
+
+    const selection = validateAttachmentSelection(uploadedFiles);
+    if (!selection.ok) {
+      return NextResponse.json({ error: "Invalid attachment" }, { status: 400 });
+    }
+
+    const attachments: { name: string; content: string }[] = [];
+    for (const file of uploadedFiles) {
+      const bytes = new Uint8Array(await file.arrayBuffer());
+      if (!matchesFileSignature(file.name, bytes)) {
+        return NextResponse.json({ error: "Invalid attachment" }, { status: 400 });
+      }
+      attachments.push({
+        name: sanitizeAttachmentFilename(file.name),
+        content: Buffer.from(bytes).toString("base64"),
+      });
+    }
+    const attachmentNames = attachments.map((attachment) => attachment.name);
+
     if (!isEmailConfigured()) {
       console.info("[brief]", {
         name: parsed.data.name,
         email: parsed.data.email,
         projectType: parsed.data.projectType,
         locale: parsed.data.locale,
+        attachments: attachmentNames.length,
       });
       return NextResponse.json({
         ok: true,
@@ -55,7 +95,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Failed to send" }, { status: 500 });
     }
 
-    const inboxMail = buildBriefInboxEmail(parsed.data);
+    const inboxMail = buildBriefInboxEmail(parsed.data, attachmentNames);
     const inboxResult = await sendTransactionalEmail({
       to: inbox,
       subject: inboxMail.subject,
@@ -65,13 +105,14 @@ export async function POST(request: Request) {
         email: parsed.data.email,
         name: parsed.data.name,
       },
+      attachment: attachments,
     });
 
     if (!inboxResult.ok) {
       return NextResponse.json({ error: "Failed to send" }, { status: 500 });
     }
 
-    const autoReply = buildBriefAutoReplyEmail(parsed.data);
+    const autoReply = buildBriefAutoReplyEmail(parsed.data, attachmentNames);
     const autoReplyResult = await sendTransactionalEmail({
       to: parsed.data.email,
       subject: autoReply.subject,

@@ -148,11 +148,23 @@
       "goalsSelect": "Оберіть щонайменше одну основну ціль.",
       "goalDescriptionHint": "мін. 10 символів",
       "goalDescriptionMin": "Опишіть, чого хочете досягти — щонайменше 10 символів.",
-      "goalDescriptionMax": "Опис цілі може мати щонайбільше 4000 символів."
+      "goalDescriptionMax": "Опис цілі може мати щонайбільше 4000 символів.",
+      "attachmentsTooMany": "Можна додати щонайбільше {maxFiles} файли.",
+      "attachmentsTooLarge": "Кожен файл має бути меншим за {maxFileSize}.",
+      "attachmentsTotalTooLarge": "Усі вкладення разом мають бути меншими за {maxTotalSize}.",
+      "attachmentsInvalidType": "Непідтримуваний тип файлу. Дозволено: PDF, JPG, PNG, WEBP, GIF, DOCX, XLSX, PPTX.",
+      "attachmentsOriginalTooLarge": "Це фото завелике. Максимальний розмір до стискання — {maxOriginalImageSize}.",
+      "attachmentsDecodeFailed": "Не вдалося прочитати «{name}» як зображення. Спробуйте інший файл.",
+      "attachmentsCouldNotOptimize": "Не вдалося стиснути «{name}» достатньо, щоб вкластися в ліміт. Спробуйте менше фото."
     },
     "rateLimited": "Забагато спроб. Зачекайте хвилину і спробуйте знову.",
     "captchaError": "Підтвердіть, що ви не бот, і спробуйте ще раз.",
     "error": "Не вдалося надіслати. Спробуйте ще раз або напишіть на email.",
+    "attachmentsHint": "Документи (PDF, DOCX, XLSX, PPTX): до {maxDocumentSize} кожен. Фото (JPG, PNG, WEBP, GIF): до {maxOriginalImageSize} кожне — фото стискаються автоматично. До {maxFiles} файлів, {maxTotalSize} загалом після обробки.",
+    "attachmentsDropHint": "Або перетягніть файли сюди.",
+    "attachmentsOptimizing": "Оптимізація фото…",
+    "attachmentsRemove": "Видалити {name}",
+    "attachmentsError": "Виникла проблема з вкладеннями. Перевірте їх і спробуйте ще раз.",
     "successToast": "Запит надіслано",
     "privacyNote": "Надсилаючи форму, ви приймаєте",
     "privacyLink": "політику конфіденційності",
@@ -194,7 +206,8 @@
       "languages": "Мови сайту або застосунку",
       "translations": "Чи є готові переклади?",
       "integrations": "Інтеграції",
-      "timeline": "Термін запуску"
+      "timeline": "Термін запуску",
+      "attachments": "Вкладення"
     },
     "projectTypes": {
       "website": "Вебсайт",

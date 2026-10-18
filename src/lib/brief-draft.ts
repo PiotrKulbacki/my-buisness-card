@@ -17,6 +17,14 @@ function emptySnapshot(): BriefDraftSnapshot {
   return { step: 1, values: emptyBriefDraft() };
 }
 
+/**
+ * useSyncExternalStore requires getServerSnapshot to return a stable reference
+ * across calls (otherwise React warns "should be cached" and can re-render in a
+ * loop). Nothing in this module mutates a returned snapshot in place — draft
+ * updates always replace it wholesale — so one shared instance is safe to reuse.
+ */
+const SERVER_SNAPSHOT: BriefDraftSnapshot = emptySnapshot();
+
 function isDraftValues(value: unknown): value is BriefDraftValues {
   if (!value || typeof value !== "object") return false;
   const record = value as Record<string, unknown>;
@@ -53,7 +61,7 @@ export function getBriefDraftSnapshot(): BriefDraftSnapshot {
 }
 
 export function getBriefDraftServerSnapshot(): BriefDraftSnapshot {
-  return emptySnapshot();
+  return SERVER_SNAPSHOT;
 }
 
 export function subscribeBriefDraft(onStoreChange: () => void) {

@@ -148,11 +148,23 @@
       "goalsSelect": "Selecciona al menos un objetivo principal.",
       "goalDescriptionHint": "mín. 10 caracteres",
       "goalDescriptionMin": "Describe qué quieres conseguir — al menos 10 caracteres.",
-      "goalDescriptionMax": "La descripción del objetivo puede tener como máximo 4000 caracteres."
+      "goalDescriptionMax": "La descripción del objetivo puede tener como máximo 4000 caracteres.",
+      "attachmentsTooMany": "Puedes adjuntar hasta {maxFiles} archivos.",
+      "attachmentsTooLarge": "Cada archivo debe pesar menos de {maxFileSize}.",
+      "attachmentsTotalTooLarge": "Todos los archivos juntos deben pesar menos de {maxTotalSize}.",
+      "attachmentsInvalidType": "Tipo de archivo no admitido. Permitidos: PDF, JPG, PNG, WEBP, GIF, DOCX, XLSX, PPTX.",
+      "attachmentsOriginalTooLarge": "Esta foto es demasiado grande. El tamaño máximo antes de comprimir es {maxOriginalImageSize}.",
+      "attachmentsDecodeFailed": "No se pudo leer «{name}» como imagen. Prueba con otro archivo.",
+      "attachmentsCouldNotOptimize": "No se pudo comprimir «{name}» lo suficiente para cumplir el límite. Prueba con una foto más pequeña."
     },
     "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo.",
     "captchaError": "Confirma que no eres un bot e inténtalo de nuevo.",
     "error": "No se pudo enviar. Inténtalo de nuevo o escríbeme por email.",
+    "attachmentsHint": "Documentos (PDF, DOCX, XLSX, PPTX): hasta {maxDocumentSize} cada uno. Fotos (JPG, PNG, WEBP, GIF): hasta {maxOriginalImageSize} cada una — las fotos se comprimen automáticamente. Hasta {maxFiles} archivos, {maxTotalSize} en total tras el procesado.",
+    "attachmentsDropHint": "O arrastra y suelta los archivos aquí.",
+    "attachmentsOptimizing": "Optimizando fotos…",
+    "attachmentsRemove": "Eliminar {name}",
+    "attachmentsError": "Hubo un problema con los archivos adjuntos. Revísalos e inténtalo de nuevo.",
     "successToast": "Consulta enviada",
     "privacyNote": "Al enviar aceptas la",
     "privacyLink": "política de privacidad",
@@ -194,7 +206,8 @@
       "languages": "Idiomas del sitio o la app",
       "translations": "¿Tienes ya traducciones?",
       "integrations": "Integraciones",
-      "timeline": "Plazo de lanzamiento"
+      "timeline": "Plazo de lanzamiento",
+      "attachments": "Archivos adjuntos"
     },
     "projectTypes": {
       "website": "Sitio web",
