@@ -154,6 +154,7 @@ Szczegóły → zakładka **Projekty**. Tu: nazwa, 1–2 zdania, opcjonalnie liv
 4. **Lyamo** — `https://lyamo.eu/`
 5. **AK Gebäudeservice** — `https://www.akgebaeudeservice.com/`
 6. **WC26 Predictor** — `https://wc26-predictor-zapraszam.vercel.app/`
+7. **Cavunio** — `https://cavunio.com/` (sklep internetowy z ebookami wydawnictwa Cavunio)
 
 ---
 

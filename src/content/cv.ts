@@ -257,6 +257,18 @@ export const cv = {
         uk: "Додаток навколо прогнозів і залучення фанатів до ЧС-2026.",
       },
     },
+    {
+      id: "cavunio",
+      title: "Cavunio",
+      liveUrl: "https://cavunio.com/",
+      summary: {
+        pl: "Sklep internetowy z ebookami mojego wydawnictwa Cavunio: PDF i EPUB, płatność bez zakładania konta i pobranie od razu po zakupie.",
+        en: "Online ebook shop for my publishing imprint Cavunio: PDF and EPUB, checkout without an account and instant download.",
+        de: "Onlineshop für E-Books meines Verlags Cavunio: PDF und EPUB, Kauf ohne Konto und sofortiger Download.",
+        es: "Tienda online de ebooks de mi editorial Cavunio: PDF y EPUB, compra sin cuenta y descarga inmediata.",
+        uk: "Інтернет-магазин ebook мого видавництва Cavunio: PDF та EPUB, оплата без акаунта й миттєве завантаження.",
+      },
+    },
   ] satisfies CvProject[],
 
   experience: [

@@ -51,7 +51,7 @@ Brak sekcji „odpowiedzialność za treści” (§ 18 MStV): strona to wizytów
 
 Jedyna strona prywatności (DE: tytuł **Datenschutzerklärung**). Nie dublować pod drugim URL.
 
-Sekcje (i18n, 5 locale): administrator (adres, e-mail, telefon), **brak IOD**, mapa przetwarzania, hosting (Vercel), Turnstile, formularz, brief, **odpowiedź z szablonu (`/reply`, token HMAC 90 dni)**, **art. 9 RODO** (nie zbieramy danych szczególnych), Brevo, analityka (Consent Mode v2), odbiorcy, transfer poza EOG, retencja, cookies (`#cookies`), prawa, organ nadzorczy Berlin (`legal.dpa`).
+Sekcje (i18n, 5 locale): administrator (adres, e-mail, telefon), **brak IOD**, mapa przetwarzania, hosting (Vercel), Turnstile, formularz, brief (w tym **załączniki**: do 3 plików, tylko jako załącznik maila przez Brevo, bez zapisu na serwerze), **odpowiedź z szablonu (`/reply`, token HMAC 90 dni)**, **art. 9 RODO** (nie zbieramy danych szczególnych), Brevo, analityka (Consent Mode v2), odbiorcy, transfer poza EOG, retencja, cookies (`#cookies`), prawa, organ nadzorczy Berlin (`legal.dpa`).
 
 **Aktywnie używane na tej witrynie:** Vercel (hosting + Analytics po zgodzie), Cloudflare Turnstile, Brevo, GA4 + Consent Mode v2, własny banner cookies, formularz kontaktowy, brief (`sessionStorage` szkicu), first-party cookies `NEXT_LOCALE` / `pk_cookie_consent`.
 
