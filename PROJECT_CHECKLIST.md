@@ -52,6 +52,8 @@
 - [x] Screenshoty / pełne case study: Lyamo (`lyamo.eu`)
 - [x] Screenshoty / pełne case study: WC26 Predictor (`wc26-predictor`)
 - [x] Screenshoty / pełne case study: Dokiero (`dokiero.com`)
+- [x] Screenshoty / pełne case study: Cavunio (`cavunio.com`)
+- [x] Screenshoty projektów jako WebP (`public/projects/`), oryginały PNG w `docs/assets/projects/`
 - [ ] Finalne copy landing/about
 - [ ] Realne URL FB / IG / YT
 
@@ -143,3 +145,4 @@
 | 2026-08-20 | Strony prawne: Impressum (przedmiot, VSBG), rozbudowana privacy, AGB, Widerruf; nota „brak umowy” przy formularzach |
 | 2026-09-09 | Impressum: USt-IdNr. z env; usunięto § 18 MStV; privacy: brak IOD, art. 9, `/reply`; AGB odesłanie do numeru        |
 | 2026-10-18 | Brief: załączniki (PDF/obrazy/OOXML, max 3, kompresja zdjęć w przeglądarce, magic bytes na serwerze, Brevo)         |
+| 2026-10-18 | Case study Cavunio (sklep z ebookami) na górze listy; kolejność Cavunio → Lyamo → Dokiero; screenshoty PNG → WebP   |

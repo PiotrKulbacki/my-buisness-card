@@ -12,8 +12,8 @@ Jak dodawać i utrzymywać projekty na stronie wizytówki. **Przed zmianami prze
 | Galeria + hover/mobile   | `src/components/projects/ProjectGallery.tsx`                      |
 | Lightbox pełnego zdjęcia | `src/components/projects/ProjectImageLightbox.tsx`                |
 | i18n UI                  | `messages/{pl,en,de,es,uk}.json` → namespace `projects`           |
-| Screenshoty (runtime)    | `public/projects/<slug>/`                                         |
-| Screenshoty (referencja) | `docs/assets/projects/<slug>/`                                    |
+| Screenshoty (runtime)    | `public/projects/<slug>/*.webp`                                   |
+| Screenshoty (oryginały)  | `docs/assets/projects/<slug>/*.png`                               |
 
 ## Layout podstrony case study (`ProjectDetail`)
 
@@ -28,7 +28,7 @@ Padding strony: kompaktowy u góry (`pt-4 md:pt-8`), żeby na desktopie cover mi
 
 ### Cover
 
-- Plik zwykle `01-….png`; proporcje zbliżone do ~1050×674 (jak MovieWeb) lub 2× (~2100×1348).
+- Plik zwykle `01-….webp`; proporcje zbliżone do ~1050×674 (jak MovieWeb) lub 2× (~2100×1348).
 - W UI: `max-w-3xl`, `max-h-[min(42dvh,26rem)]`, `object-contain`.
 - **Native `<img>`** (nie `next/image`) — ostrość jak w lightboxie.
 - **Nie duplikuj** tego samego pliku jako pierwszego kafelka galerii. Cover = tylko hero.
@@ -43,8 +43,8 @@ Padding strony: kompaktowy u góry (`pt-4 md:pt-8`), żeby na desktopie cover mi
 
 ## Dodawanie nowego projektu (checklist)
 
-1. **Assety:** `public/projects/<slug>/` + kopia w `docs/assets/projects/<slug>/`.
-2. **Cover:** `coverSrc: "/projects/<slug>/01-….ext"` — ostry zrzut (desktop viewport, retina 2× jeśli możliwe). Przy animowanym logo odczekaj ~2 s przed zrzutem.
+1. **Assety:** oryginał PNG w `docs/assets/projects/<slug>/`, wersja WebP do `public/projects/<slug>/` (patrz „Format plików”).
+2. **Cover:** `coverSrc: "/projects/<slug>/01-….webp"` — ostry zrzut (desktop viewport, retina 2× jeśli możliwe). Przy animowanym logo odczekaj ~2 s przed zrzutem.
 3. **Wpis w `projects.ts`:** `slug`, `category`, `year`, `tech[]`, opcjonalnie `liveUrl` / `repoUrl` / `courseProject` / `featured`.
 4. **Teksty 5 locale:** `title`, `summary`, `body`, caption każdego kafelka — zawsze w języku widoku portfolio (`pl`/`en`/`de`/`es`/`uk`). Nawet jeśli strona klienta jest po niemiecku (lub innym języku), **nie kopiuj** etykiet UI klienta do innych locale (np. PL: „O nas”, nie „Über uns”; „Filozofia”, nie „Philosophie”). Nazwy własne marki / firmy mogą zostać.
 5. **Galeria bez covera:** tylko dodatkowe widoki; małe modale można złożyć po 2 na jednym PNG.
@@ -57,26 +57,46 @@ Padding strony: kompaktowy u góry (`pt-4 md:pt-8`), żeby na desktopie cover mi
 - Unikaj zrzutów z telefonu / mocno skompresowanych podglądów (~400–500 px) — w kafelku i coverze wyglądają na „rozmazane”.
 - Kompozyty (np. login|register): równa wysokość paneli, spójne tło, bez upscalingu małego źródła.
 
+## Format plików
+
+Cover, kafelki i lightbox używają natywnego `<img>` (bez optymalizacji Next), więc przeglądarka pobiera plik dokładnie taki, jaki leży w `public/`. Dlatego:
+
+- `docs/assets/projects/<slug>/NN-name.png` - bezstratny oryginał (źródło prawdy, nie serwowany).
+- `public/projects/<slug>/NN-name.webp` - wersja na stronę: WebP q82, dopasowana do maks. 2100×2100 px (bez powiększania), typowo 30-200 KB zamiast 0,5-4 MB.
+- Konwersja przez `sharp` (jest w `node_modules` jako zależność Next):
+
+```js
+sharp(src)
+  .resize({ width: 2100, height: 2100, fit: "inside", withoutEnlargement: true })
+  .webp({ quality: 82, effort: 6 })
+  .toFile(dest);
+```
+
+Nie wrzucaj PNG do `public/projects/`.
+
 ## Flagi treści
 
 - `courseProject: true` → badge „Podczas kursu…”, zwykle bez `liveUrl` (`notLive`).
-- `featured: true` → wyróżnienie (flagowiec: Dokiero).
+- `featured: true` → oznaczenie flagowca (Dokiero). Obecnie żaden komponent go nie czyta, więc nie wpływa na kolejność ani wygląd.
 - Brak `liveUrl` → `projects.notLive`, nie pusty link.
 
-## Aktualny katalog projektów (2026-08-09)
+## Aktualny katalog projektów (2026-10-18)
 
-Kolejność na liście = kolejność w `projects[]`.
+Kolejność na liście = kolejność w `projects[]` (najnowszy własny produkt na górze: Cavunio → Lyamo → Dokiero → reszta).
 
 | Slug                 | Kategoria | Live                                           | Screeny                                |
 | -------------------- | --------- | ---------------------------------------------- | -------------------------------------- |
-| `dokiero`            | apps      | `https://dokiero.com/`                         | OK w `public/projects/dokiero/`        |
+| `cavunio`            | websites  | `https://cavunio.com/`                         | OK w `public/projects/cavunio/`        |
 | `lyamo`              | apps      | `https://lyamo.eu/`                            | OK w `public/projects/lyamo/`          |
+| `dokiero`            | apps      | `https://dokiero.com/`                         | OK w `public/projects/dokiero/`        |
 | `wc26-predictor`     | websites  | `https://wc26-predictor-zapraszam.vercel.app/` | OK w `public/projects/wc26-predictor/` |
 | `ak-gebaeudeservice` | websites  | `https://www.akgebaeudeservice.com/`           | OK                                     |
 | `movieweb`           | apps      | — (kurs)                                       | OK                                     |
 | `sportclub`          | apps      | — (kurs)                                       | OK                                     |
 
-Dokiero: cover `01-dashboard.png`, galeria `02`–`08` + `10`; PII (imię, e-mail, adres) — wyłącznie soft blur na tekście, bez czarnych/szarych prostokątów. Stary slug `/projects/ai-document` → 301 na `/projects/dokiero`.
+Dokiero: cover `01-dashboard.webp`, galeria `02`–`08` + `10`; PII (imię, e-mail, adres) — wyłącznie soft blur na tekście, bez czarnych/szarych prostokątów. Stary slug `/projects/ai-document` → 301 na `/projects/dokiero`.
+
+Cavunio: własny sklep + wydawnictwo ebooków; cover `01-home`, galeria `02`–`06` (zrzuty desktop 1440×900 @2× przez Playwright, baner cookies zamknięty przed zrzutem).
 
 Sitemap case studies: `docs/SEO.md`.
 
@@ -84,13 +104,13 @@ Sitemap case studies: `docs/SEO.md`.
 
 ```text
 public/projects/<slug>/
-  01-home.png          # cover only
-  02-auth.png          # gallery…
-  03-admin-dashboard.png
+  01-home.webp         # cover only
+  02-auth.webp         # gallery…
+  03-admin-dashboard.webp
   …
 ```
 
-Numeracja dwucyfrowa + krótka nazwa angielska. Ten sam układ w `docs/assets/projects/<slug>/`.
+Numeracja dwucyfrowa + krótka nazwa angielska. Ten sam układ (z `.png`) w `docs/assets/projects/<slug>/`.
 
 ## Motion (nie zmieniaj bez zgody)
 

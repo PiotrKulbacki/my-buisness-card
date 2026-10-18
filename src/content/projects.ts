@@ -12,7 +12,7 @@ export type ProjectCategory = "websites" | "apps";
 export type LocalizedString = Record<Locale, string>;
 
 export type ProjectGalleryItem = {
-  /** Runtime path under `/public`, e.g. `/projects/movieweb/01-home.png` */
+  /** Runtime path under `/public`, e.g. `/projects/movieweb/01-home.webp` */
   src?: string;
   /** Fallback visual when no screenshot is available */
   gradient?: string;
@@ -39,127 +39,85 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "dokiero",
-    category: "apps",
-    featured: true,
+    slug: "cavunio",
+    category: "websites",
     year: 2026,
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Supabase",
-      "OpenAI",
-      "Anthropic",
-      "Google Vision",
-      "Stripe",
-      "next-intl",
-      "Vercel",
-    ],
-    liveUrl: "https://dokiero.com/",
-    coverSrc: "/projects/dokiero/01-dashboard.png",
-    coverGradient: "linear-gradient(135deg, #0c1220 0%, #1a2744 50%, #c4b8a4 100%)",
+    tech: ["Next.js", "Tailwind CSS", "Google Analytics", "Meta Pixel", "Vercel"],
+    liveUrl: "https://cavunio.com/",
+    coverSrc: "/projects/cavunio/01-home.webp",
+    coverGradient: "linear-gradient(135deg, #3B2A20 0%, #A8482A 50%, #F0E8DE 100%)",
     gallery: [
       {
-        src: "/projects/dokiero/02-case-analysis.png",
+        src: "/projects/cavunio/02-ebook.webp",
         caption: {
-          pl: "Analiza sprawy — kwoty, IBAN, terminy i pełne tłumaczenie obcego pisma",
-          en: "Case analysis — amounts, IBAN, deadlines and a full translation of the foreign letter",
-          de: "Fallanalyse — Beträge, IBAN, Fristen und vollständige Übersetzung des Schreibens",
-          es: "Análisis del caso — importes, IBAN, plazos y traducción completa del escrito",
-          uk: "Аналіз справи — суми, IBAN, терміни та повний переклад іноземного листа",
+          pl: "Strona ebooka - okładka, autor i krótki opis książki",
+          en: "Ebook page - cover, author and a short book description",
+          de: "E-Book-Seite - Cover, Autor und kurze Buchbeschreibung",
+          es: "Página del ebook - portada, autor y breve descripción del libro",
+          uk: "Сторінка ebook - обкладинка, автор і короткий опис книги",
         },
       },
       {
-        src: "/projects/dokiero/03-document-history.png",
+        src: "/projects/cavunio/03-editions.webp",
         caption: {
-          pl: "Historia dokumentów — archiwum spraw z ważnością i eksportem PDF",
-          en: "Document history — case archive with validity tracking and PDF export",
-          de: "Dokumenthistorie — Aktenarchiv mit Gültigkeit und PDF-Export",
-          es: "Historial de documentos — archivo de casos con validez y exportación PDF",
-          uk: "Історія документів — архів справ із терміном дії та експортом PDF",
+          pl: "Wybór wydania - ebook, pakiet z dodatkami lub same dodatki, ceny w PLN i EUR",
+          en: "Edition picker - ebook, bundle with extras or extras only, prices in PLN and EUR",
+          de: "Ausgabenwahl - E-Book, Paket mit Extras oder nur Extras, Preise in PLN und EUR",
+          es: "Selector de edición - ebook, pack con extras o solo extras, precios en PLN y EUR",
+          uk: "Вибір видання - ebook, пакет із додатками або лише додатки, ціни в PLN і EUR",
         },
       },
       {
-        src: "/projects/dokiero/04-upload.png",
+        src: "/projects/cavunio/04-preview.webp",
         caption: {
-          pl: "Upload do analizy — zdjęcie lub PDF, kraj prawa i wybór kredytu Standard / Pro",
-          en: "Upload for analysis — photo or PDF, country of law and Standard / Pro credit",
-          de: "Upload zur Analyse — Foto oder PDF, Rechtsland und Kredit Standard / Pro",
-          es: "Subida para análisis — foto o PDF, país del derecho y crédito Standard / Pro",
-          uk: "Завантаження до аналізу — фото або PDF, країна права та кредит Standard / Pro",
+          pl: "Zajrzyj do środka - pełnoekranowa galeria ilustracji z książki",
+          en: "Look inside - full-screen gallery of the book's illustrations",
+          de: "Blick ins Buch - Vollbild-Galerie mit Illustrationen aus dem Buch",
+          es: "Echa un vistazo - galería a pantalla completa con ilustraciones del libro",
+          uk: "Зазирни всередину - повноекранна галерея ілюстрацій із книги",
         },
       },
       {
-        src: "/projects/dokiero/05-ready-letter.png",
+        src: "/projects/cavunio/05-how-it-works.webp",
         caption: {
-          pl: "Gotowe pismo do urzędu — dane, treść, data i własnoręczny podpis",
-          en: "Ready-to-send office letter — details, body, date and handwritten signature",
-          de: "Fertiges Behördenschreiben — Daten, Inhalt, Datum und Handunterschrift",
-          es: "Escrito listo para enviar — datos, cuerpo, fecha y firma manuscrita",
-          uk: "Готовий лист до установи — дані, зміст, дата та власний підпис",
+          pl: "Jak to działa - wybór wydania, płatność bez zakładania konta i pobranie od razu",
+          en: "How it works - pick an edition, pay without an account and download right away",
+          de: "So funktioniert's - Ausgabe wählen, ohne Konto bezahlen und sofort herunterladen",
+          es: "Cómo funciona - eliges edición, pagas sin cuenta y descargas al momento",
+          uk: "Як це працює - вибір видання, оплата без акаунта й миттєве завантаження",
         },
       },
       {
-        src: "/projects/dokiero/06-deadlines.png",
+        src: "/projects/cavunio/06-publisher.webp",
         caption: {
-          pl: "Terminy i zadania — przypomnienia oraz eksport do Google / Apple / Outlook",
-          en: "Deadlines and tasks — reminders plus export to Google / Apple / Outlook",
-          de: "Fristen und Aufgaben — Erinnerungen plus Export nach Google / Apple / Outlook",
-          es: "Plazos y tareas — recordatorios y exportación a Google / Apple / Outlook",
-          uk: "Терміни та завдання — нагадування й експорт у Google / Apple / Outlook",
-        },
-      },
-      {
-        src: "/projects/dokiero/07-languages.png",
-        caption: {
-          pl: "30 języków interfejsu — aplikacja gotowa dla użytkowników z prawie całego świata",
-          en: "30 UI languages — ready for users from almost anywhere in the world",
-          de: "30 UI-Sprachen — bereit für Nutzer aus nahezu der ganzen Welt",
-          es: "30 idiomas de interfaz — lista para usuarios de casi todo el mundo",
-          uk: "30 мов інтерфейсу — готова для користувачів майже з усього світу",
-        },
-      },
-      {
-        src: "/projects/dokiero/08-pdf-translation.png",
-        caption: {
-          pl: "PDF z tłumaczeniem — podsumowanie, szczegóły płatności i treść pisma",
-          en: "Translated PDF — summary, payment details and letter body",
-          de: "Übersetztes PDF — Zusammenfassung, Zahlungsdaten und Schreibenstext",
-          es: "PDF traducido — resumen, datos de pago y cuerpo del escrito",
-          uk: "PDF з перекладом — підсумок, деталі оплати та текст листа",
-        },
-      },
-      {
-        src: "/projects/dokiero/10-extend-validity.png",
-        caption: {
-          pl: "Przedłużenie ważności w archiwum — kredyty ze Standard i Pro",
-          en: "Extend archive validity — spend Standard and Pro credits",
-          de: "Archivgültigkeit verlängern — Credits aus Standard und Pro",
-          es: "Ampliar validez en el archivo — créditos Standard y Pro",
-          uk: "Продовження терміну в архіві — кредити Standard і Pro",
+          pl: "Od wydawcy - idea oficyny oraz stopka z dokumentami prawnymi",
+          en: "From the publisher - the imprint's idea and a footer with legal pages",
+          de: "Vom Verlag - die Idee des Verlags und Footer mit Rechtstexten",
+          es: "De la editorial - la idea del sello y pie con páginas legales",
+          uk: "Від видавця - ідея видавництва та футер із юридичними сторінками",
         },
       },
     ],
     title: {
-      pl: "Dokiero",
-      en: "Dokiero",
-      de: "Dokiero",
-      es: "Dokiero",
-      uk: "Dokiero",
+      pl: "Cavunio",
+      en: "Cavunio",
+      de: "Cavunio",
+      es: "Cavunio",
+      uk: "Cavunio",
     },
     summary: {
-      pl: "Mój flagowy produkt — AI skanuje obce pisma, generuje gotowe odpowiedzi do urzędu z podpisem, pilnuje terminów i przypomina e-mailem.",
-      en: "My flagship product — AI scans foreign letters, drafts ready office replies with signature, tracks deadlines and email reminders.",
-      de: "Mein Flagship — KI scannt fremdsprachige Schreiben, erstellt fertige Behördenantworten mit Unterschrift, Fristen und E-Mail-Erinnerungen.",
-      es: "Mi producto estrella — la IA escanea escritos extranjeros, genera respuestas listas con firma, plazos y recordatorios por email.",
-      uk: "Мій флагманський продукт — AI сканує іноземні листи, генерує готові відповіді з підписом, стежить за термінами та email-нагадуваннями.",
+      pl: "Mój sklep internetowy i niezależne wydawnictwo ebooków - PDF i EPUB, płatność bez konta i pobranie od razu po zakupie.",
+      en: "My online shop and independent ebook imprint - PDF and EPUB, checkout without an account and instant download.",
+      de: "Mein Onlineshop und unabhängiger E-Book-Verlag - PDF und EPUB, Kauf ohne Konto und sofortiger Download.",
+      es: "Mi tienda online y editorial independiente de ebooks - PDF y EPUB, compra sin cuenta y descarga inmediata.",
+      uk: "Мій інтернет-магазин і незалежне видавництво ebook - PDF та EPUB, оплата без акаунта й миттєве завантаження.",
     },
     body: {
-      pl: "Dokiero to mój flagowy produkt live na dokiero.com — asystent spraw urzędowych dla osób, które dostają pisma w obcym języku (lub we własnym) i nie chcą ryzykować przeoczonego terminu. Wgrywasz PDF albo zdjęcie z telefonu: AI rozpoznaje kraj i przepisy, wyjaśnia treść po ludzku, wyciąga kwoty, IBAN i daty, a potem prowadzi dialog — dopytuje o brakujące fakty, żeby wygenerować pismo odpowiedzi gotowe do wysyłki e-mailem lub listownie po wydruku (z nagłówkiem, adresem urzędu, datą, treścią i własnoręcznym podpisem z ustawień). Plik Word zostaje edytowalny, gdy trzeba coś poprawić. Wykryte terminy trafiają do panelu zadań: przypomnienie na maila 1, 2 lub 3 dni wcześniej oraz dodanie do kalendarza Google albo Apple/Outlook. Interfejs w 30 językach; pisma z UE, UK, Szwajcarii i Norwegii. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deploy na Vercel — produkt webowy z planem aplikacji mobilnej.",
-      en: "Dokiero is my flagship product live at dokiero.com — an official-matters assistant for people who receive letters in a foreign language (or their own) and cannot afford a missed deadline. Upload a PDF or phone photo: AI detects the country and legal context, explains the letter in plain language, extracts amounts, IBAN and dates, then runs a guided dialogue — asking for missing facts so it can draft a reply ready to email or print and post (header, office address, date, body and a handwritten signature from settings). The Word file stays editable when you need a tweak. Detected deadlines land in the tasks panel: email reminders 1, 2 or 3 days ahead plus Google Calendar or Apple/Outlook export. UI in 30 languages; documents from the EU, UK, Switzerland and Norway. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deployed on Vercel — a web product with a mobile app on the roadmap.",
-      de: "Dokiero ist mein Flagship live unter dokiero.com — Assistent für Behördensachen für alle, die Schreiben in einer Fremdsprache (oder der eigenen) erhalten und keine Frist verpassen dürfen. PDF oder Handyfoto hochladen: KI erkennt Land und Rechtskontext, erklärt den Inhalt verständlich, extrahiert Beträge, IBAN und Daten und führt danach einen Dialog — fehlende Fakten nachfragen, damit eine Antwort entsteht, die per E-Mail oder ausgedruckt per Post versandfertig ist (Kopf, Behördenadresse, Datum, Text und Handunterschrift aus den Einstellungen). Die Word-Datei bleibt editierbar. Erkannte Fristen landen im Aufgabenpanel: E-Mail-Erinnerung 1, 2 oder 3 Tage vorher plus Export nach Google Calendar oder Apple/Outlook. UI in 30 Sprachen; Schreiben aus EU, UK, Schweiz und Norwegen. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, Deploy auf Vercel — Webprodukt mit geplanter Mobile-App.",
-      es: "Dokiero es mi producto estrella en dokiero.com — asistente de trámites para quien recibe escritos en otro idioma (o el propio) y no puede permitirse un plazo perdido. Subes un PDF o una foto del móvil: la IA detecta el país y el marco legal, explica el contenido en lenguaje claro, extrae importes, IBAN y fechas, y luego dialoga — pregunta lo que falta para generar una respuesta lista para enviar por email o imprimir y enviar por correo (cabecera, dirección de la oficina, fecha, cuerpo y firma manuscrita desde ajustes). El Word sigue siendo editable. Los plazos detectados van al panel de tareas: recordatorio por email 1, 2 o 3 días antes y exportación a Google Calendar o Apple/Outlook. Interfaz en 30 idiomas; documentos de la UE, Reino Unido, Suiza y Noruega. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deploy en Vercel — producto web con app móvil en el roadmap.",
-      uk: "Dokiero — мій флагманський продукт на dokiero.com: асистент офіційних справ для тих, хто отримує листи іноземною (або рідною) мовою й не може пропустити термін. Завантажуєш PDF або фото з телефону: AI визначає країну й правовий контекст, пояснює зміст простою мовою, витягує суми, IBAN і дати, а потім веде діалог — запитує відсутні факти, щоб згенерувати відповідь, готову надіслати emailом або роздрукувати й відправити поштою (шапка, адреса установи, дата, текст і власний підпис із налаштувань). Файл Word залишається редагованим. Виявлені терміни потрапляють у панель завдань: email-нагадування за 1, 2 або 3 дні та експорт у Google Calendar чи Apple/Outlook. Інтерфейс 30 мовами; документи з ЄС, UK, Швейцарії та Норвегії. Стек: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, деплой на Vercel — вебпродукт із планом мобільного додатка.",
+      pl: "Cavunio to moje własne wydawnictwo i sklep z ebookami na cavunio.com - od projektu marki po wdrożenie. Pierwszy tytuł to moja powieść „Ania od nowa”. Strona ebooka pokazuje okładkę, opis, galerię „Zajrzyj do środka” z ilustracjami oraz trzy wydania: sam ebook (PDF + EPUB), pakiet z dodatkami albo same dodatki, z przełącznikiem cen PLN / EUR i ceną premierową. Zakup odbywa się bez zakładania konta: BLIK, karta, PayPal, Revolut Pay, Apple Pay lub Google Pay, a pliki można pobrać od razu i dodatkowo przychodzą e-mailem; wcześniejsze zakupy da się odzyskać w zakładce „Moje ebooki”. Do tego newsletter z potwierdzeniem zapisu, przypomnienie e-mailem o premierze, baner zgód, który włącza Google Analytics i Meta Pixel dopiero po akceptacji, oraz komplet stron prawnych (regulamin, polityka prywatności, odstąpienie od umowy, impressum). Projekt graficzny w stylu wydawniczym: papierowe tło, typografia szeryfowa i ciepłe akcenty. Stack: Next.js, Tailwind CSS, deploy na Vercel.",
+      en: "Cavunio is my own ebook imprint and shop at cavunio.com, built end to end from the brand to deployment. The first title is my novel “Ania od nowa”. The ebook page shows the cover, description, a “Look inside” gallery of illustrations and three editions: ebook only (PDF + EPUB), a bundle with extras, or extras only, with a PLN / EUR price switch and a launch price. Checkout needs no account: BLIK, card, PayPal, Revolut Pay, Apple Pay or Google Pay, with files available to download straight away and also sent by email; past purchases can be recovered under “My ebooks”. There is also a double opt-in newsletter, an email reminder for the launch, a consent banner that only enables Google Analytics and Meta Pixel after approval, and the full set of legal pages (terms, privacy policy, right of withdrawal, imprint). The design follows a publishing look: paper background, serif typography and warm accents. Stack: Next.js, Tailwind CSS, deployed on Vercel.",
+      de: "Cavunio ist mein eigener E-Book-Verlag mit Shop unter cavunio.com, von der Marke bis zum Deployment komplett selbst umgesetzt. Der erste Titel ist mein Roman „Ania od nowa“. Die E-Book-Seite zeigt Cover, Beschreibung, eine Galerie „Blick ins Buch“ mit Illustrationen und drei Ausgaben: nur E-Book (PDF + EPUB), Paket mit Extras oder nur Extras, mit Preisumschalter PLN / EUR und Premierenpreis. Gekauft wird ohne Konto: BLIK, Karte, PayPal, Revolut Pay, Apple Pay oder Google Pay; die Dateien stehen sofort zum Download bereit und kommen zusätzlich per E-Mail. Frühere Käufe lassen sich unter „Meine E-Books“ wiederfinden. Dazu kommen ein Newsletter mit Double-Opt-in, eine E-Mail-Erinnerung zur Premiere, ein Consent-Banner, das Google Analytics und Meta Pixel erst nach Zustimmung aktiviert, sowie alle Rechtstexte (AGB, Datenschutz, Widerruf, Impressum). Das Design orientiert sich an Verlagsästhetik: Papierhintergrund, Serifenschrift und warme Akzente. Stack: Next.js, Tailwind CSS, Deploy auf Vercel.",
+      es: "Cavunio es mi propia editorial de ebooks con tienda en cavunio.com, hecha de principio a fin, desde la marca hasta el despliegue. El primer título es mi novela «Ania od nowa». La página del ebook muestra la portada, la descripción, una galería «Echa un vistazo» con ilustraciones y tres ediciones: solo ebook (PDF + EPUB), pack con extras o solo extras, con selector de precio PLN / EUR y precio de lanzamiento. La compra no requiere cuenta: BLIK, tarjeta, PayPal, Revolut Pay, Apple Pay o Google Pay; los archivos se descargan al momento y también llegan por email, y las compras anteriores se recuperan en «Mis ebooks». Además hay newsletter con doble confirmación, recordatorio por email del lanzamiento, un banner de consentimiento que solo activa Google Analytics y Meta Pixel tras la aceptación, y todas las páginas legales (condiciones, privacidad, desistimiento, aviso legal). El diseño sigue una estética editorial: fondo de papel, tipografía serif y acentos cálidos. Stack: Next.js, Tailwind CSS, deploy en Vercel.",
+      uk: "Cavunio - моє власне видавництво ebook із магазином на cavunio.com, зроблене повністю самостійно: від бренду до деплою. Перша книга - мій роман «Ania od nowa». Сторінка ebook показує обкладинку, опис, галерею «Зазирни всередину» з ілюстраціями та три видання: лише ebook (PDF + EPUB), пакет із додатками або лише додатки, з перемикачем цін PLN / EUR і прем'єрною ціною. Покупка без акаунта: BLIK, картка, PayPal, Revolut Pay, Apple Pay або Google Pay; файли можна завантажити одразу, а посилання також приходить на email, попередні покупки відновлюються в розділі «Мої ebook». Також є розсилка з підтвердженням підписки, email-нагадування про прем'єру, банер згоди, який вмикає Google Analytics і Meta Pixel лише після погодження, та повний набір юридичних сторінок (правила, політика конфіденційності, відмова від договору, impressum). Дизайн у видавничому стилі: паперовий фон, шрифти із засічками й теплі акценти. Стек: Next.js, Tailwind CSS, деплой на Vercel.",
     },
   },
   {
@@ -178,11 +136,11 @@ export const projects: Project[] = [
       "i18n",
     ],
     liveUrl: "https://lyamo.eu/",
-    coverSrc: "/projects/lyamo/01-dashboard.png",
+    coverSrc: "/projects/lyamo/01-dashboard.webp",
     coverGradient: "linear-gradient(135deg, #0B1F17 0%, #1FA97A 45%, #C8F542 100%)",
     gallery: [
       {
-        src: "/projects/lyamo/02-category-donut.png",
+        src: "/projects/lyamo/02-category-donut.webp",
         caption: {
           pl: "Wydatki wg kategorii — donut z legendą i filtrem bieżącego okresu",
           en: "Expenses by category — donut chart with legend and current-period filter",
@@ -192,7 +150,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/lyamo/03-scanner-archive.png",
+        src: "/projects/lyamo/03-scanner-archive.webp",
         caption: {
           pl: "Skaner OCR paragonów (limity miesięczne) i archiwum dokumentów z podglądem",
           en: "Receipt OCR scanner (monthly quotas) and document archive with preview",
@@ -202,7 +160,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/lyamo/04-ai-chat.png",
+        src: "/projects/lyamo/04-ai-chat.webp",
         caption: {
           pl: "Asystent finansowy AI — pytania o budżet, kategorie i wpływ zakupów do wypłaty",
           en: "AI finance assistant — questions about budget, categories and purchase impact until payday",
@@ -212,7 +170,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/lyamo/05-transactions-split.png",
+        src: "/projects/lyamo/05-transactions-split.webp",
         caption: {
           pl: "Historia transakcji i split paragonu — jeden zakup rozbity na kilka kategorii",
           en: "Transaction history and receipt split — one purchase broken into multiple categories",
@@ -222,7 +180,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/lyamo/06-chart-filters.png",
+        src: "/projects/lyamo/06-chart-filters.webp",
         caption: {
           pl: "Interaktywny wykres — włączanie/wyłączanie kategorii oraz zakres dat (7 dni, dziś, własny)",
           en: "Interactive chart — toggle categories and date ranges (7 days, today, custom)",
@@ -255,6 +213,130 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "dokiero",
+    category: "apps",
+    featured: true,
+    year: 2026,
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "OpenAI",
+      "Anthropic",
+      "Google Vision",
+      "Stripe",
+      "next-intl",
+      "Vercel",
+    ],
+    liveUrl: "https://dokiero.com/",
+    coverSrc: "/projects/dokiero/01-dashboard.webp",
+    coverGradient: "linear-gradient(135deg, #0c1220 0%, #1a2744 50%, #c4b8a4 100%)",
+    gallery: [
+      {
+        src: "/projects/dokiero/02-case-analysis.webp",
+        caption: {
+          pl: "Analiza sprawy — kwoty, IBAN, terminy i pełne tłumaczenie obcego pisma",
+          en: "Case analysis — amounts, IBAN, deadlines and a full translation of the foreign letter",
+          de: "Fallanalyse — Beträge, IBAN, Fristen und vollständige Übersetzung des Schreibens",
+          es: "Análisis del caso — importes, IBAN, plazos y traducción completa del escrito",
+          uk: "Аналіз справи — суми, IBAN, терміни та повний переклад іноземного листа",
+        },
+      },
+      {
+        src: "/projects/dokiero/03-document-history.webp",
+        caption: {
+          pl: "Historia dokumentów — archiwum spraw z ważnością i eksportem PDF",
+          en: "Document history — case archive with validity tracking and PDF export",
+          de: "Dokumenthistorie — Aktenarchiv mit Gültigkeit und PDF-Export",
+          es: "Historial de documentos — archivo de casos con validez y exportación PDF",
+          uk: "Історія документів — архів справ із терміном дії та експортом PDF",
+        },
+      },
+      {
+        src: "/projects/dokiero/04-upload.webp",
+        caption: {
+          pl: "Upload do analizy — zdjęcie lub PDF, kraj prawa i wybór kredytu Standard / Pro",
+          en: "Upload for analysis — photo or PDF, country of law and Standard / Pro credit",
+          de: "Upload zur Analyse — Foto oder PDF, Rechtsland und Kredit Standard / Pro",
+          es: "Subida para análisis — foto o PDF, país del derecho y crédito Standard / Pro",
+          uk: "Завантаження до аналізу — фото або PDF, країна права та кредит Standard / Pro",
+        },
+      },
+      {
+        src: "/projects/dokiero/05-ready-letter.webp",
+        caption: {
+          pl: "Gotowe pismo do urzędu — dane, treść, data i własnoręczny podpis",
+          en: "Ready-to-send office letter — details, body, date and handwritten signature",
+          de: "Fertiges Behördenschreiben — Daten, Inhalt, Datum und Handunterschrift",
+          es: "Escrito listo para enviar — datos, cuerpo, fecha y firma manuscrita",
+          uk: "Готовий лист до установи — дані, зміст, дата та власний підпис",
+        },
+      },
+      {
+        src: "/projects/dokiero/06-deadlines.webp",
+        caption: {
+          pl: "Terminy i zadania — przypomnienia oraz eksport do Google / Apple / Outlook",
+          en: "Deadlines and tasks — reminders plus export to Google / Apple / Outlook",
+          de: "Fristen und Aufgaben — Erinnerungen plus Export nach Google / Apple / Outlook",
+          es: "Plazos y tareas — recordatorios y exportación a Google / Apple / Outlook",
+          uk: "Терміни та завдання — нагадування й експорт у Google / Apple / Outlook",
+        },
+      },
+      {
+        src: "/projects/dokiero/07-languages.webp",
+        caption: {
+          pl: "30 języków interfejsu — aplikacja gotowa dla użytkowników z prawie całego świata",
+          en: "30 UI languages — ready for users from almost anywhere in the world",
+          de: "30 UI-Sprachen — bereit für Nutzer aus nahezu der ganzen Welt",
+          es: "30 idiomas de interfaz — lista para usuarios de casi todo el mundo",
+          uk: "30 мов інтерфейсу — готова для користувачів майже з усього світу",
+        },
+      },
+      {
+        src: "/projects/dokiero/08-pdf-translation.webp",
+        caption: {
+          pl: "PDF z tłumaczeniem — podsumowanie, szczegóły płatności i treść pisma",
+          en: "Translated PDF — summary, payment details and letter body",
+          de: "Übersetztes PDF — Zusammenfassung, Zahlungsdaten und Schreibenstext",
+          es: "PDF traducido — resumen, datos de pago y cuerpo del escrito",
+          uk: "PDF з перекладом — підсумок, деталі оплати та текст листа",
+        },
+      },
+      {
+        src: "/projects/dokiero/10-extend-validity.webp",
+        caption: {
+          pl: "Przedłużenie ważności w archiwum — kredyty ze Standard i Pro",
+          en: "Extend archive validity — spend Standard and Pro credits",
+          de: "Archivgültigkeit verlängern — Credits aus Standard und Pro",
+          es: "Ampliar validez en el archivo — créditos Standard y Pro",
+          uk: "Продовження терміну в архіві — кредити Standard і Pro",
+        },
+      },
+    ],
+    title: {
+      pl: "Dokiero",
+      en: "Dokiero",
+      de: "Dokiero",
+      es: "Dokiero",
+      uk: "Dokiero",
+    },
+    summary: {
+      pl: "Mój flagowy produkt — AI skanuje obce pisma, generuje gotowe odpowiedzi do urzędu z podpisem, pilnuje terminów i przypomina e-mailem.",
+      en: "My flagship product — AI scans foreign letters, drafts ready office replies with signature, tracks deadlines and email reminders.",
+      de: "Mein Flagship — KI scannt fremdsprachige Schreiben, erstellt fertige Behördenantworten mit Unterschrift, Fristen und E-Mail-Erinnerungen.",
+      es: "Mi producto estrella — la IA escanea escritos extranjeros, genera respuestas listas con firma, plazos y recordatorios por email.",
+      uk: "Мій флагманський продукт — AI сканує іноземні листи, генерує готові відповіді з підписом, стежить за термінами та email-нагадуваннями.",
+    },
+    body: {
+      pl: "Dokiero to mój flagowy produkt live na dokiero.com — asystent spraw urzędowych dla osób, które dostają pisma w obcym języku (lub we własnym) i nie chcą ryzykować przeoczonego terminu. Wgrywasz PDF albo zdjęcie z telefonu: AI rozpoznaje kraj i przepisy, wyjaśnia treść po ludzku, wyciąga kwoty, IBAN i daty, a potem prowadzi dialog — dopytuje o brakujące fakty, żeby wygenerować pismo odpowiedzi gotowe do wysyłki e-mailem lub listownie po wydruku (z nagłówkiem, adresem urzędu, datą, treścią i własnoręcznym podpisem z ustawień). Plik Word zostaje edytowalny, gdy trzeba coś poprawić. Wykryte terminy trafiają do panelu zadań: przypomnienie na maila 1, 2 lub 3 dni wcześniej oraz dodanie do kalendarza Google albo Apple/Outlook. Interfejs w 30 językach; pisma z UE, UK, Szwajcarii i Norwegii. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deploy na Vercel — produkt webowy z planem aplikacji mobilnej.",
+      en: "Dokiero is my flagship product live at dokiero.com — an official-matters assistant for people who receive letters in a foreign language (or their own) and cannot afford a missed deadline. Upload a PDF or phone photo: AI detects the country and legal context, explains the letter in plain language, extracts amounts, IBAN and dates, then runs a guided dialogue — asking for missing facts so it can draft a reply ready to email or print and post (header, office address, date, body and a handwritten signature from settings). The Word file stays editable when you need a tweak. Detected deadlines land in the tasks panel: email reminders 1, 2 or 3 days ahead plus Google Calendar or Apple/Outlook export. UI in 30 languages; documents from the EU, UK, Switzerland and Norway. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deployed on Vercel — a web product with a mobile app on the roadmap.",
+      de: "Dokiero ist mein Flagship live unter dokiero.com — Assistent für Behördensachen für alle, die Schreiben in einer Fremdsprache (oder der eigenen) erhalten und keine Frist verpassen dürfen. PDF oder Handyfoto hochladen: KI erkennt Land und Rechtskontext, erklärt den Inhalt verständlich, extrahiert Beträge, IBAN und Daten und führt danach einen Dialog — fehlende Fakten nachfragen, damit eine Antwort entsteht, die per E-Mail oder ausgedruckt per Post versandfertig ist (Kopf, Behördenadresse, Datum, Text und Handunterschrift aus den Einstellungen). Die Word-Datei bleibt editierbar. Erkannte Fristen landen im Aufgabenpanel: E-Mail-Erinnerung 1, 2 oder 3 Tage vorher plus Export nach Google Calendar oder Apple/Outlook. UI in 30 Sprachen; Schreiben aus EU, UK, Schweiz und Norwegen. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, Deploy auf Vercel — Webprodukt mit geplanter Mobile-App.",
+      es: "Dokiero es mi producto estrella en dokiero.com — asistente de trámites para quien recibe escritos en otro idioma (o el propio) y no puede permitirse un plazo perdido. Subes un PDF o una foto del móvil: la IA detecta el país y el marco legal, explica el contenido en lenguaje claro, extrae importes, IBAN y fechas, y luego dialoga — pregunta lo que falta para generar una respuesta lista para enviar por email o imprimir y enviar por correo (cabecera, dirección de la oficina, fecha, cuerpo y firma manuscrita desde ajustes). El Word sigue siendo editable. Los plazos detectados van al panel de tareas: recordatorio por email 1, 2 o 3 días antes y exportación a Google Calendar o Apple/Outlook. Interfaz en 30 idiomas; documentos de la UE, Reino Unido, Suiza y Noruega. Stack: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, deploy en Vercel — producto web con app móvil en el roadmap.",
+      uk: "Dokiero — мій флагманський продукт на dokiero.com: асистент офіційних справ для тих, хто отримує листи іноземною (або рідною) мовою й не може пропустити термін. Завантажуєш PDF або фото з телефону: AI визначає країну й правовий контекст, пояснює зміст простою мовою, витягує суми, IBAN і дати, а потім веде діалог — запитує відсутні факти, щоб згенерувати відповідь, готову надіслати emailом або роздрукувати й відправити поштою (шапка, адреса установи, дата, текст і власний підпис із налаштувань). Файл Word залишається редагованим. Виявлені терміни потрапляють у панель завдань: email-нагадування за 1, 2 або 3 дні та експорт у Google Calendar чи Apple/Outlook. Інтерфейс 30 мовами; документи з ЄС, UK, Швейцарії та Норвегії. Стек: Next.js + TypeScript + Tailwind, Supabase, OpenAI / Anthropic, Google Vision (OCR), Stripe, next-intl, деплой на Vercel — вебпродукт із планом мобільного додатка.",
+    },
+  },
+  {
     slug: "wc26-predictor",
     category: "websites",
     year: 2026,
@@ -269,11 +351,11 @@ export const projects: Project[] = [
       "Vercel",
     ],
     liveUrl: "https://wc26-predictor-zapraszam.vercel.app/",
-    coverSrc: "/projects/wc26-predictor/01-home.png",
+    coverSrc: "/projects/wc26-predictor/01-home.webp",
     coverGradient: "linear-gradient(135deg, #020617 0%, #1E3A8A 45%, #7C3AED 100%)",
     gallery: [
       {
-        src: "/projects/wc26-predictor/02-dashboard.png",
+        src: "/projects/wc26-predictor/02-dashboard.webp",
         caption: {
           pl: "Dashboard gracza — drzewko turniejowe, zakłady długoterminowe, Dream Team i terminarze faz",
           en: "Player dashboard — tournament bracket, long-term bets, Dream Team and phase schedules",
@@ -283,7 +365,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/wc26-predictor/03-bracket.png",
+        src: "/projects/wc26-predictor/03-bracket.webp",
         caption: {
           pl: "Drzewko pucharowe — faza 1/16 i 1/8, wyniki z API (dogrywki i karne)",
           en: "Knockout bracket — round of 32 and 16, API results (extra time and penalties)",
@@ -293,7 +375,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/wc26-predictor/04-match-receipt.png",
+        src: "/projects/wc26-predictor/04-match-receipt.webp",
         caption: {
           pl: "Karta meczu po rozliczeniu — oś wydarzeń, rachunek punktowy, passa i Joker",
           en: "Settled match card — event timeline, points receipt, streak bonus and Joker",
@@ -303,7 +385,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/wc26-predictor/05-group-standings.png",
+        src: "/projects/wc26-predictor/05-group-standings.webp",
         caption: {
           pl: "Tabele grup — status zakończenia, awanse i wyniki meczów zsynchronizowane z API",
           en: "Group tables — completion status, qualifiers and match results synced from the API",
@@ -313,7 +395,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/wc26-predictor/06-dream-team.png",
+        src: "/projects/wc26-predictor/06-dream-team.webp",
         caption: {
           pl: "Dream Team w karcie meczu — punkty za występy wybranych zawodników wśród graczy",
           en: "Dream Team on the match card — points for selected players’ performances among contestants",
@@ -323,7 +405,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/wc26-predictor/07-outrights.png",
+        src: "/projects/wc26-predictor/07-outrights.webp",
         caption: {
           pl: "Zakłady specjalne — mistrz, król strzelców, MVP i rozliczenie fazy pucharowej",
           en: "Special bets — champion, top scorer, MVP and knockout-phase settlement",
@@ -361,11 +443,11 @@ export const projects: Project[] = [
     year: 2026,
     tech: ["React", "Vite", "Tailwind CSS", "Framer Motion", "React Router", "Vercel"],
     liveUrl: "https://www.akgebaeudeservice.com/",
-    coverSrc: "/projects/ak-gebaeudeservice/01-home.png",
+    coverSrc: "/projects/ak-gebaeudeservice/01-home.webp",
     coverGradient: "linear-gradient(135deg, #020617 0%, #064E3B 50%, #34D399 100%)",
     gallery: [
       {
-        src: "/projects/ak-gebaeudeservice/02-services.png",
+        src: "/projects/ak-gebaeudeservice/02-services.webp",
         caption: {
           pl: "Siatka usług — dozorca, sprzątanie, zima, usuwanie graffiti i więcej",
           en: "Services grid — caretaker, cleaning, winter service, graffiti removal and more",
@@ -375,7 +457,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ak-gebaeudeservice/07-service-modal.png",
+        src: "/projects/ak-gebaeudeservice/07-service-modal.webp",
         caption: {
           pl: "Modal szczegółów usługi — opis oferty i CTA „Poproś o ofertę”",
           en: "Service details modal — offer copy and “Request a quote” CTA",
@@ -385,7 +467,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ak-gebaeudeservice/03-ak-standard.png",
+        src: "/projects/ak-gebaeudeservice/03-ak-standard.webp",
         caption: {
           pl: "AK-Standard — „Nieruchomość na autopilocie” i cztery filary wartości",
           en: "AK-Standard — “Property on autopilot” and four value pillars",
@@ -395,7 +477,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ak-gebaeudeservice/05-philosophie.png",
+        src: "/projects/ak-gebaeudeservice/05-philosophie.webp",
         caption: {
           pl: "Filozofia — standard jakości „sprawa szefa” i twarz firmy",
           en: "Philosophy — “owner’s priority” quality standard and company face",
@@ -405,7 +487,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ak-gebaeudeservice/06-promises.png",
+        src: "/projects/ak-gebaeudeservice/06-promises.webp",
         caption: {
           pl: "O nas — obietnice: zaangażowanie, kontakt, sprzęt, dostępność 24/7",
           en: "About us — promises: engagement, direct contact, equipment, 24/7 availability",
@@ -415,7 +497,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/ak-gebaeudeservice/04-contact.png",
+        src: "/projects/ak-gebaeudeservice/04-contact.webp",
         caption: {
           pl: "Formularz kontaktowy — wybór usługi, załączniki i wysyłka oferty",
           en: "Contact form — service picker, file attachments and quote request",
@@ -454,11 +536,11 @@ export const projects: Project[] = [
     year: 2025,
     tech: ["Python", "Flask", "SQLAlchemy", "Flask-Migrate", "SQLite", "OMDb API", "Jinja2"],
     repoUrl: "https://github.com/PiotrKulbacki/movieweb_app",
-    coverSrc: "/projects/movieweb/01-home.png",
+    coverSrc: "/projects/movieweb/01-home.webp",
     coverGradient: "linear-gradient(135deg, #0F172A 0%, #1E3A5F 45%, #38BDF8 100%)",
     gallery: [
       {
-        src: "/projects/movieweb/02-users.png",
+        src: "/projects/movieweb/02-users.webp",
         caption: {
           pl: "Lista użytkowników z awatarami i usuwaniem",
           en: "User list with avatars and delete",
@@ -468,7 +550,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/movieweb/05-add-user.png",
+        src: "/projects/movieweb/05-add-user.webp",
         caption: {
           pl: "Formularz nowego użytkownika — wybór awatara i nazwa",
           en: "Add new user form — avatar picker and name",
@@ -478,7 +560,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/movieweb/03-collection.png",
+        src: "/projects/movieweb/03-collection.webp",
         caption: {
           pl: "Kolekcja filmów użytkownika — karty z plakatem, reżyserem, rokiem i oceną (CRUD)",
           en: "User movie collection cards with poster/director/year/rating CRUD",
@@ -488,7 +570,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/movieweb/04-details.png",
+        src: "/projects/movieweb/04-details.webp",
         caption: {
           pl: "Modal szczegółów filmu — fabuła i obsada z OMDb",
           en: "Movie details modal — plot & cast from OMDb",
@@ -527,11 +609,11 @@ export const projects: Project[] = [
     year: 2025,
     tech: ["React", "Vite", "Tailwind CSS", "Python", "Flask", "JWT", "SQLAlchemy", "SQLite"],
     repoUrl: "https://github.com/PiotrKulbacki/SportClub",
-    coverSrc: "/projects/sportclub/01-home.png",
+    coverSrc: "/projects/sportclub/01-home.webp",
     coverGradient: "linear-gradient(135deg, #000046 0%, #1CB5E0 55%, #FE892A 100%)",
     gallery: [
       {
-        src: "/projects/sportclub/02-auth.png",
+        src: "/projects/sportclub/02-auth.webp",
         caption: {
           pl: "Logowanie i rejestracja — JWT, role admin / uczestnik",
           en: "Login & register — JWT auth with admin / participant roles",
@@ -541,7 +623,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/sportclub/03-admin-dashboard.png",
+        src: "/projects/sportclub/03-admin-dashboard.webp",
         caption: {
           pl: "Panel admina — kursy, limity miejsc, dodawanie / edycja / usuwanie",
           en: "Admin dashboard — courses, spot limits, add / edit / delete",
@@ -551,7 +633,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/sportclub/04-admin-forms.png",
+        src: "/projects/sportclub/04-admin-forms.webp",
         caption: {
           pl: "Formularze admina — nowy kurs oraz klasa (dzień, godzina, lokalizacja, trener, miejsca)",
           en: "Admin forms — new course and class (day, time, location, trainer, spots)",
@@ -561,7 +643,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/sportclub/05-admin-classes.png",
+        src: "/projects/sportclub/05-admin-classes.webp",
         caption: {
           pl: "Harmonogram klas i lista uczestników — podgląd zapisanych członków",
           en: "Class schedule and member list — view enrolled participants",
@@ -571,7 +653,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/sportclub/06-user-join.png",
+        src: "/projects/sportclub/06-user-join.webp",
         caption: {
           pl: "Panel użytkownika — przegląd kursów i dołączanie do konkretnej klasy",
           en: "User dashboard — browse courses and join a specific class",
@@ -581,7 +663,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/projects/sportclub/07-enrolled.png",
+        src: "/projects/sportclub/07-enrolled.webp",
         caption: {
           pl: "Zapisane zajęcia — wypisanie z klasy i usuwanie konta",
           en: "Enrolled classes — leave a class and delete account",
