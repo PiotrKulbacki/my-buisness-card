@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { siteConfig } from "@/config/site";
+import { Link } from "@/i18n/navigation";
 import { LegalArticle, LegalSection } from "@/components/legal/LegalArticle";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -50,10 +51,10 @@ export default async function ImpressumPage({ params }: Props) {
           </a>
         </p>
         <p>
-          {t("phone")}:{" "}
-          <a className="underline underline-offset-4" href={`tel:${legal.phoneTel}`}>
-            {legal.phoneDisplay}
-          </a>
+          {t("contactForm")}:{" "}
+          <Link className="underline underline-offset-4" href="/contact">
+            {t("contactFormLink")}
+          </Link>
         </p>
       </LegalSection>
 

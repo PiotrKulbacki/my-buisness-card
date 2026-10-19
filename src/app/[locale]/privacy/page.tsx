@@ -56,12 +56,6 @@ export default async function PrivacyPage({ params }: Props) {
             {siteConfig.email}
           </a>
         </p>
-        <p>
-          {t("phone")}:{" "}
-          <a className="underline underline-offset-4" href={`tel:${legal.phoneTel}`}>
-            {legal.phoneDisplay}
-          </a>
-        </p>
       </LegalSection>
 
       <LegalSection heading={t("dpoHeading")}>

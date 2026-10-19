@@ -34,13 +34,14 @@ Podstawa: **§ 5 DDG** (Digitale-Dienste-Gesetz).
 | Przedmiot       | strony, webdesign, cyfrowe obecności, indywidualne usługi i oprogramowanie (i18n)                 |
 | Adres           | `siteConfig.legal` — Bendastr. 11, 12051 Berlin                                                   |
 | E-mail          | `siteConfig.email`                                                                                |
-| Telefon         | `siteConfig.legal.phoneDisplay`                                                                   |
 | USt-IdNr.       | `NEXT_PUBLIC_UST_IDNR` — publiczny, gdy wydany (§ 5 DDG); Steuernummer **nie** publikujemy        |
 | Nazwa handlowa  | brak — na Gewerbe jest wyłącznie **Piotr Kulbacki** (bez dopisku Web Development)                 |
 | Handelsregister | brak wpisu — numeru nie podajemy                                                                  |
 | Streitbeilegung | brak udziału w Verbraucherschlichtung (VSBG); **bez** linku do zamkniętej platformy ODR UE (2025) |
 
-Dane adresowe, telefon i organ DPA: `src/config/site.ts` → `legal`.  
+Telefon **nie jest publikowany** (od 2026-10-19). Kontakt w Impressum, privacy, AGB i pouczeniu Widerruf: e-mail + formularz kontaktowy (szybki kontakt elektroniczny wg § 5 DDG). JSON-LD bez `telephone`.
+
+Dane adresowe i organ DPA: `src/config/site.ts` → `legal`.  
 `NEXT_PUBLIC_UST_IDNR` ustaw w **`.env.local`** oraz na **Vercel Production** (Preview opcjonalnie), potem **redeploy** — zmienne `NEXT_PUBLIC_*` są wklejane przy buildzie.
 
 Brak sekcji „odpowiedzialność za treści” (§ 18 MStV): strona to wizytówka / CV / projekty, nie oferta dziennikarsko-redakcyjna.
@@ -51,7 +52,7 @@ Brak sekcji „odpowiedzialność za treści” (§ 18 MStV): strona to wizytów
 
 Jedyna strona prywatności (DE: tytuł **Datenschutzerklärung**). Nie dublować pod drugim URL.
 
-Sekcje (i18n, 5 locale): administrator (adres, e-mail, telefon), **brak IOD**, mapa przetwarzania, hosting (Vercel), Turnstile, formularz, brief (w tym **załączniki**: do 3 plików, tylko jako załącznik maila przez Brevo, bez zapisu na serwerze), **odpowiedź z szablonu (`/reply`, token HMAC 90 dni)**, **art. 9 RODO** (nie zbieramy danych szczególnych), Brevo, analityka (Consent Mode v2), odbiorcy, transfer poza EOG, retencja, cookies (`#cookies`), prawa, organ nadzorczy Berlin (`legal.dpa`).
+Sekcje (i18n, 5 locale): administrator (adres, e-mail), **brak IOD**, mapa przetwarzania, hosting (Vercel), Turnstile, formularz, brief (w tym **załączniki**: do 3 plików, tylko jako załącznik maila przez Brevo, bez zapisu na serwerze), **odpowiedź z szablonu (`/reply`, token HMAC 90 dni)**, **art. 9 RODO** (nie zbieramy danych szczególnych), Brevo, analityka (Consent Mode v2), odbiorcy, transfer poza EOG, retencja, cookies (`#cookies`), prawa, organ nadzorczy Berlin (`legal.dpa`).
 
 **Aktywnie używane na tej witrynie:** Vercel (hosting + Analytics po zgodzie), Cloudflare Turnstile, Brevo, GA4 + Consent Mode v2, własny banner cookies, formularz kontaktowy, brief (`sessionStorage` szkicu), first-party cookies `NEXT_LOCALE` / `pk_cookie_consent`.
 

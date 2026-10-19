@@ -56,7 +56,6 @@
     "closeCertificate": "Zamknij",
     "languages": "Języki",
     "remote": "Remote",
-    "showPhone": "Pokaż numer",
     "skillGroups": {
       "frontend": "Frontend",
       "backend": "Backend i dane",
@@ -298,12 +297,11 @@
   },
   "privacy": {
     "title": "Polityka prywatności",
-    "updated": "Ostatnia aktualizacja: 18 października 2026",
+    "updated": "Ostatnia aktualizacja: 19 października 2026",
     "intro": "Ta strona przetwarza dane osobowe tylko w zakresie niezbędnym do działania witryny, odpowiedzi na zapytania i briefy oraz - po zgodzie - pomiaru ruchu. Nie opisuję tu usług, których ta witryna nie używa (np. własnej bazy Supabase).",
     "controllerHeading": "Administrator danych",
     "controllerBody": "Administratorem danych jest {name} (Einzelunternehmen, Berlin).",
     "email": "E-mail",
-    "phone": "Telefon",
     "dpoHeading": "Inspektor Ochrony Danych",
     "dpoBody": "Nie jestem zobowiązany do wyznaczenia Inspektora Ochrony Danych (IOD / Datenschutzbeauftragter) i go nie powołałem. W sprawach prywatności użyj danych kontaktowych administratora powyżej.",
     "mapHeading": "Jakie dane przetwarzam",
@@ -365,7 +363,8 @@
     "businessBody": "Tworzenie stron internetowych, webdesign, cyfrowych wizytówek oraz indywidualnych usług i rozwiązań cyfrowych.",
     "contactHeading": "Kontakt",
     "email": "E-mail",
-    "phone": "Telefon",
+    "contactForm": "Formularz kontaktowy",
+    "contactFormLink": "piotrkulbacki.com/contact",
     "vatHeading": "Podatek od towarów i usług",
     "vatId": "Numer VAT (USt-IdNr.)",
     "vatBody": "Jako Kleinunternehmer według § 19 UStG nie doliczam VAT. Numer podatkowy (Steuernummer) nie jest publikowany.",
@@ -470,7 +469,7 @@
   },
   "agb": {
     "title": "Warunki współpracy (AGB)",
-    "updated": "Ostatnia aktualizacja: 9 września 2026",
+    "updated": "Ostatnia aktualizacja: 19 października 2026",
     "intro": "Poniższe warunki opisują, jak zawieram i realizuję zlecenia (strony, aplikacje, usługi cyfrowe). Nie zastępują indywidualnej oferty. Korzystanie z witryny ani wysłanie formularza nie oznacza zakupu.",
     "model": "Model: kontakt → analiza potrzeb → indywidualny zakres → indywidualna oferta → akceptacja → rozpoczęcie realizacji.",
     "withdrawalLink": "Informacja o prawie odstąpienia (dla konsumentów)",
@@ -486,7 +485,7 @@
       },
       "conclusion": {
         "heading": "3. Kontakt i zawarcie umowy",
-        "body": "Kontakt jest możliwy przez formularz, brief, e-mail, telefon lub inne podane kanały. Wysłanie formularza lub briefu to zapytanie, nie oferta wiążąca i nie obowiązek zakupu.\n\nUmowa dochodzi do skutku, gdy obie strony uzgodnią indywidualny zakres i cenę - zwykle przez pisemne lub mailowe potwierdzenie oferty. Do tego momentu mogę odmówić realizacji bez podania przyczyny."
+        "body": "Kontakt jest możliwy przez formularz, brief lub e-mail. Wysłanie formularza lub briefu to zapytanie, nie oferta wiążąca i nie obowiązek zakupu.\n\nUmowa dochodzi do skutku, gdy obie strony uzgodnią indywidualny zakres i cenę - zwykle przez pisemne lub mailowe potwierdzenie oferty. Do tego momentu mogę odmówić realizacji bez podania przyczyny."
       },
       "offers": {
         "heading": "4. Oferty i wycena",
@@ -556,10 +555,10 @@
   },
   "widerruf": {
     "title": "Prawo odstąpienia",
-    "updated": "Ostatnia aktualizacja: 20 sierpnia 2026",
+    "updated": "Ostatnia aktualizacja: 19 października 2026",
     "intro": "Poniższa informacja dotyczy konsumentów (nie przedsiębiorców), gdy dojdzie do umowy o usługi zawartej na odległość (np. akceptacja indywidualnej oferty e-mailem). Wysłanie formularza kontaktowego lub briefu nie zawiera umowy i nie rozpoczyna biegu odstąpienia.",
     "instructionHeading": "Informacja o prawie odstąpienia",
-    "instructionBody": "Mają Państwo prawo odstąpić od umowy w terminie 14 dni bez podawania przyczyny.\n\nTermin odstąpienia kończy się po 14 dniach od dnia zawarcia umowy.\n\nAby skorzystać z prawa odstąpienia, należy poinformować mnie (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com, tel. +49 157 35166871) o swojej decyzji w drodze jednoznacznego oświadczenia (np. pismo wysłane pocztą lub e-mail). Można skorzystać z poniższego wzoru, ale nie jest to obowiązkowe.\n\nAby zachować termin, wystarczy wysłać informację o wykonaniu prawa odstąpienia przed jego upływem.",
+    "instructionBody": "Mają Państwo prawo odstąpić od umowy w terminie 14 dni bez podawania przyczyny.\n\nTermin odstąpienia kończy się po 14 dniach od dnia zawarcia umowy.\n\nAby skorzystać z prawa odstąpienia, należy poinformować mnie (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com) o swojej decyzji w drodze jednoznacznego oświadczenia (np. pismo wysłane pocztą lub e-mail). Można skorzystać z poniższego wzoru, ale nie jest to obowiązkowe.\n\nAby zachować termin, wystarczy wysłać informację o wykonaniu prawa odstąpienia przed jego upływem.",
     "earlyStartHeading": "Skutki odstąpienia i wcześniejsze rozpoczęcie usługi",
     "earlyStartBody": "W przypadku odstąpienia zwracam wszystkie otrzymane płatności niezwłocznie, nie później niż w 14 dni od otrzymania informacji o odstąpieniu, tym samym kanałem płatności, chyba że wyraźnie uzgodniono inaczej; bez opłat z tego tytułu.\n\nJeżeli zażądali Państwo rozpoczęcia usługi przed upływem 14 dni, zapłacą Państwo kwotę proporcjonalną do świadczeń spełnionych do chwili poinformowania o odstąpieniu, w stosunku do pełnego zakresu umowy.\n\nJeśli usługa zostanie w pełni wykonana, a wyrazili Państwo uprzednio wyraźną zgodę na rozpoczęcie przed końcem terminu oraz potwierdzenie, że tracą Państwo prawo odstąpienia z chwilą pełnego wykonania - prawo odstąpienia wygasa.\n\nTakiego potwierdzenia nie zbieram przez formularz na stronie. Gdyby konsument chciał start przed upływem 14 dni, zrobię to wyłącznie po wyraźnym żądaniu na trwałym nośniku (e-mail) z wymaganymi oświadczeniami. Do tego czasu mogę wstrzymać odpłatną realizację.",
     "formHeading": "Wzór formularza odstąpienia",

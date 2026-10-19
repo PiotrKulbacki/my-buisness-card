@@ -56,7 +56,6 @@
     "closeCertificate": "Cerrar",
     "languages": "Idiomas",
     "remote": "Remoto",
-    "showPhone": "Mostrar número",
     "skillGroups": {
       "frontend": "Frontend",
       "backend": "Backend y datos",
@@ -298,12 +297,11 @@
   },
   "privacy": {
     "title": "Política de privacidad",
-    "updated": "Última actualización: 18 de octubre de 2026",
+    "updated": "Última actualización: 19 de octubre de 2026",
     "intro": "Este sitio trata datos personales solo en la medida necesaria para funcionar, responder a consultas y briefs y - con consentimiento - medir el tráfico. No describo servicios que este sitio no usa (por ejemplo no hay base Supabase propia).",
     "controllerHeading": "Responsable del tratamiento",
     "controllerBody": "El responsable es {name} (autónomo / Einzelunternehmen, Berlín).",
     "email": "Email",
-    "phone": "Teléfono",
     "dpoHeading": "Delegado de protección de datos",
     "dpoBody": "No estoy obligado a designar un delegado de protección de datos (DPO / IOD) y no he nombrado ninguno. Para privacidad use los datos de contacto del responsable arriba.",
     "mapHeading": "Qué datos trato",
@@ -365,7 +363,8 @@
     "businessBody": "Creación de sitios web, diseño web, presencias digitales en línea y servicios y soluciones digitales a medida.",
     "contactHeading": "Contacto",
     "email": "Email",
-    "phone": "Teléfono",
+    "contactForm": "Formulario de contacto",
+    "contactFormLink": "piotrkulbacki.com/contact",
     "vatHeading": "IVA",
     "vatId": "NIF-IVA (USt-IdNr.)",
     "vatBody": "Como pequeño empresario según § 19 UStG (Kleinunternehmer) no repercuto IVA. El número fiscal (Steuernummer) no se publica.",
@@ -470,7 +469,7 @@
   },
   "agb": {
     "title": "Condiciones de colaboración (AGB)",
-    "updated": "Última actualización: 9 de septiembre de 2026",
+    "updated": "Última actualización: 19 de octubre de 2026",
     "intro": "Estas condiciones describen cómo acepto y ejecuto encargos de pago (webs, apps, servicios digitales). No sustituyen una oferta individual. Usar el sitio o enviar un formulario no es una compra.",
     "model": "Flujo: contacto → análisis de necesidades → alcance individual → oferta individual → aceptación → inicio del trabajo.",
     "withdrawalLink": "Información sobre el desistimiento (consumidores)",
@@ -486,7 +485,7 @@
       },
       "conclusion": {
         "heading": "3. Contacto y celebración del contrato",
-        "body": "El contacto es posible por formulario, brief, email, teléfono u otros canales indicados. Enviar el formulario o el brief es una consulta, no una oferta vinculante ni una obligación de compra.\n\nEl contrato nace cuando ambas partes acuerdan alcance y precio individuales - normalmente con confirmación escrita o por email de la oferta. Hasta entonces puedo rechazar el trabajo sin motivar."
+        "body": "El contacto es posible por formulario, brief o email. Enviar el formulario o el brief es una consulta, no una oferta vinculante ni una obligación de compra.\n\nEl contrato nace cuando ambas partes acuerdan alcance y precio individuales - normalmente con confirmación escrita o por email de la oferta. Hasta entonces puedo rechazar el trabajo sin motivar."
       },
       "offers": {
         "heading": "4. Ofertas y precio",
@@ -556,10 +555,10 @@
   },
   "widerruf": {
     "title": "Derecho de desistimiento",
-    "updated": "Última actualización: 20 de agosto de 2026",
+    "updated": "Última actualización: 19 de octubre de 2026",
     "intro": "La siguiente información es para consumidores (no empresas) cuando se celebra un contrato a distancia de servicios (p. ej. aceptar una oferta individual por email). Enviar el formulario o el brief no celebra el contrato ni inicia el plazo de desistimiento.",
     "instructionHeading": "Instrucciones de desistimiento",
-    "instructionBody": "Tiene usted derecho a desistir del contrato en un plazo de 14 días sin indicar el motivo.\n\nEl plazo de desistimiento expirará a los 14 días del día de la celebración del contrato.\n\nPara ejercer el desistimiento deberá notificarme (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com, tel. +49 157 35166871) su decisión mediante una declaración inequívoca (p. ej. carta o email). Puede usar el modelo siguiente, pero no es obligatorio.\n\nPara cumplir el plazo basta con que la comunicación relativa al ejercicio del desistimiento sea enviada antes de que venza el plazo.",
+    "instructionBody": "Tiene usted derecho a desistir del contrato en un plazo de 14 días sin indicar el motivo.\n\nEl plazo de desistimiento expirará a los 14 días del día de la celebración del contrato.\n\nPara ejercer el desistimiento deberá notificarme (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com) su decisión mediante una declaración inequívoca (p. ej. carta o email). Puede usar el modelo siguiente, pero no es obligatorio.\n\nPara cumplir el plazo basta con que la comunicación relativa al ejercicio del desistimiento sea enviada antes de que venza el plazo.",
     "earlyStartHeading": "Consecuencias y comienzo anticipado del servicio",
     "earlyStartBody": "Si desiste, le reembolsaré todos los pagos recibidos sin demora indebida y, en cualquier caso, a más tardar en 14 días desde que se me informe del desistimiento, con el mismo medio de pago de la transacción inicial salvo pacto expreso en contrario; no se le cobrará ninguna comisión por el reembolso.\n\nSi pidió que el servicio comenzara durante el plazo de desistimiento, abonará un importe proporcional a lo ya prestado hasta que me informó del desistimiento, en comparación con el total del contrato.\n\nEl derecho de desistimiento se pierde en un contrato de servicios si he ejecutado el servicio por completo y empecé solo después de que usted diera su consentimiento expreso previo y reconociera que pierde el derecho al completarse la prestación.\n\nNo recabo esa confirmación en el formulario web. Si un consumidor quiere empezar antes de 14 días, lo haré solo tras una petición expresa en un soporte duradero (email) con las declaraciones legales. Hasta entonces puedo aplazar la ejecución onerosa.",
     "formHeading": "Modelo de formulario de desistimiento",

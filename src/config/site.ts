@@ -45,8 +45,6 @@ export const siteConfig = {
     city: "Berlin",
     country: "Germany",
     countryDe: "Deutschland",
-    phoneDisplay: "+49 157 35166871",
-    phoneTel: "+4915735166871",
     entity: "Einzelunternehmen",
     vatId: process.env.NEXT_PUBLIC_UST_IDNR?.trim() ?? "",
     /** Berlin supervisory authority (privacy page). */

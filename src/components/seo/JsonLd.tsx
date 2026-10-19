@@ -30,7 +30,6 @@ export async function JsonLd() {
         },
         image: logoUrl,
         email: siteConfig.email,
-        telephone: siteConfig.legal.phoneTel,
         address: {
           "@type": "PostalAddress",
           streetAddress: siteConfig.legal.street,

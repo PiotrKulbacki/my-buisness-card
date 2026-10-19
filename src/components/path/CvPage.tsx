@@ -2,7 +2,6 @@ import { getTranslations } from "next-intl/server";
 import { cv } from "@/content/cv";
 import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/motion/Reveal";
-import { PhoneReveal } from "@/components/path/PhoneReveal";
 import { CertificatesList } from "@/components/path/CertificatesList";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import type { Locale } from "@/i18n/routing";
@@ -43,7 +42,6 @@ export async function CvPage({ locale }: Props) {
           >
             {siteConfig.email}
           </a>
-          <PhoneReveal />
         </div>
         <div className="mt-4">
           <p className="text-fg-muted text-sm">

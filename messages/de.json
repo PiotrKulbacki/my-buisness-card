@@ -56,7 +56,6 @@
     "closeCertificate": "Schließen",
     "languages": "Sprachen",
     "remote": "Remote",
-    "showPhone": "Nummer anzeigen",
     "skillGroups": {
       "frontend": "Frontend",
       "backend": "Backend & Daten",
@@ -298,12 +297,11 @@
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "updated": "Zuletzt aktualisiert: 18. Oktober 2026",
+    "updated": "Zuletzt aktualisiert: 19. Oktober 2026",
     "intro": "Diese Website verarbeitet personenbezogene Daten nur, soweit dies für den Betrieb, die Beantwortung von Anfragen und Projekt-Briefs und - mit Einwilligung - die Reichweitenmessung erforderlich ist. Dienste, die hier nicht eingesetzt werden (z. B. keine eigene Supabase-Datenbank), werden nicht beschrieben.",
     "controllerHeading": "Verantwortlicher",
     "controllerBody": "Verantwortlicher ist {name} (Einzelunternehmen, Berlin).",
     "email": "E-Mail",
-    "phone": "Telefon",
     "dpoHeading": "Datenschutzbeauftragter",
     "dpoBody": "Ich bin nicht verpflichtet, einen Datenschutzbeauftragten zu benennen, und habe keinen benannt. Für Datenschutzanliegen nutzen Sie die Kontaktdaten des Verantwortlichen oben.",
     "mapHeading": "Welche Daten ich verarbeite",
@@ -365,7 +363,8 @@
     "businessBody": "Erstellung von Websites, Webdesign, digitalen Online-Präsenzen sowie individuelle digitale Dienstleistungen und Softwarelösungen.",
     "contactHeading": "Kontakt",
     "email": "E-Mail",
-    "phone": "Telefon",
+    "contactForm": "Kontaktformular",
+    "contactFormLink": "piotrkulbacki.com/contact",
     "vatHeading": "Umsatzsteuer",
     "vatId": "USt-IdNr.",
     "vatBody": "Als Kleinunternehmer nach § 19 UStG weise ich keine Umsatzsteuer aus. Die Steuernummer wird nicht veröffentlicht.",
@@ -470,7 +469,7 @@
   },
   "agb": {
     "title": "Allgemeine Geschäftsbedingungen (AGB)",
-    "updated": "Zuletzt aktualisiert: 9. September 2026",
+    "updated": "Zuletzt aktualisiert: 19. Oktober 2026",
     "intro": "Diese AGB beschreiben, wie ich Aufträge (Websites, Anwendungen, digitale Leistungen) annehme und ausführe. Sie ersetzen kein individuelles Angebot. Die Nutzung der Website und das Absenden eines Formulars sind kein Kauf.",
     "model": "Ablauf: Kontakt → Bedarfsanalyse → individueller Leistungsumfang → individuelles Angebot → Annahme → Leistungsbeginn.",
     "withdrawalLink": "Widerrufsbelehrung (für Verbraucher)",
@@ -486,7 +485,7 @@
       },
       "conclusion": {
         "heading": "3. Kontakt und Vertragsschluss",
-        "body": "Kontakt ist über Formular, Brief, E-Mail, Telefon oder andere angegebene Kanäle möglich. Das Absenden von Formular oder Brief ist eine Anfrage, kein verbindliches Angebot und keine Kaufpflicht.\n\nEin Vertrag kommt zustande, wenn beide Seiten individuellen Umfang und Preis vereinbaren - in der Regel durch schriftliche oder E-Mail-Bestätigung des Angebots. Bis dahin kann ich die Ausführung ohne Angabe von Gründen ablehnen."
+        "body": "Kontakt ist über Formular, Brief oder E-Mail möglich. Das Absenden von Formular oder Brief ist eine Anfrage, kein verbindliches Angebot und keine Kaufpflicht.\n\nEin Vertrag kommt zustande, wenn beide Seiten individuellen Umfang und Preis vereinbaren - in der Regel durch schriftliche oder E-Mail-Bestätigung des Angebots. Bis dahin kann ich die Ausführung ohne Angabe von Gründen ablehnen."
       },
       "offers": {
         "heading": "4. Angebote und Vergütung",
@@ -556,10 +555,10 @@
   },
   "widerruf": {
     "title": "Widerrufsbelehrung",
-    "updated": "Zuletzt aktualisiert: 20. August 2026",
+    "updated": "Zuletzt aktualisiert: 19. Oktober 2026",
     "intro": "Die folgende Belehrung gilt für Verbraucher (nicht für Unternehmer), wenn ein Fernabsatzvertrag über Dienstleistungen zustande kommt (z. B. Annahme eines individuellen Angebots per E-Mail). Das Absenden von Kontaktformular oder Brief ist noch kein Vertragsschluss und setzt keine Widerrufsfrist in Lauf.",
     "instructionHeading": "Widerrufsbelehrung",
-    "instructionBody": "Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.\n\nDie Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.\n\nUm Ihr Widerrufsrecht auszuüben, müssen Sie mich (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com, Tel. +49 157 35166871) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.\n\nZur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",
+    "instructionBody": "Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.\n\nDie Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.\n\nUm Ihr Widerrufsrecht auszuüben, müssen Sie mich (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.\n\nZur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",
     "earlyStartHeading": "Folgen des Widerrufs und vorzeitiger Leistungsbeginn",
     "earlyStartBody": "Wenn Sie diesen Vertrag widerrufen, habe ich Ihnen alle Zahlungen, die ich von Ihnen erhalten habe, unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf bei mir eingegangen ist. Für diese Rückzahlung verwende ich dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet.\n\nHaben Sie verlangt, dass die Dienstleistungen während der Widerrufsfrist beginnen sollen, so haben Sie einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie mich von der Ausübung des Widerrufsrechts unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht.\n\nDas Widerrufsrecht erlischt bei einem Vertrag zur Erbringung von Dienstleistungen, wenn ich die Dienstleistung vollständig erbracht habe und mit der Ausführung erst begonnen habe, nachdem Sie dazu Ihre ausdrückliche Zustimmung gegeben und gleichzeitig Ihre Kenntnis davon bestätigt haben, dass Sie Ihr Widerrufsrecht bei vollständiger Vertragserfüllung durch mich verlieren.\n\nEine solche Bestätigung erhebe ich nicht über das Website-Formular. Soll ein Verbraucher vor Ablauf der 14 Tage den Beginn wünschen, erfolgt dies nur nach ausdrücklichem Verlangen auf einem dauerhaften Datenträger (E-Mail) mit den gesetzlich erforderlichen Hinweisen. Bis dahin kann ich eine entgeltliche Ausführung zurückstellen.",
     "formHeading": "Muster-Widerrufsformular",

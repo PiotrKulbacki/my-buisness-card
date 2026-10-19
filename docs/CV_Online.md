@@ -23,7 +23,6 @@ Nie jest to kopia pliku PDF 1:1. PDF jest źródłem faktów (role, daty, certyf
 | Spec + content `cv.ts` + i18n (5 locale) | ✅     | Namespace `path.*`, `nav.path` / `nav.pathMobile`                                           |
 | UI `/path` (`CvPage`)                    | ✅     | Summary, skills, soft skills, projekty-skrót, doświadczenie, edukacja, certyfikaty, języki  |
 | Nawigacja CV / Doświadczenie             | ✅     | Mobile = CV, desktop = Doświadczenie (+ locale)                                             |
-| Telefon click-to-reveal                  | ✅     | `PhoneReveal` (Base64, odkodowanie po kliknięciu)                                           |
 | Social pod lokalizacją                   | ✅     | Ikony LinkedIn + GitHub (`SocialLinks`), bez tekstowych URL                                 |
 | Certyfikaty — modal podglądu             | ✅     | `CertificatesList`: PDF iframe / obraz; fallback „otwórz w nowej karcie”                    |
 | Pliki w `public/certificates/`           | ✅     | PDF + skany dyplomu; Git/GitHub (Udemy) — bez pliku na razie (świadomie odłożone)           |
@@ -44,7 +43,7 @@ Nie jest to kopia pliku PDF 1:1. PDF jest źródłem faktów (role, daty, certyf
 | Edukacja (Masterschool + ZAL + Technikum) |                                          |
 | Certyfikaty + lokalne pliki / podgląd     |                                          |
 | Języki (poziomy jak w PDF)                |                                          |
-| Kontakt (email, telefon z reveal, social) | Pobieranie PDF — **nie**                 |
+| Kontakt (email, social)                   | Pobieranie PDF — **nie**                 |
 
 URL trasy: **`/path`** (bez zmiany slugów).
 
@@ -66,7 +65,7 @@ Klucze i18n: `nav.path` (desktop), `nav.pathMobile` (mobile), namespace `path.*`
 
 Kolejność sekcji:
 
-1. **Hero** — H1, lead, email, telefon (reveal), Berlin · Remote, ikony LinkedIn/GitHub
+1. **Hero** — H1, lead, email, Berlin · Remote, ikony LinkedIn/GitHub
 2. **Podsumowanie zawodowe**
 3. **Umiejętności techniczne** — grupy; nagłówki grup w kolorze `text-accent`
 4. **Soft skills**
@@ -80,16 +79,11 @@ Bez przycisku „Pobierz CV”. Bez eyebrow nad H1.
 
 ---
 
-## Kontakt i telefon (anti-spam)
+## Kontakt
 
 - Email — widoczny (`mailto:`).
 - LinkedIn / GitHub — **ikony** pod lokalizacją (nie tekstowe linki).
-- Telefon: domyślnie zamazany + CTA „Pokaż numer”; po kliknięciu pełny numer + `tel:`.
-- Numer nie jest plain-textem w pierwszym HTML (Base64 + odkodowanie po interakcji).
-
-**Ocena ochrony:** click-to-reveal utrudnia proste boty scrapujące HTML bez JS. **Nie chroni** przed headless browserami. Główna ochrona spamu formularza: rate limiting + honeypot.
-
-Telefon (źródło PDF): `+49 1573 5166871`.
+- **Bez numeru telefonu** (decyzja 2026-10-19): na całej stronie kontakt tylko przez e-mail i formularze (kontakt, brief). Komponent `PhoneReveal` usunięty. Nie dodawaj numeru z powrotem (CV, Impressum, privacy, Widerruf, JSON-LD).
 
 ---
 
@@ -289,7 +283,6 @@ Poziom angielskiego **bez zmiany** względem PDF.
 | `src/content/cv.ts`                        | Dane CV                           |
 | `src/app/[locale]/path/page.tsx`           | Strona sekcji                     |
 | `src/components/path/CvPage.tsx`           | Layout treści                     |
-| `src/components/path/PhoneReveal.tsx`      | Telefon reveal                    |
 | `src/components/path/CertificatesList.tsx` | Lista + modal certyfikatów        |
 | `src/components/layout/Sidebar.tsx`        | `path` / `pathMobile`             |
 | `src/components/ui/SocialLinks.tsx`        | Ikony social                      |
@@ -314,7 +307,7 @@ Poziom angielskiego **bez zmiany** względem PDF.
 - [x] Mobile: etykieta **CV**; desktop: **Doświadczenie** (i odpowiedniki locale)
 - [x] Trasa `/path` działa we wszystkich 5 językach
 - [x] Widoczne: summary, stack grupowany, soft skills, 7 projektów (+ badge kursu), doświadczenie (w tym DG + poza IT), edukacja (3 pozycje), certyfikaty z podglądem, języki
-- [x] Telefon zamazany → „Pokaż numer”
+- [x] Brak numeru telefonu (tylko e-mail + formularze)
 - [x] Brak download PDF CV
 - [x] Certyfikaty lokalne + modal; PII na dyplomie zredagowane
 - [x] Klasy Tailwind v4 zgodne z IntelliSense (m.in. `bg-bg`, `z-100`)

@@ -56,7 +56,6 @@
     "closeCertificate": "Close",
     "languages": "Languages",
     "remote": "Remote",
-    "showPhone": "Show number",
     "skillGroups": {
       "frontend": "Frontend",
       "backend": "Backend & data",
@@ -298,12 +297,11 @@
   },
   "privacy": {
     "title": "Privacy policy",
-    "updated": "Last updated: 18 October 2026",
+    "updated": "Last updated: 19 October 2026",
     "intro": "This site processes personal data only as needed to run the website, reply to enquiries and project briefs and - with consent - measure traffic. I do not describe services this site does not use (for example there is no Supabase database here).",
     "controllerHeading": "Data controller",
     "controllerBody": "The controller is {name} (sole proprietorship / Einzelunternehmen, Berlin).",
     "email": "Email",
-    "phone": "Phone",
     "dpoHeading": "Data protection officer",
     "dpoBody": "I am not required to appoint a data protection officer (Datenschutzbeauftragter / IOD) and have not appointed one. For privacy requests use the controller contact details above.",
     "mapHeading": "What data I process",
@@ -365,7 +363,8 @@
     "businessBody": "Creation of websites, web design, digital online presences, and individual digital services and software solutions.",
     "contactHeading": "Contact",
     "email": "Email",
-    "phone": "Phone",
+    "contactForm": "Contact form",
+    "contactFormLink": "piotrkulbacki.com/contact",
     "vatHeading": "VAT",
     "vatId": "VAT ID (USt-IdNr.)",
     "vatBody": "As a small business under § 19 UStG (Kleinunternehmer) I do not charge VAT. The tax office number (Steuernummer) is not published.",
@@ -470,7 +469,7 @@
   },
   "agb": {
     "title": "Terms of cooperation (AGB)",
-    "updated": "Last updated: 9 September 2026",
+    "updated": "Last updated: 19 October 2026",
     "intro": "These terms describe how I accept and deliver paid work (websites, apps, digital services). They do not replace an individual offer. Using the site or sending a form is not a purchase.",
     "model": "Flow: contact → needs analysis → individual scope → individual offer → acceptance → start of work.",
     "withdrawalLink": "Withdrawal information (consumers)",
@@ -486,7 +485,7 @@
       },
       "conclusion": {
         "heading": "3. Contact and conclusion of contract",
-        "body": "You can contact me via the form, brief, email, phone or other listed channels. Sending a form or brief is an enquiry, not a binding offer and not an obligation to buy.\n\nA contract is formed when both sides agree an individual scope and price - usually by written or email confirmation of an offer. Until then I may decline the work without giving reasons."
+        "body": "You can contact me via the form, brief or email. Sending a form or brief is an enquiry, not a binding offer and not an obligation to buy.\n\nA contract is formed when both sides agree an individual scope and price - usually by written or email confirmation of an offer. Until then I may decline the work without giving reasons."
       },
       "offers": {
         "heading": "4. Offers and pricing",
@@ -556,10 +555,10 @@
   },
   "widerruf": {
     "title": "Right of withdrawal",
-    "updated": "Last updated: 20 August 2026",
+    "updated": "Last updated: 19 October 2026",
     "intro": "The following information is for consumers (not businesses) when a distance contract for services is concluded (for example accepting an individual offer by email). Sending the contact form or brief does not conclude a contract and does not start the withdrawal period.",
     "instructionHeading": "Instructions on withdrawal",
-    "instructionBody": "You have the right to withdraw from this contract within 14 days without giving any reason.\n\nThe withdrawal period is 14 days from the day the contract is concluded.\n\nTo exercise the right of withdrawal, you must inform me (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com, tel. +49 157 35166871) of your decision by a clear statement (e.g. a letter sent by post or email). You may use the model withdrawal form below, but it is not obligatory.\n\nTo meet the deadline it is sufficient to send your communication concerning the exercise of the right of withdrawal before the period has expired.",
+    "instructionBody": "You have the right to withdraw from this contract within 14 days without giving any reason.\n\nThe withdrawal period is 14 days from the day the contract is concluded.\n\nTo exercise the right of withdrawal, you must inform me (Piotr Kulbacki, Bendastr. 11, 12051 Berlin, kontakt@piotrkulbacki.com) of your decision by a clear statement (e.g. a letter sent by post or email). You may use the model withdrawal form below, but it is not obligatory.\n\nTo meet the deadline it is sufficient to send your communication concerning the exercise of the right of withdrawal before the period has expired.",
     "earlyStartHeading": "Effects of withdrawal and starting early",
     "earlyStartBody": "If you withdraw, I will reimburse all payments received from you without undue delay and in any event not later than 14 days from the day I am informed of the withdrawal, using the same means of payment as in the original transaction unless expressly agreed otherwise; you will not incur any fees as a result of such reimbursement.\n\nIf you requested that services begin during the withdrawal period, you shall pay an amount proportionate to what has been provided until you informed me of withdrawal, compared with the full coverage of the contract.\n\nThe withdrawal right is lost for a service contract if I have fully performed the service and started only after you gave prior express consent and acknowledged that you lose the right of withdrawal once performance is complete.\n\nI do not collect that confirmation through the website form. If a consumer wants work to start before 14 days, I will do so only after an express request on a durable medium (email) with the legally required statements. Until then I may hold paid performance.",
     "formHeading": "Model withdrawal form",

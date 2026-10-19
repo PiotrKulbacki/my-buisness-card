@@ -67,7 +67,7 @@
 - [x] Desktop: ikona globusa przy LanguageSwitcher (sidebar bez zmian układu)
 - [x] Landing mobile: hero wypełnia viewport (stopka do scrolla); skalowanie portretu
 - [x] Avatar lightbox (klik → powiększony podgląd, Escape / tło / Zamknij)
-- [x] CV: nav mobile **CV** / desktop **Doświadczenie**; PhoneReveal; ikony social; certyfikaty modal
+- [x] CV: nav mobile **CV** / desktop **Doświadczenie**; ikony social; certyfikaty modal
 - [x] Tailwind v4: tokeny `@theme` (`border-line`, `bg-bg/95`…); `button { font }` w `@layer base`
 
 ---
@@ -148,3 +148,4 @@
 | 2026-10-18 | Case study Cavunio (sklep z ebookami) na górze listy; kolejność Cavunio → Lyamo → Dokiero; screenshoty PNG → WebP   |
 | 2026-10-18 | Privacy (5 locale): załączniki w briefie; CV: projekt Cavunio                                                       |
 | 2026-10-19 | CV: grupa „Programowanie z AI”, AI w summary i doświadczeniu; usunięty duplikat WC26                                |
+| 2026-10-19 | Usunięty numer telefonu ze strony (CV, Impressum, privacy, AGB, Widerruf, JSON-LD); kontakt: e-mail + formularze    |
