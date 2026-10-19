@@ -41,17 +41,17 @@ export type CvProject = {
 
 export type CvSkillGroup = {
   id: string;
-  labelKey: "frontend" | "backend" | "ai" | "payments" | "quality" | "deploy" | "product";
+  labelKey: "frontend" | "backend" | "ai" | "aiDev" | "payments" | "quality" | "deploy" | "product";
   items: string[];
 };
 
 export const cv = {
   summary: {
-    pl: "Full Stack Software Engineer — buduję niezawodne aplikacje webowe end-to-end, własne produkty SaaS i AI oraz komercyjne strony internetowe. Łączę nowoczesny frontend (React, TypeScript, Next.js) z solidnym backendem, jakością kodu (TDD, Zod, Vitest) i wdrożeniami produkcyjnymi.",
-    en: "Full Stack Software Engineer — I build reliable end-to-end web apps, own SaaS and AI products, and commercial websites. I combine modern frontend (React, TypeScript, Next.js) with solid backends, code quality (TDD, Zod, Vitest), and production deployments.",
-    de: "Full Stack Software Engineer — ich baue zuverlässige End-to-End-Web-Apps, eigene SaaS- und KI-Produkte sowie kommerzielle Websites. Moderner Frontend (React, TypeScript, Next.js), solides Backend, Codequalität (TDD, Zod, Vitest) und produktive Deployments.",
-    es: "Full Stack Software Engineer — construyo apps web end-to-end fiables, productos SaaS e IA propios y webs comerciales. Combino frontend moderno (React, TypeScript, Next.js) con backends sólidos, calidad de código (TDD, Zod, Vitest) y despliegues en producción.",
-    uk: "Full Stack Software Engineer — будую надійні end-to-end вебзастосунки, власні SaaS і AI продукти та комерційні сайти. Поєдную сучасний frontend (React, TypeScript, Next.js) із солідним бекендом, якістю коду (TDD, Zod, Vitest) і продакшен-деплоями.",
+    pl: "Full Stack Software Engineer — buduję niezawodne aplikacje webowe end-to-end, własne produkty SaaS i AI oraz komercyjne strony internetowe. Łączę nowoczesny frontend (React, TypeScript, Next.js) z solidnym backendem, jakością kodu (TDD, Zod, Vitest) i wdrożeniami produkcyjnymi. Na co dzień programuję z agentami AI (Claude Code, ChatGPT, Cursor) w uporządkowanym procesie: własne skille, dokumentacja dla agentów i weryfikacja każdej zmiany przed wdrożeniem.",
+    en: "Full Stack Software Engineer — I build reliable end-to-end web apps, own SaaS and AI products, and commercial websites. I combine modern frontend (React, TypeScript, Next.js) with solid backends, code quality (TDD, Zod, Vitest), and production deployments. Day to day I build with AI coding agents (Claude Code, ChatGPT, Cursor) in a structured workflow: custom skills, agent-ready documentation and verification of every change before it ships.",
+    de: "Full Stack Software Engineer — ich baue zuverlässige End-to-End-Web-Apps, eigene SaaS- und KI-Produkte sowie kommerzielle Websites. Moderner Frontend (React, TypeScript, Next.js), solides Backend, Codequalität (TDD, Zod, Vitest) und produktive Deployments. Im Alltag entwickle ich mit KI-Coding-Agenten (Claude Code, ChatGPT, Cursor) in einem strukturierten Workflow: eigene Skills, agententaugliche Dokumentation und Prüfung jeder Änderung vor dem Release.",
+    es: "Full Stack Software Engineer — construyo apps web end-to-end fiables, productos SaaS e IA propios y webs comerciales. Combino frontend moderno (React, TypeScript, Next.js) con backends sólidos, calidad de código (TDD, Zod, Vitest) y despliegues en producción. En el día a día desarrollo con agentes de IA para código (Claude Code, ChatGPT, Cursor) en un flujo estructurado: skills propias, documentación preparada para agentes y verificación de cada cambio antes de publicarlo.",
+    uk: "Full Stack Software Engineer — будую надійні end-to-end вебзастосунки, власні SaaS і AI продукти та комерційні сайти. Поєдную сучасний frontend (React, TypeScript, Next.js) із солідним бекендом, якістю коду (TDD, Zod, Vitest) і продакшен-деплоями. Щодня розробляю з AI-агентами для коду (Claude Code, ChatGPT, Cursor) у структурованому процесі: власні skills, документація для агентів і перевірка кожної зміни перед релізом.",
   } satisfies Localized,
 
   skillGroups: [
@@ -88,7 +88,28 @@ export const cv = {
     {
       id: "ai",
       labelKey: "ai",
-      items: ["OpenAI API", "AI-powered apps", "Prompt engineering", "AI document processing"],
+      items: [
+        "OpenAI API",
+        "Anthropic Claude API",
+        "LLM integration",
+        "AI-powered apps",
+        "Prompt engineering",
+        "AI document processing (OCR + LLM)",
+      ],
+    },
+    {
+      id: "aiDev",
+      labelKey: "aiDev",
+      items: [
+        "Agentic coding: Claude Code, Cursor",
+        "ChatGPT",
+        "Context engineering",
+        "Agent Skills & subagents",
+        "CLAUDE.md / AGENTS.md",
+        "MCP (Model Context Protocol)",
+        "Spec-driven development",
+        "Human-in-the-loop review",
+      ],
     },
     {
       id: "payments",
@@ -246,18 +267,6 @@ export const cv = {
       },
     },
     {
-      id: "wc26-predictor",
-      title: "WC26 Predictor",
-      liveUrl: "https://wc26-predictor-zapraszam.vercel.app/",
-      summary: {
-        pl: "Aplikacja wokół predykcji i zaangażowania fanów przy Mistrzostwach Świata 2026.",
-        en: "App around predictions and fan engagement for the 2026 World Cup.",
-        de: "App rund um Predictions und Fan-Engagement zur WM 2026.",
-        es: "App de predicciones y engagement de fans para el Mundial 2026.",
-        uk: "Додаток навколо прогнозів і залучення фанатів до ЧС-2026.",
-      },
-    },
-    {
       id: "cavunio",
       title: "Cavunio",
       liveUrl: "https://cavunio.com/",
@@ -300,26 +309,41 @@ export const cv = {
           "Dalsze zdobywanie doświadczenia jako Full Stack Software Engineer",
           "Otwarcie i prowadzenie własnej działalności — produkty cyfrowe oraz realizacje dla klientów",
           "Projektowanie i wdrażanie aplikacji webowych end-to-end (architektura, jakość, produkcja)",
+          "Programowanie wspomagane AI (agentic coding): Claude Code, ChatGPT i Cursor w codziennej pracy, z człowiekiem zatwierdzającym architekturę, commity i wdrożenia",
+          "Własny zestaw Agent Skills i subagentów (architektura, jakość kodu, bezpieczeństwo, QA, Git, research techniczny) oraz dokumentacja projektów pod agentów (CLAUDE.md / AGENTS.md)",
+          "Integracja LLM w produktach: OpenAI i Anthropic Claude z OCR (Google Vision) w Dokiero, asystent finansowy AI w Lyamo",
         ],
         en: [
           "Continued growth as a Full Stack Software Engineer",
           "Established and run an independent practice — digital products and client deliveries",
           "Designing and shipping end-to-end web applications (architecture, quality, production)",
+          "AI-assisted development (agentic coding): Claude Code, ChatGPT and Cursor in daily work, with human approval of architecture, commits and releases",
+          "Built a custom set of Agent Skills and subagents (architecture, code quality, security, QA, Git, technical research) plus agent-ready project documentation (CLAUDE.md / AGENTS.md)",
+          "LLM integration in products: OpenAI and Anthropic Claude with OCR (Google Vision) in Dokiero, an AI finance assistant in Lyamo",
         ],
         de: [
           "Weiterer Kompetenzaufbau als Full Stack Software Engineer",
           "Aufbau und Führung einer selbstständigen Tätigkeit — digitale Produkte und Kundenprojekte",
           "Konzeption und Umsetzung von Web-Apps end-to-end (Architektur, Qualität, Produktion)",
+          "KI-gestützte Entwicklung (Agentic Coding): Claude Code, ChatGPT und Cursor im Arbeitsalltag, Architektur, Commits und Releases gibt ein Mensch frei",
+          "Eigenes Set aus Agent Skills und Subagenten (Architektur, Codequalität, Sicherheit, QA, Git, technische Recherche) sowie agententaugliche Projektdokumentation (CLAUDE.md / AGENTS.md)",
+          "LLM-Integration in Produkten: OpenAI und Anthropic Claude mit OCR (Google Vision) in Dokiero, KI-Finanzassistent in Lyamo",
         ],
         es: [
           "Continuo desarrollo como Full Stack Software Engineer",
           "Apertura y gestión de actividad independiente — productos digitales y entregas a clientes",
           "Diseño y despliegue de aplicaciones web end-to-end (arquitectura, calidad, producción)",
+          "Desarrollo asistido por IA (agentic coding): Claude Code, ChatGPT y Cursor en el trabajo diario, con aprobación humana de arquitectura, commits y despliegues",
+          "Conjunto propio de Agent Skills y subagentes (arquitectura, calidad de código, seguridad, QA, Git, investigación técnica) y documentación de proyecto preparada para agentes (CLAUDE.md / AGENTS.md)",
+          "Integración de LLM en productos: OpenAI y Anthropic Claude con OCR (Google Vision) en Dokiero, asistente financiero con IA en Lyamo",
         ],
         uk: [
           "Подальший розвиток як Full Stack Software Engineer",
           "Відкриття та ведення власної діяльності — цифрові продукти й клієнтські реалізації",
           "Проєктування та впровадження вебзастосунків end-to-end (архітектура, якість, продакшен)",
+          "Розробка з AI (agentic coding): Claude Code, ChatGPT і Cursor у щоденній роботі, архітектуру, коміти й релізи затверджує людина",
+          "Власний набір Agent Skills і субагентів (архітектура, якість коду, безпека, QA, Git, технічне дослідження) та документація проєктів для агентів (CLAUDE.md / AGENTS.md)",
+          "Інтеграція LLM у продуктах: OpenAI та Anthropic Claude з OCR (Google Vision) у Dokiero, фінансовий AI-асистент у Lyamo",
         ],
       },
     },

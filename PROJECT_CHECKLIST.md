@@ -147,3 +147,4 @@
 | 2026-10-18 | Brief: załączniki (PDF/obrazy/OOXML, max 3, kompresja zdjęć w przeglądarce, magic bytes na serwerze, Brevo)         |
 | 2026-10-18 | Case study Cavunio (sklep z ebookami) na górze listy; kolejność Cavunio → Lyamo → Dokiero; screenshoty PNG → WebP   |
 | 2026-10-18 | Privacy (5 locale): załączniki w briefie; CV: projekt Cavunio                                                       |
+| 2026-10-19 | CV: grupa „Programowanie z AI”, AI w summary i doświadczeniu; usunięty duplikat WC26                                |

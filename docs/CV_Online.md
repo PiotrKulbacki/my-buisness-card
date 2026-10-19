@@ -100,7 +100,8 @@ Wdrożone summary podkreśla:
 - budowę kompletnych aplikacji webowych end-to-end,
 - produkty własne SaaS / AI,
 - realizacje komercyjne,
-- jakość kodu (TDD, Zod, Vitest) i wdrożenia produkcyjne.
+- jakość kodu (TDD, Zod, Vitest) i wdrożenia produkcyjne,
+- programowanie z agentami AI (Claude Code, ChatGPT, Cursor) w uporządkowanym procesie: własne skille, dokumentacja dla agentów, weryfikacja zmian.
 
 ---
 
@@ -118,7 +119,13 @@ Node.js, Supabase, PostgreSQL, Prisma, REST API, Authentication, RLS, Python, Fl
 
 ### AI
 
-OpenAI API, AI-powered apps, Prompt engineering, AI document processing
+OpenAI API, Anthropic Claude API, LLM integration, AI-powered apps, Prompt engineering, AI document processing (OCR + LLM)
+
+### Programowanie z AI (`aiDev`)
+
+Agentic coding: Claude Code, Cursor, ChatGPT, Context engineering, Agent Skills & subagents, CLAUDE.md / AGENTS.md, MCP (Model Context Protocol), Spec-driven development, Human-in-the-loop review
+
+Podstawa wpisów (stan 2026-10): własne skille Claude Code (`architecture`, `code-quality`, `security`, `qa`, `git-workflow`, `project-discovery`, `feature-discovery`, `human-writing`), subagent `technical-researcher`, globalny `CLAUDE.md`, `AGENTS.md` / `.cursorrules` w projektach, narzędzia MCP (Chrome, Vercel, Stripe). Grupa AI = AI w produktach; Programowanie z AI = AI w procesie wytwarzania.
 
 ### Płatności
 
@@ -163,7 +170,7 @@ Szczegóły → zakładka **Projekty**. Tu: nazwa, 1–2 zdania, opcjonalnie liv
 ### 1. Inżynier oprogramowania — działalność gospodarcza
 
 **2025 — obecnie** · Własna działalność  
-Rozwój jako Full Stack SE; produkty cyfrowe i realizacje dla klientów; aplikacje end-to-end.
+Rozwój jako Full Stack SE; produkty cyfrowe i realizacje dla klientów; aplikacje end-to-end; programowanie wspomagane AI (agentic coding, własne Agent Skills i subagenci, dokumentacja dla agentów); integracja LLM w Dokiero i Lyamo.
 
 > Lyamo **nie** jest osobną pozycją doświadczenia — produkt pojawia się w projektach-skrótach.
 
@@ -306,7 +313,7 @@ Poziom angielskiego **bez zmiany** względem PDF.
 
 - [x] Mobile: etykieta **CV**; desktop: **Doświadczenie** (i odpowiedniki locale)
 - [x] Trasa `/path` działa we wszystkich 5 językach
-- [x] Widoczne: summary, stack grupowany, soft skills, 6 projektów (+ badge kursu), doświadczenie (w tym DG + poza IT), edukacja (3 pozycje), certyfikaty z podglądem, języki
+- [x] Widoczne: summary, stack grupowany, soft skills, 7 projektów (+ badge kursu), doświadczenie (w tym DG + poza IT), edukacja (3 pozycje), certyfikaty z podglądem, języki
 - [x] Telefon zamazany → „Pokaż numer”
 - [x] Brak download PDF CV
 - [x] Certyfikaty lokalne + modal; PII na dyplomie zredagowane
