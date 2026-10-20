@@ -144,10 +144,6 @@
       "emailInvalid": "Bitte eine gültige E-Mail-Adresse angeben.",
       "projectTypeHint": "eine Option wählen",
       "projectTypeSelect": "Bitte die Projektart auswählen.",
-      "goalsHint": "mindestens eine wählen",
-      "goalsSelect": "Bitte mindestens ein Hauptziel auswählen.",
-      "goalDescriptionHint": "min. 10 Zeichen",
-      "goalDescriptionMin": "Beschreiben Sie, was Sie erreichen möchten — mindestens 10 Zeichen.",
       "goalDescriptionMax": "Die Zielbeschreibung darf höchstens 4000 Zeichen haben.",
       "attachmentsTooMany": "Sie können bis zu {maxFiles} Dateien anhängen.",
       "attachmentsTooLarge": "Jede Datei muss kleiner als {maxFileSize} sein.",
@@ -161,6 +157,7 @@
     "captchaError": "Bitte bestätigen Sie, dass Sie kein Bot sind, und versuchen Sie es erneut.",
     "error": "Senden fehlgeschlagen. Bitte erneut versuchen oder direkt per E-Mail.",
     "attachmentsHint": "Dokumente (PDF, DOCX, XLSX, PPTX): je bis zu {maxDocumentSize}. Fotos (JPG, PNG, WEBP, GIF): je bis zu {maxOriginalImageSize} — Fotos werden automatisch komprimiert. Bis zu {maxFiles} Dateien, insgesamt {maxTotalSize} nach der Verarbeitung.",
+    "attachmentsChoose": "Dateien auswählen",
     "attachmentsDropHint": "Oder Dateien hierher ziehen.",
     "attachmentsOptimizing": "Fotos werden optimiert…",
     "attachmentsRemove": "{name} entfernen",
@@ -175,10 +172,9 @@
     "steps": {
       "1": "Kontakt und Art",
       "2": "Ziel",
-      "3": "Umfang",
-      "4": "Materialien",
-      "5": "Details",
-      "6": "Zusammenfassung"
+      "3": "Materialien",
+      "4": "Details",
+      "5": "Zusammenfassung"
     },
     "fields": {
       "name": "Name",
@@ -192,10 +188,6 @@
       "nameIdeaN": "Vorschlag {n}",
       "goals": "Hauptziele",
       "goalDescription": "Was möchten Sie mit dem Projekt erreichen?",
-      "pages": "Welche Unterseiten brauchen Sie?",
-      "appFeatures": "Welche Funktionen brauchen Sie?",
-      "scopeExtra": "Zusätzlich",
-      "scopeNotes": "Was ist Ihnen besonders wichtig?",
       "hasLogo": "Haben Sie ein Logo?",
       "hasPhotos": "Haben Sie Fotos?",
       "hasCopy": "Haben Sie Texte?",
@@ -211,8 +203,10 @@
     },
     "projectTypes": {
       "website": "Website",
-      "app": "Web-App / Dashboard",
-      "other": "Unsicher — ich brauche eine Beratung"
+      "app": "App",
+      "shop": "Onlineshop",
+      "card": "Visitenkarte/Online-Lebenslauf",
+      "other": "Sonstiges"
     },
     "goals": {
       "clients": "Kundengewinnung",
@@ -225,37 +219,6 @@
       "opsPanel": "Unternehmensverwaltung",
       "informing": "Kunden informieren",
       "other": "Sonstiges"
-    },
-    "pages": {
-      "home": "Start",
-      "about": "Über uns",
-      "offer": "Angebot / Leistungen",
-      "work": "Referenzen",
-      "pricing": "Preise",
-      "reviews": "Bewertungen",
-      "faq": "FAQ",
-      "blog": "Blog",
-      "gallery": "Galerie",
-      "contact": "Kontakt",
-      "form": "Formular",
-      "map": "Karte",
-      "other": "Sonstiges"
-    },
-    "appFeatures": {
-      "auth": "Login / Registrierung",
-      "clientPanel": "Kundenbereich",
-      "payments": "Zahlungen",
-      "cms": "CMS / Blog",
-      "bookings": "Buchungen / Kalender",
-      "newsletter": "Newsletter",
-      "search": "Suche",
-      "api": "API-Integrationen",
-      "other": "Sonstiges",
-      "unsure": "Unsicher — ich brauche eine Beratung"
-    },
-    "scopeExtra": {
-      "other": "Sonstiges",
-      "unsure": "Unsicher — ich brauche eine Beratung"
     },
     "material": {
       "yes": "Ja",

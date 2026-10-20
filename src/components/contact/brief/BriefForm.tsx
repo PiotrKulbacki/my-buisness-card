@@ -37,10 +37,8 @@ import { resolveValidationMessage } from "@/lib/form-validation";
 import { ImageOptimizeError, optimizeImageFile } from "@/lib/image-optimize";
 import {
   BRIEF_STEP_COUNT,
-  appFeatureOptions,
   briefPayloadSchema,
   briefStep1Schema,
-  briefStep2Schema,
   draftToPayload,
   existingNeedOptions,
   goalOptions,
@@ -49,7 +47,6 @@ import {
   isBriefDraftDirty,
   languageOptions,
   materialOptions,
-  pageOptions,
   projectTypes,
   rebuildOptions,
   translationOptions,
@@ -136,16 +133,6 @@ export function BriefForm() {
         return;
       }
     }
-    if (step === 2) {
-      const parsed = briefStep2Schema.safeParse({
-        goals: values.goals,
-        goalDescription: values.goalDescription,
-      });
-      if (!parsed.success) {
-        toast.error(resolveValidationMessage(parsed.error, t));
-        return;
-      }
-    }
     goTo(step + 1);
   }
 
@@ -225,19 +212,19 @@ export function BriefForm() {
 
   const canAcceptMoreFiles = !disabled && files.length < MAX_ATTACHMENTS;
 
-  function handleDragOver(event: DragEvent<HTMLInputElement>) {
+  function handleDragOver(event: DragEvent<HTMLLabelElement>) {
     event.preventDefault();
     if (!canAcceptMoreFiles) return;
     event.dataTransfer.dropEffect = "copy";
     setIsDraggingOver(true);
   }
 
-  function handleDragLeave(event: DragEvent<HTMLInputElement>) {
+  function handleDragLeave(event: DragEvent<HTMLLabelElement>) {
     event.preventDefault();
     setIsDraggingOver(false);
   }
 
-  async function handleDrop(event: DragEvent<HTMLInputElement>) {
+  async function handleDrop(event: DragEvent<HTMLLabelElement>) {
     event.preventDefault();
     setIsDraggingOver(false);
     if (!canAcceptMoreFiles) return;
@@ -488,8 +475,7 @@ export function BriefForm() {
         <div className="space-y-4">
           <BriefChoiceGroup
             legend={t("fields.goals")}
-            required
-            hint={t("validation.goalsHint")}
+            optionalLabel={t("optional")}
             name="goals"
             type="checkbox"
             disabled={disabled}
@@ -500,8 +486,7 @@ export function BriefForm() {
           <label className="flex flex-col gap-3 text-sm">
             <span className="leading-none">
               {t("fields.goalDescription")}
-              <RequiredMark />
-              <OptionalHint label={t("validation.goalDescriptionHint")} />
+              <OptionalHint label={t("optional")} />
             </span>
             <textarea
               name="goalDescription"
@@ -510,56 +495,12 @@ export function BriefForm() {
               value={values.goalDescription}
               onChange={(event) => patch({ goalDescription: event.target.value })}
               className={`${fieldClassName} resize-y`}
-              aria-required
             />
           </label>
         </div>
       ) : null}
 
       {step === 3 ? (
-        <div className="space-y-4">
-          {values.projectType === "website" ? (
-            <BriefChoiceGroup
-              legend={t("fields.pages")}
-              optionalLabel={t("optional")}
-              name="pages"
-              type="checkbox"
-              disabled={disabled}
-              value={values.pages}
-              options={optionsFrom(pageOptions, (id) => t(`pages.${id}`))}
-              onChange={(next) => patch({ pages: next as BriefDraftValues["pages"] })}
-            />
-          ) : null}
-          {values.projectType === "app" ? (
-            <BriefChoiceGroup
-              legend={t("fields.appFeatures")}
-              optionalLabel={t("optional")}
-              name="appFeatures"
-              type="checkbox"
-              disabled={disabled}
-              value={values.appFeatures}
-              options={optionsFrom(appFeatureOptions, (id) => t(`appFeatures.${id}`))}
-              onChange={(next) => patch({ appFeatures: next as BriefDraftValues["appFeatures"] })}
-            />
-          ) : null}
-          <label className="flex flex-col gap-3 text-sm">
-            <span className="leading-none">
-              {t("fields.scopeNotes")}
-              <OptionalHint label={t("optional")} />
-            </span>
-            <textarea
-              name="scopeNotes"
-              rows={4}
-              disabled={disabled}
-              value={values.scopeNotes}
-              onChange={(event) => patch({ scopeNotes: event.target.value })}
-              className={`${fieldClassName} resize-y`}
-            />
-          </label>
-        </div>
-      ) : null}
-
-      {step === 4 ? (
         <div className="space-y-4">
           <BriefChoiceGroup
             legend={t("fields.hasLogo")}
@@ -648,7 +589,7 @@ export function BriefForm() {
         </div>
       ) : null}
 
-      {step === 5 ? (
+      {step === 4 ? (
         <div className="space-y-4">
           <BriefChoiceGroup
             legend={t("fields.languages")}
@@ -696,7 +637,7 @@ export function BriefForm() {
         </div>
       ) : null}
 
-      {step === 6 ? (
+      {step === BRIEF_STEP_COUNT ? (
         <div className="space-y-6">
           <BriefSummary
             values={values}
@@ -717,23 +658,34 @@ export function BriefForm() {
                 maxTotalSize: formatBytes(MAX_TOTAL_ATTACHMENT_SIZE_BYTES),
               })}
             </p>
-            <input
-              type="file"
-              multiple
-              accept={ATTACHMENT_ACCEPT_ATTRIBUTE}
-              disabled={!canAcceptMoreFiles}
-              onChange={handleFilesSelected}
+            {/* The native file input's text follows the browser language, not the site locale. */}
+            <label
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
               onDrop={handleDrop}
-              aria-label={t("fields.attachments")}
               className={cn(
                 fieldClassName,
-                "file:focus-ring file:bg-accent file:text-accent-ink file:mr-3 file:cursor-pointer file:rounded-full file:border-0 file:px-4 file:py-2 file:text-sm file:font-medium disabled:cursor-not-allowed",
+                "has-focus-visible:border-accent flex cursor-pointer flex-wrap items-center gap-3 has-focus-visible:shadow-[0_0_0_3px_color-mix(in_oklab,var(--accent)_35%,transparent)]",
+                !canAcceptMoreFiles && "cursor-not-allowed opacity-60",
                 isDraggingOver && "border-accent bg-accent/10",
               )}
-            />
-            <p className="text-fg-muted text-xs leading-snug">{t("attachmentsDropHint")}</p>
+            >
+              <input
+                type="file"
+                multiple
+                accept={ATTACHMENT_ACCEPT_ATTRIBUTE}
+                disabled={!canAcceptMoreFiles}
+                onChange={handleFilesSelected}
+                aria-label={t("fields.attachments")}
+                className="sr-only"
+              />
+              <span className="bg-accent text-accent-ink pointer-events-none rounded-full px-4 py-2 text-sm font-medium">
+                {t("attachmentsChoose")}
+              </span>
+              <span className="text-fg-muted pointer-events-none text-xs leading-snug">
+                {t("attachmentsDropHint")}
+              </span>
+            </label>
             {optimizing ? (
               <p role="status" className="text-fg-muted flex items-center gap-2 text-sm">
                 <span

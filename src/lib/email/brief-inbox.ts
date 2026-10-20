@@ -8,95 +8,64 @@ import {
 import { resolveInboxReplyUrl } from "@/lib/reply-token";
 import { joinNameIdeas, type BriefPayload } from "@/lib/schemas/brief";
 
-function joinLabels(values: string[] | undefined, labels: Record<string, string>, empty: string) {
-  if (!values?.length) return empty;
-  return values.map((value) => labels[value] ?? value).join(", ");
+function joinLabels(values: string[] | undefined, labels: Record<string, string>) {
+  return values?.map((value) => labels[value] ?? value).join(", ");
 }
 
-function singleLabel(value: string | undefined, labels: Record<string, string>, empty: string) {
-  if (!value) return empty;
-  return labels[value] ?? value;
+function singleLabel(value: string | undefined, labels: Record<string, string>) {
+  return value ? (labels[value] ?? value) : undefined;
 }
 
+/** Only fields the client actually filled in end up in the e-mails. */
 export function buildBriefRows(
   params: BriefPayload,
   locale?: string | null,
   attachmentNames: string[] = [],
 ) {
   const copy = getBriefMessages(locale);
-  const empty = copy.empty;
 
-  const rows: { label: string; value: string }[] = [
+  const rows: { label: string; value: string | undefined }[] = [
     { label: copy.fields.name, value: params.name },
-    { label: copy.fields.company, value: params.company ?? empty },
+    { label: copy.fields.company, value: params.company },
     { label: copy.fields.email, value: params.email },
-    { label: copy.fields.phone, value: params.phone ?? empty },
-    { label: copy.fields.currentWebsite, value: params.currentWebsite ?? empty },
-    {
-      label: copy.fields.projectType,
-      value: copy.projectTypes[params.projectType],
-    },
-    {
-      label: copy.fields.nameIdeas,
-      value: joinNameIdeas(params).join(", ") || empty,
-    },
-    {
-      label: copy.fields.goals,
-      value: joinLabels(params.goals, copy.goals, empty),
-    },
+    { label: copy.fields.phone, value: params.phone },
+    { label: copy.fields.currentWebsite, value: params.currentWebsite },
+    { label: copy.fields.projectType, value: copy.projectTypes[params.projectType] },
+    { label: copy.fields.nameIdeas, value: joinNameIdeas(params).join(", ") },
+    { label: copy.fields.goals, value: joinLabels(params.goals, copy.goals) },
     { label: copy.fields.goalDescription, value: params.goalDescription },
+    { label: copy.fields.hasLogo, value: singleLabel(params.hasLogo, copy.material) },
+    { label: copy.fields.hasPhotos, value: singleLabel(params.hasPhotos, copy.material) },
+    { label: copy.fields.hasCopy, value: singleLabel(params.hasCopy, copy.material) },
+    { label: copy.fields.inspiration, value: params.inspiration },
   ];
-
-  if (params.projectType === "website") {
-    rows.push({ label: copy.fields.pages, value: joinLabels(params.pages, copy.pages, empty) });
-  }
-  if (params.projectType === "app") {
-    rows.push({
-      label: copy.fields.appFeatures,
-      value: joinLabels(params.appFeatures, copy.appFeatures, empty),
-    });
-  }
-
-  rows.push(
-    { label: copy.fields.scopeNotes, value: params.scopeNotes ?? empty },
-    { label: copy.fields.hasLogo, value: singleLabel(params.hasLogo, copy.material, empty) },
-    { label: copy.fields.hasPhotos, value: singleLabel(params.hasPhotos, copy.material, empty) },
-    { label: copy.fields.hasCopy, value: singleLabel(params.hasCopy, copy.material, empty) },
-    { label: copy.fields.inspiration, value: params.inspiration ?? empty },
-  );
 
   if (params.currentWebsite) {
     rows.push(
-      { label: copy.fields.rebuild, value: singleLabel(params.rebuild, copy.rebuild, empty) },
+      { label: copy.fields.rebuild, value: singleLabel(params.rebuild, copy.rebuild) },
       {
         label: copy.fields.existingNeeds,
-        value: joinLabels(params.existingNeeds, copy.existingNeeds, empty),
+        value: joinLabels(params.existingNeeds, copy.existingNeeds),
       },
-      { label: copy.fields.existingNotes, value: params.existingNotes ?? empty },
+      { label: copy.fields.existingNotes, value: params.existingNotes },
     );
   }
 
   rows.push(
-    {
-      label: copy.fields.languages,
-      value: joinLabels(params.languages, copy.siteLanguages, empty),
-    },
+    { label: copy.fields.languages, value: joinLabels(params.languages, copy.siteLanguages) },
     {
       label: copy.fields.translations,
-      value: singleLabel(params.translations, copy.translations, empty),
+      value: singleLabel(params.translations, copy.translations),
     },
     {
       label: copy.fields.integrations,
-      value: joinLabels(params.integrations, copy.integrations, empty),
+      value: joinLabels(params.integrations, copy.integrations),
     },
-    { label: copy.fields.timeline, value: params.timeline ?? empty },
+    { label: copy.fields.timeline, value: params.timeline },
+    { label: copy.fields.attachments, value: attachmentNames.join(", ") },
   );
 
-  if (attachmentNames.length > 0) {
-    rows.push({ label: copy.fields.attachments, value: attachmentNames.join(", ") });
-  }
-
-  return rows;
+  return rows.filter((row): row is { label: string; value: string } => Boolean(row.value));
 }
 
 export function buildBriefInboxEmail(

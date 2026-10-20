@@ -1,7 +1,7 @@
-import { emptyBriefDraft, type BriefDraftValues } from "@/lib/schemas/brief";
+import { BRIEF_STEP_COUNT, emptyBriefDraft, type BriefDraftValues } from "@/lib/schemas/brief";
 
 export const BRIEF_DRAFT_KEY = "pk_brief_draft";
-const BRIEF_DRAFT_VERSION = 4;
+const BRIEF_DRAFT_VERSION = 5;
 
 export type BriefDraftSnapshot = {
   step: number;
@@ -40,7 +40,7 @@ function readStorage(): BriefDraftSnapshot {
       return emptySnapshot();
     }
     const step = Number(parsed.step);
-    if (!Number.isInteger(step) || step < 1 || step > 6) return emptySnapshot();
+    if (!Number.isInteger(step) || step < 1 || step > BRIEF_STEP_COUNT) return emptySnapshot();
     return {
       step,
       values: { ...emptyBriefDraft(), ...parsed.values, website: "" },

@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { locales } from "@/i18n/routing";
 
-export const projectTypes = ["website", "app", "other"] as const;
+export const projectTypes = ["website", "app", "shop", "card", "other"] as const;
 export const goalOptions = [
   "clients",
   "services",
@@ -14,34 +14,6 @@ export const goalOptions = [
   "informing",
   "other",
 ] as const;
-export const pageOptions = [
-  "home",
-  "about",
-  "offer",
-  "work",
-  "pricing",
-  "reviews",
-  "faq",
-  "blog",
-  "gallery",
-  "contact",
-  "form",
-  "map",
-  "other",
-] as const;
-export const appFeatureOptions = [
-  "auth",
-  "clientPanel",
-  "payments",
-  "cms",
-  "bookings",
-  "newsletter",
-  "search",
-  "api",
-  "other",
-  "unsure",
-] as const;
-export const scopeExtraOptions = ["other", "unsure"] as const;
 export const materialOptions = ["yes", "partial", "no"] as const;
 export const rebuildOptions = ["yes", "no", "unsure"] as const;
 export const existingNeedOptions = ["keepContent", "migrate", "urls"] as const;
@@ -56,7 +28,7 @@ export const integrationOptions = [
   "other",
 ] as const;
 
-export const BRIEF_STEP_COUNT = 6;
+export const BRIEF_STEP_COUNT = 5;
 
 function blankToUndefined(value: unknown) {
   if (typeof value !== "string") return value;
@@ -77,12 +49,8 @@ export const briefPayloadSchema = z.object({
   nameIdea1: optionalText(80),
   nameIdea2: optionalText(80),
   nameIdea3: optionalText(80),
-  goals: z.array(z.enum(goalOptions)).min(1),
-  goalDescription: z.string().trim().min(10).max(4000),
-  pages: z.array(z.enum(pageOptions)).default([]),
-  appFeatures: z.array(z.enum(appFeatureOptions)).default([]),
-  scopeExtra: z.array(z.enum(scopeExtraOptions)).default([]),
-  scopeNotes: optionalText(4000),
+  goals: z.array(z.enum(goalOptions)).default([]),
+  goalDescription: optionalText(4000),
   hasLogo: z.enum(materialOptions).optional(),
   hasPhotos: z.enum(materialOptions).optional(),
   hasCopy: z.enum(materialOptions).optional(),
@@ -113,10 +81,6 @@ export type BriefDraftValues = {
   nameIdea3: string;
   goals: (typeof goalOptions)[number][];
   goalDescription: string;
-  pages: (typeof pageOptions)[number][];
-  appFeatures: (typeof appFeatureOptions)[number][];
-  scopeExtra: (typeof scopeExtraOptions)[number][];
-  scopeNotes: string;
   hasLogo: (typeof materialOptions)[number] | "";
   hasPhotos: (typeof materialOptions)[number] | "";
   hasCopy: (typeof materialOptions)[number] | "";
@@ -143,10 +107,6 @@ export const emptyBriefDraft = (): BriefDraftValues => ({
   nameIdea3: "",
   goals: [],
   goalDescription: "",
-  pages: [],
-  appFeatures: [],
-  scopeExtra: [],
-  scopeNotes: "",
   hasLogo: "",
   hasPhotos: "",
   hasCopy: "",
@@ -165,11 +125,6 @@ export const briefStep1Schema = z.object({
   name: z.string().trim().min(2).max(80),
   email: z.string().trim().email(),
   projectType: z.enum(projectTypes),
-});
-
-export const briefStep2Schema = z.object({
-  goals: z.array(z.enum(goalOptions)).min(1),
-  goalDescription: z.string().trim().min(10).max(4000),
 });
 
 export function hasCurrentWebsite(values: Pick<BriefDraftValues, "currentWebsite">) {
@@ -200,10 +155,6 @@ export function draftToPayload(
     nameIdea3: values.nameIdea3,
     goals: values.goals,
     goalDescription: values.goalDescription,
-    pages: values.pages,
-    appFeatures: values.appFeatures,
-    scopeExtra: values.scopeExtra,
-    scopeNotes: values.scopeNotes,
     hasLogo: values.hasLogo || undefined,
     hasPhotos: values.hasPhotos || undefined,
     hasCopy: values.hasCopy || undefined,
@@ -234,10 +185,6 @@ export function isBriefDraftDirty(values: BriefDraftValues) {
     values.nameIdea3.trim() !== "" ||
     values.goals.length > 0 ||
     values.goalDescription.trim() !== "" ||
-    values.pages.length > 0 ||
-    values.appFeatures.length > 0 ||
-    values.scopeExtra.length > 0 ||
-    values.scopeNotes.trim() !== "" ||
     values.hasLogo !== "" ||
     values.hasPhotos !== "" ||
     values.hasCopy !== "" ||
