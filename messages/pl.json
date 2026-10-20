@@ -144,10 +144,6 @@
       "emailInvalid": "Podaj poprawny adres e-mail.",
       "projectTypeHint": "zaznacz jedną opcję",
       "projectTypeSelect": "Zaznacz rodzaj projektu.",
-      "goalsHint": "zaznacz co najmniej jeden",
-      "goalsSelect": "Zaznacz co najmniej jeden główny cel.",
-      "goalDescriptionHint": "min. 10 znaków",
-      "goalDescriptionMin": "Opisz, co chcesz osiągnąć — co najmniej 10 znaków.",
       "goalDescriptionMax": "Opis celu może mieć maksymalnie 4000 znaków.",
       "attachmentsTooMany": "Możesz dodać maksymalnie {maxFiles} pliki.",
       "attachmentsTooLarge": "Każdy plik musi mieć mniej niż {maxFileSize}.",
@@ -161,6 +157,7 @@
     "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie.",
     "error": "Nie udało się wysłać. Spróbuj ponownie lub napisz bezpośrednio na email.",
     "attachmentsHint": "Dokumenty (PDF, DOCX, XLSX, PPTX): do {maxDocumentSize} każdy. Zdjęcia (JPG, PNG, WEBP, GIF): do {maxOriginalImageSize} każde — zdjęcia są automatycznie kompresowane. Maks. {maxFiles} pliki, {maxTotalSize} łącznie po przetworzeniu.",
+    "attachmentsChoose": "Wybierz pliki",
     "attachmentsDropHint": "Możesz też przeciągnąć pliki tutaj.",
     "attachmentsOptimizing": "Optymalizowanie zdjęć…",
     "attachmentsRemove": "Usuń {name}",
@@ -175,10 +172,9 @@
     "steps": {
       "1": "Kontakt i rodzaj",
       "2": "Cel",
-      "3": "Zakres",
-      "4": "Materiały",
-      "5": "Szczegóły",
-      "6": "Podsumowanie"
+      "3": "Materiały",
+      "4": "Szczegóły",
+      "5": "Podsumowanie"
     },
     "fields": {
       "name": "Imię",
@@ -192,10 +188,6 @@
       "nameIdeaN": "Propozycja {n}",
       "goals": "Główne cele",
       "goalDescription": "Co chcesz osiągnąć dzięki projektowi?",
-      "pages": "Jakie podstrony przewidujesz?",
-      "appFeatures": "Jakie funkcje są potrzebne?",
-      "scopeExtra": "Dodatkowo",
-      "scopeNotes": "Co jest dla Ciebie szczególnie ważne?",
       "hasLogo": "Czy masz logo?",
       "hasPhotos": "Czy masz gotowe zdjęcia?",
       "hasCopy": "Czy masz teksty?",
@@ -211,8 +203,10 @@
     },
     "projectTypes": {
       "website": "Strona internetowa",
-      "app": "Aplikacja webowa / panel",
-      "other": "Nie wiem — potrzebuję konsultacji"
+      "app": "Aplikacja",
+      "shop": "Sklep internetowy",
+      "card": "Wizytówka/CV online",
+      "other": "Inny"
     },
     "goals": {
       "clients": "Pozyskiwanie klientów",
@@ -225,37 +219,6 @@
       "opsPanel": "Zarządzanie firmą",
       "informing": "Informowanie klientów",
       "other": "Inne"
-    },
-    "pages": {
-      "home": "Start",
-      "about": "O nas",
-      "offer": "Oferta / usługi",
-      "work": "Realizacje",
-      "pricing": "Cennik",
-      "reviews": "Opinie",
-      "faq": "FAQ",
-      "blog": "Blog",
-      "gallery": "Galeria",
-      "contact": "Kontakt",
-      "form": "Formularz",
-      "map": "Mapa",
-      "other": "Inne"
-    },
-    "appFeatures": {
-      "auth": "Logowanie / rejestracja",
-      "clientPanel": "Panel klienta",
-      "payments": "Płatności",
-      "cms": "CMS / blog",
-      "bookings": "Rezerwacje / kalendarz",
-      "newsletter": "Newsletter",
-      "search": "Wyszukiwarka",
-      "api": "Integracje API",
-      "other": "Inne",
-      "unsure": "Nie wiem — potrzebuję konsultacji"
-    },
-    "scopeExtra": {
-      "other": "Inne",
-      "unsure": "Nie wiem — potrzebuję konsultacji"
     },
     "material": {
       "yes": "Tak",

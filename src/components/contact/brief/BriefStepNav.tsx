@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { BRIEF_STEP_COUNT } from "@/lib/schemas/brief";
 
 type BriefStepNavProps = {
   step: number;
@@ -30,7 +31,7 @@ export function BriefStepNav({
           {backLabel}
         </Button>
       ) : null}
-      {step < 6 ? (
+      {step < BRIEF_STEP_COUNT ? (
         <Button
           key="brief-next"
           type="button"

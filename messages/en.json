@@ -144,10 +144,6 @@
       "emailInvalid": "Enter a valid email address.",
       "projectTypeHint": "select one option",
       "projectTypeSelect": "Select a project type.",
-      "goalsHint": "select at least one",
-      "goalsSelect": "Select at least one main goal.",
-      "goalDescriptionHint": "min. 10 characters",
-      "goalDescriptionMin": "Describe what you want to achieve — at least 10 characters.",
       "goalDescriptionMax": "The goal description can be at most 4000 characters.",
       "attachmentsTooMany": "You can attach up to {maxFiles} files.",
       "attachmentsTooLarge": "Each file must be under {maxFileSize}.",
@@ -161,6 +157,7 @@
     "captchaError": "Please confirm you are not a bot and try again.",
     "error": "Couldn’t send. Try again or email me directly.",
     "attachmentsHint": "Documents (PDF, DOCX, XLSX, PPTX): up to {maxDocumentSize} each. Photos (JPG, PNG, WEBP, GIF): up to {maxOriginalImageSize} each — photos are compressed automatically. Up to {maxFiles} files, {maxTotalSize} total after processing.",
+    "attachmentsChoose": "Choose files",
     "attachmentsDropHint": "Or drag and drop files here.",
     "attachmentsOptimizing": "Optimizing photos…",
     "attachmentsRemove": "Remove {name}",
@@ -175,10 +172,9 @@
     "steps": {
       "1": "Contact and type",
       "2": "Goal",
-      "3": "Scope",
-      "4": "Materials",
-      "5": "Details",
-      "6": "Summary"
+      "3": "Materials",
+      "4": "Details",
+      "5": "Summary"
     },
     "fields": {
       "name": "Name",
@@ -192,10 +188,6 @@
       "nameIdeaN": "Idea {n}",
       "goals": "Main goals",
       "goalDescription": "What do you want to achieve with this project?",
-      "pages": "Which pages do you need?",
-      "appFeatures": "Which features do you need?",
-      "scopeExtra": "Additionally",
-      "scopeNotes": "What matters most to you?",
       "hasLogo": "Do you have a logo?",
       "hasPhotos": "Do you have photos ready?",
       "hasCopy": "Do you have copy ready?",
@@ -211,8 +203,10 @@
     },
     "projectTypes": {
       "website": "Website",
-      "app": "Web app / dashboard",
-      "other": "Not sure — I need a consultation"
+      "app": "App",
+      "shop": "Online store",
+      "card": "Business card/online CV",
+      "other": "Other"
     },
     "goals": {
       "clients": "Winning clients",
@@ -225,37 +219,6 @@
       "opsPanel": "Company management",
       "informing": "Informing customers",
       "other": "Other"
-    },
-    "pages": {
-      "home": "Home",
-      "about": "About",
-      "offer": "Offer / services",
-      "work": "Work / case studies",
-      "pricing": "Pricing",
-      "reviews": "Testimonials",
-      "faq": "FAQ",
-      "blog": "Blog",
-      "gallery": "Gallery",
-      "contact": "Contact",
-      "form": "Form",
-      "map": "Map",
-      "other": "Other"
-    },
-    "appFeatures": {
-      "auth": "Login / registration",
-      "clientPanel": "Client dashboard",
-      "payments": "Payments",
-      "cms": "CMS / blog",
-      "bookings": "Bookings / calendar",
-      "newsletter": "Newsletter",
-      "search": "Search",
-      "api": "API integrations",
-      "other": "Other",
-      "unsure": "Not sure — I need a consultation"
-    },
-    "scopeExtra": {
-      "other": "Other",
-      "unsure": "Not sure — I need a consultation"
     },
     "material": {
       "yes": "Yes",

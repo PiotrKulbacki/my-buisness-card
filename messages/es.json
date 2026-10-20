@@ -144,10 +144,6 @@
       "emailInvalid": "Introduce un email válido.",
       "projectTypeHint": "elige una opción",
       "projectTypeSelect": "Selecciona el tipo de proyecto.",
-      "goalsHint": "elige al menos uno",
-      "goalsSelect": "Selecciona al menos un objetivo principal.",
-      "goalDescriptionHint": "mín. 10 caracteres",
-      "goalDescriptionMin": "Describe qué quieres conseguir — al menos 10 caracteres.",
       "goalDescriptionMax": "La descripción del objetivo puede tener como máximo 4000 caracteres.",
       "attachmentsTooMany": "Puedes adjuntar hasta {maxFiles} archivos.",
       "attachmentsTooLarge": "Cada archivo debe pesar menos de {maxFileSize}.",
@@ -161,6 +157,7 @@
     "captchaError": "Confirma que no eres un bot e inténtalo de nuevo.",
     "error": "No se pudo enviar. Inténtalo de nuevo o escríbeme por email.",
     "attachmentsHint": "Documentos (PDF, DOCX, XLSX, PPTX): hasta {maxDocumentSize} cada uno. Fotos (JPG, PNG, WEBP, GIF): hasta {maxOriginalImageSize} cada una — las fotos se comprimen automáticamente. Hasta {maxFiles} archivos, {maxTotalSize} en total tras el procesado.",
+    "attachmentsChoose": "Elegir archivos",
     "attachmentsDropHint": "O arrastra y suelta los archivos aquí.",
     "attachmentsOptimizing": "Optimizando fotos…",
     "attachmentsRemove": "Eliminar {name}",
@@ -175,10 +172,9 @@
     "steps": {
       "1": "Contacto y tipo",
       "2": "Objetivo",
-      "3": "Alcance",
-      "4": "Materiales",
-      "5": "Detalles",
-      "6": "Resumen"
+      "3": "Materiales",
+      "4": "Detalles",
+      "5": "Resumen"
     },
     "fields": {
       "name": "Nombre",
@@ -192,10 +188,6 @@
       "nameIdeaN": "Propuesta {n}",
       "goals": "Objetivos principales",
       "goalDescription": "¿Qué quieres conseguir con el proyecto?",
-      "pages": "¿Qué páginas necesitas?",
-      "appFeatures": "¿Qué funciones necesitas?",
-      "scopeExtra": "Además",
-      "scopeNotes": "¿Qué es especialmente importante para ti?",
       "hasLogo": "¿Tienes logo?",
       "hasPhotos": "¿Tienes fotos listas?",
       "hasCopy": "¿Tienes textos?",
@@ -211,8 +203,10 @@
     },
     "projectTypes": {
       "website": "Sitio web",
-      "app": "Aplicación web / panel",
-      "other": "No lo sé — necesito consultoría"
+      "app": "Aplicación",
+      "shop": "Tienda online",
+      "card": "Tarjeta de visita/CV online",
+      "other": "Otro"
     },
     "goals": {
       "clients": "Captar clientes",
@@ -225,37 +219,6 @@
       "opsPanel": "Gestión de la empresa",
       "informing": "Informar a clientes",
       "other": "Otro"
-    },
-    "pages": {
-      "home": "Inicio",
-      "about": "Sobre nosotros",
-      "offer": "Oferta / servicios",
-      "work": "Trabajos",
-      "pricing": "Precios",
-      "reviews": "Opiniones",
-      "faq": "FAQ",
-      "blog": "Blog",
-      "gallery": "Galería",
-      "contact": "Contacto",
-      "form": "Formulario",
-      "map": "Mapa",
-      "other": "Otro"
-    },
-    "appFeatures": {
-      "auth": "Inicio de sesión / registro",
-      "clientPanel": "Panel de cliente",
-      "payments": "Pagos",
-      "cms": "CMS / blog",
-      "bookings": "Reservas / calendario",
-      "newsletter": "Newsletter",
-      "search": "Búsqueda",
-      "api": "Integraciones API",
-      "other": "Otro",
-      "unsure": "No lo sé — necesito consultoría"
-    },
-    "scopeExtra": {
-      "other": "Otro",
-      "unsure": "No lo sé — necesito consultoría"
     },
     "material": {
       "yes": "Sí",

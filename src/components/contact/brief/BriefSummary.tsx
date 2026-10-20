@@ -33,18 +33,7 @@ export function BriefSummary({ values, emptyLabel, label, optionLabel }: BriefSu
     { key: "goalDescription", value: values.goalDescription || emptyLabel },
   ];
 
-  if (values.projectType === "website") {
-    rows.push({ key: "pages", value: join(values.pages, "pages", optionLabel, emptyLabel) });
-  }
-  if (values.projectType === "app") {
-    rows.push({
-      key: "appFeatures",
-      value: join(values.appFeatures, "appFeatures", optionLabel, emptyLabel),
-    });
-  }
-
   rows.push(
-    { key: "scopeNotes", value: values.scopeNotes || emptyLabel },
     {
       key: "hasLogo",
       value: values.hasLogo ? optionLabel("material", values.hasLogo) : emptyLabel,
