@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Piotr Kulbacki — Web & Product Engineer",
+    "title": "Piotr Kulbacki - Web & Product Engineer",
     "description": "Construyo productos digitales modernos, webs y apps. Creador de Dokiero. Disponible en remoto."
   },
   "nav": {
@@ -21,17 +21,17 @@
   "landing": {
     "welcome": "Bienvenido a mi portfolio",
     "role": "Ingeniero de software",
-    "tagline": "Construyo productos digitales, webs y apps — del concepto a producción."
+    "tagline": "Construyo productos digitales, webs y apps - del concepto a producción."
   },
   "about": {
     "eyebrow": "Introducción",
     "title": "Quién soy",
-    "lead": "Ingeniero de producto y founder — diseño, código y pensamiento de producto.",
+    "lead": "Ingeniero de producto y founder - diseño, código y pensamiento de producto.",
     "bio": "Soy Piotr Kulbacki. Construyo de extremo a extremo: de arquitectura y UX a producción. Claridad, rendimiento y detalles que generan confianza.",
     "buildingTitle": "Qué construyo",
-    "buildingBody": "Productos propios y trabajo para clientes — con foco en UX y buena ingeniería.",
+    "buildingBody": "Productos propios y trabajo para clientes - con foco en UX y buena ingeniería.",
     "buildingItems": {
-      "product": "Dokiero — asistente de trámites con IA (30 idiomas)",
+      "product": "Dokiero - asistente de trámites con IA (30 idiomas)",
       "websites": "Webs corporativas y landings con SEO y motion",
       "apps": "Lyamo y otras apps web / dashboards operativos"
     },
@@ -40,13 +40,13 @@
   "path": {
     "eyebrow": "CV",
     "title": "Experiencia",
-    "lead": "CV online completo — experiencia, skills, proyectos y educación.",
+    "lead": "CV online completo - experiencia, skills, proyectos y educación.",
     "summary": "Resumen",
     "experience": "Experiencia",
     "skills": "Skills técnicas",
     "softSkills": "Soft skills",
     "projects": "Proyectos",
-    "projectsNote": "Menciones breves — los case studies completos están en la pestaña Proyectos.",
+    "projectsNote": "Menciones breves - los case studies completos están en la pestaña Proyectos.",
     "courseBadge": "Durante el curso de programación",
     "live": "Live",
     "education": "Educación",
@@ -69,7 +69,7 @@
   },
   "projects": {
     "title": "Proyectos",
-    "lead": "Trabajos seleccionados — webs, apps y productos propios.",
+    "lead": "Trabajos seleccionados - webs, apps y productos propios.",
     "filters": {
       "all": "Todos",
       "websites": "Sitios web",
@@ -132,7 +132,7 @@
     "submit": "Enviar",
     "sending": "Enviando…",
     "optional": "opcional",
-    "successTitle": "Gracias — consulta enviada",
+    "successTitle": "Gracias - consulta enviada",
     "successBody": "He recibido la descripción del proyecto y suelo responder en 1–2 días laborables. Envié una confirmación al email indicado.",
     "successContact": "Volver a contacto",
     "successHome": "Inicio",
@@ -156,7 +156,7 @@
     "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo.",
     "captchaError": "Confirma que no eres un bot e inténtalo de nuevo.",
     "error": "No se pudo enviar. Inténtalo de nuevo o escríbeme por email.",
-    "attachmentsHint": "Documentos (PDF, DOCX, XLSX, PPTX): hasta {maxDocumentSize} cada uno. Fotos (JPG, PNG, WEBP, GIF): hasta {maxOriginalImageSize} cada una — las fotos se comprimen automáticamente. Hasta {maxFiles} archivos, {maxTotalSize} en total tras el procesado.",
+    "attachmentsHint": "Documentos (PDF, DOCX, XLSX, PPTX): hasta {maxDocumentSize} cada uno. Fotos (JPG, PNG, WEBP, GIF): hasta {maxOriginalImageSize} cada una - las fotos se comprimen automáticamente. Hasta {maxFiles} archivos, {maxTotalSize} en total tras el procesado.",
     "attachmentsChoose": "Elegir archivos",
     "attachmentsDropHint": "O arrastra y suelta los archivos aquí.",
     "attachmentsOptimizing": "Optimizando fotos…",
@@ -184,7 +184,7 @@
       "currentWebsite": "Sitio web actual",
       "projectType": "Tipo de proyecto",
       "nameIdeas": "Propuestas de nombre para el sitio o la app",
-      "nameIdeasHint": "Hasta tres nombres — las comentaremos y comprobaremos la disponibilidad del dominio.",
+      "nameIdeasHint": "Hasta tres nombres - las comentaremos y comprobaremos la disponibilidad del dominio.",
       "nameIdeaN": "Propuesta {n}",
       "goals": "Objetivos principales",
       "goalDescription": "¿Qué quieres conseguir con el proyecto?",
@@ -398,11 +398,11 @@
       "emailLabel": "Email",
       "phoneLabel": "Teléfono",
       "messageLabel": "Mensaje",
-      "replyHint": "El botón abre el formulario de respuesta en la web — el mensaje usará la misma plantilla.",
+      "replyHint": "El botón abre el formulario de respuesta en la web - el mensaje usará la misma plantilla.",
       "cta": "Responder en la plantilla"
     },
     "autoReply": {
-      "subject": "Gracias — he recibido tu mensaje",
+      "subject": "Gracias - he recibido tu mensaje",
       "greeting": "Hola {name},",
       "body": "Gracias por escribirme. He recibido tu mensaje y normalmente respondo en 1–2 días laborables.",
       "messageLabel": "Tu mensaje:",
@@ -412,11 +412,11 @@
     "briefInbox": {
       "subject": "Consulta de proyecto: {name}",
       "title": "Nueva consulta de proyecto",
-      "replyHint": "El botón abre el formulario de respuesta en la web — el mensaje usará la misma plantilla.",
+      "replyHint": "El botón abre el formulario de respuesta en la web - el mensaje usará la misma plantilla.",
       "cta": "Responder en la plantilla"
     },
     "briefAutoReply": {
-      "subject": "Gracias — he recibido tu consulta",
+      "subject": "Gracias - he recibido tu consulta",
       "greeting": "Hola {name},",
       "body": "Gracias por describir el proyecto. Revisaré tus respuestas y suelo responder en 1–2 días laborables.",
       "summaryLabel": "Tus respuestas:",

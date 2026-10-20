@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Piotr Kulbacki — Software Engineer",
+    "title": "Piotr Kulbacki - Software Engineer",
     "description": "I build modern digital products, websites and apps. Creator of Dokiero. Available for remote collaboration."
   },
   "nav": {
@@ -21,17 +21,17 @@
   "landing": {
     "welcome": "Welcome to my portfolio",
     "role": "Software Engineer",
-    "tagline": "I build digital products, websites and apps — from concept to production."
+    "tagline": "I build digital products, websites and apps - from concept to production."
   },
   "about": {
     "eyebrow": "Introduction",
     "title": "Who I am",
-    "lead": "Product engineer and founder — combining design, code and product thinking.",
+    "lead": "Product engineer and founder - combining design, code and product thinking.",
     "bio": "I'm Piotr Kulbacki. I build end-to-end: architecture and UX through to production. Clear messaging, performance and craft details that build trust.",
     "buildingTitle": "What I build",
-    "buildingBody": "I ship my own products and client work — with a strong focus on UX quality and solid engineering.",
+    "buildingBody": "I ship my own products and client work - with a strong focus on UX quality and solid engineering.",
     "buildingItems": {
-      "product": "Dokiero — official-matters AI assistant (30 languages)",
+      "product": "Dokiero - official-matters AI assistant (30 languages)",
       "websites": "Company sites and landings with SEO and motion",
       "apps": "Lyamo and other web apps / ops dashboards"
     },
@@ -40,13 +40,13 @@
   "path": {
     "eyebrow": "CV",
     "title": "Experience",
-    "lead": "Full online CV — experience, skills, projects and education.",
+    "lead": "Full online CV - experience, skills, projects and education.",
     "summary": "Summary",
     "experience": "Experience",
     "skills": "Technical skills",
     "softSkills": "Soft skills",
     "projects": "Projects",
-    "projectsNote": "Short mentions — fuller case studies live in the Projects tab.",
+    "projectsNote": "Short mentions - fuller case studies live in the Projects tab.",
     "courseBadge": "During programming course",
     "live": "Live",
     "education": "Education",
@@ -69,7 +69,7 @@
   },
   "projects": {
     "title": "Projects",
-    "lead": "Selected work — websites, applications and own products.",
+    "lead": "Selected work - websites, applications and own products.",
     "filters": {
       "all": "All",
       "websites": "Websites",
@@ -132,7 +132,7 @@
     "submit": "Send",
     "sending": "Sending…",
     "optional": "optional",
-    "successTitle": "Thank you — enquiry sent",
+    "successTitle": "Thank you - enquiry sent",
     "successBody": "I received your project outline and usually reply within 1–2 business days. A confirmation went to the email you provided.",
     "successContact": "Back to contact",
     "successHome": "Home",
@@ -156,7 +156,7 @@
     "rateLimited": "Too many attempts. Please wait a moment and try again.",
     "captchaError": "Please confirm you are not a bot and try again.",
     "error": "Couldn’t send. Try again or email me directly.",
-    "attachmentsHint": "Documents (PDF, DOCX, XLSX, PPTX): up to {maxDocumentSize} each. Photos (JPG, PNG, WEBP, GIF): up to {maxOriginalImageSize} each — photos are compressed automatically. Up to {maxFiles} files, {maxTotalSize} total after processing.",
+    "attachmentsHint": "Documents (PDF, DOCX, XLSX, PPTX): up to {maxDocumentSize} each. Photos (JPG, PNG, WEBP, GIF): up to {maxOriginalImageSize} each - photos are compressed automatically. Up to {maxFiles} files, {maxTotalSize} total after processing.",
     "attachmentsChoose": "Choose files",
     "attachmentsDropHint": "Or drag and drop files here.",
     "attachmentsOptimizing": "Optimizing photos…",
@@ -184,7 +184,7 @@
       "currentWebsite": "Current website",
       "projectType": "Project type",
       "nameIdeas": "Name ideas for the site or app",
-      "nameIdeasHint": "Up to three names — we will discuss them and check domain availability.",
+      "nameIdeasHint": "Up to three names - we will discuss them and check domain availability.",
       "nameIdeaN": "Idea {n}",
       "goals": "Main goals",
       "goalDescription": "What do you want to achieve with this project?",
@@ -398,11 +398,11 @@
       "emailLabel": "Email",
       "phoneLabel": "Phone",
       "messageLabel": "Message",
-      "replyHint": "The button opens the on-site reply form — the message will use the same template.",
+      "replyHint": "The button opens the on-site reply form - the message will use the same template.",
       "cta": "Reply in template"
     },
     "autoReply": {
-      "subject": "Thanks — I received your message",
+      "subject": "Thanks - I received your message",
       "greeting": "Hi {name},",
       "body": "Thank you for getting in touch. I received your message and will reply within 1–2 business days.",
       "messageLabel": "Your message:",
@@ -412,11 +412,11 @@
     "briefInbox": {
       "subject": "Project enquiry: {name}",
       "title": "New project enquiry",
-      "replyHint": "The button opens the on-site reply form — the message will use the same template.",
+      "replyHint": "The button opens the on-site reply form - the message will use the same template.",
       "cta": "Reply in template"
     },
     "briefAutoReply": {
-      "subject": "Thanks — I received your enquiry",
+      "subject": "Thanks - I received your enquiry",
       "greeting": "Hi {name},",
       "body": "Thank you for outlining your project. I will review your answers and usually reply within 1–2 business days.",
       "summaryLabel": "Your answers:",

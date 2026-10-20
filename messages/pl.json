@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Piotr Kulbacki — Inżynier oprogramowania",
+    "title": "Piotr Kulbacki - Inżynier oprogramowania",
     "description": "Buduję nowoczesne produkty cyfrowe, strony i aplikacje. Twórca Dokiero. Współpraca remote."
   },
   "nav": {
@@ -21,17 +21,17 @@
   "landing": {
     "welcome": "Witaj w moim portfolio",
     "role": "Inżynier oprogramowania",
-    "tagline": "Buduję produkty cyfrowe, strony i aplikacje — od koncepcji po wdrożenie."
+    "tagline": "Buduję produkty cyfrowe, strony i aplikacje - od koncepcji po wdrożenie."
   },
   "about": {
     "eyebrow": "Wprowadzenie",
     "title": "Kim jestem",
-    "lead": "Inżynier produktu i founder — łączę design, kod i myślenie produktowe.",
+    "lead": "Inżynier produktu i founder - łączę design, kod i myślenie produktowe.",
     "bio": "Nazywam się Piotr Kulbacki. Buduję rozwiązania end-to-end: od architektury i UX po produkcję. Stawiam na czytelny przekaz, wydajność i detale, które budują zaufanie.",
     "buildingTitle": "Co buduję",
-    "buildingBody": "Tworzę produkty własne i realizacje dla klientów — ze szczególnym naciskiem na jakość UX oraz solidną inżynierię.",
+    "buildingBody": "Tworzę produkty własne i realizacje dla klientów - ze szczególnym naciskiem na jakość UX oraz solidną inżynierię.",
     "buildingItems": {
-      "product": "Dokiero — asystent spraw urzędowych (AI, 30 języków)",
+      "product": "Dokiero - asystent spraw urzędowych (AI, 30 języków)",
       "websites": "Strony firmowe i landingi z naciskiem na SEO i motion",
       "apps": "Lyamo i inne aplikacje webowe / panele operacyjne"
     },
@@ -40,13 +40,13 @@
   "path": {
     "eyebrow": "CV",
     "title": "Doświadczenie",
-    "lead": "Pełne CV online — doświadczenie, kompetencje, projekty i edukacja.",
+    "lead": "Pełne CV online - doświadczenie, kompetencje, projekty i edukacja.",
     "summary": "Podsumowanie",
     "experience": "Doświadczenie",
     "skills": "Umiejętności techniczne",
     "softSkills": "Kompetencje miękkie",
     "projects": "Projekty",
-    "projectsNote": "Krótkie wzmianki — pełniejsze case studies znajdziesz w zakładce Projekty.",
+    "projectsNote": "Krótkie wzmianki - pełniejsze case studies znajdziesz w zakładce Projekty.",
     "courseBadge": "Podczas kursu programowania",
     "live": "Live",
     "education": "Edukacja",
@@ -69,7 +69,7 @@
   },
   "projects": {
     "title": "Projekty",
-    "lead": "Wybrane realizacje — strony, aplikacje i produkty własne.",
+    "lead": "Wybrane realizacje - strony, aplikacje i produkty własne.",
     "filters": {
       "all": "Wszystkie",
       "websites": "Strony internetowe",
@@ -91,7 +91,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "lead": "Masz pomysł na produkt, stronę lub współpracę? Napisz — odpowiadam zwykle w 1–2 dni robocze.",
+    "lead": "Masz pomysł na produkt, stronę lub współpracę? Napisz - odpowiadam zwykle w 1–2 dni robocze.",
     "name": "Imię",
     "email": "Email",
     "phone": "Telefon",
@@ -132,7 +132,7 @@
     "submit": "Wyślij",
     "sending": "Wysyłanie…",
     "optional": "opcjonalnie",
-    "successTitle": "Dziękuję — zapytanie wysłane",
+    "successTitle": "Dziękuję - zapytanie wysłane",
     "successBody": "Otrzymałem opis projektu i odezwę się zwykle w ciągu 1–2 dni roboczych. Na podany e-mail poszło potwierdzenie.",
     "successContact": "Wróć do kontaktu",
     "successHome": "Strona główna",
@@ -156,7 +156,7 @@
     "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
     "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie.",
     "error": "Nie udało się wysłać. Spróbuj ponownie lub napisz bezpośrednio na email.",
-    "attachmentsHint": "Dokumenty (PDF, DOCX, XLSX, PPTX): do {maxDocumentSize} każdy. Zdjęcia (JPG, PNG, WEBP, GIF): do {maxOriginalImageSize} każde — zdjęcia są automatycznie kompresowane. Maks. {maxFiles} pliki, {maxTotalSize} łącznie po przetworzeniu.",
+    "attachmentsHint": "Dokumenty (PDF, DOCX, XLSX, PPTX): do {maxDocumentSize} każdy. Zdjęcia (JPG, PNG, WEBP, GIF): do {maxOriginalImageSize} każde - zdjęcia są automatycznie kompresowane. Maks. {maxFiles} pliki, {maxTotalSize} łącznie po przetworzeniu.",
     "attachmentsChoose": "Wybierz pliki",
     "attachmentsDropHint": "Możesz też przeciągnąć pliki tutaj.",
     "attachmentsOptimizing": "Optymalizowanie zdjęć…",
@@ -184,7 +184,7 @@
       "currentWebsite": "Obecna strona internetowa",
       "projectType": "Rodzaj projektu",
       "nameIdeas": "Propozycje nazwy strony lub aplikacji",
-      "nameIdeasHint": "Do trzech nazw — omówimy je i sprawdzimy dostępność domeny.",
+      "nameIdeasHint": "Do trzech nazw - omówimy je i sprawdzimy dostępność domeny.",
       "nameIdeaN": "Propozycja {n}",
       "goals": "Główne cele",
       "goalDescription": "Co chcesz osiągnąć dzięki projektowi?",
@@ -398,11 +398,11 @@
       "emailLabel": "E-mail",
       "phoneLabel": "Telefon",
       "messageLabel": "Wiadomość",
-      "replyHint": "Przycisk otwiera formularz odpowiedzi na stronie — wiadomość wyjdzie w tym samym szablonie.",
+      "replyHint": "Przycisk otwiera formularz odpowiedzi na stronie - wiadomość wyjdzie w tym samym szablonie.",
       "cta": "Odpowiedz w szablonie"
     },
     "autoReply": {
-      "subject": "Dziękuję — otrzymałem Twoją wiadomość",
+      "subject": "Dziękuję - otrzymałem Twoją wiadomość",
       "greeting": "Cześć {name},",
       "body": "Dziękuję za kontakt. Otrzymałem Twoją wiadomość i odpowiem zwykle w ciągu 1–2 dni roboczych.",
       "messageLabel": "Twoja wiadomość:",
@@ -412,11 +412,11 @@
     "briefInbox": {
       "subject": "Zapytanie o projekt: {name}",
       "title": "Nowe zapytanie o projekt",
-      "replyHint": "Przycisk otwiera formularz odpowiedzi na stronie — wiadomość wyjdzie w tym samym szablonie.",
+      "replyHint": "Przycisk otwiera formularz odpowiedzi na stronie - wiadomość wyjdzie w tym samym szablonie.",
       "cta": "Odpowiedz w szablonie"
     },
     "briefAutoReply": {
-      "subject": "Dziękuję — otrzymałem Twoje zapytanie",
+      "subject": "Dziękuję - otrzymałem Twoje zapytanie",
       "greeting": "Cześć {name},",
       "body": "Dziękuję za opis projektu. Przeczytam Twoje odpowiedzi i odezwę się zwykle w ciągu 1–2 dni roboczych.",
       "summaryLabel": "Twoje odpowiedzi:",

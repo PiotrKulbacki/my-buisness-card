@@ -42,7 +42,7 @@ export function LandingHero() {
           <SocialLinks className="mt-4 md:mt-8" />
         </Reveal>
 
-        {/* LCP: no Reveal fade — opacity:0 delays Largest Contentful Paint on mobile. */}
+        {/* LCP: no Reveal fade - opacity:0 delays Largest Contentful Paint on mobile. */}
         <div className="flex min-h-0 items-end justify-center overflow-hidden md:block md:items-center md:overflow-visible">
           <Portrait
             priority

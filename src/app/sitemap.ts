@@ -3,7 +3,7 @@ import { routing } from "@/i18n/routing";
 import { absoluteLocaleUrl, getIndexableRoutes, hreflangLanguages } from "@/lib/seo";
 
 /**
- * sitemap.xml — every public locale URL + xhtml hreflang alternates
+ * sitemap.xml - every public locale URL + xhtml hreflang alternates
  * (same map as page metadata / `buildPageMetadata`).
  */
 export default function sitemap(): MetadataRoute.Sitemap {

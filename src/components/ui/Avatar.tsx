@@ -26,7 +26,7 @@ function useIsClient() {
   );
 }
 
-/** Classic circular avatar — click to open an enlarged lightbox preview. */
+/** Classic circular avatar - click to open an enlarged lightbox preview. */
 export function Avatar({ className, size = "lg" }: AvatarProps) {
   const t = useTranslations("common");
   const reduce = useReducedMotion();

@@ -1,7 +1,7 @@
 import { MAX_ATTACHMENT_SIZE_BYTES } from "@/lib/attachments";
 
 /**
- * Client-only photo compression for brief attachments. Runs entirely via <canvas> —
+ * Client-only photo compression for brief attachments. Runs entirely via <canvas> -
  * no extra dependency. Documents and GIFs never go through this module (see
  * COMPRESSIBLE_IMAGE_EXTENSIONS in lib/attachments.ts).
  */
@@ -11,11 +11,11 @@ import { MAX_ATTACHMENT_SIZE_BYTES } from "@/lib/attachments";
  * of the MAX_ATTACHMENT_SIZE_BYTES budget for typical detailed photos instead
  * of leaving it mostly unused. Empirically checked with a libwebp-class encoder
  * against a deliberately noisy/detailed 4000x3000 synthetic photo (worst case):
- * 2600px @ quality 0.92 landed around ~2.2MB — safely under the 3MB ceiling with
+ * 2600px @ quality 0.92 landed around ~2.2MB - safely under the 3MB ceiling with
  * headroom, while a 2000px @ quality 0.82 (the previous settings) landed under
  * 1MB on the same image, confirming the old ladder was leaving quality on the
  * table. Smooth/low-detail photos naturally end up smaller at these same
- * settings — that's expected, not a bug: there's no benefit to padding a photo
+ * settings - that's expected, not a bug: there's no benefit to padding a photo
  * that already looks great at a smaller size.
  */
 const MAX_DIMENSION = 2600;
@@ -101,7 +101,7 @@ function withExtension(filename: string, extension: string): string {
 
 /**
  * Compresses a photo down to MAX_ATTACHMENT_SIZE_BYTES by capping resolution and,
- * for lossy formats, reducing quality — stopping at the first setting that fits so
+ * for lossy formats, reducing quality - stopping at the first setting that fits so
  * quality isn't dropped further than needed. Already-small photos pass through
  * untouched. Throws ImageOptimizeError if the file can't be decoded, or can't be
  * brought under the limit even at the lowest quality/resolution step.

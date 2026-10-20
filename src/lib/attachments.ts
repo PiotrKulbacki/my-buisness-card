@@ -1,7 +1,7 @@
 /**
  * Shared client/server rules for brief attachments. Limits are kept low enough to
  * stay well under Vercel's hard 4.5MB request body limit for Serverless Functions
- * (see https://vercel.com/docs/functions/limitations#request-body-size) — files are
+ * (see https://vercel.com/docs/functions/limitations#request-body-size) - files are
  * relayed as email attachments (Brevo), not stored, so that limit is the real ceiling.
  */
 
@@ -21,7 +21,7 @@ export type AttachmentExtension = (typeof ACCEPTED_ATTACHMENT_EXTENSIONS)[number
 
 /**
  * MIME types matching ACCEPTED_ATTACHMENT_EXTENSIONS, used only to widen the
- * <input accept> hint (see ATTACHMENT_ACCEPT_ATTRIBUTE) — actual validation
+ * <input accept> hint (see ATTACHMENT_ACCEPT_ATTRIBUTE) - actual validation
  * never trusts a MIME type, only the magic-byte check in matchesFileSignature.
  */
 const ACCEPTED_ATTACHMENT_MIME_TYPES = [
@@ -37,7 +37,7 @@ const ACCEPTED_ATTACHMENT_MIME_TYPES = [
 
 /**
  * Extensions alone leave the OS's "Open" button disabled when picking a photo
- * from macOS's Photos-library integration in the native file dialog — that
+ * from macOS's Photos-library integration in the native file dialog - that
  * picker matches selections by MIME/UTI, not by file extension. Including both
  * fixes it without loosening what we actually accept server-side.
  */
@@ -55,9 +55,9 @@ export const MAX_ATTACHMENT_SIZE_BYTES = 3 * 1024 * 1024;
 export const MAX_TOTAL_ATTACHMENT_SIZE_BYTES = 4 * 1024 * 1024;
 
 /**
- * Photos (not GIFs — see COMPRESSIBLE_IMAGE_EXTENSIONS) may be selected up to this
+ * Photos (not GIFs - see COMPRESSIBLE_IMAGE_EXTENSIONS) may be selected up to this
  * size and are then compressed client-side down to MAX_ATTACHMENT_SIZE_BYTES before
- * upload. This only bounds what the browser is asked to decode/compress — it is not
+ * upload. This only bounds what the browser is asked to decode/compress - it is not
  * itself sent anywhere, so it doesn't need to respect the Vercel request-body limit.
  */
 export const MAX_ORIGINAL_IMAGE_SIZE_BYTES = 10 * 1024 * 1024;
@@ -125,7 +125,7 @@ const SIGNATURES: Record<AttachmentExtension, (bytes: Uint8Array) => boolean> = 
   ".gif": (b) => matchesBytes(b, 0, [0x47, 0x49, 0x46, 0x38]),
   ".webp": (b) =>
     matchesBytes(b, 0, [0x52, 0x49, 0x46, 0x46]) && matchesBytes(b, 8, [0x57, 0x45, 0x42, 0x50]),
-  // .docx/.xlsx/.pptx are all zip containers (OOXML) — the local file header signature
+  // .docx/.xlsx/.pptx are all zip containers (OOXML) - the local file header signature
   // can't distinguish between them, so it only rules out non-zip files impersonating one.
   ".docx": (b) => matchesBytes(b, 0, [0x50, 0x4b, 0x03, 0x04]),
   ".xlsx": (b) => matchesBytes(b, 0, [0x50, 0x4b, 0x03, 0x04]),

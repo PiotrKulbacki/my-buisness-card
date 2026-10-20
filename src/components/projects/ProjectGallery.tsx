@@ -111,7 +111,7 @@ function GalleryFigure({
         >
           {item.src ? (
             <div className="absolute inset-0 flex items-center justify-center bg-black/30 p-2 md:p-2.5">
-              {/* Native img — same sharpness path as lightbox; Next/Image + CSS transform softens UI text */}
+              {/* Native img - same sharpness path as lightbox; Next/Image + CSS transform softens UI text */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={item.src}

@@ -69,7 +69,7 @@ export function ProjectImageLightbox({ src, alt, closeLabel, onClose }: ProjectI
 
           <motion.div
             className="border-line bg-bg-elevated relative z-10 flex max-h-[92dvh] w-full max-w-5xl flex-col overflow-hidden rounded-[20px] border shadow-(--shadow)"
-            // Opacity/y only — CSS `scale` on the shell softens UI screenshots in the lightbox
+            // Opacity/y only - CSS `scale` on the shell softens UI screenshots in the lightbox
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             exit={reduce ? undefined : { opacity: 0, y: 8 }}

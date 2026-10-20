@@ -36,7 +36,7 @@ function NavIcon({ children }: { children: ReactNode }) {
 const icons: Record<(typeof links)[number]["key"], ReactNode> = {
   about: (
     <NavIcon>
-      {/* Person + spark — identity */}
+      {/* Person + spark - identity */}
       <circle cx="12" cy="8" r="3.25" />
       <path d="M5.5 19.5c1.2-3.2 3.4-4.8 6.5-4.8s5.3 1.6 6.5 4.8" />
       <path d="M18.2 4.2l.4 1.1 1.1.4-1.1.4-.4 1.1-.4-1.1-1.1-.4 1.1-.4z" />
@@ -44,7 +44,7 @@ const icons: Record<(typeof links)[number]["key"], ReactNode> = {
   ),
   projects: (
     <NavIcon>
-      {/* Stacked boards — projects */}
+      {/* Stacked boards - projects */}
       <rect x="4" y="5" width="14" height="10" rx="2" />
       <path d="M7 17h11a2 2 0 0 0 2-2V8" />
       <path d="M8 9.5h6M8 12.5h4" />

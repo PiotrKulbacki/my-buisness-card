@@ -1,4 +1,4 @@
-/** Ordered AGB section keys — copy lives in messages/{locale}.json under agb.sections. */
+/** Ordered AGB section keys - copy lives in messages/{locale}.json under agb.sections. */
 export const AGB_SECTION_KEYS = [
   "scope",
   "clients",

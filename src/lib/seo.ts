@@ -70,7 +70,7 @@ export function getIndexableRoutes(): IndexableRoute[] {
   return [...staticRoutes, ...projectRoutes];
 }
 
-/** Shared brand OG/Twitter card — static `/og.png` (WhatsApp needs a file extension). */
+/** Shared brand OG/Twitter card - static `/og.png` (WhatsApp needs a file extension). */
 export function brandShareImage() {
   const url = `${getSiteOrigin()}${siteConfig.brand.shareOg}`;
   return {
@@ -78,7 +78,7 @@ export function brandShareImage() {
     secureUrl: url,
     width: 1200,
     height: 630,
-    alt: `${siteConfig.name} — ${siteConfig.role}`,
+    alt: `${siteConfig.name} - ${siteConfig.role}`,
     type: "image/png" as const,
   };
 }
