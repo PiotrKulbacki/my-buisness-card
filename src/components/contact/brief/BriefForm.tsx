@@ -665,7 +665,7 @@ export function BriefForm() {
               onDrop={handleDrop}
               className={cn(
                 fieldClassName,
-                "has-focus-visible:border-accent flex cursor-pointer flex-wrap items-center gap-3 has-focus-visible:shadow-[0_0_0_3px_color-mix(in_oklab,var(--accent)_35%,transparent)]",
+                "has-focus-visible:border-accent flex w-full max-w-sm cursor-pointer flex-wrap items-center gap-3 has-focus-visible:shadow-[0_0_0_3px_color-mix(in_oklab,var(--accent)_35%,transparent)]",
                 !canAcceptMoreFiles && "cursor-not-allowed opacity-60",
                 isDraggingOver && "border-accent bg-accent/10",
               )}
@@ -730,7 +730,7 @@ export function BriefForm() {
             aria-hidden
           />
           {siteKey ? (
-            <div className="w-full min-w-0 [&_iframe]:max-w-full">
+            <div className="w-full max-w-sm min-w-0 [&_iframe]:max-w-full">
               <Turnstile
                 ref={turnstileRef}
                 siteKey={siteKey}
