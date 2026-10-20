@@ -89,7 +89,7 @@ export function PdfPagePreview({ url, title }: Props) {
           canvas.height = Math.floor(viewport.height * dpr);
           canvas.style.width = `${Math.floor(viewport.width)}px`;
           canvas.style.height = `${Math.floor(viewport.height)}px`;
-          canvas.setAttribute("aria-label", `${title} — ${pageNumber}/${numPages}`);
+          canvas.setAttribute("aria-label", `${title} - ${pageNumber}/${numPages}`);
 
           context.setTransform(dpr, 0, 0, dpr, 0, 0);
           context.clearRect(0, 0, viewport.width, viewport.height);

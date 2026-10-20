@@ -20,8 +20,8 @@ function emptySnapshot(): BriefDraftSnapshot {
 /**
  * useSyncExternalStore requires getServerSnapshot to return a stable reference
  * across calls (otherwise React warns "should be cached" and can re-render in a
- * loop). Nothing in this module mutates a returned snapshot in place — draft
- * updates always replace it wholesale — so one shared instance is safe to reuse.
+ * loop). Nothing in this module mutates a returned snapshot in place - draft
+ * updates always replace it wholesale - so one shared instance is safe to reuse.
  */
 const SERVER_SNAPSHOT: BriefDraftSnapshot = emptySnapshot();
 

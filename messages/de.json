@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Piotr Kulbacki — Web & Product Engineer",
+    "title": "Piotr Kulbacki - Web & Product Engineer",
     "description": "Ich baue moderne digitale Produkte, Websites und Apps. Schöpfer von Dokiero. Remote verfügbar."
   },
   "nav": {
@@ -21,17 +21,17 @@
   "landing": {
     "welcome": "Willkommen in meinem Portfolio",
     "role": "Software Engineer",
-    "tagline": "Ich baue digitale Produkte, Websites und Apps — von der Idee bis zum Launch."
+    "tagline": "Ich baue digitale Produkte, Websites und Apps - von der Idee bis zum Launch."
   },
   "about": {
     "eyebrow": "Einführung",
     "title": "Wer ich bin",
-    "lead": "Product Engineer und Founder — Design, Code und Produktdenken.",
+    "lead": "Product Engineer und Founder - Design, Code und Produktdenken.",
     "bio": "Ich bin Piotr Kulbacki. Ich baue end-to-end: von Architektur und UX bis Produktion. Klarheit, Performance und Details, die Vertrauen schaffen.",
     "buildingTitle": "Was ich baue",
-    "buildingBody": "Eigene Produkte und Kundenprojekte — mit Fokus auf UX-Qualität und solide Engineering.",
+    "buildingBody": "Eigene Produkte und Kundenprojekte - mit Fokus auf UX-Qualität und solide Engineering.",
     "buildingItems": {
-      "product": "Dokiero — KI-Assistent für Behördensachen (30 Sprachen)",
+      "product": "Dokiero - KI-Assistent für Behördensachen (30 Sprachen)",
       "websites": "Firmenwebsites und Landings mit SEO und Motion",
       "apps": "Lyamo und weitere Web-Apps / Ops-Dashboards"
     },
@@ -40,13 +40,13 @@
   "path": {
     "eyebrow": "CV",
     "title": "Erfahrung",
-    "lead": "Vollständiges Online-CV — Erfahrung, Skills, Projekte und Bildung.",
+    "lead": "Vollständiges Online-CV - Erfahrung, Skills, Projekte und Bildung.",
     "summary": "Zusammenfassung",
     "experience": "Erfahrung",
     "skills": "Technische Skills",
     "softSkills": "Soft Skills",
     "projects": "Projekte",
-    "projectsNote": "Kurze Erwähnungen — ausführliche Case Studies findest du unter Projekte.",
+    "projectsNote": "Kurze Erwähnungen - ausführliche Case Studies findest du unter Projekte.",
     "courseBadge": "Während des Programmierkurses",
     "live": "Live",
     "education": "Bildung",
@@ -69,7 +69,7 @@
   },
   "projects": {
     "title": "Projekte",
-    "lead": "Ausgewählte Arbeiten — Websites, Apps und eigene Produkte.",
+    "lead": "Ausgewählte Arbeiten - Websites, Apps und eigene Produkte.",
     "filters": {
       "all": "Alle",
       "websites": "Websites",
@@ -132,7 +132,7 @@
     "submit": "Senden",
     "sending": "Senden…",
     "optional": "optional",
-    "successTitle": "Danke — Anfrage gesendet",
+    "successTitle": "Danke - Anfrage gesendet",
     "successBody": "Ich habe Ihre Projektbeschreibung erhalten und antworte in der Regel innerhalb von 1–2 Werktagen. Eine Bestätigung ging an Ihre E-Mail-Adresse.",
     "successContact": "Zurück zum Kontakt",
     "successHome": "Startseite",
@@ -156,7 +156,7 @@
     "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen.",
     "captchaError": "Bitte bestätigen Sie, dass Sie kein Bot sind, und versuchen Sie es erneut.",
     "error": "Senden fehlgeschlagen. Bitte erneut versuchen oder direkt per E-Mail.",
-    "attachmentsHint": "Dokumente (PDF, DOCX, XLSX, PPTX): je bis zu {maxDocumentSize}. Fotos (JPG, PNG, WEBP, GIF): je bis zu {maxOriginalImageSize} — Fotos werden automatisch komprimiert. Bis zu {maxFiles} Dateien, insgesamt {maxTotalSize} nach der Verarbeitung.",
+    "attachmentsHint": "Dokumente (PDF, DOCX, XLSX, PPTX): je bis zu {maxDocumentSize}. Fotos (JPG, PNG, WEBP, GIF): je bis zu {maxOriginalImageSize} - Fotos werden automatisch komprimiert. Bis zu {maxFiles} Dateien, insgesamt {maxTotalSize} nach der Verarbeitung.",
     "attachmentsChoose": "Dateien auswählen",
     "attachmentsDropHint": "Oder Dateien hierher ziehen.",
     "attachmentsOptimizing": "Fotos werden optimiert…",
@@ -184,7 +184,7 @@
       "currentWebsite": "Aktuelle Website",
       "projectType": "Projektart",
       "nameIdeas": "Namensvorschläge für die Website oder App",
-      "nameIdeasHint": "Bis zu drei Namen — wir besprechen sie und prüfen die Domainverfügbarkeit.",
+      "nameIdeasHint": "Bis zu drei Namen - wir besprechen sie und prüfen die Domainverfügbarkeit.",
       "nameIdeaN": "Vorschlag {n}",
       "goals": "Hauptziele",
       "goalDescription": "Was möchten Sie mit dem Projekt erreichen?",
@@ -398,11 +398,11 @@
       "emailLabel": "E-Mail",
       "phoneLabel": "Telefon",
       "messageLabel": "Nachricht",
-      "replyHint": "Die Schaltfläche öffnet das Antwortformular auf der Website — die Nachricht nutzt dasselbe Template.",
+      "replyHint": "Die Schaltfläche öffnet das Antwortformular auf der Website - die Nachricht nutzt dasselbe Template.",
       "cta": "Im Template antworten"
     },
     "autoReply": {
-      "subject": "Danke — ich habe Ihre Nachricht erhalten",
+      "subject": "Danke - ich habe Ihre Nachricht erhalten",
       "greeting": "Hallo {name},",
       "body": "Vielen Dank für Ihre Nachricht. Ich habe sie erhalten und antworte in der Regel innerhalb von 1–2 Werktagen.",
       "messageLabel": "Ihre Nachricht:",
@@ -412,11 +412,11 @@
     "briefInbox": {
       "subject": "Projektanfrage: {name}",
       "title": "Neue Projektanfrage",
-      "replyHint": "Die Schaltfläche öffnet das Antwortformular auf der Website — die Nachricht nutzt dasselbe Template.",
+      "replyHint": "Die Schaltfläche öffnet das Antwortformular auf der Website - die Nachricht nutzt dasselbe Template.",
       "cta": "Im Template antworten"
     },
     "briefAutoReply": {
-      "subject": "Danke — ich habe Ihre Anfrage erhalten",
+      "subject": "Danke - ich habe Ihre Anfrage erhalten",
       "greeting": "Hallo {name},",
       "body": "Vielen Dank für die Projektbeschreibung. Ich lese Ihre Angaben und antworte in der Regel innerhalb von 1–2 Werktagen.",
       "summaryLabel": "Ihre Angaben:",

@@ -10,7 +10,7 @@ export const siteConfig = {
   portraitSrc: "/portrait.png",
   portraitEnabled: true,
   /**
-   * Sidebar circular avatar — drop a separate crop at `public/avatar.png`
+   * Sidebar circular avatar - drop a separate crop at `public/avatar.png`
    * and set avatarEnabled to true. Until then a placeholder ring is shown.
    */
   avatarSrc: "/avatar.png",
@@ -35,7 +35,7 @@ export const siteConfig = {
     remote: true,
   },
   /**
-   * Legal / Impressum (§ 5 DDG) — Einzelunternehmen, Kleinunternehmer (§ 19 UStG).
+   * Legal / Impressum (§ 5 DDG) - Einzelunternehmen, Kleinunternehmer (§ 19 UStG).
    * Gewerbe name is the natural person (no separate trade name).
    * USt-IdNr. from NEXT_PUBLIC_UST_IDNR when issued; Steuernummer must not be published.
    */

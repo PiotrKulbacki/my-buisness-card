@@ -71,7 +71,7 @@ export function subscribeConsent(onStoreChange: () => void) {
   return () => window.removeEventListener(COOKIE_CONSENT_CHANGE_EVENT, onStoreChange);
 }
 
-/** Stable reference for useSyncExternalStore — new object each read causes infinite loop. */
+/** Stable reference for useSyncExternalStore - new object each read causes infinite loop. */
 let cachedConsentSnapshot: CookieConsentValue | null = null;
 
 function consentEquals(a: CookieConsentValue | null, b: CookieConsentValue | null) {

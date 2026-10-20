@@ -29,7 +29,7 @@ function GlobeIcon({ className }: { className?: string }) {
 
 type LanguageSwitcherProps = {
   className?: string;
-  /** Short locale codes (PL, EN, …) — used on mobile header. */
+  /** Short locale codes (PL, EN, …) - used on mobile header. */
   compact?: boolean;
   /** Dropdown opens below the trigger (mobile top bar). Default: above. */
   menuPlacement?: "above" | "below";

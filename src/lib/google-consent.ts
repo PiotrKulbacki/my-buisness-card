@@ -13,7 +13,7 @@ export type GoogleConsentSettings = {
   ad_personalization: GoogleConsentState;
 };
 
-/** Default before any user choice — required by Consent Mode v2 + RODO. */
+/** Default before any user choice - required by Consent Mode v2 + RODO. */
 export const GOOGLE_CONSENT_DEFAULT_DENIED = {
   analytics_storage: "denied",
   ad_storage: "denied",

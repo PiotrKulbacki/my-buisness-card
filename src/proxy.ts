@@ -26,7 +26,7 @@ function withoutLocaleCookie(response: NextResponse): NextResponse {
   return response;
 }
 
-/** Skip locale middleware for OG/Twitter image routes — crawlers dislike Set-Cookie on assets. */
+/** Skip locale middleware for OG/Twitter image routes - crawlers dislike Set-Cookie on assets. */
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   if (pathname.includes("/opengraph-image") || pathname.includes("/twitter-image")) {

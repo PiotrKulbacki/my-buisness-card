@@ -4,9 +4,9 @@ import { ImageResponse } from "next/og";
 import { siteConfig } from "@/config/site";
 import { routing } from "@/i18n/routing";
 
-/** Canonical share URL for crawlers (WhatsApp) is `public/og.png` — see `brandShareImage()`. */
+/** Canonical share URL for crawlers (WhatsApp) is `public/og.png` - see `brandShareImage()`. */
 
-export const alt = `${siteConfig.name} — ${siteConfig.role}`;
+export const alt = `${siteConfig.name} - ${siteConfig.role}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -70,7 +70,7 @@ export default async function OpenGraphImage({ params }: Props) {
             lineHeight: 1.35,
           }}
         >
-          Digital products, websites and apps — from concept to production.
+          Digital products, websites and apps - from concept to production.
         </div>
       </div>
 
