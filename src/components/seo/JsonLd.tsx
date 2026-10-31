@@ -1,11 +1,13 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { siteConfig } from "@/config/site";
-import { getSiteOrigin } from "@/lib/seo";
+import { absoluteLocaleUrl, getSiteOrigin } from "@/lib/seo";
 
 export async function JsonLd() {
   const locale = await getLocale();
   const t = await getTranslations("meta");
   const origin = getSiteOrigin();
+  /** Locale home page - the bare origin only 307-redirects. */
+  const homeUrl = absoluteLocaleUrl(locale);
   const organizationId = `${origin}/#organization`;
   const personId = `${origin}/#person`;
   const websiteId = `${origin}/#website`;
@@ -20,7 +22,7 @@ export async function JsonLd() {
         "@type": "Organization",
         "@id": organizationId,
         name: siteConfig.name,
-        url: origin,
+        url: homeUrl,
         logo: {
           "@type": "ImageObject",
           url: logoUrl,
@@ -44,7 +46,7 @@ export async function JsonLd() {
         "@type": "Person",
         "@id": personId,
         name: siteConfig.name,
-        url: origin,
+        url: homeUrl,
         image: imageUrl,
         email: siteConfig.email,
         jobTitle: siteConfig.role,
@@ -55,7 +57,7 @@ export async function JsonLd() {
         "@type": "WebSite",
         "@id": websiteId,
         name: siteConfig.name,
-        url: origin,
+        url: homeUrl,
         description: t("description"),
         inLanguage: locale,
         publisher: { "@id": organizationId },
