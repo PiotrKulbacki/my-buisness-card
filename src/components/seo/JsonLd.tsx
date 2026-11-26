@@ -2,71 +2,56 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { siteConfig } from "@/config/site";
 import { absoluteLocaleUrl, getSiteOrigin } from "@/lib/seo";
 
+/** Home page structured data: Person (shared `@id` with the brand sites), ProfilePage, WebSite. */
 export async function JsonLd() {
   const locale = await getLocale();
   const t = await getTranslations("meta");
-  const origin = getSiteOrigin();
-  /** Locale home page - the bare origin only 307-redirects. */
-  const homeUrl = absoluteLocaleUrl(locale);
-  const organizationId = `${origin}/#organization`;
-  const personId = `${origin}/#person`;
-  const websiteId = `${origin}/#website`;
-  const logoUrl = `${origin}${siteConfig.brand.googleLogo}`;
-  const imageUrl = `${origin}${siteConfig.portraitSrc}`;
-  const sameAs = Object.values(siteConfig.social);
+  const { identity } = siteConfig;
+  const person = { "@id": identity.personId };
 
   const data = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": organizationId,
-        name: siteConfig.name,
-        url: homeUrl,
-        logo: {
-          "@type": "ImageObject",
-          url: logoUrl,
-          contentUrl: logoUrl,
-          width: 120,
-          height: 120,
-        },
-        image: logoUrl,
-        email: siteConfig.email,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: siteConfig.legal.street,
-          postalCode: siteConfig.legal.postalCode,
-          addressLocality: siteConfig.legal.city,
-          addressCountry: "DE",
-        },
-        sameAs,
-        founder: { "@id": personId },
-      },
-      {
         "@type": "Person",
-        "@id": personId,
+        "@id": identity.personId,
         name: siteConfig.name,
-        url: homeUrl,
-        image: imageUrl,
+        url: identity.personUrl,
+        image: `${getSiteOrigin()}${siteConfig.portraitSrc}`,
         email: siteConfig.email,
         jobTitle: siteConfig.role,
-        sameAs,
-        worksFor: { "@id": organizationId },
+        sameAs: Object.values(siteConfig.social),
+        brand: siteConfig.brands.map((brand) => ({
+          "@type": "Brand",
+          "@id": brand.id,
+          name: brand.name,
+          url: brand.url,
+        })),
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": identity.profileId,
+        url: absoluteLocaleUrl(locale),
+        inLanguage: locale,
+        mainEntity: person,
       },
       {
         "@type": "WebSite",
-        "@id": websiteId,
+        "@id": identity.websiteId,
         name: siteConfig.name,
-        url: homeUrl,
+        url: identity.websiteUrl,
         description: t("description"),
         inLanguage: locale,
-        publisher: { "@id": organizationId },
-        author: { "@id": personId },
+        publisher: person,
       },
     ],
   };
 
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script
+      type="application/ld+json"
+      // Escape "<" so no string in the payload can close the script tag.
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}
+    />
   );
 }

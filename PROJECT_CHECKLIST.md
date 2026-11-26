@@ -151,3 +151,4 @@
 | 2026-10-19 | Usunięty numer telefonu ze strony (CV, Impressum, privacy, AGB, Widerruf, JSON-LD); kontakt: e-mail + formularze          |
 | 2026-10-20 | Brief: 5 kroków (bez „Zakres”), nowe typy (sklep, wizytówka/CV, inny), cele opcjonalne, maile tylko z wypełnionymi polami |
 | 2026-10-20 | Brief: własny przycisk wyboru plików (i18n zamiast tekstu przeglądarki); załączniki i Turnstile `max-w-sm`                |
+| 2026-11-26 | JSON-LD na home: Person (`@id` cavunio.com) + marki, ProfilePage, WebSite; linki marek w hero; IG `piotr.kulbacki`        |
