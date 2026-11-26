@@ -6,11 +6,11 @@
 - Postęp i historia zmian: `PROJECT_CHECKLIST.md`; SEO, JSON-LD i IndexNow: `docs/SEO.md`; wdrożenie: `docs/DEPLOY.md`.
 - Wspólny standard SEO i encji czterech stron: `~/Developer/ebook-shop/docs/seo-encje.md` (wersja 2, scalona w `main` sklepu). Agent tego repo może go edytować (zasady w nagłówku standardu).
 - Plan wdrożenia, lista usług i opis wizytówki: `docs/SEO-encje-wdrozenie.md`.
-- Na gałęzi `seo/entity-home` (PR #11, niescalony, CI zielone): dom osoby według standardu (`Person` `#person`, `ProfilePage` per wersja językowa, opis osoby w hero, „Kim jestem” i meta), podstrona `/{locale}/services` z `LocalBusiness` `#business` i telefonem, sitemap z ręcznym `lastmod`, IndexNow (`scripts/indexnow.mjs`). Na produkcji wciąż stary stan (`Person` `https://cavunio.com/#piotr-kulbacki`).
+- Na produkcji od 2026-11-26 (PR #11 i #12 scalone przez właściciela tego dnia): dom osoby według standardu (`Person` `#person`, `ProfilePage` per wersja językowa, opis osoby w hero, „Kim jestem” i meta), podstrona `/{locale}/services` z `LocalBusiness` `#business` i telefonem, sitemap z ręcznym `lastmod`, IndexNow (`scripts/indexnow.mjs`). Produkcja podaje już `Person` `https://piotrkulbacki.com/#person`.
 - Opis osoby, `jobTitle` i `knowsAbout`: jedno źródło `messages/*.json` → `person`; usługi: `messages/*.json` → `services` (DE to źródło nazw z wizytówki).
-- Na gałęzi `brand/job-title-graphics` (PR #12 na bazie `seo/entity-home`, scalać razem z PR #11): logotypy (`public/brand/ui-lockup-*`, mastery `02`, `03`, `06`) i karta OG (`public/og.png`, generator `opengraph-image.tsx`) z nowym stanowiskiem „Web designer and app developer” zamiast „Software Engineer”. `siteConfig.role` czyta EN `jobTitle` z `messages/en.json`. Opis wariantów: `docs/Brand_Logo.md`.
+- Logotypy (`public/brand/ui-lockup-*`, mastery `02`, `03`, `06`) i karta OG (`public/og.png`, generator `opengraph-image.tsx`) z nowym stanowiskiem „Web designer and app developer” zamiast „Software Engineer”. `siteConfig.role` czyta EN `jobTitle` z `messages/en.json`. Opis wariantów: `docs/Brand_Logo.md`.
 - Wizytówka Google: stały adres `https://maps.google.com/?cid=6497189699195385071`; stan w standardzie, sekcja 13.3.
-- Claude in Chrome (diagnoza 2026-11-26): rozszerzenie łączy się, ale na każdej stronie wstrzykiwanie skryptów kończy się limitem czasu (zrzuty ekranu i odczyt strony nie działają). Chrome działał 5 dni bez restartu: uruchomiona wersja 157, na dysku zainstalowana 158; rozszerzenie Claude pobrane w wersji 1.0.109 obok starej 1.0.107. Naprawa: pełny restart Chrome (Cmd+Q i ponowne uruchomienie).
+- Claude in Chrome (diagnoza 2026-11-26): rozszerzenie łączy się, ale na każdej stronie wstrzykiwanie skryptów kończy się limitem czasu (zrzuty ekranu i odczyt strony nie działają). Przyczyna: w ustawieniach rozszerzenia Claude dostęp do witryn jest ograniczony, dozwolona tylko `https://www.google.com/*` (tam zrzut działa). Restart Chrome nie pomógł (wersja nie była przyczyną). Naprawa po stronie właściciela, sekcja 3.
 - Skille w repo: `dev-quality` i `writing` włączone w `.claude/settings.json` (zgoda właściciela 2026-11-26).
 
 ## 2. Decyzje właściciela
@@ -28,23 +28,20 @@
 
 ## 3. Akcje dla właściciela
 
-- Zamknąć Chrome w całości (Cmd+Q) i uruchomić ponownie, potem dać agentowi znać, żeby sprawdził Claude in Chrome (zrzut ekranu dowolnej strony). Dopiero wtedy wiadomo, czy panel `business.google.com` też zacznie działać.
-- Scalić PR #12 (grafiki, https://github.com/PiotrKulbacki/my-buisness-card/pull/12) razem z PR #11 (najpierw #11, potem #12; GitHub przestawi bazę na `main`).
-- Sprawdzić PR #11 (https://github.com/PiotrKulbacki/my-buisness-card/pull/11; podgląd Vercel: `/pl`, `/pl/about`, `/de/services`) i scalić go dopiero w etapie 3 (te same dni co cavunio.com, dokiero.com, lyamo.eu).
+- Claude in Chrome: `chrome://extensions` → Claude → Szczegóły → Dostęp do witryn → „We wszystkich witrynach”, potem dać agentowi znać, żeby sprawdził zrzut ekranu i panel `business.google.com`.
 - Wkleić opis wizytówki z `docs/SEO-encje-wdrozenie.md`, sekcja 4.
 - Wizytówka: opinie od prawdziwych klientów (planowane ≥ 4), bez zachęt.
-- Po wdrożeniu na produkcję: strona WWW wizytówki → `https://piotrkulbacki.com/de/services`.
+- Strona WWW wizytówki → `https://piotrkulbacki.com/de/services` (strona jest już na produkcji).
 
-## 4. Zadanie w toku: standard SEO i encji (gałąź `seo/entity-home`, PR #11)
+## 4. Zadanie w toku: standard SEO i encji (kod na produkcji, zostały kontrole po wdrożeniu)
 
 Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
 
 1. Przegląd, odczyt wizytówki, standard v2, opis zatwierdzony, dane firmy - **zrobione** (2026-11-26).
 2. Etap 1 kodu: dom osoby (kroki 1–7) - **zrobione** (2026-11-26); lint, typecheck, build, format i graf lokalnie OK.
 3. Etap 2 kodu: podstrona `/{locale}/services` i `#business` - **zrobione** (2026-11-26), w tym samym PR.
-4. Etap 3 - **następny krok**, czeka na gotowość pozostałych trzech stron:
-   - tuż przed scaleniem: ustawić datę `ENTITY_UPDATE` w `src/lib/seo.ts` na dzień wdrożenia (sitemap `lastmod`, `ProfilePage.dateModified`);
-   - scalenie PR #11 i PR #12 (właściciel), potem kontrola ze standardu, sekcja 11: Rich Results Test (`/pl`, `/de/services`; czy Google akceptuje adres bez ulicy), Schema Markup Validator, curl z UA robotów AI;
+4. Etap 3 - **w toku**. Scalenie PR #11 i #12 - **zrobione** (2026-11-26, `ENTITY_UPDATE` = 2026-11-26). Następny krok:
+   - kontrola ze standardu, sekcja 11: Rich Results Test (`/pl`, `/de/services`; czy Google akceptuje adres bez ulicy), Schema Markup Validator, curl z UA robotów AI;
    - `node scripts/indexnow.mjs`; GSC: ponowne wysłanie sitemapy; Facebook Sharing Debugger → Scrape Again (nowa karta OG, `docs/SEO.md`);
    - bio na profilach (standard 6.1 / 6.2, link `https://piotrkulbacki.com/`).
 
