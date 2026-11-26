@@ -20,7 +20,7 @@ Analityka (poza SEO tech, ale często weryfikowana razem z GSC): `docs/Analytics
 | `sitemap.xml`               | `src/app/sitemap.ts` → `/sitemap.xml`     |
 | Middleware (crawlerzy OG)   | `src/proxy.ts`                            |
 | Logo w OG                   | `docs/Brand_Logo.md` → `lockupHorizontal` |
-| JSON-LD (org + person)      | `src/components/seo/JsonLd.tsx`           |
+| JSON-LD (person + strony)   | `src/components/seo/JsonLd.tsx`           |
 
 ---
 
@@ -74,21 +74,23 @@ GSC: po deployu wyślij ponownie `https://piotrkulbacki.com/sitemap.xml` — `do
 
 ## Favicon w Google Search
 
-Mała ikona PK obok URL w SERP pochodzi z `<link rel="icon">` na stronie głównej hosta — **nie** z `Organization.logo`.
+Mała ikona PK obok URL w SERP pochodzi z `<link rel="icon">` na stronie głównej hosta — **nie** z JSON-LD.
 
 Wymogi Google (Search Central): kwadrat, min. 8×8 (zalecane **> 48×48**), crawlable dla Googlebot + Googlebot-Image, **stabilny URL**. Recrawl: od kilku dni do kilku tygodni. Po deployu: GSC → URL Inspection na `https://piotrkulbacki.com/en` (i `/pl`) → Request indexing.
 
-Pierwsza ikona w HTML: `/brand/google-120.png` (ten sam plik co `Organization.logo`). Dalej 192 / 96 / 48 / 32 PNG i ICO — downscale z `05-icon-filled-master.png`, bez SVG (stary SVG wyglądał w zakładce jak „R”). Nie używać file-based `src/app/favicon.ico` (hash w query psuje stabilność).
+Pierwsza ikona w HTML: `/brand/google-120.png`. Dalej 192 / 96 / 48 / 32 PNG i ICO — downscale z `05-icon-filled-master.png`, bez SVG (stary SVG wyglądał w zakładce jak „R”). Nie używać file-based `src/app/favicon.ico` (hash w query psuje stabilność).
 
 ---
 
 ## JSON-LD
 
-`JsonLd` na każdej stronie (`[locale]/layout.tsx`):
+`JsonLd` tylko na stronie głównej (`[locale]/page.tsx`), jeden `@graph`. Dane w `siteConfig.identity` i `siteConfig.brands` (`src/config/site.ts`):
 
-- `Organization` — `logo` → `https://piotrkulbacki.com/brand/google-120.png` (min. 112×112; Knowledge Panel / marka)
-- `Person` — `image` → portret; `worksFor` → Organization
-- `WebSite` — `publisher` / `author`
+- `Person` - `@id` `https://cavunio.com/#piotr-kulbacki` (wspólny z cavunio.com, dokiero.com, lyamo.eu; **nie zmieniać**), `url` `https://piotrkulbacki.com`, `sameAs` = wszystkie profile z `siteConfig.social`, `brand` → Cavunio / Dokiero / Lyamo (widoczne linki w hero)
+- `ProfilePage` - `@id` `https://piotrkulbacki.com/#profile`, `url` = strona główna locale, `mainEntity` → Person
+- `WebSite` - `@id` `https://piotrkulbacki.com/#website`, `url` `https://piotrkulbacki.com/`, `inLanguage` = locale, `publisher` → Person
+
+Bez węzła `Organization` (jednoosobowa działalność bez nazwy firmy). Treść skryptu: `<` → `\u003c`.
 
 Test: [Rich Results Test](https://search.google.com/test/rich-results) na stronie głównej locale.
 
@@ -104,4 +106,4 @@ Test: [Rich Results Test](https://search.google.com/test/rich-results) na stroni
 | `wc26-predictor`     | `https://wc26-predictor-zapraszam.vercel.app/` | Typer MŚ 2026; screeny OK                        |
 | `ak-gebaeudeservice` | `https://www.akgebaeudeservice.com/`           | Screeny OK                                       |
 
-`siteConfig.product.url` = `https://lyamo.eu`.
+Linki marek: `siteConfig.brands`.

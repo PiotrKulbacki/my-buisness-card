@@ -60,14 +60,28 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/it-piotr-kulbacki",
     facebook: "https://www.facebook.com/profile.php?id=61568507043528",
     github: "https://github.com/PiotrKulbacki",
-    instagram: "https://www.instagram.com/piotr_kulbacki/",
+    instagram: "https://www.instagram.com/piotr.kulbacki/",
     tiktok: "https://www.tiktok.com/@piotr_kulbacki",
     youtube: "https://www.youtube.com/@kulbackipiotr",
   },
-  product: {
-    name: "Lyamo",
-    url: "https://lyamo.eu",
+  /**
+   * JSON-LD identity shared with cavunio.com, dokiero.com and lyamo.eu.
+   * Fixed production values (not env-based): the person `@id` must stay
+   * exactly as the brand sites reference it.
+   */
+  identity: {
+    personId: "https://cavunio.com/#piotr-kulbacki",
+    personUrl: "https://piotrkulbacki.com",
+    websiteId: "https://piotrkulbacki.com/#website",
+    websiteUrl: "https://piotrkulbacki.com/",
+    profileId: "https://piotrkulbacki.com/#profile",
   },
+  /** Own brands - linked on the home page and listed as `Person.brand` in JSON-LD. */
+  brands: [
+    { id: "https://cavunio.com/#cavunio", name: "Cavunio", url: "https://cavunio.com" },
+    { id: "https://dokiero.com/#dokiero", name: "Dokiero", url: "https://dokiero.com" },
+    { id: "https://lyamo.eu/#lyamo", name: "Lyamo", url: "https://lyamo.eu" },
+  ],
   stack: [
     "TypeScript",
     "Next.js",

@@ -40,6 +40,20 @@ export function LandingHero() {
             {t("tagline")}
           </p>
           <SocialLinks className="mt-4 md:mt-8" />
+          <ul className="mt-3 flex flex-wrap items-center gap-2 md:mt-4">
+            {siteConfig.brands.map((brand) => (
+              <li key={brand.url}>
+                <a
+                  href={brand.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus-ring border-line text-fg hover:border-accent hover:text-accent inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-medium transition-colors"
+                >
+                  {brand.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </Reveal>
 
         {/* LCP: no Reveal fade - opacity:0 delays Largest Contentful Paint on mobile. */}

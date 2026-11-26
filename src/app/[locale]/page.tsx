@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { LandingHero } from "@/components/home/LandingHero";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { buildPageMetadata } from "@/lib/seo";
 
 type Props = {
@@ -21,5 +22,10 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <LandingHero />;
+  return (
+    <>
+      <LandingHero />
+      <JsonLd />
+    </>
+  );
 }
