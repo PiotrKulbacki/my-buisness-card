@@ -5,6 +5,7 @@
 - Strona wizytówka Next.js 16 (App Router, next-intl, 5 locale: pl/en/de/es/uk), hosting Vercel, domena `piotrkulbacki.com`.
 - Postęp i historia zmian: `PROJECT_CHECKLIST.md`; SEO i JSON-LD: `docs/SEO.md`; wdrożenie: `docs/DEPLOY.md`.
 - JSON-LD tylko na stronie głównej (`src/components/seo/JsonLd.tsx`), jeden `@graph`: Person + ProfilePage + WebSite. Dane w `siteConfig.identity` i `siteConfig.brands` (`src/config/site.ts`).
+- Zweryfikowany na produkcji 2026-11-26: Rich Results Test - Profile page ważny, bez ostrzeżeń; validator.schema.org - 0 błędów, 0 ostrzeżeń.
 
 ## 2. Decyzje właściciela
 
@@ -16,7 +17,6 @@
 
 ## 3. Akcje dla właściciela
 
-- Po merge i wdrożeniu PR z JSON-LD: Rich Results Test (https://search.google.com/test/rich-results) i https://validator.schema.org/ dla `https://piotrkulbacki.com`; opcjonalnie GSC → URL Inspection → Request indexing dla `/en` i `/pl`.
 - Sprawdzić, czy cavunio.com, dokiero.com i lyamo.eu mają w `sameAs` Instagram z kropką (`piotr.kulbacki`).
 
 ## 4. Zadanie w toku
