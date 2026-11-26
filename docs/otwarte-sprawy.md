@@ -10,7 +10,7 @@
 - Opis osoby, `jobTitle` i `knowsAbout`: jedno źródło `messages/*.json` → `person`; usługi: `messages/*.json` → `services` (DE to źródło nazw z wizytówki).
 - Logotypy (`public/brand/ui-lockup-*`, mastery `02`, `03`, `06`) i karta OG (`public/og.png`, generator `opengraph-image.tsx`) z nowym stanowiskiem „Web designer and app developer” zamiast „Software Engineer”. `siteConfig.role` czyta EN `jobTitle` z `messages/en.json`. Opis wariantów: `docs/Brand_Logo.md`.
 - Wizytówka Google: stały adres `https://maps.google.com/?cid=6497189699195385071`; stan w standardzie, sekcja 13.3.
-- Claude in Chrome (diagnoza 2026-11-26): rozszerzenie łączy się, ale na każdej stronie wstrzykiwanie skryptów kończy się limitem czasu (zrzuty ekranu i odczyt strony nie działają). Przyczyna: w ustawieniach rozszerzenia Claude dostęp do witryn jest ograniczony, dozwolona tylko `https://www.google.com/*` (tam zrzut działa). Restart Chrome nie pomógł (wersja nie była przyczyną). Naprawa po stronie właściciela, sekcja 3.
+- Claude in Chrome działa (2026-11-27), po ustawieniu w rozszerzeniu dostępu „We wszystkich witrynach”. Wcześniejsze limity czasu wynikały z dostępu ograniczonego do `www.google.com`. W Chrome zalogowanych jest kilka kont Google; GSC piotrkulbacki.com jest na koncie właściciela `it.piotr.kulbacki@…` (w Chrome `/u/4/`), nie na koncie domyślnym.
 - Skille w repo: `dev-quality` i `writing` włączone w `.claude/settings.json` (zgoda właściciela 2026-11-26).
 
 ## 2. Decyzje właściciela
@@ -28,7 +28,8 @@
 
 ## 3. Akcje dla właściciela
 
-- Claude in Chrome: `chrome://extensions` → Claude → Szczegóły → Dostęp do witryn → „We wszystkich witrynach”, potem dać agentowi znać, żeby sprawdził zrzut ekranu i panel `business.google.com`.
+- Bing Webmaster Tools: zalogować się (agent nie loguje się hasłem) i ewentualnie URL Inspection dla `https://piotrkulbacki.com/pl`. Bing dostał już adresy przez IndexNow, więc to tylko kontrola.
+- Bio na profilach: zatwierdzić krótkie wersje opisu (Instagram, TikTok, Facebook, GitHub mają limity znaków) i wybrać język każdego profilu; potem agent je wpisze.
 - Wkleić opis wizytówki z `docs/SEO-encje-wdrozenie.md`, sekcja 4.
 - Wizytówka: opinie od prawdziwych klientów (planowane ≥ 4), bez zachęt.
 - Strona WWW wizytówki → `https://piotrkulbacki.com/de/services` (strona jest już na produkcji).
@@ -40,12 +41,12 @@ Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
 1. Przegląd, odczyt wizytówki, standard v2, opis zatwierdzony, dane firmy - **zrobione** (2026-11-26).
 2. Etap 1 kodu: dom osoby (kroki 1–7) - **zrobione** (2026-11-26); lint, typecheck, build, format i graf lokalnie OK.
 3. Etap 2 kodu: podstrona `/{locale}/services` i `#business` - **zrobione** (2026-11-26), w tym samym PR.
-4. Etap 3 - **w toku**. Scalenie PR #11 i #12 - **zrobione** (2026-11-26, `ENTITY_UPDATE` = 2026-11-26). Następny krok:
-   - kontrola ze standardu, sekcja 11: Rich Results Test (`/pl`, `/de/services`; czy Google akceptuje adres bez ulicy), Schema Markup Validator, curl z UA robotów AI;
-   - `node scripts/indexnow.mjs`; GSC: ponowne wysłanie sitemapy; Facebook Sharing Debugger → Scrape Again (nowa karta OG, `docs/SEO.md`);
-   - bio na profilach (standard 6.1 / 6.2, link `https://piotrkulbacki.com/`).
+4. Etap 3 - **w toku**. Scalenie PR #11 i #12 - **zrobione** (2026-11-26, `ENTITY_UPDATE` = 2026-11-26). Kontrola 2026-11-27:
+   - **zrobione:** Rich Results Test `/pl` (6 poprawnych: LocalBusiness, 4× Organization, ProfilePage) i `/de/services` (LocalBusiness i Organization poprawne; adres bez ulicy przyjęty, brak `streetAddress`/`postalCode` tylko jako uwaga opcjonalna; brak też opcjonalnych `priceRange` i `image`); Schema Markup Validator `/pl`: 0 błędów, 0 ostrzeżeń; graf `@id` zgodny, brak `cavunio.com/#piotr-kulbacki`; curl z UA OAI-SearchBot, Claude-SearchBot, PerplexityBot, Bingbot, Googlebot, GPTBot, ClaudeBot: 200 (korzeń 307 → wersja językowa); IndexNow: 90 adresów, HTTP 202; Facebook Sharing Debugger: ponowne pobranie `/pl`, `/de`, `/en`, `/es`, `/uk`, `/de/services` (nowa karta OG); GSC: mapa witryny przesłana ponownie (90 adresów), prośba o zindeksowanie `/pl` (był w indeksie) i `/de/services` (Google go jeszcze nie znał);
+   - **zostało:** Bing (sekcja 3, logowanie właściciela); bio na profilach (opis z sekcji 6 standardu, link `https://piotrkulbacki.com/`; Instagram i TikTok mają limity znaków, potrzebna krótsza wersja do zatwierdzenia); miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
 
 ## 5. Inne otwarte sprawy
 
+- **Błąd od sierpnia:** roboty podglądów linków (Facebook, WhatsApp, LinkedIn, Twitter) dostają **404** dla `https://piotrkulbacki.com/` (zwykła przeglądarka dostaje 307 → `/en`). Przyczyna w `src/proxy.ts`: dla tych robotów kod zmienia `request.nextUrl.pathname` na `/en` i woła middleware next-intl, ale strona `/` nie istnieje (wniosek, niesprawdzone lokalnie). Skutek: link do strony głównej udostępniony bez wersji językowej pokazuje „404: This page could not be found” zamiast karty. Propozycja: dla tych robotów zwracać `NextResponse.rewrite` na `/{defaultLocale}{ścieżka}` (bez ciasteczka) i dodać test curl z UA `facebookexternalhit`. Po wdrożeniu: Sharing Debugger → ponownie pobrać `https://piotrkulbacki.com/`. Do decyzji właściciela.
 - CV (`src/content/cv.ts`): podsumowanie i stanowisko „Full Stack Software Engineer” / „Inżynier oprogramowania - działalność gospodarcza”. To historia zawodowa, nie `jobTitle`; zostawione bez zmian. Do decyzji, czy dopasować do opisu osoby.
 - `docs/SEO.md`, sekcja robots.txt, nie wymienia `Disallow: /*/reply` (jest w `src/app/robots.ts`). Drobna nieścisłość dokumentacji.
