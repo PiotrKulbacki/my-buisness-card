@@ -19,7 +19,7 @@ _Stan na 2026-11-26. Standard: `~/Developer/ebook-shop/docs/seo-encje.md`, wersj
 
 ## 2. Plan
 
-### Etap 1: dom osoby (gałąź `seo/entity-standard`, draft PR #9)
+### Etap 1: dom osoby (nowa gałąź od `main`: `seo/entity-home`, nowy PR)
 
 1. `src/config/site.ts`: `identity.personId` → `#person`; `personUrl`/`websiteUrl` `https://piotrkulbacki.com/`; `brands` z `type` i `url` z ukośnikiem; `knowsLanguage`, `homeLocation`; stały adres wizytówki (`https://maps.google.com/?cid=6497189699195385071`).
 2. `messages/*.json` (5 języków): opis 6.1 w hero (zamiast `landing.tagline`) i w „O mnie”; `landing.role` = `jobTitle` 6.3 (zastępuje „Inżynier oprogramowania”); meta `title`/`description` strony głównej zgodne z opisem; `knowsAbout` widoczne w „O mnie”.
@@ -38,7 +38,7 @@ _Stan na 2026-11-26. Standard: `~/Developer/ebook-shop/docs/seo-encje.md`, wersj
 
 ### Etap 3: po wdrożeniu (poza kodem)
 
-1. Scalenie PR #9 dopiero, gdy cavunio.com, dokiero.com i lyamo.eu są gotowe ze zmianą `@id` osoby (standard, sekcja 12).
+1. Scalenie PR z kodem dopiero, gdy cavunio.com, dokiero.com i lyamo.eu są gotowe ze zmianą `@id` osoby (standard, sekcja 12).
 2. IndexNow: zgłoszenie zmienionych adresów skryptem.
 3. Bio na profilach: opis 6.1 (LinkedIn, YouTube) lub 6.2 (Instagram, TikTok, Facebook, GitHub), link `https://piotrkulbacki.com/`.
 

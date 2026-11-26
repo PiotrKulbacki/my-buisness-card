@@ -29,14 +29,14 @@
 - Wizytówka: opinie od prawdziwych klientów (planowane ≥ 4), bez zachęt.
 - Po wdrożeniu etapu 2: strona WWW wizytówki → `https://piotrkulbacki.com/de/services`.
 
-## 4. Zadanie w toku: standard SEO i encji (gałąź `seo/entity-standard`, draft PR #9)
+## 4. Zadanie w toku: standard SEO i encji (nowa gałąź od `main`: `seo/entity-home`, nowy PR)
 
 Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
 
 1. Przegląd, odczyt wizytówki, standard v2, opis zatwierdzony, dane firmy - **zrobione** (2026-11-26).
 2. Etap 1 kodu: dom osoby (kroki 1–7) - **następny krok**, wszystkie dane są.
 3. Etap 2 kodu: podstrona `/{locale}/services` i `#business` - po etapie 1; na starcie potwierdzić telefon na podstronie.
-4. Etap 3: scalenie PR #9 razem z pozostałymi stronami, IndexNow, bio na profilach.
+4. Etap 3: scalenie PR z kodem razem z pozostałymi stronami, IndexNow, bio na profilach.
 
 ## 5. Inne otwarte sprawy
 
