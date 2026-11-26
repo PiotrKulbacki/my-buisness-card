@@ -35,8 +35,11 @@ export default function proxy(request: NextRequest) {
 
   if (isShareCrawler(request)) {
     if (!hasLocalePrefix(pathname)) {
-      const suffix = pathname === "/" ? "" : pathname;
-      request.nextUrl.pathname = `/${routing.defaultLocale}${suffix}`;
+      // Serve the default locale in place (200, no redirect, no cookie). Handing a
+      // mutated URL to the intl middleware let Next serve the unprefixed path: 404.
+      const url = request.nextUrl.clone();
+      url.pathname = `/${routing.defaultLocale}${pathname === "/" ? "" : pathname}`;
+      return NextResponse.rewrite(url);
     }
     return withoutLocaleCookie(intlMiddleware(request));
   }
