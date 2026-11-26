@@ -55,6 +55,7 @@ Lokalnie: skopiuj te same klucze do `.env` (wzór: `.env.example`), żeby Turnst
 1. Property = URL produkcji (`https://piotrkulbacki.com`)
 2. Weryfikacja DNS TXT lub HTML
 3. Submit `https://piotrkulbacki.com/sitemap.xml`
+   Po każdym wdrożeniu ze zmianą treści: `node scripts/indexnow.mjs` (Bing i inne; `docs/SEO.md`, IndexNow)
 4. Sprawdź `https://piotrkulbacki.com/robots.txt` (Allow `/`, Disallow `/api/`, Sitemap)
 
 Szczegóły sitemap / hreflang / OG: [`docs/SEO.md`](SEO.md).

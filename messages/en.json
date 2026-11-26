@@ -1,7 +1,16 @@
 {
-  "meta": {
-    "title": "Piotr Kulbacki - Software Engineer",
-    "description": "I build modern digital products, websites and apps. Creator of Dokiero. Available for remote collaboration."
+  "person": {
+    "description": "Piotr Kulbacki: Berlin-based entrepreneur, web designer and developer of apps (Dokiero, Lyamo), SaaS products and automations, author of guides on AI and social media (Cavunio). He also offers on-site IT support in Berlin and the surrounding area.",
+    "jobTitle": "Web designer and app developer",
+    "knowsAbout": [
+      "Web design",
+      "App development",
+      "SaaS",
+      "Automation",
+      "Artificial intelligence",
+      "Social media",
+      "IT support"
+    ]
   },
   "nav": {
     "about": "Who I am",
@@ -19,15 +28,13 @@
     "role": "Software Engineer"
   },
   "landing": {
-    "welcome": "Welcome to my portfolio",
-    "role": "Software Engineer",
-    "tagline": "I build digital products, websites and apps - from concept to production."
+    "welcome": "Welcome to my portfolio"
   },
   "about": {
     "eyebrow": "Introduction",
     "title": "Who I am",
-    "lead": "Product engineer and founder - combining design, code and product thinking.",
     "bio": "I'm Piotr Kulbacki. I build end-to-end: architecture and UX through to production. Clear messaging, performance and craft details that build trust.",
+    "knowsTitle": "What I work on",
     "buildingTitle": "What I build",
     "buildingBody": "I ship my own products and client work - with a strong focus on UX quality and solid engineering.",
     "buildingItems": {
@@ -120,6 +127,60 @@
     "rateLimited": "Too many attempts. Please wait a moment and try again.",
     "captchaError": "Please confirm you are not a bot and try again.",
     "noContractNote": "Sending this form does not conclude a contract or create an obligation to buy."
+  },
+  "services": {
+    "title": "Services",
+    "lead": "IT support, web design and software development in Berlin and Brandenburg. On-site or remote IT support, visits by appointment.",
+    "areaLabel": "Service area",
+    "area": "Berlin and Brandenburg",
+    "phoneLabel": "Phone",
+    "contactCta": "Get in touch",
+    "mapsLink": "View on Google Maps",
+    "groups": [
+      {
+        "name": "IT support",
+        "items": [
+          "On-site IT support",
+          "Remote IT support",
+          "Computer and laptop help",
+          "PC and laptop setup",
+          "Software installation",
+          "Windows support",
+          "macOS and iOS support",
+          "Printer setup",
+          "Wi-Fi and network setup",
+          "Email setup",
+          "Smartphone and tablet setup",
+          "IT consulting",
+          "Technical troubleshooting",
+          "Data backup"
+        ]
+      },
+      {
+        "name": "Web design",
+        "items": [
+          "Web design",
+          "Website development",
+          "Website redesign",
+          "Online shop development",
+          "Website maintenance and support",
+          "Technical SEO optimisation",
+          "Domain and hosting setup"
+        ]
+      },
+      {
+        "name": "Software development",
+        "items": [
+          "Custom software development",
+          "Web application development",
+          "Mobile app development",
+          "SaaS development",
+          "API integration",
+          "Process automation",
+          "Database development"
+        ]
+      }
+    ]
   },
   "brief": {
     "title": "Describe your project",

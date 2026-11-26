@@ -1,7 +1,16 @@
 {
-  "meta": {
-    "title": "Piotr Kulbacki - Web & Product Engineer",
-    "description": "Construyo productos digitales modernos, webs y apps. Creador de Dokiero. Disponible en remoto."
+  "person": {
+    "description": "Piotr Kulbacki: emprendedor afincado en Berlín, diseñador web y desarrollador de aplicaciones (Dokiero, Lyamo), soluciones SaaS y automatizaciones, autor de guías sobre IA y redes sociales (Cavunio). También ofrece soporte informático presencial en Berlín y alrededores.",
+    "jobTitle": "Diseñador web y desarrollador de aplicaciones",
+    "knowsAbout": [
+      "Diseño web",
+      "Desarrollo de aplicaciones",
+      "SaaS",
+      "Automatización",
+      "Inteligencia artificial",
+      "Redes sociales",
+      "Soporte informático"
+    ]
   },
   "nav": {
     "about": "Quién soy",
@@ -19,15 +28,13 @@
     "role": "Ingeniero de software"
   },
   "landing": {
-    "welcome": "Bienvenido a mi portfolio",
-    "role": "Ingeniero de software",
-    "tagline": "Construyo productos digitales, webs y apps - del concepto a producción."
+    "welcome": "Bienvenido a mi portfolio"
   },
   "about": {
     "eyebrow": "Introducción",
     "title": "Quién soy",
-    "lead": "Ingeniero de producto y founder - diseño, código y pensamiento de producto.",
     "bio": "Soy Piotr Kulbacki. Construyo de extremo a extremo: de arquitectura y UX a producción. Claridad, rendimiento y detalles que generan confianza.",
+    "knowsTitle": "A qué me dedico",
     "buildingTitle": "Qué construyo",
     "buildingBody": "Productos propios y trabajo para clientes - con foco en UX y buena ingeniería.",
     "buildingItems": {
@@ -120,6 +127,60 @@
     "rateLimited": "Demasiados intentos. Espera un momento e inténtalo de nuevo.",
     "captchaError": "Confirma que no eres un bot e inténtalo de nuevo.",
     "noContractNote": "Enviar el formulario no supone celebrar un contrato ni una obligación de compra."
+  },
+  "services": {
+    "title": "Servicios",
+    "lead": "Soporte informático, diseño web y desarrollo de software en Berlín y Brandeburgo. Soporte informático presencial o remoto, visitas con cita previa.",
+    "areaLabel": "Zona de servicio",
+    "area": "Berlín y Brandeburgo",
+    "phoneLabel": "Teléfono",
+    "contactCta": "Contactar",
+    "mapsLink": "Ver en Google Maps",
+    "groups": [
+      {
+        "name": "Soporte informático",
+        "items": [
+          "Soporte informático presencial",
+          "Soporte informático remoto",
+          "Ayuda con ordenadores y portátiles",
+          "Configuración de PC y portátiles",
+          "Instalación de software",
+          "Soporte de Windows",
+          "Soporte de macOS e iOS",
+          "Configuración de impresoras",
+          "Configuración de wifi y redes",
+          "Configuración de correo electrónico",
+          "Configuración de smartphones y tabletas",
+          "Consultoría informática",
+          "Resolución de problemas técnicos",
+          "Copias de seguridad de datos"
+        ]
+      },
+      {
+        "name": "Diseño web",
+        "items": [
+          "Diseño web",
+          "Desarrollo de sitios web",
+          "Rediseño de sitios web",
+          "Creación de tiendas online",
+          "Mantenimiento y soporte de sitios web",
+          "Optimización SEO técnica",
+          "Configuración de dominio y hosting"
+        ]
+      },
+      {
+        "name": "Desarrollo de software",
+        "items": [
+          "Desarrollo de software a medida",
+          "Desarrollo de aplicaciones web",
+          "Desarrollo de apps móviles",
+          "Desarrollo SaaS",
+          "Integración de API",
+          "Automatización de procesos",
+          "Desarrollo de bases de datos"
+        ]
+      }
+    ]
   },
   "brief": {
     "title": "Describe tu proyecto",

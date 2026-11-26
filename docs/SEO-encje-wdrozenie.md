@@ -4,6 +4,8 @@ _Stan na 2026-11-26. Standard: `~/Developer/ebook-shop/docs/seo-encje.md`, wersj
 
 ## 1. Stan repo względem standardu (przegląd 2026-11-26)
 
+Etapy 1 i 2 z sekcji 2 są wdrożone na gałęzi `seo/entity-home` (2026-11-26); tabela poniżej opisuje stan sprzed zmian, czyli to, co nadal jest na produkcji do scalenia PR. Postęp: `docs/otwarte-sprawy.md`, sekcja 4.
+
 | Obszar           | Dziś                                                                                                                         | Do zrobienia                                                                             |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `Person.@id`     | `https://cavunio.com/#piotr-kulbacki`                                                                                        | `https://piotrkulbacki.com/#person` (te same dni co pozostałe 3 strony)                  |
@@ -32,7 +34,7 @@ _Stan na 2026-11-26. Standard: `~/Developer/ebook-shop/docs/seo-encje.md`, wersj
 ### Etap 2: podstrona Usługi i `#business` (ten sam PR)
 
 1. Trasa `/{locale}/services` (angielska ścieżka we wszystkich językach, jak `/about`), w nawigacji nie (mobilna ma 4 kolumny); link z hero (obok marek) i ze stopki; trasa w `getIndexableRoutes()`.
-2. Treść: trzy grupy usług z sekcji 3 (nazwy przetłumaczone na 5 języków; DE to źródło), obszar „Berlin i Brandenburgia”, kontakt (`/contact`, telefon według 13.3 pkt 4 standardu), link „Google Maps” do stałego adresu.
+2. Treść: trzy grupy usług z sekcji 3 (nazwy przetłumaczone na 5 języków; DE to źródło), obszar „Berlin i Brandenburgia”, kontakt (`/contact`, telefon `+49 1573 5166871`: potwierdzony przez właściciela 2026-11-26, tylko na tej podstronie), link „Google Maps” do stałego adresu.
 3. JSON-LD na podstronie: `LocalBusiness` `#business` według 13.3 standardu (adres częściowy, `areaServed`, `hasOfferCatalog`, `telephone`, `founder`, `sameAs`, bez ocen i godzin). Na stronie głównej krótkie odwołanie do `#business`.
 4. Po wdrożeniu: użytkownik ustawia stronę WWW wizytówki na `https://piotrkulbacki.com/de/services`.
 

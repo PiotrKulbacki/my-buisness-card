@@ -1,7 +1,16 @@
 {
-  "meta": {
-    "title": "Piotr Kulbacki - Web & Product Engineer",
-    "description": "Ich baue moderne digitale Produkte, Websites und Apps. Schöpfer von Dokiero. Remote verfügbar."
+  "person": {
+    "description": "Piotr Kulbacki: Unternehmer aus Berlin, Webdesigner und Entwickler von Apps (Dokiero, Lyamo), SaaS-Lösungen und Automatisierungen, Autor von Ratgebern zu KI und Social Media (Cavunio). Er bietet außerdem IT-Support vor Ort beim Kunden in Berlin und Umgebung.",
+    "jobTitle": "Webdesigner und App-Entwickler",
+    "knowsAbout": [
+      "Webdesign",
+      "App-Entwicklung",
+      "SaaS",
+      "Automatisierung",
+      "Künstliche Intelligenz",
+      "Social Media",
+      "IT-Support"
+    ]
   },
   "nav": {
     "about": "Wer ich bin",
@@ -19,15 +28,13 @@
     "role": "Software Engineer"
   },
   "landing": {
-    "welcome": "Willkommen in meinem Portfolio",
-    "role": "Software Engineer",
-    "tagline": "Ich baue digitale Produkte, Websites und Apps - von der Idee bis zum Launch."
+    "welcome": "Willkommen in meinem Portfolio"
   },
   "about": {
     "eyebrow": "Einführung",
     "title": "Wer ich bin",
-    "lead": "Product Engineer und Founder - Design, Code und Produktdenken.",
     "bio": "Ich bin Piotr Kulbacki. Ich baue end-to-end: von Architektur und UX bis Produktion. Klarheit, Performance und Details, die Vertrauen schaffen.",
+    "knowsTitle": "Schwerpunkte",
     "buildingTitle": "Was ich baue",
     "buildingBody": "Eigene Produkte und Kundenprojekte - mit Fokus auf UX-Qualität und solide Engineering.",
     "buildingItems": {
@@ -120,6 +127,60 @@
     "rateLimited": "Zu viele Versuche. Bitte kurz warten und erneut versuchen.",
     "captchaError": "Bitte bestätigen Sie, dass Sie kein Bot sind, und versuchen Sie es erneut.",
     "noContractNote": "Das Absenden des Formulars stellt keinen Vertragsschluss und keine Kaufverpflichtung dar."
+  },
+  "services": {
+    "title": "Leistungen",
+    "lead": "IT-Support, Webdesign und Softwareentwicklung in Berlin und Brandenburg. IT-Support vor Ort beim Kunden oder per Fernwartung, Termine nach Vereinbarung.",
+    "areaLabel": "Einsatzgebiet",
+    "area": "Berlin und Brandenburg",
+    "phoneLabel": "Telefon",
+    "contactCta": "Kontakt aufnehmen",
+    "mapsLink": "Auf Google Maps ansehen",
+    "groups": [
+      {
+        "name": "IT-Support",
+        "items": [
+          "IT-Support vor Ort",
+          "IT-Fernwartung",
+          "Computer- und Laptop-Hilfe",
+          "PC- und Laptop-Einrichtung",
+          "Softwareinstallation",
+          "Windows-Support",
+          "macOS- und iOS-Support",
+          "Druckereinrichtung",
+          "WLAN- und Netzwerkeinrichtung",
+          "E-Mail-Einrichtung",
+          "Smartphone- und Tablet-Einrichtung",
+          "IT-Beratung",
+          "Technische Fehlerbehebung",
+          "Datensicherung"
+        ]
+      },
+      {
+        "name": "Webdesign",
+        "items": [
+          "Webdesign",
+          "Website-Entwicklung",
+          "Website-Redesign",
+          "Online-Shop-Erstellung",
+          "Website-Wartung und Betreuung",
+          "Technische SEO-Optimierung",
+          "Domain- und Hosting-Einrichtung"
+        ]
+      },
+      {
+        "name": "Softwareentwicklung",
+        "items": [
+          "Individuelle Softwareentwicklung",
+          "Webanwendungsentwicklung",
+          "Mobile App-Entwicklung",
+          "SaaS-Entwicklung",
+          "API-Integration",
+          "Prozessautomatisierung",
+          "Datenbankentwicklung"
+        ]
+      }
+    ]
   },
   "brief": {
     "title": "Beschreiben Sie Ihr Projekt",

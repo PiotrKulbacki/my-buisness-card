@@ -1,7 +1,16 @@
 {
-  "meta": {
-    "title": "Piotr Kulbacki - Inżynier oprogramowania",
-    "description": "Buduję nowoczesne produkty cyfrowe, strony i aplikacje. Twórca Dokiero. Współpraca remote."
+  "person": {
+    "description": "Piotr Kulbacki: przedsiębiorca z Berlina, projektant stron internetowych i twórca aplikacji (Dokiero, Lyamo), rozwiązań SaaS i automatyzacji, autor poradników o AI i mediach społecznościowych (Cavunio). Oferuje też wsparcie IT u klienta w Berlinie i okolicach.",
+    "jobTitle": "Projektant stron internetowych i twórca aplikacji",
+    "knowsAbout": [
+      "projektowanie stron internetowych",
+      "tworzenie aplikacji",
+      "SaaS",
+      "automatyzacja",
+      "sztuczna inteligencja",
+      "media społecznościowe",
+      "wsparcie IT"
+    ]
   },
   "nav": {
     "about": "Kim jestem",
@@ -19,15 +28,13 @@
     "role": "Inżynier oprogramowania"
   },
   "landing": {
-    "welcome": "Witaj w moim portfolio",
-    "role": "Inżynier oprogramowania",
-    "tagline": "Buduję produkty cyfrowe, strony i aplikacje - od koncepcji po wdrożenie."
+    "welcome": "Witaj w moim portfolio"
   },
   "about": {
     "eyebrow": "Wprowadzenie",
     "title": "Kim jestem",
-    "lead": "Inżynier produktu i founder - łączę design, kod i myślenie produktowe.",
     "bio": "Nazywam się Piotr Kulbacki. Buduję rozwiązania end-to-end: od architektury i UX po produkcję. Stawiam na czytelny przekaz, wydajność i detale, które budują zaufanie.",
+    "knowsTitle": "Czym się zajmuję",
     "buildingTitle": "Co buduję",
     "buildingBody": "Tworzę produkty własne i realizacje dla klientów - ze szczególnym naciskiem na jakość UX oraz solidną inżynierię.",
     "buildingItems": {
@@ -120,6 +127,60 @@
     "rateLimited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
     "captchaError": "Potwierdź, że nie jesteś botem, i spróbuj ponownie.",
     "noContractNote": "Wysłanie formularza nie stanowi zawarcia umowy ani obowiązku zakupu."
+  },
+  "services": {
+    "title": "Usługi",
+    "lead": "Wsparcie IT, projektowanie stron internetowych i tworzenie oprogramowania w Berlinie i Brandenburgii. Wsparcie IT u klienta lub zdalnie, wizyty po umówieniu.",
+    "areaLabel": "Obszar",
+    "area": "Berlin i Brandenburgia",
+    "phoneLabel": "Telefon",
+    "contactCta": "Napisz do mnie",
+    "mapsLink": "Zobacz w Google Maps",
+    "groups": [
+      {
+        "name": "Wsparcie IT",
+        "items": [
+          "Wsparcie IT u klienta",
+          "Zdalne wsparcie IT",
+          "Pomoc z komputerem i laptopem",
+          "Konfiguracja komputerów i laptopów",
+          "Instalacja oprogramowania",
+          "Wsparcie Windows",
+          "Wsparcie macOS i iOS",
+          "Konfiguracja drukarek",
+          "Konfiguracja Wi-Fi i sieci",
+          "Konfiguracja poczty e-mail",
+          "Konfiguracja smartfonów i tabletów",
+          "Doradztwo IT",
+          "Rozwiązywanie problemów technicznych",
+          "Kopie zapasowe danych"
+        ]
+      },
+      {
+        "name": "Strony internetowe",
+        "items": [
+          "Projektowanie stron internetowych",
+          "Tworzenie stron internetowych",
+          "Przebudowa stron internetowych",
+          "Tworzenie sklepów internetowych",
+          "Utrzymanie i opieka nad stroną",
+          "Techniczna optymalizacja SEO",
+          "Konfiguracja domeny i hostingu"
+        ]
+      },
+      {
+        "name": "Oprogramowanie",
+        "items": [
+          "Oprogramowanie na zamówienie",
+          "Tworzenie aplikacji webowych",
+          "Tworzenie aplikacji mobilnych",
+          "Tworzenie rozwiązań SaaS",
+          "Integracja API",
+          "Automatyzacja procesów",
+          "Tworzenie baz danych"
+        ]
+      }
+    ]
   },
   "brief": {
     "title": "Opisz swój projekt",

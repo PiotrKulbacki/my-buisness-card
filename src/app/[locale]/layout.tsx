@@ -40,7 +40,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "meta" });
+  const t = await getTranslations({ locale, namespace: "person" });
+  const title = `${siteConfig.name} - ${t("jobTitle")}`;
   const page = buildPageMetadata({
     locale,
     path: "",
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     metadataBase: new URL(siteConfig.url),
     title: {
-      default: t("title"),
+      default: title,
       template: `%s · ${siteConfig.name}`,
     },
     description: t("description"),
@@ -72,13 +73,13 @@ export async function generateMetadata({ params }: Props) {
     openGraph: {
       ...page.openGraph,
       siteName: siteConfig.name,
-      title: t("title"),
+      title,
       description: t("description"),
       images: [shareImage],
     },
     twitter: {
       card: "summary_large_image",
-      title: t("title"),
+      title,
       description: t("description"),
       images: [shareImage.url],
     },

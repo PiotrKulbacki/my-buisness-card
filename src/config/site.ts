@@ -65,23 +65,53 @@ export const siteConfig = {
     youtube: "https://www.youtube.com/@kulbackipiotr",
   },
   /**
-   * JSON-LD identity shared with cavunio.com, dokiero.com and lyamo.eu.
-   * Fixed production values (not env-based): the person `@id` must stay
-   * exactly as the brand sites reference it.
+   * JSON-LD identity shared with cavunio.com, dokiero.com and lyamo.eu
+   * (standard: ebook-shop `docs/seo-encje.md`). Fixed production values
+   * (not env-based): the `@id`s must stay exactly as the brand sites reference them.
    */
   identity: {
-    personId: "https://cavunio.com/#piotr-kulbacki",
-    personUrl: "https://piotrkulbacki.com",
+    personId: "https://piotrkulbacki.com/#person",
+    personUrl: "https://piotrkulbacki.com/",
     websiteId: "https://piotrkulbacki.com/#website",
     websiteUrl: "https://piotrkulbacki.com/",
-    profileId: "https://piotrkulbacki.com/#profile",
+    businessId: "https://piotrkulbacki.com/#business",
+    /** One `url` for `#business` in every locale: the page the Google profile links to. */
+    businessUrl: "https://piotrkulbacki.com/de/services",
+    /** Languages the person speaks (not the site's locales). */
+    knowsLanguage: ["pl", "de", "en"],
+    homeLocation: "Berlin",
+    /** Home page `ProfilePage.dateCreated` (first commit of the site). */
+    profileCreated: "2026-08-06T07:50:11+02:00",
   },
   /** Own brands - linked on the home page and listed as `Person.brand` in JSON-LD. */
   brands: [
-    { id: "https://cavunio.com/#cavunio", name: "Cavunio", url: "https://cavunio.com" },
-    { id: "https://dokiero.com/#dokiero", name: "Dokiero", url: "https://dokiero.com" },
-    { id: "https://lyamo.eu/#lyamo", name: "Lyamo", url: "https://lyamo.eu" },
+    {
+      id: "https://cavunio.com/#cavunio",
+      type: "OnlineStore",
+      name: "Cavunio",
+      url: "https://cavunio.com/",
+    },
+    {
+      id: "https://dokiero.com/#dokiero",
+      type: "OnlineBusiness",
+      name: "Dokiero",
+      url: "https://dokiero.com/",
+    },
+    {
+      id: "https://lyamo.eu/#lyamo",
+      type: "OnlineBusiness",
+      name: "Lyamo",
+      url: "https://lyamo.eu/",
+    },
   ],
+  /**
+   * Local business ("Piotr Kulbacki", Google Business Profile) - NAP must match the
+   * profile word for word. Phone is shown only on the services page.
+   */
+  business: {
+    telephone: "+49 1573 5166871",
+    googleMapsUrl: "https://maps.google.com/?cid=6497189699195385071",
+  },
   stack: [
     "TypeScript",
     "Next.js",

@@ -8,19 +8,20 @@ Analityka (poza SEO tech, ale często weryfikowana razem z GSC): `docs/Analytics
 
 ## Pliki
 
-| Rola                        | Ścieżka                                   |
-| --------------------------- | ----------------------------------------- |
-| Helpery URL + lista tras    | `src/lib/seo.ts`                          |
-| Metadata layout (title, OG) | `src/app/[locale]/layout.tsx`             |
-| Metadata stron              | `buildPageMetadata()` w każdej `page.tsx` |
-| OG / Twitter image (logo)   | `public/og.png` (kanoniczny URL share)    |
-| Generator karty OG          | `src/app/[locale]/opengraph-image.tsx`    |
-| Alias Twitter               | `src/app/[locale]/twitter-image.tsx`      |
-| `robots.txt`                | `src/app/robots.ts` → `/robots.txt`       |
-| `sitemap.xml`               | `src/app/sitemap.ts` → `/sitemap.xml`     |
-| Middleware (crawlerzy OG)   | `src/proxy.ts`                            |
-| Logo w OG                   | `docs/Brand_Logo.md` → `lockupHorizontal` |
-| JSON-LD (person + strony)   | `src/components/seo/JsonLd.tsx`           |
+| Rola                        | Ścieżka                                      |
+| --------------------------- | -------------------------------------------- |
+| Helpery URL + lista tras    | `src/lib/seo.ts`                             |
+| Metadata layout (title, OG) | `src/app/[locale]/layout.tsx`                |
+| Metadata stron              | `buildPageMetadata()` w każdej `page.tsx`    |
+| OG / Twitter image (logo)   | `public/og.png` (kanoniczny URL share)       |
+| Generator karty OG          | `src/app/[locale]/opengraph-image.tsx`       |
+| Alias Twitter               | `src/app/[locale]/twitter-image.tsx`         |
+| `robots.txt`                | `src/app/robots.ts` → `/robots.txt`          |
+| `sitemap.xml`               | `src/app/sitemap.ts` → `/sitemap.xml`        |
+| Middleware (crawlerzy OG)   | `src/proxy.ts`                               |
+| Logo w OG                   | `docs/Brand_Logo.md` → `lockupHorizontal`    |
+| JSON-LD (osoba, firma)      | `src/components/seo/JsonLd.tsx`              |
+| IndexNow (klucz, skrypt)    | `public/<klucz>.txt`, `scripts/indexnow.mjs` |
 
 ---
 
@@ -28,7 +29,7 @@ Analityka (poza SEO tech, ale często weryfikowana razem z GSC): `docs/Analytics
 
 Każda strona: `alternates.canonical` + `languages` dla `pl` / `en` / `de` / `es` / `uk` oraz `x-default` → **EN** (`routing.defaultLocale`).
 
-Ścieżki bez locale: `""`, `/about`, `/projects`, `/path`, `/contact`, `/contact/brief`, `/privacy`, `/impressum`, `/agb`, `/widerruf`, `/projects/<slug>`.
+Ścieżki bez locale: `""`, `/about`, `/services`, `/projects`, `/path`, `/contact`, `/contact/brief`, `/privacy`, `/impressum`, `/agb`, `/widerruf`, `/projects/<slug>`.
 
 ---
 
@@ -54,21 +55,33 @@ Test: Debugger FB / LinkedIn Post Inspector / View Source (`og:title`, `og:image
 
 ## sitemap.xml
 
-Źródło tras: `getIndexableRoutes()` w `seo.ts`.
+Źródło tras i dat: `getIndexableRoutes()` w `seo.ts`. Każda trasa ma ręcznie ustawione `lastModified` (ISO 8601 z czasem) = data ostatniej istotnej zmiany treści, danych strukturalnych lub linków. Bez `changefreq` i `priority` (Google i Bing je ignorują; standard, sekcja 8.2). **Przy istotnej zmianie strony zaktualizuj jej datę w `seo.ts`**; nie ustawiać czasu generowania mapy.
 
-| Grupa        | Ścieżki (bez locale)                                                                                     | Priorytet (orientacyjnie) |
-| ------------ | -------------------------------------------------------------------------------------------------------- | ------------------------- |
-| Home         | `""`                                                                                                     | 1.0                       |
-| Główne       | `/about`, `/projects`, `/path`, `/contact`, `/contact/brief`                                             | 0.6–0.9                   |
-| Case studies | `/projects/cavunio`, `lyamo`, `dokiero`, `wc26-predictor`, `ak-gebaeudeservice`, `movieweb`, `sportclub` | 0.7                       |
-| Prawne       | `/privacy`, `/impressum`, `/agb`, `/widerruf`                                                            | 0.3                       |
+| Grupa        | Ścieżki (bez locale)                                                                                     |
+| ------------ | -------------------------------------------------------------------------------------------------------- |
+| Główne       | `""`, `/about`, `/services`, `/projects`, `/path`, `/contact`, `/contact/brief`                          |
+| Case studies | `/projects/cavunio`, `lyamo`, `dokiero`, `wc26-predictor`, `ak-gebaeudeservice`, `movieweb`, `sportclub` |
+| Prawne       | `/privacy`, `/impressum`, `/agb`, `/widerruf`                                                            |
 
-**Łącznie:** (10 stron nawigacji/prawnych/brief + 7 case studies) × 5 locale = **85 URL**.  
+**Łącznie:** (11 stron + 7 case studies) × 5 locale = **90 URL**.  
 Każdy `<url>` ma `xhtml:link` hreflang (jak metadata stron).
 
-Strony prawne **są** indeksowane (niższy priorytet). Nie blokować ich w robots.
+Strony prawne **są** indeksowane. Nie blokować ich w robots.
 
 GSC: po deployu wyślij ponownie `https://piotrkulbacki.com/sitemap.xml` — `docs/DEPLOY.md`.
+
+---
+
+## IndexNow
+
+Bing, Yandex, Seznam, Naver, Yep i inni (Google nie uczestniczy). Klucz jest publiczny z definicji: `public/d450f943222b72c9f0463a9644ad5187.txt`, ten sam w `scripts/indexnow.mjs`. Po wdrożeniu produkcji, ręcznie:
+
+```bash
+node scripts/indexnow.mjs                                   # wszystkie adresy z sitemap.xml
+node scripts/indexnow.mjs https://piotrkulbacki.com/de/services   # tylko wybrane
+```
+
+Odpowiedź 200 lub 202 = przyjęte.
 
 ---
 
@@ -84,15 +97,22 @@ Pierwsza ikona w HTML: `/brand/google-120.png`. Dalej 192 / 96 / 48 / 32 PNG i I
 
 ## JSON-LD
 
-`JsonLd` tylko na stronie głównej (`[locale]/page.tsx`), jeden `@graph`. Dane w `siteConfig.identity` i `siteConfig.brands` (`src/config/site.ts`):
+Wspólny standard czterech stron: `~/Developer/ebook-shop/docs/seo-encje.md` (formaty 1.1, szablon 5.1, firma lokalna 13.3). Tu tylko to, jak jest wdrożony. Kod: `src/components/seo/JsonLd.tsx`; dane: `siteConfig.identity`, `siteConfig.brands`, `siteConfig.business` (`src/config/site.ts`); opis osoby, `jobTitle` i `knowsAbout`: `messages/*.json` → `person` (to samo źródło dla hero, „Kim jestem”, meta i JSON-LD).
 
-- `Person` - `@id` `https://cavunio.com/#piotr-kulbacki` (wspólny z cavunio.com, dokiero.com, lyamo.eu; **nie zmieniać**), `url` `https://piotrkulbacki.com`, `sameAs` = wszystkie profile z `siteConfig.social`, `brand` → Cavunio / Dokiero / Lyamo (widoczne linki w hero)
-- `ProfilePage` - `@id` `https://piotrkulbacki.com/#profile`, `url` = strona główna locale, `mainEntity` → Person
-- `WebSite` - `@id` `https://piotrkulbacki.com/#website`, `url` `https://piotrkulbacki.com/`, `inLanguage` = locale, `publisher` → Person
+**Strona główna** (`HomeJsonLd`, `/{locale}`), jeden `@graph`:
+
+- `ProfilePage` - `@id` = URL wersji + `#profile` (np. `https://piotrkulbacki.com/pl#profile`), `inLanguage`, `dateCreated` (`identity.profileCreated`), `dateModified` = `lastModified` strony głównej z `getIndexableRoutes()`, `mainEntity` → osoba, `isPartOf` → `#website`
+- `Person` - `@id` `https://piotrkulbacki.com/#person` (wspólne z cavunio.com, dokiero.com, lyamo.eu; **nie zmieniać**), `url` `https://piotrkulbacki.com/`, `description` / `jobTitle` / `knowsAbout` w języku wersji, `knowsLanguage` `pl, de, en`, `homeLocation` Berlin, `brand` → Cavunio (`OnlineStore`), Dokiero i Lyamo (`OnlineBusiness`), `sameAs` = `siteConfig.social`
+- `WebSite` - `@id` `https://piotrkulbacki.com/#website`, `url` `https://piotrkulbacki.com/`, `inLanguage` = 5 języków, `publisher` → osoba
+- krótkie odwołanie do `LocalBusiness` `#business` (hero linkuje do Usług)
+
+**Usługi** (`ServicesJsonLd`, `/{locale}/services`): `LocalBusiness` `https://piotrkulbacki.com/#business`, `name` „Piotr Kulbacki” (jak wizytówka Google), adres bez ulicy (Berlin, DE), `telephone` `+49 1573 5166871`, `areaServed` Berlin + Brandenburg, `hasOfferCatalog` = 3 grupy usług widoczne na stronie (w języku wersji), `founder` → osoba, `sameAs` → stały adres wizytówki (`cid`). Bez ocen i godzin. `url` to zawsze `https://piotrkulbacki.com/de/services` (strona, na którą prowadzi wizytówka), w każdej wersji językowej, żeby jedno `@id` miało jeden `url` **(wniosek)**.
+
+Telefon jest widoczny tylko na podstronie Usługi (decyzja właściciela 2026-11-26); reszta strony bez telefonu.
 
 Bez węzła `Organization` (jednoosobowa działalność bez nazwy firmy). Treść skryptu: `<` → `\u003c`.
 
-Test: [Rich Results Test](https://search.google.com/test/rich-results) na stronie głównej locale.
+Test: [Rich Results Test](https://search.google.com/test/rich-results) (`/pl`, `/de/services`), [Schema Markup Validator](https://validator.schema.org/) dla całego grafu; szybki test zgodności czterech stron: standard, sekcja 11.
 
 ---
 
