@@ -16,12 +16,12 @@ Identyfikacja wizualna marki osobistej (monogram **PK** + wordmark) spójna z da
 
 ## Warianty UI (przycięte, bez zbędnego czarnego paddingu)
 
-| Plik                       | Wariant                                                                | Użycie                       |
-| -------------------------- | ---------------------------------------------------------------------- | ---------------------------- |
-| `ui-lockup-side.png`       | PK po lewej + Piotr / Kulbacki / Software Engineer (3 linie) po prawej | Desktop sidebar pod avatarem |
-| `ui-lockup-stacked.png`    | PK nad tekstem (3 linie, wycentrowane)                                 | Master / zapas               |
-| `ui-lockup-horizontal.png` | Monogram + „Piotr Kulbacki” w jednej linii                             | Mobile top bar obok avatara  |
-| `ui-mark.png`              | Sam monogram PK                                                        | Stopka                       |
+| Plik                       | Wariant                                                   | Użycie                       |
+| -------------------------- | --------------------------------------------------------- | ---------------------------- |
+| `ui-lockup-side.png`       | PK po lewej + Piotr / Kulbacki / rola (3 linie) po prawej | Desktop sidebar pod avatarem |
+| `ui-lockup-stacked.png`    | PK nad tekstem (3 linie, wycentrowane)                    | Master / zapas               |
+| `ui-lockup-horizontal.png` | Monogram + „Piotr Kulbacki” w jednej linii                | Mobile top bar obok avatara  |
+| `ui-mark.png`              | Sam monogram PK                                           | Stopka                       |
 
 Komponent: `<BrandLogo variant="lockupSide" | "lockupStacked" | "lockupHorizontal" | "mark" />`.
 
@@ -79,7 +79,8 @@ Linki wokół logo: `href="/"` + `aria-label={siteConfig.name}`; obrazek z `deco
 
 ## Uwagi
 
-- „SOFTWARE ENGINEER” w lockupie side jest w kolorze accent `#c8f542` (czytelność na dark UI). Imię/nazwisko białe.
-- Wordmark roli to element znaku (EN), nie osobny klucz i18n.
+- Linia roli we wszystkich lockupach (`ui-lockup-*`, mastery `02`, `03`, `06`): „WEB DESIGNER & APP DEVELOPER” (EN `jobTitle` z `messages/en.json` → `person`), font Chakra Petch SemiBold (OFL), rozstrzelenie 0,32 em, szerokość jak linia pod nazwiskiem. Zmieniona 2026-11-26 (wcześniej „SOFTWARE ENGINEER”); imię i nazwisko bez zmian.
+- W lockupie side rola w kolorze accent `#c8f542`, w horizontal i stacked szara. Imię/nazwisko białe.
+- Wordmark roli to element znaku (EN), nie osobny klucz i18n. Przy zmianie `jobTitle` trzeba podmienić linię roli w tych plikach i odświeżyć `public/og.png` (generator czyta `siteConfig.role`).
 - To PNG (raster). Docelowo warto przerysować monogram do SVG pod idealną ostrość we wszystkich skalach.
 - Nie mieszać z marką produktową **Lyamo**.

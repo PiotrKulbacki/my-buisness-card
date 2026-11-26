@@ -1,9 +1,12 @@
+import en from "../../messages/en.json";
+
 export const siteConfig = {
   name: "Piotr Kulbacki",
   firstName: "Piotr",
   lastName: "Kulbacki",
   shortName: "P",
-  role: "Software Engineer",
+  /** EN `jobTitle` (single source: `messages/*.json` → `person`); printed on the OG card and logo lockups. */
+  role: en.person.jobTitle,
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://piotrkulbacki.com",
   email: "kontakt@piotrkulbacki.com",
   /** Hero / main portrait */
