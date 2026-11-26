@@ -48,6 +48,8 @@ export type IndexableRoute = {
 
 /** Date of the person/services update (home, about, services). */
 const ENTITY_UPDATE = "2026-11-26T23:30:00+01:00";
+/** Services page: portrait as `LocalBusiness.image`. */
+const SERVICES_UPDATE = "2026-11-27T12:00:00+01:00";
 /** Last site-wide content edit (punctuation pass, #3). */
 const CONTENT_UPDATE = "2026-10-20T13:53:07+02:00";
 
@@ -56,7 +58,7 @@ export function getIndexableRoutes(): IndexableRoute[] {
   const staticRoutes: IndexableRoute[] = [
     { path: "", lastModified: ENTITY_UPDATE },
     { path: "/about", lastModified: ENTITY_UPDATE },
-    { path: "/services", lastModified: ENTITY_UPDATE },
+    { path: "/services", lastModified: SERVICES_UPDATE },
     { path: "/projects", lastModified: CONTENT_UPDATE },
     { path: "/path", lastModified: CONTENT_UPDATE },
     { path: "/contact", lastModified: CONTENT_UPDATE },
