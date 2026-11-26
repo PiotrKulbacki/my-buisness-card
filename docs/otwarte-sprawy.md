@@ -6,7 +6,7 @@
 - Postęp i historia zmian: `PROJECT_CHECKLIST.md`; SEO, JSON-LD i IndexNow: `docs/SEO.md`; wdrożenie: `docs/DEPLOY.md`.
 - Wspólny standard SEO i encji czterech stron: `~/Developer/ebook-shop/docs/seo-encje.md` (wersja 2, scalona w `main` sklepu). Agent tego repo może go edytować (zasady w nagłówku standardu).
 - Plan wdrożenia, lista usług i opis wizytówki: `docs/SEO-encje-wdrozenie.md`.
-- Na gałęzi `seo/entity-home` (PR otwarty, niescalony): dom osoby według standardu (`Person` `#person`, `ProfilePage` per wersja językowa, opis osoby w hero, „Kim jestem” i meta), podstrona `/{locale}/services` z `LocalBusiness` `#business` i telefonem, sitemap z ręcznym `lastmod`, IndexNow (`scripts/indexnow.mjs`). Na produkcji wciąż stary stan (`Person` `https://cavunio.com/#piotr-kulbacki`).
+- Na gałęzi `seo/entity-home` (PR #11, niescalony, CI zielone): dom osoby według standardu (`Person` `#person`, `ProfilePage` per wersja językowa, opis osoby w hero, „Kim jestem” i meta), podstrona `/{locale}/services` z `LocalBusiness` `#business` i telefonem, sitemap z ręcznym `lastmod`, IndexNow (`scripts/indexnow.mjs`). Na produkcji wciąż stary stan (`Person` `https://cavunio.com/#piotr-kulbacki`).
 - Opis osoby, `jobTitle` i `knowsAbout`: jedno źródło `messages/*.json` → `person`; usługi: `messages/*.json` → `services` (DE to źródło nazw z wizytówki).
 - Wizytówka Google: stały adres `https://maps.google.com/?cid=6497189699195385071`; stan w standardzie, sekcja 13.3. Panel właściciela (`business.google.com`) nie otwiera się w Claude in Chrome; widok publiczny Map działa.
 - Skille w repo: `dev-quality` i `writing` włączone w `.claude/settings.json` (zgoda właściciela 2026-11-26).
@@ -26,12 +26,12 @@
 
 ## 3. Akcje dla właściciela
 
-- Sprawdzić PR z gałęzi `seo/entity-home` (podgląd Vercel: `/pl`, `/pl/about`, `/de/services`) i scalić go dopiero w etapie 3 (te same dni co cavunio.com, dokiero.com, lyamo.eu).
+- Sprawdzić PR #11 (https://github.com/PiotrKulbacki/my-buisness-card/pull/11; podgląd Vercel: `/pl`, `/pl/about`, `/de/services`) i scalić go dopiero w etapie 3 (te same dni co cavunio.com, dokiero.com, lyamo.eu).
 - Wkleić opis wizytówki z `docs/SEO-encje-wdrozenie.md`, sekcja 4.
 - Wizytówka: opinie od prawdziwych klientów (planowane ≥ 4), bez zachęt.
 - Po wdrożeniu na produkcję: strona WWW wizytówki → `https://piotrkulbacki.com/de/services`.
 
-## 4. Zadanie w toku: standard SEO i encji (gałąź `seo/entity-home`)
+## 4. Zadanie w toku: standard SEO i encji (gałąź `seo/entity-home`, PR #11)
 
 Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
 
