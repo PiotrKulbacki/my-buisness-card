@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "dev-quality@skills-dir": true,
+    "writing@skills-dir": true
+  }
+}

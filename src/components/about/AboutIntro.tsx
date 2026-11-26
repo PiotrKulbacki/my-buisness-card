@@ -7,6 +7,8 @@ import { siteConfig } from "@/config/site";
 
 export function AboutIntro() {
   const t = useTranslations("about");
+  const person = useTranslations("person");
+  const knowsAbout = person.raw("knowsAbout") as string[];
 
   return (
     <section className="py-6 md:py-8">
@@ -14,7 +16,7 @@ export function AboutIntro() {
         <div>
           <Reveal>
             <h1 className="display text-4xl md:text-6xl">{t("title")}</h1>
-            <p className="text-fg-muted mt-4 max-w-xl text-lg md:mt-5">{t("lead")}</p>
+            <p className="text-fg-muted mt-4 max-w-xl text-lg md:mt-5">{person("description")}</p>
             <p className="text-fg-muted mt-4 max-w-xl leading-relaxed md:mt-5">{t("bio")}</p>
           </Reveal>
 
@@ -34,6 +36,20 @@ export function AboutIntro() {
                 <span className="text-accent">▸</span>
                 {t("buildingItems.apps")}
               </li>
+            </ul>
+          </Reveal>
+
+          <Reveal delay={0.1} className="mt-8 md:mt-10">
+            <h2 className="display text-2xl md:text-3xl">{t("knowsTitle")}</h2>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {knowsAbout.map((topic) => (
+                <li
+                  key={topic}
+                  className="border-line bg-bg-elevated rounded-full border px-3 py-1.5 text-sm"
+                >
+                  {topic}
+                </li>
+              ))}
             </ul>
           </Reveal>
 

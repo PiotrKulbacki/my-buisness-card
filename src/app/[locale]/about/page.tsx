@@ -9,11 +9,12 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about" });
+  const person = await getTranslations({ locale, namespace: "person" });
   return buildPageMetadata({
     locale,
     path: "/about",
     title: t("title"),
-    description: t("lead"),
+    description: person("description"),
   });
 }
 

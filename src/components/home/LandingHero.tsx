@@ -5,9 +5,12 @@ import { Reveal } from "@/components/motion/Reveal";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import { Portrait } from "@/components/ui/Portrait";
 import { siteConfig } from "@/config/site";
+import { Link } from "@/i18n/navigation";
 
 export function LandingHero() {
   const t = useTranslations("landing");
+  const person = useTranslations("person");
+  const services = useTranslations("services");
 
   return (
     <section className="relative -my-6 flex h-(--site-landing-mobile-h) flex-col pt-5 pb-1 md:my-0 md:h-(--site-main-h) md:min-h-0 md:justify-center md:py-0">
@@ -34,13 +37,21 @@ export function LandingHero() {
                 />
               </svg>
             </span>
-            {t("role")}
+            {person("jobTitle")}
           </p>
           <p className="text-fg-muted mt-2 max-w-md text-sm leading-relaxed md:mt-4 md:text-base">
-            {t("tagline")}
+            {person("description")}
           </p>
           <SocialLinks className="mt-4 md:mt-8" />
           <ul className="mt-3 flex flex-wrap items-center gap-2 md:mt-4">
+            <li>
+              <Link
+                href="/services"
+                className="focus-ring border-accent text-accent hover:bg-accent hover:text-accent-ink inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-medium transition-colors"
+              >
+                {services("title")}
+              </Link>
+            </li>
             {siteConfig.brands.map((brand) => (
               <li key={brand.url}>
                 <a

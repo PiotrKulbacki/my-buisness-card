@@ -42,32 +42,42 @@ export function hreflangLanguages(path = ""): Record<string, string> {
 
 export type IndexableRoute = {
   path: string;
-  changeFrequency: "weekly" | "monthly" | "yearly";
-  priority: number;
+  /** Last significant change of content, structured data or links (ISO 8601); set by hand. */
+  lastModified: string;
 };
+
+/** Date of the person/services update (home, about, services). */
+const ENTITY_UPDATE = "2026-11-26T23:30:00+01:00";
+/** Last site-wide content edit (punctuation pass, #3). */
+const CONTENT_UPDATE = "2026-10-20T13:53:07+02:00";
 
 /** Public pages listed in sitemap (one entry per locale + hreflang). */
 export function getIndexableRoutes(): IndexableRoute[] {
   const staticRoutes: IndexableRoute[] = [
-    { path: "", changeFrequency: "weekly", priority: 1 },
-    { path: "/about", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/projects", changeFrequency: "weekly", priority: 0.9 },
-    { path: "/path", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/contact/brief", changeFrequency: "monthly", priority: 0.6 },
-    { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
-    { path: "/impressum", changeFrequency: "yearly", priority: 0.3 },
-    { path: "/agb", changeFrequency: "yearly", priority: 0.3 },
-    { path: "/widerruf", changeFrequency: "yearly", priority: 0.3 },
+    { path: "", lastModified: ENTITY_UPDATE },
+    { path: "/about", lastModified: ENTITY_UPDATE },
+    { path: "/services", lastModified: ENTITY_UPDATE },
+    { path: "/projects", lastModified: CONTENT_UPDATE },
+    { path: "/path", lastModified: CONTENT_UPDATE },
+    { path: "/contact", lastModified: CONTENT_UPDATE },
+    { path: "/contact/brief", lastModified: CONTENT_UPDATE },
+    { path: "/privacy", lastModified: CONTENT_UPDATE },
+    { path: "/impressum", lastModified: CONTENT_UPDATE },
+    { path: "/agb", lastModified: CONTENT_UPDATE },
+    { path: "/widerruf", lastModified: CONTENT_UPDATE },
   ];
 
   const projectRoutes: IndexableRoute[] = projects.map((project) => ({
     path: `/projects/${project.slug}`,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
+    lastModified: CONTENT_UPDATE,
   }));
 
   return [...staticRoutes, ...projectRoutes];
+}
+
+/** `lastModified` of one indexable route (e.g. `ProfilePage.dateModified` for ""). */
+export function routeLastModified(path: string): string | undefined {
+  return getIndexableRoutes().find((route) => route.path === normalizeSitePath(path))?.lastModified;
 }
 
 /** Shared brand OG/Twitter card - static `/og.png` (WhatsApp needs a file extension). */
