@@ -57,20 +57,20 @@ export default async function OpenGraphImage({ params }: Props) {
             fontWeight: 700,
             color: "#f5f5f5",
             letterSpacing: "-0.04em",
-            maxWidth: 920,
+            maxWidth: 1056,
           }}
         >
-          Software Engineer
+          {siteConfig.role}
         </div>
         <div
           style={{
             fontSize: 28,
             color: "#9a9a9a",
-            maxWidth: 820,
+            maxWidth: 1000,
             lineHeight: 1.35,
           }}
         >
-          Digital products, websites and apps - from concept to production.
+          Websites, apps, SaaS and automations. On-site IT support in Berlin.
         </div>
       </div>
 
@@ -87,7 +87,7 @@ export default async function OpenGraphImage({ params }: Props) {
         }}
       >
         <span>{siteConfig.url.replace(/^https?:\/\//, "")}</span>
-        <span style={{ color: "#ff6a3d" }}>Remote · Berlin / EU</span>
+        <span style={{ color: "#ff6a3d" }}>Berlin · Remote EU</span>
       </div>
     </div>,
     { ...size },
