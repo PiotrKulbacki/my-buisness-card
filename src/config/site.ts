@@ -61,7 +61,7 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/profile.php?id=61568507043528",
     github: "https://github.com/PiotrKulbacki",
     instagram: "https://www.instagram.com/piotr.kulbacki/",
-    tiktok: "https://www.tiktok.com/@piotr_kulbacki",
+    tiktok: "https://www.tiktok.com/@piotr_kulbacki_youtube",
     youtube: "https://www.youtube.com/@kulbackipiotr",
   },
   /**

@@ -13,11 +13,12 @@
 - Jednoosobowa działalność bez nazwy firmy: brak węzła `Organization` w JSON-LD (2026-11-26).
 - `sameAs` = wszystkie profile widoczne na stronie (`siteConfig.social`), nie tylko FB/IG.
 - Instagram: `https://www.instagram.com/piotr.kulbacki/` (zmieniona nazwa; stara `piotr_kulbacki` nieaktualna).
+- TikTok: `https://www.tiktok.com/@piotr_kulbacki_youtube` (zmieniona nazwa; stara `piotr_kulbacki` nieaktualna).
 - Bez numeru telefonu na stronie i w JSON-LD (2026-10-19).
 
 ## 3. Akcje dla właściciela
 
-- Sprawdzić, czy cavunio.com, dokiero.com i lyamo.eu mają w `sameAs` Instagram z kropką (`piotr.kulbacki`).
+- Sprawdzić, czy cavunio.com, dokiero.com i lyamo.eu mają w `sameAs` Instagram `piotr.kulbacki` i TikTok `piotr_kulbacki_youtube` (instrukcje przekazane agentom 2026-11-26).
 
 ## 4. Zadanie w toku
 
