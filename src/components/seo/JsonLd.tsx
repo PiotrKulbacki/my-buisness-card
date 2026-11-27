@@ -98,6 +98,7 @@ export async function ServicesJsonLd() {
     "@graph": [
       {
         ...businessRef,
+        image: `${getSiteOrigin()}${siteConfig.portraitSrc}`,
         address: {
           "@type": "PostalAddress",
           addressLocality: "Berlin",

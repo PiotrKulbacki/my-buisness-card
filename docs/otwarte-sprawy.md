@@ -28,8 +28,6 @@
 
 ## 3. Akcje dla właściciela
 
-- Bio na profilach: zatwierdzić propozycje (2026-11-27, w rozmowie z agentem: Instagram, TikTok, Facebook i LinkedIn po polsku, GitHub po angielsku, opis LinkedIn/YouTube = pełny zatwierdzony opis PL); potem agent je wpisze.
-- Bing Webmaster Tools, import z GSC: zaimportować wszystkie witryny, potem w Bing → Mapy witryn dodać ręcznie `https://<domena>/sitemap.xml` dla każdej domeny (import pokazał tylko 1 mapę z 4; wniosek: mapy z usług domenowych GSC się nie przenoszą). Zrzut leży w `bing/` w repo (nieśledzony, można usunąć).
 - Wkleić opis wizytówki z `docs/SEO-encje-wdrozenie.md`, sekcja 4.
 - Wizytówka: opinie od prawdziwych klientów (planowane ≥ 4), bez zachęt.
 - Strona WWW wizytówki → `https://piotrkulbacki.com/de/services` (strona jest już na produkcji).
@@ -43,8 +41,11 @@ Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
 3. Etap 2 kodu: podstrona `/{locale}/services` i `#business` - **zrobione** (2026-11-26), w tym samym PR.
 4. Etap 3 - **w toku**. Scalenie PR #11 i #12 - **zrobione** (2026-11-26, `ENTITY_UPDATE` = 2026-11-26). Kontrola 2026-11-27:
    - **zrobione:** Rich Results Test `/pl` (6 poprawnych: LocalBusiness, 4× Organization, ProfilePage) i `/de/services` (LocalBusiness i Organization poprawne; adres bez ulicy przyjęty, brak `streetAddress`/`postalCode` tylko jako uwaga opcjonalna; brak też opcjonalnych `priceRange` i `image`); Schema Markup Validator `/pl`: 0 błędów, 0 ostrzeżeń; graf `@id` zgodny, brak `cavunio.com/#piotr-kulbacki`; curl z UA OAI-SearchBot, Claude-SearchBot, PerplexityBot, Bingbot, Googlebot, GPTBot, ClaudeBot: 200 (korzeń 307 → wersja językowa); IndexNow: 90 adresów, HTTP 202; Facebook Sharing Debugger: ponowne pobranie `/pl`, `/de`, `/en`, `/es`, `/uk`, `/de/services` (nowa karta OG); GSC: mapa witryny przesłana ponownie (90 adresów), prośba o zindeksowanie `/pl` (był w indeksie) i `/de/services` (Google go jeszcze nie znał);
-   - PR „fix: share crawlers 404 on unprefixed URLs” (2026-11-27): roboty podglądów (Facebook, WhatsApp, LinkedIn, Twitter) dostawały 404 dla `/` i innych adresów bez wersji językowej od sierpnia; po scaleniu Sharing Debugger → ponownie pobrać `https://piotrkulbacki.com/`;
-   - **zostało:** Bing (sekcja 3); bio na profilach (opis z sekcji 6 standardu, link `https://piotrkulbacki.com/`; Instagram i TikTok mają limity znaków, potrzebna krótsza wersja do zatwierdzenia); miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
+   - PR #15 (roboty podglądów dostawały 404 dla `/` i adresów bez wersji językowej) scalony 2026-11-27; produkcja: 200 dla Facebook, WhatsApp, LinkedIn, Twitter; Sharing Debugger dla `https://piotrkulbacki.com/`: 200, nowa karta OG;
+   - Bing Webmaster Tools (2026-11-27): piotrkulbacki.com, cavunio.com, dokiero.com, lyamo.eu mają po jednej mapie witryny, stan „Sukces” (90, 21, 180, 5 adresów). Folder `bing/` w repo (nieśledzony zrzut) można usunąć;
+   - bio na profilach wpisane przez właściciela (2026-11-27);
+   - PR „feat: portrait as LocalBusiness image” (2026-11-27): `image` = `/portrait.png` w `#business` na `/{locale}/services`, `lastmod` `/services` = 2026-11-27 (zgoda właściciela na portret). Po scaleniu: Rich Results Test `/de/services`, IndexNow dla `/{locale}/services`;
+   - **zostało:** kontrole po scaleniu PR z portretem; miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
 
 ## 5. Inne otwarte sprawy
 
