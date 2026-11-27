@@ -26,7 +26,7 @@
 - Instagram `https://www.instagram.com/piotr.kulbacki/`, TikTok `https://www.tiktok.com/@piotr_kulbacki_youtube`.
 - `priceRange` w `#business` nie dodajemy (2026-11-27); uwaga Rich Results Test o jego braku jest opcjonalna.
 - CV: stanowisko w podsumowaniu i w bieżącej działalności = `jobTitle` z `messages/*.json` (2026-11-27). Nazwa bootcampu „Software Engineering” zostaje (to nazwa kursu).
-- Podstrona Usługi: poza główną nawigacją (mobilna ma 4 kolumny), linki z hero i ze stopki; wejście z wizytówki Google.
+- Podstrona Usługi: poza główną nawigacją (mobilna ma 4 kolumny), link tylko z hero strony głównej (stopka bez linku, 2026-11-27); wejście z wizytówki Google.
 - Telefon (2026-11-26): `+49 1573 5166871` tylko na podstronie Usługi i w `#business`; reszta strony bez telefonu (decyzja z 2026-10-19 poza tym wyjątkiem obowiązuje).
 
 ## 3. Akcje dla właściciela
@@ -49,8 +49,9 @@ Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
    - PR #16 (portret jako `image` w `#business`, `lastmod` `/services` = 2026-11-27) scalony 2026-11-27; Rich Results Test `/de/services`: LocalBusiness i Organization poprawne, `image` przyjęty, jedyna uwaga: brak opcjonalnego `priceRange`; IndexNow dla 5× `/{locale}/services`: HTTP 200;
    - PR „feat: share card with portrait” (2026-11-27, prośba właściciela): karta OG z portretem z prawej (jak hero strony głównej), plik `public/og.jpg` (JPEG ok. 110 KB zamiast PNG ok. 575 KB, limit WhatsApp), `og:image:type` `image/jpeg`. Scalony (PR #17); Sharing Debugger: ponowne pobranie `/`, `/pl`, `/de`, `/en`, `/es`, `/uk`, `/de/services`, wszędzie nowa karta `og.jpg`; LinkedIn Post Inspector `/`, `/pl`, `/de`: nowa karta;
    - opis wizytówki wklejony przez właściciela (2026-11-27);
-   - PR „fix: unify CV job title” (2026-11-27): stanowisko w CV jak `jobTitle`, `docs/SEO.md` z regułą `Disallow: /*/reply`;
-   - **zostało:** opcjonalnie Bing Places (import z Google, decyzja właściciela); miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
+   - PR #18 „fix: unify CV job title” (2026-11-27) scalony: stanowisko w CV jak `jobTitle`, `docs/SEO.md` z regułą `Disallow: /*/reply`;
+   - PR #19 (2026-11-27, prośba właściciela): we wszystkich 5 językach `services.lead` (tekst podstrony i meta description) obszar Berlin i Brandenburgia dotyczy tylko wizyt u klienta (strony i oprogramowanie bez ograniczenia obszaru); link „Usługi” usunięty ze stopki;
+   - **zostało:** opcjonalnie Bing Places (import z Google, decyzja właściciela); miesięczna kontrola zapytań (standard, sekcja 11, pkt 5); przy niej sprawdzić w GSC, czy `/{locale}/services` (zwłaszcza `/de/services`) są zaindeksowane i mają wyświetlenia. Jeśli nie, przywrócić link „Usługi” w stopce (`src/components/layout/Footer.tsx`, usunięty 2026-11-27).
 
 ## 5. Inne otwarte sprawy
 
