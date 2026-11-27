@@ -31,7 +31,7 @@ export const siteConfig = {
     /** Square mark for Google Organization.logo (min. 112×112) */
     googleLogo: "/brand/google-120.png",
     /** Static OG/Twitter card (1200×630). WhatsApp requires a `.png` URL. */
-    shareOg: "/og.png",
+    shareOg: "/og.jpg",
   },
   location: {
     city: "Berlin",
