@@ -47,11 +47,11 @@ export type CvSkillGroup = {
 
 export const cv = {
   summary: {
-    pl: "Full Stack Software Engineer - buduję niezawodne aplikacje webowe end-to-end, własne produkty SaaS i AI oraz komercyjne strony internetowe. Łączę nowoczesny frontend (React, TypeScript, Next.js) z solidnym backendem, jakością kodu (TDD, Zod, Vitest) i wdrożeniami produkcyjnymi. Na co dzień programuję z agentami AI (Claude Code, ChatGPT, Cursor) w uporządkowanym procesie: własne skille, dokumentacja dla agentów i weryfikacja każdej zmiany przed wdrożeniem.",
-    en: "Full Stack Software Engineer - I build reliable end-to-end web apps, own SaaS and AI products, and commercial websites. I combine modern frontend (React, TypeScript, Next.js) with solid backends, code quality (TDD, Zod, Vitest), and production deployments. Day to day I build with AI coding agents (Claude Code, ChatGPT, Cursor) in a structured workflow: custom skills, agent-ready documentation and verification of every change before it ships.",
-    de: "Full Stack Software Engineer - ich baue zuverlässige End-to-End-Web-Apps, eigene SaaS- und KI-Produkte sowie kommerzielle Websites. Moderner Frontend (React, TypeScript, Next.js), solides Backend, Codequalität (TDD, Zod, Vitest) und produktive Deployments. Im Alltag entwickle ich mit KI-Coding-Agenten (Claude Code, ChatGPT, Cursor) in einem strukturierten Workflow: eigene Skills, agententaugliche Dokumentation und Prüfung jeder Änderung vor dem Release.",
-    es: "Full Stack Software Engineer - construyo apps web end-to-end fiables, productos SaaS e IA propios y webs comerciales. Combino frontend moderno (React, TypeScript, Next.js) con backends sólidos, calidad de código (TDD, Zod, Vitest) y despliegues en producción. En el día a día desarrollo con agentes de IA para código (Claude Code, ChatGPT, Cursor) en un flujo estructurado: skills propias, documentación preparada para agentes y verificación de cada cambio antes de publicarlo.",
-    uk: "Full Stack Software Engineer - будую надійні end-to-end вебзастосунки, власні SaaS і AI продукти та комерційні сайти. Поєдную сучасний frontend (React, TypeScript, Next.js) із солідним бекендом, якістю коду (TDD, Zod, Vitest) і продакшен-деплоями. Щодня розробляю з AI-агентами для коду (Claude Code, ChatGPT, Cursor) у структурованому процесі: власні skills, документація для агентів і перевірка кожної зміни перед релізом.",
+    pl: "Projektant stron internetowych i twórca aplikacji - buduję niezawodne aplikacje webowe end-to-end, własne produkty SaaS i AI oraz komercyjne strony internetowe. Łączę nowoczesny frontend (React, TypeScript, Next.js) z solidnym backendem, jakością kodu (TDD, Zod, Vitest) i wdrożeniami produkcyjnymi. Na co dzień programuję z agentami AI (Claude Code, ChatGPT, Cursor) w uporządkowanym procesie: własne skille, dokumentacja dla agentów i weryfikacja każdej zmiany przed wdrożeniem.",
+    en: "Web designer and app developer - I build reliable end-to-end web apps, own SaaS and AI products, and commercial websites. I combine modern frontend (React, TypeScript, Next.js) with solid backends, code quality (TDD, Zod, Vitest), and production deployments. Day to day I build with AI coding agents (Claude Code, ChatGPT, Cursor) in a structured workflow: custom skills, agent-ready documentation and verification of every change before it ships.",
+    de: "Webdesigner und App-Entwickler - ich baue zuverlässige End-to-End-Web-Apps, eigene SaaS- und KI-Produkte sowie kommerzielle Websites. Moderner Frontend (React, TypeScript, Next.js), solides Backend, Codequalität (TDD, Zod, Vitest) und produktive Deployments. Im Alltag entwickle ich mit KI-Coding-Agenten (Claude Code, ChatGPT, Cursor) in einem strukturierten Workflow: eigene Skills, agententaugliche Dokumentation und Prüfung jeder Änderung vor dem Release.",
+    es: "Diseñador web y desarrollador de aplicaciones - construyo apps web end-to-end fiables, productos SaaS e IA propios y webs comerciales. Combino frontend moderno (React, TypeScript, Next.js) con backends sólidos, calidad de código (TDD, Zod, Vitest) y despliegues en producción. En el día a día desarrollo con agentes de IA para código (Claude Code, ChatGPT, Cursor) en un flujo estructurado: skills propias, documentación preparada para agentes y verificación de cada cambio antes de publicarlo.",
+    uk: "Вебдизайнер і розробник застосунків - будую надійні end-to-end вебзастосунки, власні SaaS і AI продукти та комерційні сайти. Поєдную сучасний frontend (React, TypeScript, Next.js) із солідним бекендом, якістю коду (TDD, Zod, Vitest) і продакшен-деплоями. Щодня розробляю з AI-агентами для коду (Claude Code, ChatGPT, Cursor) у структурованому процесі: власні skills, документація для агентів і перевірка кожної зміни перед релізом.",
   } satisfies Localized,
 
   skillGroups: [
@@ -284,11 +284,11 @@ export const cv = {
     {
       id: "independent-practice",
       role: {
-        pl: "Inżynier oprogramowania - działalność gospodarcza",
-        en: "Software Engineer - independent practice",
-        de: "Software Engineer - selbstständige Tätigkeit",
-        es: "Ingeniero de software - actividad independiente",
-        uk: "Інженер програмного забезпечення - власна діяльність",
+        pl: "Projektant stron internetowych i twórca aplikacji - działalność gospodarcza",
+        en: "Web designer and app developer - independent practice",
+        de: "Webdesigner und App-Entwickler - selbstständige Tätigkeit",
+        es: "Diseñador web y desarrollador de aplicaciones - actividad independiente",
+        uk: "Вебдизайнер і розробник застосунків - власна діяльність",
       },
       org: {
         pl: "Własna działalność",
@@ -306,7 +306,7 @@ export const cv = {
       },
       points: {
         pl: [
-          "Dalsze zdobywanie doświadczenia jako Full Stack Software Engineer",
+          "Dalsze zdobywanie doświadczenia jako projektant stron internetowych i twórca aplikacji",
           "Otwarcie i prowadzenie własnej działalności - produkty cyfrowe oraz realizacje dla klientów",
           "Projektowanie i wdrażanie aplikacji webowych end-to-end (architektura, jakość, produkcja)",
           "Programowanie wspomagane AI (agentic coding): Claude Code, ChatGPT i Cursor w codziennej pracy, z człowiekiem zatwierdzającym architekturę, commity i wdrożenia",
@@ -314,7 +314,7 @@ export const cv = {
           "Integracja LLM w produktach: OpenAI i Anthropic Claude z OCR (Google Vision) w Dokiero, asystent finansowy AI w Lyamo",
         ],
         en: [
-          "Continued growth as a Full Stack Software Engineer",
+          "Continued growth as a web designer and app developer",
           "Established and run an independent practice - digital products and client deliveries",
           "Designing and shipping end-to-end web applications (architecture, quality, production)",
           "AI-assisted development (agentic coding): Claude Code, ChatGPT and Cursor in daily work, with human approval of architecture, commits and releases",
@@ -322,7 +322,7 @@ export const cv = {
           "LLM integration in products: OpenAI and Anthropic Claude with OCR (Google Vision) in Dokiero, an AI finance assistant in Lyamo",
         ],
         de: [
-          "Weiterer Kompetenzaufbau als Full Stack Software Engineer",
+          "Weiterer Kompetenzaufbau als Webdesigner und App-Entwickler",
           "Aufbau und Führung einer selbstständigen Tätigkeit - digitale Produkte und Kundenprojekte",
           "Konzeption und Umsetzung von Web-Apps end-to-end (Architektur, Qualität, Produktion)",
           "KI-gestützte Entwicklung (Agentic Coding): Claude Code, ChatGPT und Cursor im Arbeitsalltag, Architektur, Commits und Releases gibt ein Mensch frei",
@@ -330,7 +330,7 @@ export const cv = {
           "LLM-Integration in Produkten: OpenAI und Anthropic Claude mit OCR (Google Vision) in Dokiero, KI-Finanzassistent in Lyamo",
         ],
         es: [
-          "Continuo desarrollo como Full Stack Software Engineer",
+          "Continuo desarrollo como diseñador web y desarrollador de aplicaciones",
           "Apertura y gestión de actividad independiente - productos digitales y entregas a clientes",
           "Diseño y despliegue de aplicaciones web end-to-end (arquitectura, calidad, producción)",
           "Desarrollo asistido por IA (agentic coding): Claude Code, ChatGPT y Cursor en el trabajo diario, con aprobación humana de arquitectura, commits y despliegues",
@@ -338,7 +338,7 @@ export const cv = {
           "Integración de LLM en productos: OpenAI y Anthropic Claude con OCR (Google Vision) en Dokiero, asistente financiero con IA en Lyamo",
         ],
         uk: [
-          "Подальший розвиток як Full Stack Software Engineer",
+          "Подальший розвиток як вебдизайнер і розробник застосунків",
           "Відкриття та ведення власної діяльності - цифрові продукти й клієнтські реалізації",
           "Проєктування та впровадження вебзастосунків end-to-end (архітектура, якість, продакшен)",
           "Розробка з AI (agentic coding): Claude Code, ChatGPT і Cursor у щоденній роботі, архітектуру, коміти й релізи затверджує людина",

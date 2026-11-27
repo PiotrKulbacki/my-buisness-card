@@ -48,7 +48,7 @@ Test: Debugger FB / LinkedIn Post Inspector / View Source (`og:title`, `og:image
 ## robots.txt
 
 - `Allow: /`
-- `Disallow: /api/`
+- `Disallow: /api/`, `/*/reply` (strona odpowiedzi z szablonu, link z tokenem HMAC z maila)
 - `Host` + `Sitemap: https://piotrkulbacki.com/sitemap.xml`
 
 ---
