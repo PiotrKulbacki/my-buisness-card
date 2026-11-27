@@ -1,6 +1,6 @@
 # SEO — wizytówka Piotr Kulbacki
 
-Status: wdrożone (canonical, hreflang, robots, sitemap, wspólny OG image, opcjonalny `fb:app_id`).
+Status: wdrożone (canonical, hreflang, robots, sitemap, `llms.txt`, wspólny OG image, opcjonalny `fb:app_id`).
 
 Analityka (poza SEO tech, ale często weryfikowana razem z GSC): `docs/Analytics.md`.
 
@@ -18,6 +18,7 @@ Analityka (poza SEO tech, ale często weryfikowana razem z GSC): `docs/Analytics
 | Alias Twitter               | `src/app/[locale]/twitter-image.tsx`         |
 | `robots.txt`                | `src/app/robots.ts` → `/robots.txt`          |
 | `sitemap.xml`               | `src/app/sitemap.ts` → `/sitemap.xml`        |
+| `llms.txt` (dla AI, EN)     | `src/app/llms.txt/route.ts` → `/llms.txt`    |
 | Middleware (crawlerzy OG)   | `src/proxy.ts`                               |
 | Logo w OG                   | `docs/Brand_Logo.md` → `lockupHorizontal`    |
 | JSON-LD (osoba, firma)      | `src/components/seo/JsonLd.tsx`              |
