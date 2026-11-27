@@ -51,7 +51,7 @@ Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
    - opis wizytówki wklejony przez właściciela (2026-11-27);
    - PR #18 „fix: unify CV job title” (2026-11-27) scalony: stanowisko w CV jak `jobTitle`, `docs/SEO.md` z regułą `Disallow: /*/reply`;
    - PR #19 (2026-11-27, prośba właściciela): we wszystkich 5 językach `services.lead` (tekst podstrony i meta description) obszar Berlin i Brandenburgia dotyczy tylko wizyt u klienta (strony i oprogramowanie bez ograniczenia obszaru); link „Usługi” usunięty ze stopki;
-   - **zostało:** opcjonalnie Bing Places (import z Google, decyzja właściciela); miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
+   - **zostało:** opcjonalnie Bing Places (import z Google, decyzja właściciela); miesięczna kontrola zapytań (standard, sekcja 11, pkt 5); przy niej sprawdzić w GSC, czy `/{locale}/services` (zwłaszcza `/de/services`) są zaindeksowane i mają wyświetlenia. Jeśli nie, przywrócić link „Usługi” w stopce (`src/components/layout/Footer.tsx`, usunięty 2026-11-27).
 
 ## 5. Inne otwarte sprawy
 
