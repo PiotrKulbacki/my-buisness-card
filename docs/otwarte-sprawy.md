@@ -8,7 +8,7 @@
 - Plan wdrożenia, lista usług i opis wizytówki: `docs/SEO-encje-wdrozenie.md`.
 - Na produkcji od 2026-11-26 (PR #11 i #12 scalone przez właściciela tego dnia): dom osoby według standardu (`Person` `#person`, `ProfilePage` per wersja językowa, opis osoby w hero, „Kim jestem” i meta), podstrona `/{locale}/services` z `LocalBusiness` `#business` i telefonem, sitemap z ręcznym `lastmod`, IndexNow (`scripts/indexnow.mjs`). Produkcja podaje już `Person` `https://piotrkulbacki.com/#person`.
 - Opis osoby, `jobTitle` i `knowsAbout`: jedno źródło `messages/*.json` → `person`; usługi: `messages/*.json` → `services` (DE to źródło nazw z wizytówki).
-- Logotypy (`public/brand/ui-lockup-*`, mastery `02`, `03`, `06`) i karta OG (`public/og.png`, generator `opengraph-image.tsx`) z nowym stanowiskiem „Web designer and app developer” zamiast „Software Engineer”. `siteConfig.role` czyta EN `jobTitle` z `messages/en.json`. Opis wariantów: `docs/Brand_Logo.md`.
+- Logotypy (`public/brand/ui-lockup-*`, mastery `02`, `03`, `06`) i karta OG (`public/og.jpg`, generator `opengraph-image.tsx`) z nowym stanowiskiem „Web designer and app developer” zamiast „Software Engineer”. `siteConfig.role` czyta EN `jobTitle` z `messages/en.json`. Opis wariantów: `docs/Brand_Logo.md`.
 - Wizytówka Google: stały adres `https://maps.google.com/?cid=6497189699195385071`; stan w standardzie, sekcja 13.3.
 - Claude in Chrome działa (2026-11-27), po ustawieniu w rozszerzeniu dostępu „We wszystkich witrynach”. Wcześniejsze limity czasu wynikały z dostępu ograniczonego do `www.google.com`. W Chrome zalogowanych jest kilka kont Google; GSC piotrkulbacki.com jest na koncie właściciela `it.piotr.kulbacki@…` (w Chrome `/u/4/`), nie na koncie domyślnym.
 - Skille w repo: `dev-quality` i `writing` włączone w `.claude/settings.json` (zgoda właściciela 2026-11-26).
@@ -44,8 +44,9 @@ Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
    - PR #15 (roboty podglądów dostawały 404 dla `/` i adresów bez wersji językowej) scalony 2026-11-27; produkcja: 200 dla Facebook, WhatsApp, LinkedIn, Twitter; Sharing Debugger dla `https://piotrkulbacki.com/`: 200, nowa karta OG;
    - Bing Webmaster Tools (2026-11-27): piotrkulbacki.com, cavunio.com, dokiero.com, lyamo.eu mają po jednej mapie witryny, stan „Sukces” (90, 21, 180, 5 adresów). Folder `bing/` w repo (nieśledzony zrzut) można usunąć;
    - bio na profilach wpisane przez właściciela (2026-11-27);
-   - PR „feat: portrait as LocalBusiness image” (2026-11-27): `image` = `/portrait.png` w `#business` na `/{locale}/services`, `lastmod` `/services` = 2026-11-27 (zgoda właściciela na portret). Po scaleniu: Rich Results Test `/de/services`, IndexNow dla `/{locale}/services`;
-   - **zostało:** kontrole po scaleniu PR z portretem; miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
+   - PR #16 (portret jako `image` w `#business`, `lastmod` `/services` = 2026-11-27) scalony 2026-11-27; Rich Results Test `/de/services`: LocalBusiness i Organization poprawne, `image` przyjęty, jedyna uwaga: brak opcjonalnego `priceRange`; IndexNow dla 5× `/{locale}/services`: HTTP 200;
+   - PR „feat: share card with portrait” (2026-11-27, prośba właściciela): karta OG z portretem z prawej (jak hero strony głównej), plik `public/og.jpg` (JPEG ok. 110 KB zamiast PNG ok. 575 KB, limit WhatsApp), `og:image:type` `image/jpeg`. Po scaleniu: Sharing Debugger → ponowne pobranie `/`, `/pl`, `/de`, `/en`, `/es`, `/uk`, `/de/services`; LinkedIn Post Inspector `/`;
+   - **zostało:** kontrole po scaleniu PR z kartą OG; miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
 
 ## 5. Inne otwarte sprawy
 

@@ -82,7 +82,7 @@ export function routeLastModified(path: string): string | undefined {
   return getIndexableRoutes().find((route) => route.path === normalizeSitePath(path))?.lastModified;
 }
 
-/** Shared brand OG/Twitter card - static `/og.png` (WhatsApp needs a file extension). */
+/** Shared brand OG/Twitter card - static `/og.jpg` (WhatsApp needs a file extension and a small file). */
 export function brandShareImage() {
   const url = `${getSiteOrigin()}${siteConfig.brand.shareOg}`;
   return {
@@ -91,7 +91,7 @@ export function brandShareImage() {
     width: 1200,
     height: 630,
     alt: `${siteConfig.name} - ${siteConfig.role}`,
-    type: "image/png" as const,
+    type: "image/jpeg" as const,
   };
 }
 

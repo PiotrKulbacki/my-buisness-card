@@ -63,7 +63,7 @@ Szczegóły sitemap / hreflang / OG: [`docs/SEO.md`](SEO.md).
 ## 5. Open Graph / share preview
 
 1. Facebook Sharing Debugger → Scrape Again dla `/`, `/en`, `/pl`, `/pl/about`
-2. `og:image` = `https://piotrkulbacki.com/og.png` (nie `/{locale}/opengraph-image`)
+2. `og:image` = `https://piotrkulbacki.com/og.jpg` (nie `/{locale}/opengraph-image`)
 3. Wszystkie URL powinny mieć **tę samą** grafikę z logo (nie portret)
 4. WhatsApp: wklej link z paska adresu w **nowej** wiadomości; stary czat może trzymać cache. Debugger FB nie odświeża cache WhatsApp automatycznie.
 

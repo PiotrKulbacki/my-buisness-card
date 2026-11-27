@@ -55,15 +55,15 @@ W `public/brand/` zostają też mastery (`01-mark-only.png`, `02-…`, `03-…`,
 
 ## Mapa w layoutcie
 
-| Miejsce                        | Asset                                                                                                                                           |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Desktop sidebar (pod avatarem) | `lockupSide`                                                                                                                                    |
-| Mobile top bar                 | `lockupHorizontal`                                                                                                                              |
-| Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…`                                                                                        |
-| Open Graph / Twitter card      | `public/og.png` (1200×630); źródło wizualne: `lockupHorizontal` w `opengraph-image.tsx`; `brandShareImage()` w `src/lib/seo.ts` (`docs/SEO.md`) |
-| Footer (przy ©)                | `mark` (wys. `h-4`)                                                                                                                             |
-| Zakładka przeglądarki / SERP   | `google-120.png` + PNG 192/96/48/32 + ICO (ten sam znak PK, bez SVG)                                                                            |
-| JSON-LD Person.image           | `portrait.png`                                                                                                                                  |
+| Miejsce                        | Asset                                                                                                                                                     |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Desktop sidebar (pod avatarem) | `lockupSide`                                                                                                                                              |
+| Mobile top bar                 | `lockupHorizontal`                                                                                                                                        |
+| Maile Brevo (nagłówek)         | `lockupHorizontal` z `https://piotrkulbacki.com/brand/…`                                                                                                  |
+| Open Graph / Twitter card      | `public/og.jpg` (1200×630); źródło wizualne: `lockupHorizontal` i portret w `opengraph-image.tsx`; `brandShareImage()` w `src/lib/seo.ts` (`docs/SEO.md`) |
+| Footer (przy ©)                | `mark` (wys. `h-4`)                                                                                                                                       |
+| Zakładka przeglądarki / SERP   | `google-120.png` + PNG 192/96/48/32 + ICO (ten sam znak PK, bez SVG)                                                                                      |
+| JSON-LD Person.image           | `portrait.png`                                                                                                                                            |
 
 Desktop sidebar: lockup side `max-w-40`. Stopka treści i pas LanguageSwitcher: wspólna wysokość `--site-footer-h` (3.25rem), oba flush do dołu viewportu (separatory w jednej linii). Desktop shell: `md:h-svh` — stopka zawsze na dole; Home / Kontakt bez scrollbara okna (`h-(--site-main-h)`).
 
@@ -81,6 +81,6 @@ Linki wokół logo: `href="/"` + `aria-label={siteConfig.name}`; obrazek z `deco
 
 - Linia roli we wszystkich lockupach (`ui-lockup-*`, mastery `02`, `03`, `06`): „WEB DESIGNER & APP DEVELOPER” (EN `jobTitle` z `messages/en.json` → `person`), font Chakra Petch SemiBold (OFL), rozstrzelenie 0,32 em, szerokość jak linia pod nazwiskiem. Zmieniona 2026-11-26 (wcześniej „SOFTWARE ENGINEER”); imię i nazwisko bez zmian.
 - W lockupie side rola w kolorze accent `#c8f542`, w horizontal i stacked szara. Imię/nazwisko białe.
-- Wordmark roli to element znaku (EN), nie osobny klucz i18n. Przy zmianie `jobTitle` trzeba podmienić linię roli w tych plikach i odświeżyć `public/og.png` (generator czyta `siteConfig.role`).
+- Wordmark roli to element znaku (EN), nie osobny klucz i18n. Przy zmianie `jobTitle` trzeba podmienić linię roli w tych plikach i odświeżyć `public/og.jpg` (generator czyta `siteConfig.role`).
 - To PNG (raster). Docelowo warto przerysować monogram do SVG pod idealną ostrość we wszystkich skalach.
 - Nie mieszać z marką produktową **Lyamo**.
