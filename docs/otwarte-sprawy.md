@@ -24,11 +24,13 @@
 - Jednoosobowa działalność bez nazwy firmy: brak węzła `Organization`; firma lokalna w JSON-LD to `LocalBusiness` `#business` o nazwie „Piotr Kulbacki”.
 - `sameAs` = wszystkie profile widoczne na stronie (`siteConfig.social`), kolejność jak `SELLER_PROFILES` w repo sklepu.
 - Instagram `https://www.instagram.com/piotr.kulbacki/`, TikTok `https://www.tiktok.com/@piotr_kulbacki_youtube`.
+- `priceRange` w `#business` nie dodajemy (2026-11-27); uwaga Rich Results Test o jego braku jest opcjonalna.
+- CV: stanowisko w podsumowaniu i w bieżącej działalności = `jobTitle` z `messages/*.json` (2026-11-27). Nazwa bootcampu „Software Engineering” zostaje (to nazwa kursu).
+- Podstrona Usługi: poza główną nawigacją (mobilna ma 4 kolumny), linki z hero i ze stopki; wejście z wizytówki Google.
 - Telefon (2026-11-26): `+49 1573 5166871` tylko na podstronie Usługi i w `#business`; reszta strony bez telefonu (decyzja z 2026-10-19 poza tym wyjątkiem obowiązuje).
 
 ## 3. Akcje dla właściciela
 
-- Wkleić opis wizytówki z `docs/SEO-encje-wdrozenie.md`, sekcja 4.
 - Wizytówka: opinie od prawdziwych klientów (planowane ≥ 4), bez zachęt.
 - Strona WWW wizytówki → `https://piotrkulbacki.com/de/services` (strona jest już na produkcji).
 
@@ -45,10 +47,11 @@ Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
    - Bing Webmaster Tools (2026-11-27): piotrkulbacki.com, cavunio.com, dokiero.com, lyamo.eu mają po jednej mapie witryny, stan „Sukces” (90, 21, 180, 5 adresów). Folder `bing/` w repo (nieśledzony zrzut) można usunąć;
    - bio na profilach wpisane przez właściciela (2026-11-27);
    - PR #16 (portret jako `image` w `#business`, `lastmod` `/services` = 2026-11-27) scalony 2026-11-27; Rich Results Test `/de/services`: LocalBusiness i Organization poprawne, `image` przyjęty, jedyna uwaga: brak opcjonalnego `priceRange`; IndexNow dla 5× `/{locale}/services`: HTTP 200;
-   - PR „feat: share card with portrait” (2026-11-27, prośba właściciela): karta OG z portretem z prawej (jak hero strony głównej), plik `public/og.jpg` (JPEG ok. 110 KB zamiast PNG ok. 575 KB, limit WhatsApp), `og:image:type` `image/jpeg`. Po scaleniu: Sharing Debugger → ponowne pobranie `/`, `/pl`, `/de`, `/en`, `/es`, `/uk`, `/de/services`; LinkedIn Post Inspector `/`;
-   - **zostało:** kontrole po scaleniu PR z kartą OG; miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
+   - PR „feat: share card with portrait” (2026-11-27, prośba właściciela): karta OG z portretem z prawej (jak hero strony głównej), plik `public/og.jpg` (JPEG ok. 110 KB zamiast PNG ok. 575 KB, limit WhatsApp), `og:image:type` `image/jpeg`. Scalony (PR #17); Sharing Debugger: ponowne pobranie `/`, `/pl`, `/de`, `/en`, `/es`, `/uk`, `/de/services`, wszędzie nowa karta `og.jpg`; LinkedIn Post Inspector `/`, `/pl`, `/de`: nowa karta;
+   - opis wizytówki wklejony przez właściciela (2026-11-27);
+   - PR „fix: unify CV job title” (2026-11-27): stanowisko w CV jak `jobTitle`, `docs/SEO.md` z regułą `Disallow: /*/reply`;
+   - **zostało:** opcjonalnie Bing Places (import z Google, decyzja właściciela); miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
 
 ## 5. Inne otwarte sprawy
 
-- CV (`src/content/cv.ts`): podsumowanie i stanowisko „Full Stack Software Engineer” / „Inżynier oprogramowania - działalność gospodarcza”. To historia zawodowa, nie `jobTitle`; zostawione bez zmian. Do decyzji, czy dopasować do opisu osoby.
-- `docs/SEO.md`, sekcja robots.txt, nie wymienia `Disallow: /*/reply` (jest w `src/app/robots.ts`). Drobna nieścisłość dokumentacji.
+- Brak.
