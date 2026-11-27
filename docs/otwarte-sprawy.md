@@ -49,7 +49,8 @@ Etapy (szczegóły w `docs/SEO-encje-wdrozenie.md`, sekcja 2):
    - PR #16 (portret jako `image` w `#business`, `lastmod` `/services` = 2026-11-27) scalony 2026-11-27; Rich Results Test `/de/services`: LocalBusiness i Organization poprawne, `image` przyjęty, jedyna uwaga: brak opcjonalnego `priceRange`; IndexNow dla 5× `/{locale}/services`: HTTP 200;
    - PR „feat: share card with portrait” (2026-11-27, prośba właściciela): karta OG z portretem z prawej (jak hero strony głównej), plik `public/og.jpg` (JPEG ok. 110 KB zamiast PNG ok. 575 KB, limit WhatsApp), `og:image:type` `image/jpeg`. Scalony (PR #17); Sharing Debugger: ponowne pobranie `/`, `/pl`, `/de`, `/en`, `/es`, `/uk`, `/de/services`, wszędzie nowa karta `og.jpg`; LinkedIn Post Inspector `/`, `/pl`, `/de`: nowa karta;
    - opis wizytówki wklejony przez właściciela (2026-11-27);
-   - PR „fix: unify CV job title” (2026-11-27): stanowisko w CV jak `jobTitle`, `docs/SEO.md` z regułą `Disallow: /*/reply`;
+   - PR #18 „fix: unify CV job title” (2026-11-27) scalony: stanowisko w CV jak `jobTitle`, `docs/SEO.md` z regułą `Disallow: /*/reply`;
+   - PR „fix: services PL lead” (2026-11-27, prośba właściciela): w PL `services.lead` (tekst podstrony i meta description) obszar „w Berlinie i Brandenburgii” przeniesiony na koniec, do wizyt; EN/DE bez zmian;
    - **zostało:** opcjonalnie Bing Places (import z Google, decyzja właściciela); miesięczna kontrola zapytań (standard, sekcja 11, pkt 5).
 
 ## 5. Inne otwarte sprawy
