@@ -6,7 +6,6 @@ import { siteConfig } from "@/config/site";
 
 export async function Footer() {
   const t = await getTranslations("footer");
-  const services = await getTranslations("services");
   const year = new Date().getFullYear();
 
   return (
@@ -24,9 +23,6 @@ export async function Footer() {
           aria-label={t("legalNav")}
           className="flex max-w-full shrink-0 flex-wrap items-center justify-center gap-x-3 gap-y-2 md:justify-end md:gap-x-4"
         >
-          <Link className="focus-ring hover:text-fg rounded" href="/services">
-            {services("title")}
-          </Link>
           <Link className="focus-ring hover:text-fg rounded" href="/impressum">
             {t("impressum")}
           </Link>

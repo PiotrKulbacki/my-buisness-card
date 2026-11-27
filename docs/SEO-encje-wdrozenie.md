@@ -33,7 +33,7 @@ Etapy 1 i 2 z sekcji 2 są wdrożone na gałęzi `seo/entity-home` (2026-11-26);
 
 ### Etap 2: podstrona Usługi i `#business` (ten sam PR)
 
-1. Trasa `/{locale}/services` (angielska ścieżka we wszystkich językach, jak `/about`), w nawigacji nie (mobilna ma 4 kolumny); link z hero (obok marek) i ze stopki; trasa w `getIndexableRoutes()`.
+1. Trasa `/{locale}/services` (angielska ścieżka we wszystkich językach, jak `/about`), w nawigacji nie (mobilna ma 4 kolumny); link z hero (obok marek), bez linku w stopce (decyzja właściciela 2026-11-27); trasa w `getIndexableRoutes()`.
 2. Treść: trzy grupy usług z sekcji 3 (nazwy przetłumaczone na 5 języków; DE to źródło), obszar „Berlin i Brandenburgia”, kontakt (`/contact`, telefon `+49 1573 5166871`: potwierdzony przez właściciela 2026-11-26, tylko na tej podstronie), link „Google Maps” do stałego adresu.
 3. JSON-LD na podstronie: `LocalBusiness` `#business` według 13.3 standardu (adres częściowy, `areaServed`, `hasOfferCatalog`, `telephone`, `founder`, `sameAs`, bez ocen i godzin). Na stronie głównej krótkie odwołanie do `#business`.
 4. Po wdrożeniu: użytkownik ustawia stronę WWW wizytówki na `https://piotrkulbacki.com/de/services`.
